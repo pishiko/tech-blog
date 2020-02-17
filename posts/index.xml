@@ -6,10 +6,37 @@
     <description>Recent content in Posts on ぴしめも</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
-    <lastBuildDate>Sun, 02 Feb 2020 09:29:15 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 17 Feb 2020 10:29:27 +0900</lastBuildDate>
     
 	<atom:link href="https://pishiko.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Dash buttonとの闘い(敗北)</title>
+      <link>https://pishiko.github.io/posts/dash-button/</link>
+      <pubDate>Mon, 17 Feb 2020 10:29:27 +0900</pubDate>
+      
+      <guid>https://pishiko.github.io/posts/dash-button/</guid>
+      <description>要約  Amazon Dash Button をハックしてIoTボタンにしてた 2020年に入ってから使えなくなってた 自爆ファームウェアの配信によって文鎮化されてた  昔々&amp;hellip; 実家暮らしなので母親にご飯を作っていただいているので，ご飯ができると「ご飯できたよ～」と呼ばれます．それがお互いにストレスだったので，キッチンには，押すとPush BulletというサービスからスマホやPCに通知が行くボタンが置いてありました．
+仕組みとしては，
+ 商品発注をオフにしたAmazon Dash Buttonが押される 自宅のサーバで検知（ボタンからのARPリクエストをキャッチ） IFTTTを通してPush Bulletに通知  といったものでした．
+ところが 動かなくなってました．とりあえず初期化しようと思ってAmazon アプリから設定しようとしたのですが，設定項目がありませんでした．もしやと思って調べてみたら&amp;hellip;
+ Dash Button端末を使用した商品の注文は、2019年8月31日で終了しています。
+端末は2019年12月31日に自動的に登録解除およびリセットされるため、お客様による操作は必要ありません。なお、Dash Button端末を廃棄する前に手動での登録解除をご希望の場合は、コンテンツと端末の管理にアクセスして、端末タブから登録を解除できます。お使いのDash Buttonを選択し、登録の解除をクリックしてください。最後に、Dash Button端末を1回押します。ライトが白く点滅した後、赤く点灯します。
+ https://www.amazon.co.jp/gp/help/customer/display.html?nodeId=201706050
+とのこと．
+サービス終了&amp;hellip;
+自爆とは どうやら2020年になってからボタンを押してアマゾンのサーバにリクエストを送ると，文鎮化するファームウェアアップデートが実行される模様． スパイ映画でよく見た「なお，このメッセージは自動的に消滅する．」ってやつだ&amp;hellip;
+ネットワークから遮断 とりあえずDash Button Hackライブラリの Nekmo/amazon-dash によると，dash-button-na-aws-opf.amazon.com, 0.amazon.pool.ntp.org, 1.amazon.pool.ntp.org, 2.amazon.pool.ntp.org, 3.amazon.pool.ntp .orgからのパケットをブロックすればよいとのこと．
+ちなみにntp.orgってなんだろうと思ったらNetwork Time Protocolプロトコルというものっぽい．ネットワーク機器の時間同期に用いるとか．
+→まだだめ
+Wi-Fiの設定 再設定を試みます．Amazonのアプリには存在しないため，非公式のスクリプトを用いて設定します． fffonion/setup-dashbutton.py
+スクリプトの中身自体は，
+ Dashボタン長押しで設定モードにする Amazon ConfigureMeというSSIDに接続 http://192.168.0.1/?amzn_ssid=SSID&amp;amp;amzn_pw=PASS にアクセス  て感じでシンプルです．
+→でもだめ
+最後の手段 https://blog.christophermullins.com/2019/12/20/rescue-your-amazon-dash-buttons/によると，
+ ファームウェアアップデートを一度でもしてしまったら終わり 一度Wi-Fiの設定をしたことがあるボタンのみWi-Fiの再設定が可能 ただし古いボタンなら特定の音声を流すことで初期設定が可能  特定の音声っていうのは，ボタンにはマイクがついていて，それによって設定が可能らしい．で，それでバッファの長さチェックがされていないので，オーバーフローさせていい感じにできるらしいです． ふわふわしてますね． その音声ファイルはここ .</description>
+    </item>
     
     <item>
       <title>このブログを Hugo&#43;GitHub Pages で作る</title>
