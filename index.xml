@@ -20,11 +20,14 @@
       <description>Youtube Share Hubを作った →https://pishiko.github.io/youtube-share-hub/
 どんなの？ こんなの
 Youtubeの共有メニューから選択してツイートのリンクに遷移するwebアプリケーション
+そのまま共有してもURLしか共有できないしTwitterカードも表示されないから不便
 どんな技術使った？  PWA  Web Share Target API   vue.js bootstrap Github Pages  PWAについて 最低構成は以下になる．
 index.html メインのアプリ
 serviceworker.js ServiceWorkerが動くことでオフラインでもキャッシュで動作したりすることが可能，特にやりたいことが無ければ関数は空でもいい
 manifest.json これがキモ．アプリの名前，アイコンから，共有メニューからの動作まで設定できる． 楽ちんジェネレーターもある．アイコンもリサイズしてくれる．https://app-manifest.firebaseapp.com/
-Web Share Target API apk
+Web Share Target API apkのアプリみたいに共有機能が使える．ただし，「なんちゃってホームに追加Webアプリ」とかじゃこの機能は使えない．
+ChromeからPWAアプリと認められる条件は以下
+ アイコンがpngであること．jpgはだめ ServiceWorkerを用意する manifest.jsonが正しく記述されている  それから，Web Share APIは今のところAndroidでないと使えない．たのむよApple．
 そのほか メインはvue.jsで実装．丁寧にエラー処理なども書いた． デザインはbootstrap．楽． Github Pagesはこのブログ立ち上げた時と一緒．
 Github Pagesなので，ソースコードはここにあります． https://github.com/pishiko/youtube-share-hub
 おわり</description>
