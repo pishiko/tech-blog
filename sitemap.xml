@@ -3,7 +3,17 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://pishiko.github.io/tags/dev/</loc>
+    <lastmod>2020-03-30T04:32:22+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://pishiko.github.io/posts/</loc>
+    <lastmod>2020-03-30T04:32:22+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pishiko.github.io/tags/</loc>
     <lastmod>2020-03-30T04:32:22+09:00</lastmod>
   </url>
   
@@ -19,16 +29,6 @@
   
   <url>
     <loc>https://pishiko.github.io/posts/dash-button/</loc>
-    <lastmod>2020-02-17T10:29:27+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://pishiko.github.io/tags/dev/</loc>
-    <lastmod>2020-02-17T10:29:27+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://pishiko.github.io/tags/</loc>
     <lastmod>2020-02-17T10:29:27+09:00</lastmod>
   </url>
   

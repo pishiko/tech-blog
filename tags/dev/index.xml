@@ -6,10 +6,29 @@
     <description>Recent content in dev on ぴしめも</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
-    <lastBuildDate>Mon, 17 Feb 2020 10:29:27 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 30 Mar 2020 04:32:22 +0900</lastBuildDate>
     
 	<atom:link href="https://pishiko.github.io/tags/dev/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Youtube Share Hubを作った</title>
+      <link>https://pishiko.github.io/posts/youtube-share-hub/</link>
+      <pubDate>Mon, 30 Mar 2020 04:32:22 +0900</pubDate>
+      
+      <guid>https://pishiko.github.io/posts/youtube-share-hub/</guid>
+      <description>Youtube Share Hubを作った →https://pishiko.github.io/youtube-share-hub/
+どんなの？ こんなの
+Youtubeの共有メニューから選択してツイートのリンクに遷移するwebアプリケーション
+どんな技術使った？  PWA  Web Share Target API   vue.js bootstrap Github Pages  PWAについて 最低構成は以下になる．
+index.html メインのアプリ
+serviceworker.js ServiceWorkerが動くことでオフラインでもキャッシュで動作したりすることが可能，特にやりたいことが無ければ関数は空でもいい
+manifest.json これがキモ．アプリの名前，アイコンから，共有メニューからの動作まで設定できる． 楽ちんジェネレーターもある．アイコンもリサイズしてくれる．https://app-manifest.firebaseapp.com/
+Web Share Target API apk
+そのほか メインはvue.jsで実装．丁寧にエラー処理なども書いた． デザインはbootstrap．楽． Github Pagesはこのブログ立ち上げた時と一緒．
+Github Pagesなので，ソースコードはここにあります． https://github.com/pishiko/youtube-share-hub
+おわり</description>
+    </item>
     
     <item>
       <title>Dash buttonとの闘い(敗北)</title>
