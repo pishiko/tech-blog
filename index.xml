@@ -6,10 +6,40 @@
     <description>Recent content on ぴしめも</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
-    <lastBuildDate>Mon, 30 Mar 2020 04:32:22 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 30 Mar 2020 19:23:16 +0900</lastBuildDate>
     
 	<atom:link href="https://pishiko.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>製作物まとめ</title>
+      <link>https://pishiko.github.io/posts/seisakubutu-matome/</link>
+      <pubDate>Mon, 30 Mar 2020 19:23:16 +0900</pubDate>
+      
+      <guid>https://pishiko.github.io/posts/seisakubutu-matome/</guid>
+      <description>制作物まとめ 個人的に作ったもの一覧です．詳細の記事も随時追加していきます．
+YoutubeShareHub Youtubeの共有を便利にするPWAアプリです． GithubPages上で動いています．
+サイト https://pishiko.github.io/youtube-share-hub/
+解説 https://pishiko.github.io/posts/youtube-share-hub/
+LINE匿名チャット LINEをあえて匿名掲示板みたいな使い方をしてみようというサービス． BOTと友達になるだけで繋がれます． GoogleAppsScript上で動いています．
+Github https://github.com/pishiko/anonymous-linechatbot
+カラオケ生成ツール Youtubeの動画をカラオケ動画に変換してくれるツールです．JOYSOUNDで動画を流して歌います． Python + ffmpeg製です
+Github https://github.com/pishiko/you-karaoke
+facerigもどき Unity＋Python＋Live2D
+学科掲示板通知BOT 学科掲示板が使い勝手が悪かったのでスクレイピングして通知するLINEBot． GoogleAppsScript上で動いてます．
+Github https://github.com/pishiko/tuatsboard-linebot
+このブログ HugoとGithubPagesで作ってます．
+ページ https://pishiko.github.io/
+解説 https://pishiko.github.io/posts/hugo1/
+discordBOT discordのBotです．Python + discord.pyでHeroku上で動いています． サーバの管理からチーム振り分けや，VCで音楽を再生する機能も実装しました．
+pdf Miner 英文のpdfから英単語の頻出リストを出力するPythonスクリプトです．
+Github https://github.com/pishiko/pdf-word-count
+テトリス C++ とDirectXで実装したテトリスです．
+テトリスできた～～～ pic.twitter.com/o9rLVfejsb
+&amp;mdash; pishiko (@pishitaro_) September 1, 2017  OculusQuest開発 スタンドアロンのVRHMDであるOculusQuestで動作する積み木アプリ． Unity製です．
+Quest で積み木 pic.twitter.com/okoMaJ0aYB
+&amp;mdash; pishiko (@pishitaro_) June 1, 2019  ARゲーム ジャンプゲームです． Unity＋Vuforia製です．</description>
+    </item>
     
     <item>
       <title>Youtube Share Hubを作った</title>
@@ -20,7 +50,7 @@
       <description>Youtube Share Hubを作った →https://pishiko.github.io/youtube-share-hub/
 どんなの？ こんなの
 Youtubeの共有メニューから選択してツイートのリンクに遷移するwebアプリケーション
-そのまま共有してもURLしか共有できないしTwitterカードも表示されないから不便
+そのまま共有してもURLしか共有できないしTwitterカードも表示されないから不便だったので作りました．
 どんな技術使った？  PWA  Web Share Target API   vue.js bootstrap Github Pages  PWAについて 最低構成は以下になる．
 index.html メインのアプリ
 serviceworker.js ServiceWorkerが動くことでオフラインでもキャッシュで動作したりすることが可能，特にやりたいことが無ければ関数は空でもいい
