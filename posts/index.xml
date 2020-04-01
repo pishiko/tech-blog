@@ -6,10 +6,33 @@
     <description>Recent content in Posts on ぴしめも</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
-    <lastBuildDate>Mon, 30 Mar 2020 19:23:16 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 01 Apr 2020 21:46:39 +0900</lastBuildDate>
     
 	<atom:link href="https://pishiko.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>匿名LINEBotを作った</title>
+      <link>https://pishiko.github.io/posts/anonymas-chat/</link>
+      <pubDate>Wed, 01 Apr 2020 21:46:39 +0900</pubDate>
+      
+      <guid>https://pishiko.github.io/posts/anonymas-chat/</guid>
+      <description>匿名LINEBotを作った ！ この記事は以前はてなブログに書いたものを再編集したものです
+読みにくかったらごめんなさい
+ 概要 LINEのBotを公開しました。
+いままで身内向けのBOTを作ることはあったけど、初めてオープンなのを作りました。
+LINEのBOTを作るにはHTTPリクエストを受けるサーバーが必要なんですが、サーバーを立てるのはお金がかかります。そこで今回は無料でそれっぽいことができるGoogleAppsScriptを用いてやってみました。
+ソースコード https://github.com/pishiko/anonymous-linechatbot
+実装したこと   基本機能（発言を他の利用者に拡散）
+  アイコンの実装
+  ミュート機能
+  解説 まずLINE APIで多数にメッセージを配信するには宛先のuserIdを指定する必要があります。しかし、Botと友達になっているユーザーのリストはAPIでは手に入らないため、自分で用意する必要があります。なので、友達登録されたときのイベントを使って記録していきます。
+次に記録ですが、DBをGASでお手軽に実装するにはGoogleSpreadSheetを用います。視覚的にも分かりやすいし簡単だし、ちょっと遅いけど使えます。
+アイコンはキューをGSSで実装して、友達登録時にユーザーリストにIDと一緒にします。友達をやめたときはアイコンキューに戻してやって、ユーザーリストからIDごと消してやります。
+ミュート機能はユーザーがミュートかどうかリストに保存して、LINE APIのリッチメニューから操作できるようにします。リッチメニューはLINE @MANAGERからぽちぽちで作れます。リッチメニューのボタンが押されたらキーワードを発言するように設定して、それをGASでキャッチします。
+最後に発言をほかの登録者に拡散するようにします。LINE APIのイベントでメッセージ受信をキャッチして、userIdからユーザーリストを検索してアイコンを取得、そのあとユーザーリストの発信者以外かつミュートになっていない人に成形したメッセージを配信します。
+おわり</description>
+    </item>
     
     <item>
       <title>製作物まとめ</title>

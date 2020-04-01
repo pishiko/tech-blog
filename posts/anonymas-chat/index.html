@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="jp">
+  <head>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <title>匿名LINEBotを作った // ぴしめも</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.63.2" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Pishiko" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://pishiko.github.io/css/main.min.f90f5edd436ec7b74ad05479a05705770306911f721193e7845948fb07fe1335.css" />
+    <link rel="stylesheet" href="/css/custom.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="匿名LINEBotを作った"/>
+<meta name="twitter:description" content="匿名LINEBotを作った ！ この記事は以前はてなブログに書いたものを再編集したものです
+読みにくかったらごめんなさい
+ 概要 LINEのBotを公開しました。
+いままで身内向けのBOTを作ることはあったけど、初めてオープンなのを作りました。
+LINEのBOTを作るにはHTTPリクエストを受けるサーバーが必要なんですが、サーバーを立てるのはお金がかかります。そこで今回は無料でそれっぽいことができるGoogleAppsScriptを用いてやってみました。
+ソースコード https://github.com/pishiko/anonymous-linechatbot
+実装したこと   基本機能（発言を他の利用者に拡散）
+  アイコンの実装
+  ミュート機能
+  解説 まずLINE APIで多数にメッセージを配信するには宛先のuserIdを指定する必要があります。しかし、Botと友達になっているユーザーのリストはAPIでは手に入らないため、自分で用意する必要があります。なので、友達登録されたときのイベントを使って記録していきます。
+次に記録ですが、DBをGASでお手軽に実装するにはGoogleSpreadSheetを用います。視覚的にも分かりやすいし簡単だし、ちょっと遅いけど使えます。
+アイコンはキューをGSSで実装して、友達登録時にユーザーリストにIDと一緒にします。友達をやめたときはアイコンキューに戻してやって、ユーザーリストからIDごと消してやります。
+ミュート機能はユーザーがミュートかどうかリストに保存して、LINE APIのリッチメニューから操作できるようにします。リッチメニューはLINE @MANAGERからぽちぽちで作れます。リッチメニューのボタンが押されたらキーワードを発言するように設定して、それをGASでキャッチします。
+最後に発言をほかの登録者に拡散するようにします。LINE APIのイベントでメッセージ受信をキャッチして、userIdからユーザーリストを検索してアイコンを取得、そのあとユーザーリストの発信者以外かつミュートになっていない人に成形したメッセージを配信します。
+おわり"/>
+
+    <meta property="og:title" content="匿名LINEBotを作った" />
+<meta property="og:description" content="匿名LINEBotを作った ！ この記事は以前はてなブログに書いたものを再編集したものです
+読みにくかったらごめんなさい
+ 概要 LINEのBotを公開しました。
+いままで身内向けのBOTを作ることはあったけど、初めてオープンなのを作りました。
+LINEのBOTを作るにはHTTPリクエストを受けるサーバーが必要なんですが、サーバーを立てるのはお金がかかります。そこで今回は無料でそれっぽいことができるGoogleAppsScriptを用いてやってみました。
+ソースコード https://github.com/pishiko/anonymous-linechatbot
+実装したこと   基本機能（発言を他の利用者に拡散）
+  アイコンの実装
+  ミュート機能
+  解説 まずLINE APIで多数にメッセージを配信するには宛先のuserIdを指定する必要があります。しかし、Botと友達になっているユーザーのリストはAPIでは手に入らないため、自分で用意する必要があります。なので、友達登録されたときのイベントを使って記録していきます。
+次に記録ですが、DBをGASでお手軽に実装するにはGoogleSpreadSheetを用います。視覚的にも分かりやすいし簡単だし、ちょっと遅いけど使えます。
+アイコンはキューをGSSで実装して、友達登録時にユーザーリストにIDと一緒にします。友達をやめたときはアイコンキューに戻してやって、ユーザーリストからIDごと消してやります。
+ミュート機能はユーザーがミュートかどうかリストに保存して、LINE APIのリッチメニューから操作できるようにします。リッチメニューはLINE @MANAGERからぽちぽちで作れます。リッチメニューのボタンが押されたらキーワードを発言するように設定して、それをGASでキャッチします。
+最後に発言をほかの登録者に拡散するようにします。LINE APIのイベントでメッセージ受信をキャッチして、userIdからユーザーリストを検索してアイコンを取得、そのあとユーザーリストの発信者以外かつミュートになっていない人に成形したメッセージを配信します。
+おわり" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://pishiko.github.io/posts/anonymas-chat/" />
+<meta property="article:published_time" content="2020-04-01T21:46:39+09:00" />
+<meta property="article:modified_time" content="2020-04-01T21:46:39+09:00" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://pishiko.github.io"><img class="app-header-avatar" src="/avatar.jpg" alt="Pishiko" /></a>
+      <h1>ぴしめも</h1>
+      <p>All day long fun🍁</p>
+      <div class="app-header-social">
+        
+          <a target="_blank" href="https://github.com/pishiko" rel="noreferrer noopener"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg></a>
+        
+          <a target="_blank" href="https://twitter.com/pishitaro_" rel="noreferrer noopener"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-twitter">
+  <title>twitter</title>
+  <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+</svg></a>
+        
+      </div>
+      <div>
+        <p></p>
+        <h3>Tags</h3>
+          
+          <a href="https://pishiko.github.io/tags/dev/" target="_brank">dev</a>
+          
+          <a href="https://pishiko.github.io/tags/memo/" target="_brank">memo</a>
+          
+      </div>
+      <div>
+        <h3>Content</h3>
+        <a href="https://pishiko.github.io/youtube-share-hub/" target="_brank">Youtube Share Hub</a>
+      </div>
+    </header>
+    <main class="app-container">
+      
+<article class="post">
+  <header class="post-header">
+    <h1 class="post-title">匿名LINEBotを作った</h1>
+    <div class="post-meta">
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+        Apr 1, 2020
+      </div>
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+        1 min read
+      </div><div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line>
+</svg>
+        <a class="tag" href="https://pishiko.github.io/tags/dev/">dev</a></div></div>
+  </header>
+  <div class="post-content">
+    <h1 id="匿名linebotを作った">匿名LINEBotを作った</h1>
+<p><strong>！ この記事は以前はてなブログに書いたものを再編集したものです</strong></p>
+<p>読みにくかったらごめんなさい</p>
+<hr>
+<h2 id="概要">概要</h2>
+<p><img src="https://lh3.googleusercontent.com/-Zf4XkGgqCvE/XoHJfdX2h-I/AAAAAAAAKig/8oSC0Iz65eANK3033n3oMny-IyKk7iXFwCE0YBhgLKqMEAMBZVoDT6SJ8DZucW6zsPVQekL57lh1YK5EQ11HNVenGBr8eILq7rM-qgZWRPjaR84N7DxAuEOOWeMyldDHmAyyOsD0FNzW9CJv_bv0RUwHo99u5NkJ_JmWO_RvFqC52QsqbVNdP-Dnv40CfwkAlO6iyRvmuEbTNcO66zvqRE7PBAdLjF1Bw8bJcTohv1VVwJYCkk_VksY7Bl8oelAGTZId1-6qPJxcYjJ505oXel6M9fFZq7pLdhdr-Qs9QnqLJW_Ee9taXSwDiaAWqjOsD7EaUJxzWR77Pq_sc3IyYDZskGh1Diph0zQQqs_Z1HDMrSV4ZyJ8jVCuvGeyytRleZynMcGvDDAioAer0DDOqmMARPHoLBBCkUTxsuR3GDS5M-3OYYlUBZvdcCeY47ex4duaj4csvhyRb5FJWi0QaYZaKhNa8FS3bOBI27s3qfSar_q-neW-oOeZtq6autmJEvJXRnxClp6aEkRZIdy12wvpE9uf8AKw5Z7s4FY2WUhbpFGaLVFUDvfEvnPX7xOIfVYKrF38beN7VQd7aV3P5inS8mH5mES_VLpiZ00PVIPvxLDDrJ1ZWAFOqZNOVQW-5h4RqLziuV0KHfUZsAEULZcihsfyaqDf-K7CyLLHHNhzn4qbJj5GvpPueX0WmKsaac4hf80yrgmxNgCXlTDAbmqZeT9gF3OXbailVn06uGC50d0-3vPIBBcMOQcvqSwt8LsPqKjDflYf0BQ/image.png" alt="image.png"></p>
+<p>LINEのBotを公開しました。</p>
+<p>いままで身内向けのBOTを作ることはあったけど、初めてオープンなのを作りました。</p>
+<p>LINEのBOTを作るにはHTTPリクエストを受けるサーバーが必要なんですが、サーバーを立てるのはお金がかかります。そこで今回は無料でそれっぽいことができるGoogleAppsScriptを用いてやってみました。</p>
+<p>ソースコード <a href="https://github.com/pishiko/anonymous-linechatbot">https://github.com/pishiko/anonymous-linechatbot</a></p>
+<h2 id="実装したこと">実装したこと</h2>
+<ul>
+<li>
+<p>基本機能（発言を他の利用者に拡散）</p>
+</li>
+<li>
+<p>アイコンの実装</p>
+</li>
+<li>
+<p>ミュート機能</p>
+</li>
+</ul>
+<h2 id="解説">解説</h2>
+<p><img src="https://lh3.googleusercontent.com/-AFTEwlRSZWs/XoSMtFNDlII/AAAAAAAAKjw/8LKjf50-nnAD92mMGwaI8U5mGdjnrEyggCE0YBhgLKqMEAMBZVoAg_na8RQ32d-4uXuJAuwij7r1y7shhVVJEqMpvZPVyE0UMkulsx3Hi1jBFtFygTN_pUYw-mvk6XS9nkOB3Gz2fHxPq432yP5-E7rPHn0fkWqD8-6BJNVxWuIlmerYB79oGNlxlTooj_ZE7TrPVBCFwkbakZm7AevNJqVx31Ee-H9LcmE2py_i08WUEzfEk57r1CyuLDugcYMB6smgSYPqmV1kdPDe_cWL0dVsq7S1VZkiMgr-AS5M6jUWmc7MRA5dwPndxOnx27pvw8Tm9c9pLQkAPnjXknl4833uQsZZK6Vdh8uBlE5VWqkz8pZCSMOqczm1W5kYrMfc-VhDekqUv0VpALTvuStaEPOOQzyjbpfMkzML-WjqcytCsR3kQNVfcHwR2h5e2WYYBvi-kuMRUTqUvhBMtd48rU9CgzizjUxibTMIQPYF-2bn3l2fGTpKujL1KCuXdK3d_RI_wXA9QG705BUVOTtHb_CLKtr0LIpl2aq_eyET-Yav3xWnwgbU4E5-V3H4nfTxNHQsloDOCeSdXSvYLw-qJigRbwCrulZcPQShGR-Dm5zSA3gzT3LF8uh6EHtfOyWnBNuMTj8q1_YL2rIgHVxdyry3bYTCfxmS7SdELZXC4VtILeMupzwQXlgN7YUxGXl2WHHEBNn-DEFuIwkjd-kGESAbEY9IyhKwBNvJ1Nxplvv1409cVYZSUw-YFcHs08CI9HX2U5jDwm5L0BQ/image.png" alt="image.png"></p>
+<p>まずLINE APIで多数にメッセージを配信するには宛先のuserIdを指定する必要があります。しかし、Botと友達になっているユーザーのリストはAPIでは手に入らないため、自分で用意する必要があります。なので、友達登録されたときのイベントを使って記録していきます。</p>
+<p>次に記録ですが、DBをGASでお手軽に実装するにはGoogleSpreadSheetを用います。視覚的にも分かりやすいし簡単だし、ちょっと遅いけど使えます。</p>
+<p>アイコンはキューをGSSで実装して、友達登録時にユーザーリストにIDと一緒にします。友達をやめたときはアイコンキューに戻してやって、ユーザーリストからIDごと消してやります。</p>
+<p>ミュート機能はユーザーがミュートかどうかリストに保存して、LINE APIのリッチメニューから操作できるようにします。リッチメニューはLINE @MANAGERからぽちぽちで作れます。リッチメニューのボタンが押されたらキーワードを発言するように設定して、それをGASでキャッチします。</p>
+<p>最後に発言をほかの登録者に拡散するようにします。LINE APIのイベントでメッセージ受信をキャッチして、userIdからユーザーリストを検索してアイコンを取得、そのあとユーザーリストの発信者以外かつミュートになっていない人に成形したメッセージを配信します。</p>
+<p>おわり</p>
+
+  </div>
+  <div class="post-footer">
+    
+  </div>
+  <div>
+    <li class="posts-list-item">
+    </li>
+    <p></p>
+    <a href="https://pishiko.github.io"><u>＜ Back</u></a>
+  </div>
+</article>
+
+    </main>
+  </body>
+</html>
