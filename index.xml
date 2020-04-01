@@ -45,6 +45,7 @@ YoutubeShareHub Youtubeの共有を便利にするPWAアプリです． GithubPa
 サイト https://pishiko.github.io/youtube-share-hub/
 解説 https://pishiko.github.io/posts/youtube-share-hub/
 LINE匿名チャット LINEをあえて匿名掲示板みたいな使い方をしてみようというサービス． BOTと友達になるだけで繋がれます． GoogleAppsScript上で動いています．
+解説 https://pishiko.github.io/posts/anonymas-chat/
 Github https://github.com/pishiko/anonymous-linechatbot
 カラオケ生成ツール Youtubeの動画をカラオケ動画に変換してくれるツールです．JOYSOUNDで動画を流して歌います． Python + ffmpeg製です
 Github https://github.com/pishiko/you-karaoke
