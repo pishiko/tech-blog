@@ -18,15 +18,14 @@
       
       <guid>https://pishiko.github.io/posts/anonymas-chat/</guid>
       <description>匿名LINEBotを作った ！ この記事は以前はてなブログに書いたものを再編集したものです
-読みにくかったらごめんなさい
- 概要 LINEのBotを公開しました。
+ 概要   LINEのBotを公開しました。
 いままで身内向けのBOTを作ることはあったけど、初めてオープンなのを作りました。
 LINEのBOTを作るにはHTTPリクエストを受けるサーバーが必要なんですが、サーバーを立てるのはお金がかかります。そこで今回は無料でそれっぽいことができるGoogleAppsScriptを用いてやってみました。
 ソースコード https://github.com/pishiko/anonymous-linechatbot
 実装したこと   基本機能（発言を他の利用者に拡散）
   アイコンの実装
   ミュート機能
-  解説 まずLINE APIで多数にメッセージを配信するには宛先のuserIdを指定する必要があります。しかし、Botと友達になっているユーザーのリストはAPIでは手に入らないため、自分で用意する必要があります。なので、友達登録されたときのイベントを使って記録していきます。
+  解説   まずLINE APIで多数にメッセージを配信するには宛先のuserIdを指定する必要があります。しかし、Botと友達になっているユーザーのリストはAPIでは手に入らないため、自分で用意する必要があります。なので、友達登録されたときのイベントを使って記録していきます。
 次に記録ですが、DBをGASでお手軽に実装するにはGoogleSpreadSheetを用います。視覚的にも分かりやすいし簡単だし、ちょっと遅いけど使えます。
 アイコンはキューをGSSで実装して、友達登録時にユーザーリストにIDと一緒にします。友達をやめたときはアイコンキューに戻してやって、ユーザーリストからIDごと消してやります。
 ミュート機能はユーザーがミュートかどうかリストに保存して、LINE APIのリッチメニューから操作できるようにします。リッチメニューはLINE @MANAGERからぽちぽちで作れます。リッチメニューのボタンが押されたらキーワードを発言するように設定して、それをGASでキャッチします。
@@ -41,28 +40,26 @@ LINEのBOTを作るにはHTTPリクエストを受けるサーバーが必要な
       
       <guid>https://pishiko.github.io/posts/seisakubutu-matome/</guid>
       <description>制作物まとめ 個人的に作ったもの一覧です．詳細の記事も随時追加していきます．
-YoutubeShareHub Youtubeの共有を便利にするPWAアプリです． GithubPages上で動いています．
+YoutubeShareHub   Youtubeの共有を便利にするPWAアプリです． GithubPages上で動いています．
 サイト https://pishiko.github.io/youtube-share-hub/
 解説 https://pishiko.github.io/posts/youtube-share-hub/
 LINE匿名チャット LINEをあえて匿名掲示板みたいな使い方をしてみようというサービス． BOTと友達になるだけで繋がれます． GoogleAppsScript上で動いています．
-解説 https://pishiko.github.io/posts/anonymas-chat/
+  解説 https://pishiko.github.io/posts/anonymas-chat/
 Github https://github.com/pishiko/anonymous-linechatbot
 カラオケ生成ツール Youtubeの動画をカラオケ動画に変換してくれるツールです．JOYSOUNDで動画を流して歌います． Python + ffmpeg製です
-Github https://github.com/pishiko/you-karaoke
+  Github https://github.com/pishiko/you-karaoke
 facerigもどき Unity＋Python＋Live2D
-学科掲示板通知BOT 学科掲示板が使い勝手が悪かったのでスクレイピングして通知するLINEBot． GoogleAppsScript上で動いてます．
-Github https://github.com/pishiko/tuatsboard-linebot
+  学科掲示板通知BOT 学科掲示板が使い勝手が悪かったのでスクレイピングして通知するLINEBot． GoogleAppsScript上で動いてます．
+  Github https://github.com/pishiko/tuatsboard-linebot
 このブログ HugoとGithubPagesで作ってます．
-ページ https://pishiko.github.io/
+  ページ https://pishiko.github.io/
 解説 https://pishiko.github.io/posts/hugo1/
 discordBOT discordのBotです．Python + discord.pyでHeroku上で動いています． サーバの管理からチーム振り分けや，VCで音楽を再生する機能も実装しました．
-pdf Miner 英文のpdfから英単語の頻出リストを出力するPythonスクリプトです．
+  pdf Miner 英文のpdfから英単語の頻出リストを出力するPythonスクリプトです．
 Github https://github.com/pishiko/pdf-word-count
 テトリス C++ とDirectXで実装したテトリスです．
 テトリスできた～～～ pic.twitter.com/o9rLVfejsb
-&amp;mdash; pishiko (@pishitaro_) September 1, 2017  OculusQuest開発 スタンドアロンのVRHMDであるOculusQuestで動作する積み木アプリ． Unity製です．
-Quest で積み木 pic.twitter.com/okoMaJ0aYB
-&amp;mdash; pishiko (@pishitaro_) June 1, 2019  ARゲーム ジャンプゲームです． Unity＋Vuforia製です．</description>
+&amp;mdash; pishiko (@pishitaro_) September 1, 2017  OculusQuest開発 スタンドアロンのVRHMDであるOculusQuestで動作する積み木アプリ． Unity製です．</description>
     </item>
     
     <item>
@@ -73,7 +70,7 @@ Quest で積み木 pic.twitter.com/okoMaJ0aYB
       <guid>https://pishiko.github.io/posts/youtube-share-hub/</guid>
       <description>Youtube Share Hubを作った →https://pishiko.github.io/youtube-share-hub/
 どんなの？ こんなの
-Youtubeの共有メニューから選択してツイートのリンクに遷移するwebアプリケーション
+  Youtubeの共有メニューから選択してツイートのリンクに遷移するwebアプリケーション
 そのまま共有してもURLしか共有できないしTwitterカードも表示されないから不便だったので作りました．
 どんな技術使った？  PWA  Web Share Target API   vue.js bootstrap Github Pages  PWAについて 最低構成は以下になる．
 index.html メインのアプリ

@@ -20,15 +20,14 @@
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="匿名LINEBotを作った"/>
 <meta name="twitter:description" content="匿名LINEBotを作った ！ この記事は以前はてなブログに書いたものを再編集したものです
-読みにくかったらごめんなさい
- 概要 LINEのBotを公開しました。
+ 概要   LINEのBotを公開しました。
 いままで身内向けのBOTを作ることはあったけど、初めてオープンなのを作りました。
 LINEのBOTを作るにはHTTPリクエストを受けるサーバーが必要なんですが、サーバーを立てるのはお金がかかります。そこで今回は無料でそれっぽいことができるGoogleAppsScriptを用いてやってみました。
 ソースコード https://github.com/pishiko/anonymous-linechatbot
 実装したこと   基本機能（発言を他の利用者に拡散）
   アイコンの実装
   ミュート機能
-  解説 まずLINE APIで多数にメッセージを配信するには宛先のuserIdを指定する必要があります。しかし、Botと友達になっているユーザーのリストはAPIでは手に入らないため、自分で用意する必要があります。なので、友達登録されたときのイベントを使って記録していきます。
+  解説   まずLINE APIで多数にメッセージを配信するには宛先のuserIdを指定する必要があります。しかし、Botと友達になっているユーザーのリストはAPIでは手に入らないため、自分で用意する必要があります。なので、友達登録されたときのイベントを使って記録していきます。
 次に記録ですが、DBをGASでお手軽に実装するにはGoogleSpreadSheetを用います。視覚的にも分かりやすいし簡単だし、ちょっと遅いけど使えます。
 アイコンはキューをGSSで実装して、友達登録時にユーザーリストにIDと一緒にします。友達をやめたときはアイコンキューに戻してやって、ユーザーリストからIDごと消してやります。
 ミュート機能はユーザーがミュートかどうかリストに保存して、LINE APIのリッチメニューから操作できるようにします。リッチメニューはLINE @MANAGERからぽちぽちで作れます。リッチメニューのボタンが押されたらキーワードを発言するように設定して、それをGASでキャッチします。
@@ -37,15 +36,14 @@ LINEのBOTを作るにはHTTPリクエストを受けるサーバーが必要な
 
     <meta property="og:title" content="匿名LINEBotを作った" />
 <meta property="og:description" content="匿名LINEBotを作った ！ この記事は以前はてなブログに書いたものを再編集したものです
-読みにくかったらごめんなさい
- 概要 LINEのBotを公開しました。
+ 概要   LINEのBotを公開しました。
 いままで身内向けのBOTを作ることはあったけど、初めてオープンなのを作りました。
 LINEのBOTを作るにはHTTPリクエストを受けるサーバーが必要なんですが、サーバーを立てるのはお金がかかります。そこで今回は無料でそれっぽいことができるGoogleAppsScriptを用いてやってみました。
 ソースコード https://github.com/pishiko/anonymous-linechatbot
 実装したこと   基本機能（発言を他の利用者に拡散）
   アイコンの実装
   ミュート機能
-  解説 まずLINE APIで多数にメッセージを配信するには宛先のuserIdを指定する必要があります。しかし、Botと友達になっているユーザーのリストはAPIでは手に入らないため、自分で用意する必要があります。なので、友達登録されたときのイベントを使って記録していきます。
+  解説   まずLINE APIで多数にメッセージを配信するには宛先のuserIdを指定する必要があります。しかし、Botと友達になっているユーザーのリストはAPIでは手に入らないため、自分で用意する必要があります。なので、友達登録されたときのイベントを使って記録していきます。
 次に記録ですが、DBをGASでお手軽に実装するにはGoogleSpreadSheetを用います。視覚的にも分かりやすいし簡単だし、ちょっと遅いけど使えます。
 アイコンはキューをGSSで実装して、友達登録時にユーザーリストにIDと一緒にします。友達をやめたときはアイコンキューに戻してやって、ユーザーリストからIDごと消してやります。
 ミュート機能はユーザーがミュートかどうかリストに保存して、LINE APIのリッチメニューから操作できるようにします。リッチメニューはLINE @MANAGERからぽちぽちで作れます。リッチメニューのボタンが押されたらキーワードを発言するように設定して、それをGASでキャッチします。
@@ -119,10 +117,12 @@ LINEのBOTを作るにはHTTPリクエストを受けるサーバーが必要な
   <div class="post-content">
     <h1 id="匿名linebotを作った">匿名LINEBotを作った</h1>
 <p><strong>！ この記事は以前はてなブログに書いたものを再編集したものです</strong></p>
-<p>読みにくかったらごめんなさい</p>
 <hr>
 <h2 id="概要">概要</h2>
-<p><img src="https://lh3.googleusercontent.com/-Zf4XkGgqCvE/XoHJfdX2h-I/AAAAAAAAKig/8oSC0Iz65eANK3033n3oMny-IyKk7iXFwCE0YBhgLKqMEAMBZVoDT6SJ8DZucW6zsPVQekL57lh1YK5EQ11HNVenGBr8eILq7rM-qgZWRPjaR84N7DxAuEOOWeMyldDHmAyyOsD0FNzW9CJv_bv0RUwHo99u5NkJ_JmWO_RvFqC52QsqbVNdP-Dnv40CfwkAlO6iyRvmuEbTNcO66zvqRE7PBAdLjF1Bw8bJcTohv1VVwJYCkk_VksY7Bl8oelAGTZId1-6qPJxcYjJ505oXel6M9fFZq7pLdhdr-Qs9QnqLJW_Ee9taXSwDiaAWqjOsD7EaUJxzWR77Pq_sc3IyYDZskGh1Diph0zQQqs_Z1HDMrSV4ZyJ8jVCuvGeyytRleZynMcGvDDAioAer0DDOqmMARPHoLBBCkUTxsuR3GDS5M-3OYYlUBZvdcCeY47ex4duaj4csvhyRb5FJWi0QaYZaKhNa8FS3bOBI27s3qfSar_q-neW-oOeZtq6autmJEvJXRnxClp6aEkRZIdy12wvpE9uf8AKw5Z7s4FY2WUhbpFGaLVFUDvfEvnPX7xOIfVYKrF38beN7VQd7aV3P5inS8mH5mES_VLpiZ00PVIPvxLDDrJ1ZWAFOqZNOVQW-5h4RqLziuV0KHfUZsAEULZcihsfyaqDf-K7CyLLHHNhzn4qbJj5GvpPueX0WmKsaac4hf80yrgmxNgCXlTDAbmqZeT9gF3OXbailVn06uGC50d0-3vPIBBcMOQcvqSwt8LsPqKjDflYf0BQ/image.png" alt="image.png"></p>
+<figure>
+    <img src="/img/chat.png" width="320"/> 
+</figure>
+
 <p>LINEのBotを公開しました。</p>
 <p>いままで身内向けのBOTを作ることはあったけど、初めてオープンなのを作りました。</p>
 <p>LINEのBOTを作るにはHTTPリクエストを受けるサーバーが必要なんですが、サーバーを立てるのはお金がかかります。そこで今回は無料でそれっぽいことができるGoogleAppsScriptを用いてやってみました。</p>
@@ -140,7 +140,10 @@ LINEのBOTを作るにはHTTPリクエストを受けるサーバーが必要な
 </li>
 </ul>
 <h2 id="解説">解説</h2>
-<p><img src="https://lh3.googleusercontent.com/-AFTEwlRSZWs/XoSMtFNDlII/AAAAAAAAKjw/8LKjf50-nnAD92mMGwaI8U5mGdjnrEyggCE0YBhgLKqMEAMBZVoAg_na8RQ32d-4uXuJAuwij7r1y7shhVVJEqMpvZPVyE0UMkulsx3Hi1jBFtFygTN_pUYw-mvk6XS9nkOB3Gz2fHxPq432yP5-E7rPHn0fkWqD8-6BJNVxWuIlmerYB79oGNlxlTooj_ZE7TrPVBCFwkbakZm7AevNJqVx31Ee-H9LcmE2py_i08WUEzfEk57r1CyuLDugcYMB6smgSYPqmV1kdPDe_cWL0dVsq7S1VZkiMgr-AS5M6jUWmc7MRA5dwPndxOnx27pvw8Tm9c9pLQkAPnjXknl4833uQsZZK6Vdh8uBlE5VWqkz8pZCSMOqczm1W5kYrMfc-VhDekqUv0VpALTvuStaEPOOQzyjbpfMkzML-WjqcytCsR3kQNVfcHwR2h5e2WYYBvi-kuMRUTqUvhBMtd48rU9CgzizjUxibTMIQPYF-2bn3l2fGTpKujL1KCuXdK3d_RI_wXA9QG705BUVOTtHb_CLKtr0LIpl2aq_eyET-Yav3xWnwgbU4E5-V3H4nfTxNHQsloDOCeSdXSvYLw-qJigRbwCrulZcPQShGR-Dm5zSA3gzT3LF8uh6EHtfOyWnBNuMTj8q1_YL2rIgHVxdyry3bYTCfxmS7SdELZXC4VtILeMupzwQXlgN7YUxGXl2WHHEBNn-DEFuIwkjd-kGESAbEY9IyhKwBNvJ1Nxplvv1409cVYZSUw-YFcHs08CI9HX2U5jDwm5L0BQ/image.png" alt="image.png"></p>
+<figure>
+    <img src="/img/chat2.png" width="720"/> 
+</figure>
+
 <p>まずLINE APIで多数にメッセージを配信するには宛先のuserIdを指定する必要があります。しかし、Botと友達になっているユーザーのリストはAPIでは手に入らないため、自分で用意する必要があります。なので、友達登録されたときのイベントを使って記録していきます。</p>
 <p>次に記録ですが、DBをGASでお手軽に実装するにはGoogleSpreadSheetを用います。視覚的にも分かりやすいし簡単だし、ちょっと遅いけど使えます。</p>
 <p>アイコンはキューをGSSで実装して、友達登録時にユーザーリストにIDと一緒にします。友達をやめたときはアイコンキューに戻してやって、ユーザーリストからIDごと消してやります。</p>
