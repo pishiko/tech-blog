@@ -33,6 +33,7 @@
       <guid>https://pishiko.github.io/posts/fmlast-discord/</guid>
       <description>ようなデスクトップ常駐型アプリケーションを作りました．
 Github
+使い方
 経緯 Last.fmを見つけた ライフログを取るのにハマっていて，GPSとかの記録を取ったりしているのですが，ふと音楽のログも取りたいと思いました．
 そのようなサービスがないか調べたところ，Last.fmというものがありました． Spotifyなどと連携して聞いた音楽のログを取り，似た傾向のおすすめの曲を紹介してくれるそうです． 気に入ったのが，ログを取るためのAPIが用意してあり，PC，スマートフォンのあらゆるプレイヤーで記録できるところで，もし対応していなければ開発すればいいのです．
 共有したい Last.fmのAPIリファレンスを見ていたところ今聞いている曲を取得できるのを見つけたので，これでdiscordの「プレイ中」欄に表示しようと考えたのでした．さりげなさがいい感じなので．
@@ -46,8 +47,7 @@ discord RPC ドキュメントが充実しているので特に書くことも�
 nugetで導入してREADMEのチュートリアル通りに書けばいいです．
  ただ最初はDiscord Game SDKでやろうとしていて，文字化け問題に直面したのでかなり苦労しました．Issue→https://github.com/discord/discord-rpc/issues/119
 ちなみに，昔はGameSDKでなくてもRichPeresenceを弄れたのですがAPIが廃止されたので面倒になりました． 昔は同じことをするjs製ツールがあったっぽいのですが，API廃止で使えなくなっちゃったみたいです．
-WebAPIを呼ぶ HttpClientを使います．クエリパラメタもURLエンコードできます． その他まとめ→https://qiita.com/rawr/items/f78a3830d894042f891b
-動的なJsonを処理する 動的な，というのは，Last.</description>
+WebAPIを呼ぶ HttpClientを使います．クエリパラメタもURLエンコードできます． その他まとめ→https://qiita.com/rawr/items/f78a3830d894042f891b</description>
     </item>
     
     <item>
@@ -70,35 +70,6 @@ LINEのBOTを作るにはHTTPリクエストを受けるサーバーが必要な
 ミュート機能はユーザーがミュートかどうかリストに保存して、LINE APIのリッチメニューから操作できるようにします。リッチメニューはLINE @MANAGERからぽちぽちで作れます。リッチメニューのボタンが押されたらキーワードを発言するように設定して、それをGASでキャッチします。
 最後に発言をほかの登録者に拡散するようにします。LINE APIのイベントでメッセージ受信をキャッチして、userIdからユーザーリストを検索してアイコンを取得、そのあとユーザーリストの発信者以外かつミュートになっていない人に成形したメッセージを配信します。
 おわり</description>
-    </item>
-    
-    <item>
-      <title>製作物まとめ</title>
-      <link>https://pishiko.github.io/posts/seisakubutu-matome/</link>
-      <pubDate>Mon, 30 Mar 2020 19:23:16 +0900</pubDate>
-      
-      <guid>https://pishiko.github.io/posts/seisakubutu-matome/</guid>
-      <description>制作物まとめ 個人的に作ったもの一覧です．詳細の記事も随時追加していきます．
-YoutubeShareHub   Youtubeの共有を便利にするPWAアプリです． GithubPages上で動いています．
-サイト https://pishiko.github.io/youtube-share-hub/
-解説 https://pishiko.github.io/posts/youtube-share-hub/
-LINE匿名チャット LINEをあえて匿名掲示板みたいな使い方をしてみようというサービス． BOTと友達になるだけで繋がれます． GoogleAppsScript上で動いています．
-  解説 https://pishiko.github.io/posts/anonymas-chat/
-Github https://github.com/pishiko/anonymous-linechatbot
-カラオケ生成ツール Youtubeの動画をカラオケ動画に変換してくれるツールです．JOYSOUNDで動画を流して歌います． Python + ffmpeg製です
-  Github https://github.com/pishiko/you-karaoke
-facerigもどき Unity＋Python＋Live2D
-  学科掲示板通知BOT 学科掲示板が使い勝手が悪かったのでスクレイピングして通知するLINEBot． GoogleAppsScript上で動いてます．
-  Github https://github.com/pishiko/tuatsboard-linebot
-このブログ HugoとGithubPagesで作ってます．
-  ページ https://pishiko.github.io/
-解説 https://pishiko.github.io/posts/hugo1/
-discordBOT discordのBotです．Python + discord.pyでHeroku上で動いています． サーバの管理からチーム振り分けや，VCで音楽を再生する機能も実装しました．
-  pdf Miner 英文のpdfから英単語の頻出リストを出力するPythonスクリプトです．
-Github https://github.com/pishiko/pdf-word-count
-テトリス C++ とDirectXで実装したテトリスです．
-テトリスできた～～～ pic.twitter.com/o9rLVfejsb
-&amp;mdash; pishiko (@pishitaro_) September 1, 2017  OculusQuest開発 スタンドアロンのVRHMDであるOculusQuestで動作する積み木アプリ． Unity製です．</description>
     </item>
     
     <item>
@@ -185,6 +156,36 @@ cd public git init git remote add origin git@github.</description>
 サークル(？)のブログとは別にメモとしてブログを作ってみました．こっちではプログラミング成果物のメモが主になります．
 ちょこちょこ書いていく予定です．
 おわり</description>
+    </item>
+    
+    <item>
+      <title>製作物まとめ</title>
+      <link>https://pishiko.github.io/posts/seisakubutu-matome/</link>
+      <pubDate>Tue, 30 Mar 1999 19:23:16 +0900</pubDate>
+      
+      <guid>https://pishiko.github.io/posts/seisakubutu-matome/</guid>
+      <description>制作物まとめ 個人的に作ったもの一覧です．詳細の記事も随時追加していきます．
+NowPlayingCat Github https://github.com/pishiko/discord-nowplaying
+使い方 https://pishiko.github.io/posts/nowplayingcat/
+解説 https://pishiko.github.io/posts/fmlast-discord/
+YoutubeShareHub   Youtubeの共有を便利にするPWAアプリです． GithubPages上で動いています．
+サイト https://pishiko.github.io/youtube-share-hub/
+解説 https://pishiko.github.io/posts/youtube-share-hub/
+LINE匿名チャット LINEをあえて匿名掲示板みたいな使い方をしてみようというサービス． BOTと友達になるだけで繋がれます． GoogleAppsScript上で動いています．
+  解説 https://pishiko.github.io/posts/anonymas-chat/
+Github https://github.com/pishiko/anonymous-linechatbot
+カラオケ生成ツール Youtubeの動画をカラオケ動画に変換してくれるツールです．JOYSOUNDで動画を流して歌います． Python + ffmpeg製です
+  Github https://github.com/pishiko/you-karaoke
+facerigもどき Unity＋Python＋Live2D
+  学科掲示板通知BOT 学科掲示板が使い勝手が悪かったのでスクレイピングして通知するLINEBot． GoogleAppsScript上で動いてます．
+  Github https://github.com/pishiko/tuatsboard-linebot
+このブログ HugoとGithubPagesで作ってます．
+  ページ https://pishiko.github.io/
+解説 https://pishiko.github.io/posts/hugo1/
+discordBOT discordのBotです．Python + discord.pyでHeroku上で動いています． サーバの管理からチーム振り分けや，VCで音楽を再生する機能も実装しました．
+  pdf Miner 英文のpdfから英単語の頻出リストを出力するPythonスクリプトです．
+Github https://github.com/pishiko/pdf-word-count
+テトリス C++ とDirectXで実装したテトリスです．</description>
     </item>
     
   </channel>
