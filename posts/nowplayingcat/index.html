@@ -20,20 +20,24 @@
     
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="NowPlayingCat取扱説明書"/>
-<meta name="twitter:description" content="NowPlayingCat Github
+<meta name="twitter:description" content="(2020 9/9 追記: v1.2でバグ修正をしました．記事一番下にアップデート方法を記載．)
+NowPlayingCat Github
 概要  DiscordのNowPlaying欄にLast.fmのNowPlayingを表示するツール v1.1アップデートで使いやすくなったので取説を書きました  Last.fmってなに？という方はこちら
 使い方 前提として，Last.fmに登録しているものとします．
   https://www.last.fm/api/account/createでAPIキーを取得します． CallBackURLは空白でいいです．他は適当に入力してください．   アプリケーションをここからダウンロードして，解凍します．   初回起動時はエラーで設定画面が開くはずなので，先ほどメモったAPIKeyを入力します． Last.fm User NameにはLast.fmのユーザーネームを入力します． お好みで他の設定を変更してください．   保存を押したらdiscordにNowPlayingCatが表示されているはずです．
   その他 起動中はタスクバーに駐在するので，アイコンを右クリックすることで，アプリケーションを終了したり，設定画面を開いたりできます． v1.0からの移行 以前の設定ファイルがsettings.iniにあるはずなので，そこに書いてあるAPIKeyをv1.1の設定画面でコピペしてください． 以下はv1.0からの変更点です．
- 音楽を聴いていない時は表示しないように変更(Sleeping Catの削除) 設定画面を追加 起動時に実行の設定を追加 画像にDancing Catを追加 バグを修正 おわり  "/>
+ 音楽を聴いていない時は表示しないように変更(Sleeping Catの削除) 設定画面を追加 起動時に実行の設定を追加 画像にDancing Catを追加 バグを修正   v1.1からv1.2への移行 ダウンロードして解凍したNowPlayingCat1.2内，discordRPCTool.exeを，古いバージョンのexeファイルがあった場所に上書きコピーしてください．
+v1.2 download おわり"/>
 
     <meta property="og:title" content="NowPlayingCat取扱説明書" />
-<meta property="og:description" content="NowPlayingCat Github
+<meta property="og:description" content="(2020 9/9 追記: v1.2でバグ修正をしました．記事一番下にアップデート方法を記載．)
+NowPlayingCat Github
 概要  DiscordのNowPlaying欄にLast.fmのNowPlayingを表示するツール v1.1アップデートで使いやすくなったので取説を書きました  Last.fmってなに？という方はこちら
 使い方 前提として，Last.fmに登録しているものとします．
   https://www.last.fm/api/account/createでAPIキーを取得します． CallBackURLは空白でいいです．他は適当に入力してください．   アプリケーションをここからダウンロードして，解凍します．   初回起動時はエラーで設定画面が開くはずなので，先ほどメモったAPIKeyを入力します． Last.fm User NameにはLast.fmのユーザーネームを入力します． お好みで他の設定を変更してください．   保存を押したらdiscordにNowPlayingCatが表示されているはずです．
   その他 起動中はタスクバーに駐在するので，アイコンを右クリックすることで，アプリケーションを終了したり，設定画面を開いたりできます． v1.0からの移行 以前の設定ファイルがsettings.iniにあるはずなので，そこに書いてあるAPIKeyをv1.1の設定画面でコピペしてください． 以下はv1.0からの変更点です．
- 音楽を聴いていない時は表示しないように変更(Sleeping Catの削除) 設定画面を追加 起動時に実行の設定を追加 画像にDancing Catを追加 バグを修正 おわり  " />
+ 音楽を聴いていない時は表示しないように変更(Sleeping Catの削除) 設定画面を追加 起動時に実行の設定を追加 画像にDancing Catを追加 バグを修正   v1.1からv1.2への移行 ダウンロードして解凍したNowPlayingCat1.2内，discordRPCTool.exeを，古いバージョンのexeファイルがあった場所に上書きコピーしてください．
+v1.2 download おわり" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://pishiko.github.io/posts/nowplayingcat/" />
 <meta property="article:published_time" content="2020-07-14T10:32:41+09:00" />
@@ -100,7 +104,8 @@
         <a class="tag" href="https://pishiko.github.io/tags/dev/">dev</a></div></div>
   </header>
   <div class="post-content">
-    <h1 id="nowplayingcat">NowPlayingCat</h1>
+    <p><strong>(2020 9/9 追記: v1.2でバグ修正をしました．記事一番下にアップデート方法を記載．)</strong></p>
+<h1 id="nowplayingcat">NowPlayingCat</h1>
 <p><img src="/img/fmstatus.png" alt="status image"></p>
 <p><a href="https://github.com/pishiko/discord-nowplaying">Github</a></p>
 <br>
@@ -126,7 +131,7 @@ CallBackURLは空白でいいです．他は適当に入力してください．
 <br></p>
 </li>
 <li>
-<p>アプリケーションを<a href="https://github.com/pishiko/discord-nowplaying/releases/download/v1.1/DiscordNowPlaying1.1.zip">ここ</a>からダウンロードして，解凍します．
+<p>アプリケーションを<a href="https://github.com/pishiko/nowplayingcat/releases/download/v1.2/NowPlayingCat1.2.zip">ここ</a>からダウンロードして，解凍します．
 <br>
 <br>
 <br></p>
@@ -165,9 +170,15 @@ Last.fm User NameにはLast.fmのユーザーネームを入力します．
 <li>バグを修正
 <br>
 <br>
-<br>
-おわり</li>
+<br></li>
 </ul>
+<h1 id="v11からv12への移行">v1.1からv1.2への移行</h1>
+<p>ダウンロードして解凍したNowPlayingCat1.2内，discordRPCTool.exeを，古いバージョンのexeファイルがあった場所に上書きコピーしてください．</p>
+<p><a href="https://github.com/pishiko/nowplayingcat/releases/download/v1.2/NowPlayingCat1.2.zip">v1.2 download</a>
+<br>
+<br>
+<br>
+おわり</p>
 
   </div>
   <div class="post-footer">
