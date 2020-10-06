@@ -9,11 +9,11 @@
     <lastBuildDate>Tue, 06 Oct 2020 16:50:38 +0900</lastBuildDate><atom:link href="https://pishiko.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugoのthemeを上書きできない</title>
-      <link>https://pishiko.github.io/css-custom/</link>
+      <link>https://pishiko.github.io/posts/css-custom/</link>
       <pubDate>Tue, 06 Oct 2020 16:50:38 +0900</pubDate>
       
-      <guid>https://pishiko.github.io/css-custom/</guid>
-      <description>hugo server確認しながらテーマの上書きを試みてるんだけど，全然上書きされない．
+      <guid>https://pishiko.github.io/posts/css-custom/</guid>
+      <description>hugo serverで確認しながらテーマの上書きを試みてるんだけど，全然上書きされない．
 あれーと思って キャッシュを強制再読み込みする --ignoreCache を付けてサーバーを起動してみたら次のエラーが出た．
 &amp;gt;hugo server --ignoreCache Building sites … ERROR 2020/10/06 14:44:37 Transformation failed: TOCSS: failed to transform &amp;quot;css/main.scss&amp;quot; (text/x-scss): this feature is not available in your current Hugo version, see https://goo.gl/YMrWcn for more information Built in 501 ms Error: Error building site: logged 1 error(s) で，公式のヘルプを読む．
 Frequently Asked Questions | Hugo
