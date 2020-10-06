@@ -123,9 +123,9 @@ https://goo.gl/YMrWcn for more information
 Built in 501 ms
 Error: Error building site: logged 1 error(s)
 </code></pre><p>で，公式のヘルプを読む．</p>
-<p><a href="https://gohugo.io/troubleshooting/faq/#i-get-tocss--this-feature-is-not-available-in-your-current-hugo-version">Frequently Asked Questions | Hugo</a></p>
+<p><a href="https://gohugo.io/troubleshooting/faq/#i-get-tocss--this-feature-is-not-available-in-your-current-hugo-version"  target="_blank" rel="nofollow noopener" >Frequently Asked Questions | Hugo</a></p>
 <p>要約すると，Hugoは2バージョンあって，通常版とextended版がある．Sass(cssの拡張言語)に対応してるのはextended版だけだからそっちにしてね．です．ちなみに，extended版は少し重いらしい．あんまり気にならなかったけど．</p>
-<p>ということで<a href="https://github.com/gohugoio/hugo/releases">Releases · gohugoio/hugo</a>からダウンロードして，Pathを通してあった場所を探して，Hugo.exeだけ入れ替える．</p>
+<p>ということで<a href="https://github.com/gohugoio/hugo/releases"  target="_blank" rel="nofollow noopener" >Releases · gohugoio/hugo</a>からダウンロードして，Pathを通してあった場所を探して，Hugo.exeだけ入れ替える．</p>
 <p><strong>はい！うまくいきました！</strong></p>
 <p>にしても，オプション付けないとエラーが出てもキャッシュから生成しちゃうのどうなの？</p>
 <h2 id="cssのカスタマイズ">CSSのカスタマイズ</h2>
@@ -138,7 +138,7 @@ Error: Error building site: logged 1 error(s)
 }
 </code></pre></div><h2 id="フォントもカスタマイズ">フォントもカスタマイズ</h2>
 <p>Hugoのthemeって日本のことはほとんど考えられていないので，フォントが微妙．なので，Noto Sans JPを導入する．</p>
-<p><a href="https://fonts.google.com/specimen/Noto+Sans+JP">Noto Sans JP - Google Fonts</a>で，追加したいフォントを選んで，selected familyからEmbed，@import内の一文をコピーして，カスタムcss部分にコピペする．それから，bodyのfont-familyを上書きする．</p>
+<p><a href="https://fonts.google.com/specimen/Noto&#43;Sans&#43;JP"  target="_blank" rel="nofollow noopener" >Noto Sans JP - Google Fonts</a>で，追加したいフォントを選んで，selected familyからEmbed，@import内の一文をコピーして，カスタムcss部分にコピペする．それから，bodyのfont-familyを上書きする．</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">@<span style="color:#66d9ef">import</span>  <span style="color:#f92672">url</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#39;https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&amp;display=swap&#39;</span><span style="color:#f92672">)</span>;
 
 <span style="color:#f92672">body</span> {

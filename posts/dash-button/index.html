@@ -139,7 +139,7 @@ Wi-Fiの設定 再設定を試みます．Amazonのアプリには存在しな�
 <li>自爆ファームウェアの配信によって文鎮化されてた</li>
 </ul>
 <h2 id="昔々">昔々&hellip;</h2>
-<p>実家暮らしなので母親にご飯を作っていただいているので，ご飯ができると「ご飯できたよ～」と呼ばれます．それがお互いにストレスだったので，キッチンには，押すと<a href="https://www.pushbullet.com/">Push Bullet</a>というサービスからスマホやPCに通知が行くボタンが置いてありました．</p>
+<p>実家暮らしなので母親にご飯を作っていただいているので，ご飯ができると「ご飯できたよ～」と呼ばれます．それがお互いにストレスだったので，キッチンには，押すと<a href="https://www.pushbullet.com/"  target="_blank" rel="nofollow noopener" >Push Bullet</a>というサービスからスマホやPCに通知が行くボタンが置いてありました．</p>
 <p>仕組みとしては，</p>
 <ol>
 <li>商品発注をオフにしたAmazon Dash Buttonが押される</li>
@@ -152,22 +152,22 @@ Wi-Fiの設定 再設定を試みます．Amazonのアプリには存在しな�
 <blockquote>
 <p>Dash Button端末を使用した商品の注文は、2019年8月31日で終了しています。</p>
 <p>端末は2019年12月31日に自動的に登録解除およびリセットされるため、お客様による操作は必要ありません。なお、Dash
-Button端末を廃棄する前に手動での登録解除をご希望の場合は、<a href="https://www.amazon.co.jp/mycd">コンテンツと端末の管理</a>にアクセスして、<strong>端末</strong>タブから登録を解除できます。お使いのDash
+Button端末を廃棄する前に手動での登録解除をご希望の場合は、<a href="https://www.amazon.co.jp/mycd"  target="_blank" rel="nofollow noopener" >コンテンツと端末の管理</a>にアクセスして、<strong>端末</strong>タブから登録を解除できます。お使いのDash
 Buttonを選択し、<strong>登録の解除</strong>をクリックしてください。最後に、Dash
 Button端末を1回押します。ライトが白く点滅した後、赤く点灯します。</p>
 </blockquote>
-<p><a href="https://www.amazon.co.jp/gp/help/customer/display.html?nodeId=201706050">https://www.amazon.co.jp/gp/help/customer/display.html?nodeId=201706050</a></p>
+<p><a href="https://www.amazon.co.jp/gp/help/customer/display.html?nodeId=201706050"  target="_blank" rel="nofollow noopener" >https://www.amazon.co.jp/gp/help/customer/display.html?nodeId=201706050</a></p>
 <p>とのこと．</p>
 <p><strong>サービス終了&hellip;</strong></p>
 <h2 id="自爆とは">自爆とは</h2>
 <p>どうやら2020年になってからボタンを押してアマゾンのサーバにリクエストを送ると，<strong>文鎮化するファームウェアアップデート</strong>が実行される模様．
 スパイ映画でよく見た「なお，このメッセージは自動的に消滅する．」ってやつだ&hellip;</p>
 <h2 id="ネットワークから遮断">ネットワークから遮断</h2>
-<p>とりあえずDash Button Hackライブラリの <a href="https://github.com/Nekmo">Nekmo</a>/<strong><a href="https://github.com/Nekmo/amazon-dash">amazon-dash</a></strong> によると，<code>dash-button-na-aws-opf.amazon.com</code>, <code>0.amazon.pool.ntp.org</code>, <code>1.amazon.pool.ntp.org</code>, <code>2.amazon.pool.ntp.org</code>, <code>3.amazon.pool.ntp .org</code>からのパケットをブロックすればよいとのこと．</p>
+<p>とりあえずDash Button Hackライブラリの <a href="https://github.com/Nekmo"  target="_blank" rel="nofollow noopener" >Nekmo</a>/<strong><a href="https://github.com/Nekmo/amazon-dash"  target="_blank" rel="nofollow noopener" >amazon-dash</a></strong> によると，<code>dash-button-na-aws-opf.amazon.com</code>, <code>0.amazon.pool.ntp.org</code>, <code>1.amazon.pool.ntp.org</code>, <code>2.amazon.pool.ntp.org</code>, <code>3.amazon.pool.ntp .org</code>からのパケットをブロックすればよいとのこと．</p>
 <p>ちなみにntp.orgってなんだろうと思ったらNetwork Time Protocolプロトコルというものっぽい．ネットワーク機器の時間同期に用いるとか．</p>
 <p><strong>→まだだめ</strong></p>
 <h2 id="wi-fiの設定">Wi-Fiの設定</h2>
-<p>再設定を試みます．Amazonのアプリには存在しないため，非公式のスクリプトを用いて設定します． <a href="https://gist.github.com/fffonion">fffonion</a>/<strong><a href="https://gist.github.com/fffonion/d4960503ff6782640286163d47a30080">setup-dashbutton.py</a></strong></p>
+<p>再設定を試みます．Amazonのアプリには存在しないため，非公式のスクリプトを用いて設定します． <a href="https://gist.github.com/fffonion"  target="_blank" rel="nofollow noopener" >fffonion</a>/<strong><a href="https://gist.github.com/fffonion/d4960503ff6782640286163d47a30080"  target="_blank" rel="nofollow noopener" >setup-dashbutton.py</a></strong></p>
 <p>スクリプトの中身自体は，</p>
 <ul>
 <li>Dashボタン長押しで設定モードにする</li>
@@ -177,7 +177,7 @@ Button端末を1回押します。ライトが白く点滅した後、赤く点�
 <p>て感じでシンプルです．</p>
 <p><strong>→でもだめ</strong></p>
 <h2 id="最後の手段">最後の手段</h2>
-<p><a href="https://blog.christophermullins.com/2019/12/20/rescue-your-amazon-dash-buttons/">https://blog.christophermullins.com/2019/12/20/rescue-your-amazon-dash-buttons/</a>によると，</p>
+<p><a href="https://blog.christophermullins.com/2019/12/20/rescue-your-amazon-dash-buttons/"  target="_blank" rel="nofollow noopener" >https://blog.christophermullins.com/2019/12/20/rescue-your-amazon-dash-buttons/</a>によると，</p>
 <ul>
 <li>ファームウェアアップデートを一度でもしてしまったら終わり</li>
 <li>一度Wi-Fiの設定をしたことがあるボタンのみWi-Fiの再設定が可能</li>
@@ -185,7 +185,7 @@ Button端末を1回押します。ライトが白く点滅した後、赤く点�
 </ul>
 <p>特定の音声っていうのは，ボタンにはマイクがついていて，それによって設定が可能らしい．で，それでバッファの長さチェックがされていないので，オーバーフローさせていい感じにできるらしいです．
 ふわふわしてますね．
-その音声ファイルは<a href="https://github.com/sidoh/dashbutton/raw/master/audio_exploit/write_customer_secret.s.wav">ここ .wav file</a>にあるそうです．</p>
+その音声ファイルは<a href="https://github.com/sidoh/dashbutton/raw/master/audio_exploit/write_customer_secret.s.wav"  target="_blank" rel="nofollow noopener" >ここ .wav file</a>にあるそうです．</p>
 <p>てな感じで，
 <strong>詰みました．完全に．</strong></p>
 <h2 id="おわりに">おわりに</h2>

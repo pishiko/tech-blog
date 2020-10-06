@@ -134,13 +134,13 @@ cd public git init git remote add origin git@github." />
 <p>github pagesはリポジトリに置いておいた静的ファイルをホストしてくれるサービスです．</p>
 <h2 id="hugoのインストール">Hugoのインストール</h2>
 <p>Windows10の場合です．
-<a href="https://github.com/gohugoio/hugo/releases">https://github.com/gohugoio/hugo/releases</a>から最新リリースをダウンロードしてパスを通します．<code>Hugo\bin</code>なんかに<code>Hugo.exe</code>を移してPATHを通します．</p>
+<a href="https://github.com/gohugoio/hugo/releases"  target="_blank" rel="nofollow noopener" >https://github.com/gohugoio/hugo/releases</a>から最新リリースをダウンロードしてパスを通します．<code>Hugo\bin</code>なんかに<code>Hugo.exe</code>を移してPATHを通します．</p>
 <p>そういえばこのときPATHの上限2000文字くらいを超えててGUIだとうまくいかないというのに出会った．とりあえずユーザ環境変数にしておいた．</p>
 <h2 id="hugoのテーマ適用">Hugoのテーマ適用</h2>
 <pre><code>hugo new site myblog
 </code></pre>
 <p>これでわーっと一式生成してくれます．</p>
-<p>その後，<a href="https://themes.gohugo.io/">https://themes.gohugo.io/</a>で適当なテーマをダウンロードし，<code>\themes\</code>直下に適当な名前（テーマ名とか）にリネームしてディレクトリごとコピーします．</p>
+<p>その後，<a href="https://themes.gohugo.io/"  target="_blank" rel="nofollow noopener" >https://themes.gohugo.io/</a>で適当なテーマをダウンロードし，<code>\themes\</code>直下に適当な名前（テーマ名とか）にリネームしてディレクトリごとコピーします．</p>
 <p><code>\config.toml</code>に設定を色々書いていきます．と言っても基本はコピペです．絶対に変えるのは</p>
 <pre><code>baseURL = &quot;例 https://pishiko.github.io&quot;
 theme = &quot;さっきリネームしたテンプレート名&quot;
@@ -185,7 +185,7 @@ git push origin master
 <li>githubのリポジトリ名を間違えてて後からpishiko.github.ioに変更してもうまく機能してくれなかった．</li>
 <li>画像とかはstaticディレクトリにぶちこむ</li>
 <li>テンプレートはそのまま弄っちゃだめ</li>
-<li><a href="https://realfavicongenerator.net/">https://realfavicongenerator.net/</a>でファビコンレスポンシブ対応</li>
+<li><a href="https://realfavicongenerator.net/"  target="_blank" rel="nofollow noopener" >https://realfavicongenerator.net/</a>でファビコンレスポンシブ対応</li>
 </ul>
 <p>これくらいですかね．テンプレートのカスタマイズは少し癖があるのですが，長くなったのでまた書きたいと思います．それ以外はシンプルで楽しいです．</p>
 
