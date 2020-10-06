@@ -10,11 +10,11 @@
     <meta name="theme-color" content="#ffffff">
     <title>Discordのnowplayingに音楽を表示させる // ぴしめも</title>
     <meta charset="utf-8" />
-    <meta name="generator" content="Hugo 0.63.2" />
+    <meta name="generator" content="Hugo 0.75.1" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="Pishiko" />
     <meta name="description" content="" />
-    <link rel="stylesheet" href="https://pishiko.github.io/css/main.min.f90f5edd436ec7b74ad05479a05705770306911f721193e7845948fb07fe1335.css" />
+    <link rel="stylesheet" href="https://pishiko.github.io/css/main.min.a81c0e546b7e6ddab60a43094a8f397afa5fd3824818f19aaeaac3c24142face.css" />
     <link rel="stylesheet" href="/css/custom.css" />
 
     
@@ -36,7 +36,7 @@ discord RPC ドキュメントが充実しているので特に書くことも�
 nugetで導入してREADMEのチュートリアル通りに書けばいいです．
  ただ最初はDiscord Game SDKでやろうとしていて，文字化け問題に直面したのでかなり苦労しました．Issue→https://github.com/discord/discord-rpc/issues/119
 ちなみに，昔はGameSDKでなくてもRichPeresenceを弄れたのですがAPIが廃止されたので面倒になりました． 昔は同じことをするjs製ツールがあったっぽいのですが，API廃止で使えなくなっちゃったみたいです．
-WebAPIを呼ぶ HttpClientを使います．クエリパラメタもURLエンコードできます． その他まとめ→https://qiita.com/rawr/items/f78a3830d894042f891b"/>
+WebAPIを呼ぶ HttpClientを使います．クエリパラメタもURLエンコードできます． その他まとめ→C# 今更ですが、HttpClientを使う - Qiita"/>
 
     <meta property="og:title" content="Discordのnowplayingに音楽を表示させる" />
 <meta property="og:description" content="ようなデスクトップ常駐型アプリケーションを作りました．
@@ -55,7 +55,7 @@ discord RPC ドキュメントが充実しているので特に書くことも�
 nugetで導入してREADMEのチュートリアル通りに書けばいいです．
  ただ最初はDiscord Game SDKでやろうとしていて，文字化け問題に直面したのでかなり苦労しました．Issue→https://github.com/discord/discord-rpc/issues/119
 ちなみに，昔はGameSDKでなくてもRichPeresenceを弄れたのですがAPIが廃止されたので面倒になりました． 昔は同じことをするjs製ツールがあったっぽいのですが，API廃止で使えなくなっちゃったみたいです．
-WebAPIを呼ぶ HttpClientを使います．クエリパラメタもURLエンコードできます． その他まとめ→https://qiita.com/rawr/items/f78a3830d894042f891b" />
+WebAPIを呼ぶ HttpClientを使います．クエリパラメタもURLエンコードできます． その他まとめ→C# 今更ですが、HttpClientを使う - Qiita" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://pishiko.github.io/posts/fmlast-discord/" />
 <meta property="article:published_time" content="2020-05-09T16:06:41+09:00" />
@@ -85,14 +85,15 @@ WebAPIを呼ぶ HttpClientを使います．クエリパラメタもURLエンコ
         <p></p>
         <h3>Tags</h3>
           
-          <a href="https://pishiko.github.io/tags/dev/" target="_brank">dev</a>
+          <a href="https://pishiko.github.io/tags/dev/" target="_blank">dev</a>
           
-          <a href="https://pishiko.github.io/tags/memo/" target="_brank">memo</a>
+          <a href="https://pishiko.github.io/tags/memo/" target="_blank">memo</a>
           
       </div>
       <div>
-        <h3>Content</h3>
-        <a href="https://pishiko.github.io/youtube-share-hub/" target="_brank">Youtube Share Hub</a>
+        <h3>Links</h3>
+        <p><a href="https://pishiko.github.io/youtube-share-hub/" target="_blank">Youtube Share Hub</a></p>
+        <p><a href="/posts/nowplayingcat/" target="_blank">Now Playing Cat</a></p>
       </div>
     </header>
     <main class="app-container">
@@ -126,39 +127,30 @@ WebAPIを呼ぶ HttpClientを使います．クエリパラメタもURLエンコ
 <p><img src="/img/fmstatus.png" alt="status image"></p>
 <p><a href="https://github.com/pishiko/discord-nowplaying">Github</a></p>
 <p><a href="https://pishiko.github.io/posts/fmlast-discord/">使い方</a></p>
-<br>
-<br>
-<br>
-<h1 id="経緯">経緯</h1>
-<h2 id="lastfmを見つけた">Last.fmを見つけた</h2>
+<h2 id="経緯">経緯</h2>
+<h3 id="lastfmを見つけた">Last.fmを見つけた</h3>
 <p>ライフログを取るのにハマっていて，GPSとかの記録を取ったりしているのですが，ふと音楽のログも取りたいと思いました．</p>
 <p>そのようなサービスがないか調べたところ，Last.fmというものがありました．
 Spotifyなどと連携して聞いた音楽のログを取り，似た傾向のおすすめの曲を紹介してくれるそうです．
 気に入ったのが，ログを取るためのAPIが用意してあり，PC，スマートフォンのあらゆるプレイヤーで記録できるところで，もし対応していなければ開発すればいいのです．</p>
-<h2 id="共有したい">共有したい</h2>
+<h3 id="共有したい">共有したい</h3>
 <p>Last.fmのAPIリファレンスを見ていたところ今聞いている曲を取得できるのを見つけたので，これでdiscordの「プレイ中」欄に表示しようと考えたのでした．さりげなさがいい感じなので．</p>
-<br>
-<br>
-<br>
-<h1 id="使ったもの">使ったもの</h1>
+<h2 id="使ったもの">使ったもの</h2>
 <ul>
 <li>C# Windows フォームアプリ</li>
 <li>Last.fm API</li>
 <li>Discord RPC (Discord Game SDKのC#ラッパー)</li>
 </ul>
-<br>
-<br>
-<br>
-<h1 id="ポイントなど">ポイントなど</h1>
-<h2 id="cフォームアプリの基本">C#フォームアプリの基本</h2>
+<h2 id="ポイントなど">ポイントなど</h2>
+<h3 id="cフォームアプリの基本">C#フォームアプリの基本</h3>
 <p>あんまり書く機会がなくて，いつも忘れるので．</p>
 <p>Formクラスを継承したクラスのインスタンスに初期化処理を書けば動く.</p>
 <p>定期実行はTimerクラスがあるので，以下でFunctionNameに定期実行したい処理を書けばよい．</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Csharp" data-lang="Csharp"><span style="color:#66d9ef">var</span> timer = <span style="color:#66d9ef">new</span> Timer();
-timer.Interval = <span style="color:#ae81ff">5</span><span style="color:#ae81ff">0</span><span style="color:#ae81ff">0</span><span style="color:#ae81ff">0</span>; <span style="color:#75715e">//5s
+timer.Interval = <span style="color:#ae81ff">5000</span>; <span style="color:#75715e">//5s
 </span><span style="color:#75715e"></span>timer.Elapsed += FunctionName;
 timer.Enable = <span style="color:#66d9ef">true</span> <span style="color:#75715e">//動き出す
-</span></code></pre></div><h2 id="タスクトレイ常駐">タスクトレイ常駐</h2>
+</span></code></pre></div><h3 id="タスクトレイ常駐">タスクトレイ常駐</h3>
 <p>参考にしました．
 <a href="http://pineplanter.moo.jp/non-it-salaryman/2017/06/01/c-sharp-tasktray/">http://pineplanter.moo.jp/non-it-salaryman/2017/06/01/c-sharp-tasktray/</a></p>
 <p>全部ここに書いてるのですが，やることは</p>
@@ -169,7 +161,7 @@ timer.Enable = <span style="color:#66d9ef">true</span> <span style="color:#75715
 <li>フォームを表示させない</li>
 </ul>
 <p>です．</p>
-<h2 id="discord-rpc">discord RPC</h2>
+<h3 id="discord-rpc">discord RPC</h3>
 <p>ドキュメントが充実しているので特に書くこともないです．
 <a href="https://github.com/Lachee/discord-rpc-csharp">https://github.com/Lachee/discord-rpc-csharp</a></p>
 <p>nugetで導入してREADMEのチュートリアル通りに書けばいいです．</p>
@@ -177,23 +169,27 @@ timer.Enable = <span style="color:#66d9ef">true</span> <span style="color:#75715
 <p>ただ最初はDiscord Game SDKでやろうとしていて，文字化け問題に直面したのでかなり苦労しました．Issue→<a href="https://github.com/discord/discord-rpc/issues/119">https://github.com/discord/discord-rpc/issues/119</a></p>
 <p>ちなみに，昔はGameSDKでなくてもRichPeresenceを弄れたのですがAPIが廃止されたので面倒になりました．
 昔は同じことをするjs製ツールがあったっぽいのですが，API廃止で使えなくなっちゃったみたいです．</p>
-<h2 id="webapiを呼ぶ">WebAPIを呼ぶ</h2>
+<h3 id="webapiを呼ぶ">WebAPIを呼ぶ</h3>
 <p>HttpClientを使います．クエリパラメタもURLエンコードできます．
-その他まとめ→<a href="https://qiita.com/rawr/items/f78a3830d894042f891b">https://qiita.com/rawr/items/f78a3830d894042f891b</a></p>
-<h2 id="動的なjsonを処理する">動的なJsonを処理する</h2>
+その他まとめ→<a href="https://qiita.com/rawr/items/f78a3830d894042f891b">C# 今更ですが、HttpClientを使う - Qiita</a></p>
+<h3 id="動的なjsonを処理する">動的なJsonを処理する</h3>
 <p>動的な，というのは，Last.fmのAPIをJSONで受け取ると，Nowplayingかどうかで微妙に形が変わるため構造体を作ってそこにぶち込む，という手法が使えない，ということです．</p>
 <p>Json.NETでは動的にメンバが生成されるJsonオブジェクトが扱えるので，Json.NETをnugetで導入します．</p>
 <p>面白かったのが，C#にはdynamic型という，PythonやJSのように実行時に型が決まる静的な型（型自体は静的，ややこしい）が存在することです．ゆるゆるなので当然実行時エラーガンガンなんですけどね．</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp"><span style="color:#66d9ef">dynamic</span> jsonResponse = JsonConvert.Deserialize(jsonString);
 <span style="color:#66d9ef">var</span> m = jsonResponse.member;<span style="color:#75715e">//
-</span></code></pre></div><p>jsonで要素が存在すれかは，メンバが存在するかなので，以下で判断できます．</p>
+</span></code></pre></div><p>jsonで要素が存在するかは，メンバが存在するかなので，以下で判断できます．</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">jsonResponse.GetType().GetProperty(<span style="color:#e6db74">&#34;member&#34;</span>) != <span style="color:#66d9ef">null</span>
-</code></pre></div><p>参考→<a href="https://www.it-swarm.dev/ja/c%23/jsonnet%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6json%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%82%92%E5%8B%95%E7%9A%84%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%81%AB%E9%80%86%E3%82%B7%E3%83%AA%E3%82%A2%E3%83%AB%E5%8C%96%E3%81%99%E3%82%8B/970170060/">https://www.it-swarm.dev/ja/c%23/jsonnet%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6json%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%82%92%E5%8B%95%E7%9A%84%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%81%AB%E9%80%86%E3%82%B7%E3%83%AA%E3%82%A2%E3%83%AB%E5%8C%96%E3%81%99%E3%82%8B/970170060/</a></p>
-<p>参考→<a href="https://www.it-swarm.dev/ja/c%23/c%EF%BC%83%E3%81%AE%E5%8B%95%E7%9A%84%E5%8C%BF%E5%90%8D%E5%9E%8B%E3%81%AB%E3%83%97%E3%83%AD%E3%83%91%E3%83%86%E3%82%A3%E3%81%8C%E5%AD%98%E5%9C%A8%E3%81%99%E3%82%8B%E3%81%8B%E3%81%A9%E3%81%86%E3%81%8B%E3%82%92%E7%A2%BA%E8%AA%8D%E3%81%99%E3%82%8B%E3%81%AB%E3%81%AF%E3%81%A9%E3%81%86%E3%81%99%E3%82%8C%E3%81%B0%E3%82%88%E3%81%84%E3%81%A7%E3%81%99%E3%81%8B%EF%BC%9F/943611844/">https://www.it-swarm.dev/ja/c%23/c%EF%BC%83%E3%81%AE%E5%8B%95%E7%9A%84%E5%8C%BF%E5%90%8D%E5%9E%8B%E3%81%AB%E3%83%97%E3%83%AD%E3%83%91%E3%83%86%E3%82%A3%E3%81%8C%E5%AD%98%E5%9C%A8%E3%81%99%E3%82%8B%E3%81%8B%E3%81%A9%E3%81%86%E3%81%8B%E3%82%92%E7%A2%BA%E8%AA%8D%E3%81%99%E3%82%8B%E3%81%AB%E3%81%AF%E3%81%A9%E3%81%86%E3%81%99%E3%82%8C%E3%81%B0%E3%82%88%E3%81%84%E3%81%A7%E3%81%99%E3%81%8B%EF%BC%9F/943611844/</a></p>
-<br>
-<br>
-<br>
-<h1 id="おわり">おわり</h1>
+</code></pre></div><h3 id="参考">参考</h3>
+<ul>
+<li>
+<p><a href="https://stackoverflow.com/questions/4535840/deserialize-json-object-into-dynamic-object-using-json-net">c# - Deserialize json object into dynamic object using Json.net - Stack Overflow</a></p>
+</li>
+<li>
+<p><a href="https://stackoverflow.com/questions/9956648/how-do-i-check-if-a-property-exists-on-a-dynamic-anonymous-type-in-c">c# 4.0 - How do I check if a property exists on a dynamic anonymous type in c#? - Stack Overflow</a></p>
+</li>
+</ul>
+<h2 id="おわり">おわり</h2>
 <p>Last.fmのAPIは制限もゆるく太っ腹なのでいろいろ遊べそうです．
 楽曲情報も取得できるっぽいのでそれで何かします．</p>
 
