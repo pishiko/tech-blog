@@ -8,18 +8,18 @@
     <link rel="manifest" href="/site.webmanifest">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
-    <title>Hugoのthemeを上書きできない // ぴしめも</title>
+    <title>Hugoのthemeを上書きできない問題 // ぴしめも</title>
     <meta charset="utf-8" />
     <meta name="generator" content="Hugo 0.75.1" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="Pishiko" />
     <meta name="description" content="" />
-    <link rel="stylesheet" href="https://pishiko.github.io/css/main.min.6ed7d24988dcc2d5fa6bfc54eb68d4db44ecd756f5760ad6aa1cfd0176f5afdc.css" />
+    <link rel="stylesheet" href="https://pishiko.github.io/css/main.min.12cf9d149e0a3848fda4725d27e3c5b28bed173e58fa99dcf0be3b25516f2763.css" />
     <link rel="stylesheet" href="/css/custom.css" />
 
     
     <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Hugoのthemeを上書きできない"/>
+<meta name="twitter:title" content="Hugoのthemeを上書きできない問題"/>
 <meta name="twitter:description" content="hugo serverで確認しながらテーマの上書きを試みてるんだけど，全然上書きされない．
 あれーと思って キャッシュを強制再読み込みする --ignoreCache を付けてサーバーを起動してみたら次のエラーが出た．
 &gt;hugo server --ignoreCache Building sites … ERROR 2020/10/06 14:44:37 Transformation failed: TOCSS: failed to transform &quot;css/main.scss&quot; (text/x-scss): this feature is not available in your current Hugo version, see https://goo.gl/YMrWcn for more information Built in 501 ms Error: Error building site: logged 1 error(s) で，公式のヘルプを読む．
@@ -32,7 +32,7 @@ CSSのカスタマイズ 例えば/themes/assets/css/components/main.scssを上�
 例えばこんな感じで書けば，h2だけ上書きして下線を描画できる
 h2 { border-bottom: solid 1px $light-color; margin-top : 80px; margin-bottom : 30px; } フォントもカスタマイズ Hugoのthemeって日本のことはほとんど考えられていないので，フォントが微妙．なので，Noto Sans JPを導入する．"/>
 
-    <meta property="og:title" content="Hugoのthemeを上書きできない" />
+    <meta property="og:title" content="Hugoのthemeを上書きできない問題" />
 <meta property="og:description" content="hugo serverで確認しながらテーマの上書きを試みてるんだけど，全然上書きされない．
 あれーと思って キャッシュを強制再読み込みする --ignoreCache を付けてサーバーを起動してみたら次のエラーが出た．
 &gt;hugo server --ignoreCache Building sites … ERROR 2020/10/06 14:44:37 Transformation failed: TOCSS: failed to transform &quot;css/main.scss&quot; (text/x-scss): this feature is not available in your current Hugo version, see https://goo.gl/YMrWcn for more information Built in 501 ms Error: Error building site: logged 1 error(s) で，公式のヘルプを読む．
@@ -77,9 +77,9 @@ h2 { border-bottom: solid 1px $light-color; margin-top : 80px; margin-bottom : 3
           <p></p>
           <h3>Tags</h3>
           
-          <a href="https://pishiko.github.io/tags/dev/">dev</a>
+          <a class="tag" href="https://pishiko.github.io/tags/dev/">dev</a>
           
-          <a href="https://pishiko.github.io/tags/memo/">memo</a>
+          <a class="tag" href="https://pishiko.github.io/tags/memo/">memo</a>
           
         </div>
         <div class="links-header">
@@ -95,7 +95,7 @@ h2 { border-bottom: solid 1px $light-color; margin-top : 80px; margin-bottom : 3
       
 <article class="post">
   <header class="post-header">
-    <h1 class="post-title">Hugoのthemeを上書きできない</h1>
+    <h1 class="post-title">Hugoのthemeを上書きできない問題</h1>
     <div class="post-meta">
       <div>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
@@ -184,15 +184,23 @@ Error: Error building site: logged 1 error(s)
 </svg></a>
         
       </div>
-      <h3>Tags</h3>
-      
-      <a href="https://pishiko.github.io/tags/dev/">dev</a>
-      
-      <a href="https://pishiko.github.io/tags/memo/">memo</a>
-      
-      <h3>Links</h3>
-      <p><a href="https://pishiko.github.io/youtube-share-hub/" target="_blank">Youtube Share Hub</a></p>
-      <p><a href="/posts/nowplayingcat/" target="_blank">Now Playing Cat</a></p>
+
+      <div class="b1-footer">
+
+        <div class="tags-footer">
+          <h3>Tags</h3>
+          
+          <a class="tag" href="https://pishiko.github.io/tags/dev/">dev</a>
+          
+          <a class="tag" href="https://pishiko.github.io/tags/memo/">memo</a>
+          
+        </div>
+        <div class="links-footer">
+          <h3>Links</h3>
+          <p><a href="https://pishiko.github.io/youtube-share-hub/" target="_blank">Youtube Share Hub</a></p>
+          <p><a href="/posts/nowplayingcat/" target="_blank">Now Playing Cat</a></p>
+        </div>
+      </div>
     </footer>
   </body>
 </html>
