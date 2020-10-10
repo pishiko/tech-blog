@@ -6,7 +6,22 @@
     <description>Recent content in dev on ぴしめも</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
-    <lastBuildDate>Tue, 06 Oct 2020 16:50:38 +0900</lastBuildDate><atom:link href="https://pishiko.github.io/tags/dev/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 11 Oct 2020 02:26:36 +0900</lastBuildDate><atom:link href="https://pishiko.github.io/tags/dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Discord Bot 開発あれこれ</title>
+      <link>https://pishiko.github.io/posts/discordpy/</link>
+      <pubDate>Sun, 11 Oct 2020 02:26:36 +0900</pubDate>
+      
+      <guid>https://pishiko.github.io/posts/discordpy/</guid>
+      <description>身内コミュニティ向けdiscord botを複数人で開発しているので，有用そうなレシピを書いていきます．
+環境 pythonのdiscordAPI ラッパーである discordpy 製botをgithubで管理し，heroku上で動かしています．
+ discord.py へようこそ。 — discord.py 1.5.0 ドキュメント 【備忘録】GitHub経由でHerokuにデプロイするまでの流れ - Qiita  herokuの設定 基本  デプロイに必要なファイルの設定 | Pythonで実用Discord Bot(discordpy解説) - Qiita  時間を正しく扱うために  Herokuのタイムゾーンを日本に合わせる - Qiita  Herokuの仕様  24時間に1回再起動 ファイルは/tmp/以下でのみ書き込み可能． 再起動時にファイルなどはリポジトリの状態に初期化される  Cogで機能を分けて開発 Cogというのは，discordpyで提供されている，機能を分割するためのクラスです． メインのBotにCogを追加していく形になります．
+最低限の要素だけで構成されたテンプレートです．
+ pishiko/discordpy-cog-template: Cog template  構成 run-bot.py bot.add_cog(cog)でCogを追加します
+bot = Bot(command_prefix=[&amp;#34;!&amp;#34;]) bot.add_cog(YourCog(bot)) bot.run(TOKEN) your_cog.py Cogクラスを継承したYourCogクラスを定義します． コンストラクタ__init__に取り込まれる先のbotを与えて保持します． これによりYourCog内でもbotにアクセスできます．例えば，bot自身のUserは，self.bot.userでアクセスできるわけです．
+class YourCog(commands.Cog): def __init__(self,bot): self.bot = bot Helpのカスタマイズ デフォルトのヘルプは英語だし見にくいので，おしゃれにしてあげたいです． commands.</description>
+    </item>
+    
     <item>
       <title>Hugoのthemeを上書きできない問題</title>
       <link>https://pishiko.github.io/posts/css-custom/</link>
