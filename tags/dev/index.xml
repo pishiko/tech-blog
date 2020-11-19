@@ -42,14 +42,18 @@ h2 { border-bottom: solid 1px $light-color; margin-top : 80px; margin-bottom : 3
     </item>
     
     <item>
-      <title>Now Playing Cat取扱説明書</title>
+      <title>【Last.fm&#43;Discord】Now Playing Cat取扱説明書</title>
       <link>https://pishiko.github.io/posts/nowplayingcat/</link>
       <pubDate>Tue, 14 Jul 2020 10:32:41 +0900</pubDate>
       
       <guid>https://pishiko.github.io/posts/nowplayingcat/</guid>
       <description>(2020 9/9 追記: v1.2でバグ修正をしました．記事一番下にアップデート方法を記載．)
 NowPlayingCat Github
-概要  DiscordのNowPlaying欄にLast.fmのNowPlayingを表示するツール v1.1アップデートで使いやすくなったので取説を書きました  Last.fmってなに？という方はこちら
+DiscordのNowPlaying欄に，Last.fmを通して聴いている音楽を表示するツールです．
+Last.fmがほとんどの音楽サービスに対応しているため，どんなサービスで音楽を聴いていても表示できます．
+Windowsにしか対応していません．
+Last.fm とは Last.fmは，聴いている音楽を記録し，自分の音楽傾向を知ったり，新たなジャンルを発見する音楽SNSサービスです．
+詳しくはこちら
 導入方法 前提として，Last.fmに登録しているものとします．
   https://www.last.fm/api/account/createでAPIキーを取得します． CallBackURLは空白でいいです．他は適当に入力してください．
   アプリケーションをここからダウンロードして，解凍します．
