@@ -6,7 +6,29 @@
     <description>Recent content in Posts on ぴしめも</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
-    <lastBuildDate>Sun, 11 Oct 2020 02:26:36 +0900</lastBuildDate><atom:link href="https://pishiko.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 23 Nov 2020 00:24:55 +0900</lastBuildDate><atom:link href="https://pishiko.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go ファミコンエミュレータ開発記録 その1</title>
+      <link>https://pishiko.github.io/posts/nes1/</link>
+      <pubDate>Mon, 23 Nov 2020 00:24:55 +0900</pubDate>
+      
+      <guid>https://pishiko.github.io/posts/nes1/</guid>
+      <description>日記みたいなものです． Twitterモーメントはこちら
+動機 任天堂レトロハードが好きなんですが，せっかくなら遊ぶだけじゃなくて中身にも詳しくなりたいと思っていました． 一番好きなのはスーファミなんですが，仕様が公開されておらず難易度が高そうなので，とりあえずシンプルそうなファミコンの動作の理解をしようと． で，前にQiitaでファミコンエミュレータのHello world解説記事があったのを思い出したので，今ならできる！と思って始めました．
+偉大なる先駆者様 ファミコンエミュレータの創り方　- Hello, World!編 - - Qiita
+Pythonで実装したい！ 最初は他の人がまだやっていないものを作りたくて，Pythonで書いてmatplotのグラフ出力画面で動いたらオツだよな～と思って書いていたのですが，普通にCPUが60fpsでないので泣く泣く諦めました．
+これは果たされなかった夢の跡です． loading...
+&amp;mdash; pishiko (@pishitaro_) loading...
+実装の流れは，ROM reader-&amp;gt;CPU（Adressing -&amp;gt; OP -&amp;gt; WRAM read/write）-&amp;gt; PPU( VRAM read/write -&amp;gt;Line 生成-&amp;gt;描画 )でした．
+Go編 ということで，妥協してgolangを採用しました． pythonは8bitでuintとして数値を扱えないので書きにくかったのですが，Goは圧倒的に楽でした．
+Pythonのソースコードをほぼ移植する形で，HelloWorldを実行したところCPUは60fps十分に出ました．最高！
+loading...
+&amp;mdash; pishiko (@pishitaro_) loading... PPU 60fps計画 PPUを実装する前にどうやって出力するかを考えました．その中で，golang製2Dゲームエンジンの「Ebiten」がよさげだったので採用しました．
+Ebiten - A dead simple 2D game library for Go
+採用理由
+ 名前がかわいい ゲームライブラリなので低レイヤは触る必要が無さげ コライダーの機能などは実装されていないため，無駄がなく早そう 日本製  で，実装してみたところHello worldは出力できたんですが，8fpsくらいでした．</description>
+    </item>
+    
     <item>
       <title>Discord Bot 開発あれこれ</title>
       <link>https://pishiko.github.io/posts/discordpy/</link>
