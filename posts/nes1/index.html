@@ -160,7 +160,7 @@ pythonは8bitでuintとして数値を扱えないので書きにくかったの
 <li>日本製</li>
 </ul>
 <p>で，実装してみたところHello worldは出力できたんですが，8fpsくらいでした．</p>
-<p>何故かというと，タイル1枚のパレット情報（00~11）のスライス，を用意しておいて，以下の様に毎回NewImageしていたからです．</p>
+<p>何故かというと以下の様に，タイル1枚のパレット情報（00~11）のスライスを用意しておいて，それを毎回NewImageしていたからです．</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">background</span>.<span style="color:#a6e22e">DrawImage</span>(
 			<span style="color:#a6e22e">ebiten</span>.<span style="color:#a6e22e">NewImageFromImage</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">image</span>.<span style="color:#a6e22e">RGBA</span>{
 				<span style="color:#a6e22e">Pix</span>:    <span style="color:#a6e22e">tile</span>,
@@ -172,7 +172,7 @@ pythonは8bitでuintとして数値を扱えないので書きにくかったの
 </code></pre></div><p>どうも NewImageFromImage及びImageの初期化が遅いみたいでした．</p>
 <p>ということで，早くします．
 ebiten.Imageを色なしで，パレットのインデックス（00,01,10,11）ごとにマスクになるような形であらかじめ4枚作っておきます．
-描画時は，palletの色を取得して，DrawImageOptionsで指定します．1色ごとに4枚のImageを貼り付けます．</p>
+描画時はpalletの色を取得して，DrawImageOptionsで指定します．1色ごとに4枚のImageを貼り付けます．</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">for</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> &lt; <span style="color:#ae81ff">4</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span> {
 			<span style="color:#a6e22e">op</span> <span style="color:#f92672">:=</span> <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">ebiten</span>.<span style="color:#a6e22e">DrawImageOptions</span>{}
 			<span style="color:#a6e22e">op</span>.<span style="color:#a6e22e">GeoM</span>.<span style="color:#a6e22e">Translate</span>(float64(<span style="color:#a6e22e">tilex</span><span style="color:#f92672">*</span><span style="color:#ae81ff">8</span>), float64(<span style="color:#a6e22e">tiley</span><span style="color:#f92672">*</span><span style="color:#ae81ff">8</span>))
@@ -181,7 +181,7 @@ ebiten.Imageを色なしで，パレットのインデックス（00,01,10,11）
 			<span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">background</span>.<span style="color:#a6e22e">DrawImage</span>(<span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">tiles</span>[<span style="color:#a6e22e">nameTable</span>[<span style="color:#a6e22e">tilex</span>]<span style="color:#f92672">+</span><span style="color:#a6e22e">patternOffset</span>][<span style="color:#a6e22e">i</span>], <span style="color:#a6e22e">op</span>)
 		}
 </code></pre></div><p>これで，晴れて60fpsになりました．</p>
-<p>関係ないですが，Ebiten，公式ドキュメントが充実しすぎてて記事を書いてもらえず無名，感がありますね&hellip;</p>
+<p>関係ないですが，Ebitenは公式ドキュメントが充実しすぎてて，それで記事を書いてもらえずイマイチ盛り上がってないような&hellip;</p>
 <h2 id="hello-worldの後">Hello worldの後</h2>
 <p>ｷﾞｺ猫でもわかるさんの解説で機能の概要を理解して，細かい仕様はNesdev wikiで仕様を把握しました．</p>
 <p><a href="http://gikofami.fc2web.com/index.html"  target="_blank" rel="nofollow noopener" >ｷﾞｺ猫でもわかるファミコンプログラミング</a></p>
@@ -201,7 +201,7 @@ ebiten.Imageを色なしで，パレットのインデックス（00,01,10,11）
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
 <h3 id="cpuのバグ">CPUのバグ</h3>
 <p>CPUがうまく動いていないとPPUのデバッグもつらいので，先にバグ取りをすることにしました．</p>
-<p>やることは，<a href="http://nickmass.com/images/nestest.nes"  target="_blank" rel="nofollow noopener" >nestest</a>ROMを0xC000から動かして，<a href="https://www.qmtpro.com/~nes/misc/nestest.txt"  target="_blank" rel="nofollow noopener" >log</a>と照らし合わせるだけです．diff用のPCだけのログは<a href="https://gist.github.com/pishiko/508044bcdfe4911f34284970db7f9826"  target="_blank" rel="nofollow noopener" >ここ</a>に置いておきます．</p>
+<p>やることは，<a href="http://nickmass.com/images/nestest.nes"  target="_blank" rel="nofollow noopener" >nestest</a>ROMを0xC000から動かして，<a href="https://www.qmtpro.com/~nes/misc/nestest.log"  target="_blank" rel="nofollow noopener" >log</a>と照らし合わせるだけです．diff用のPCだけのログは<a href="https://gist.github.com/pishiko/508044bcdfe4911f34284970db7f9826"  target="_blank" rel="nofollow noopener" >ここ</a>に置いておきます．</p>
 <p>バグではなく仕様で引っかかったのは以下です．</p>
 <ul>
 <li>
