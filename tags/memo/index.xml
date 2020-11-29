@@ -26,6 +26,10 @@
       
       <guid>https://pishiko.github.io/posts/seisakubutu-matome/</guid>
       <description>制作物まとめ 個人的に作ったもの一覧です．詳細の記事も随時追加していきます．
+GoNES loading...
+&amp;mdash; pishiko (@pishitaro_) loading... 日記：Go ファミコンエミュレータ開発記録 その1 // ぴしめも
+Go言語製のファミコンエミュレータです．
+ベースはほぼ出来ていますが，更なるマッパーへの対応や音声の改善のため，まだ開発中です．
 NowPlayingCat Github https://github.com/pishiko/discord-nowplaying
 使い方 https://pishiko.github.io/posts/nowplayingcat/
 解説 https://pishiko.github.io/posts/fmlast-discord/
@@ -38,15 +42,11 @@ Github https://github.com/pishiko/anonymous-linechatbot
 カラオケ生成ツール Youtubeの動画をカラオケ動画に変換してくれるツールです．JOYSOUNDで動画を流して歌います． Python + ffmpeg製です
   Github https://github.com/pishiko/you-karaoke
 facerigもどき Unity＋Python＋Live2D
-  学科掲示板通知BOT 学科掲示板が使い勝手が悪かったのでスクレイピングして通知するLINEBot． GoogleAppsScript上で動いてます．
+  学科掲示板通知BOT 大学の掲示板の使い勝手が悪かったのでスクレイピングして通知するLINEBotです． GoogleAppsScript上で動いてます．
   Github https://github.com/pishiko/tuatsboard-linebot
 このブログ HugoとGithubPagesで作ってます．
   ページ https://pishiko.github.io/
-解説 https://pishiko.github.io/posts/hugo1/
-discordBOT discordのBotです．Python + discord.pyでHeroku上で動いています． サーバの管理からチーム振り分けや，VCで音楽を再生する機能も実装しました．
-  pdf Miner 英文のpdfから英単語の頻出リストを出力するPythonスクリプトです．
-Github https://github.com/pishiko/pdf-word-count
-テトリス C++ とDirectXで実装したテトリスです．</description>
+解説 https://pishiko.</description>
     </item>
     
   </channel>
