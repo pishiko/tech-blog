@@ -96,7 +96,7 @@ v1.2 download
       <pubDate>Sat, 09 May 2020 16:06:41 +0900</pubDate>
       
       <guid>https://pishiko.github.io/posts/fmlast-discord/</guid>
-      <description>ようなデスクトップ常駐型アプリケーションを作りました．
+      <description>デスクトップ常駐型アプリケーションを作りました．
 Github
 使い方
 経緯 Last.fmを見つけた ライフログを取るのにハマっていて，GPSとかの記録を取ったりしているのですが，ふと音楽のログも取りたいと思いました．
@@ -121,8 +121,7 @@ WebAPIを呼ぶ HttpClientを使います．クエリパラメタもURLエンコ
       <pubDate>Wed, 01 Apr 2020 21:46:39 +0900</pubDate>
       
       <guid>https://pishiko.github.io/posts/anonymas-chat/</guid>
-      <description>！ この記事は以前はてなブログに書いたものを再編集したものです
- 概要   LINEのBotを公開しました。
+      <description>概要   LINEのBotを公開しました。
 いままで身内向けのBOTを作ることはあったけど、初めてオープンなのを作りました。
 LINEのBOTを作るにはHTTPリクエストを受けるサーバーが必要なんですが、サーバーを立てるのはお金がかかります。そこで今回は無料でそれっぽいことができるGoogleAppsScriptを用いてやってみました。
 ソースコード https://github.com/pishiko/anonymous-linechatbot
@@ -224,33 +223,36 @@ cd public git init git remote add origin git@github.</description>
     </item>
     
     <item>
-      <title>作ったものまとめ</title>
-      <link>https://pishiko.github.io/posts/seisakubutu-matome/</link>
+      <title>製作物まとめ</title>
+      <link>https://pishiko.github.io/posts/summary/</link>
       <pubDate>Tue, 30 Mar 1999 19:23:16 +0900</pubDate>
       
-      <guid>https://pishiko.github.io/posts/seisakubutu-matome/</guid>
-      <description>制作物まとめ 個人的に作ったもの一覧です．詳細の記事も随時追加していきます．
-GoNES loading...
-&amp;mdash; pishiko (@pishitaro_) loading... 日記：Go ファミコンエミュレータ開発記録 その1 // ぴしめも
-Go言語製のファミコンエミュレータです．
-ベースはほぼ出来ていますが，更なるマッパーへの対応や音声の改善のため，まだ開発中です．
-NowPlayingCat Github https://github.com/pishiko/discord-nowplaying
-使い方 https://pishiko.github.io/posts/nowplayingcat/
-解説 https://pishiko.github.io/posts/fmlast-discord/
-YoutubeShareHub   Youtubeの共有を便利にするPWAアプリです． GithubPages上で動いています．
-サイト https://pishiko.github.io/youtube-share-hub/
-解説 https://pishiko.github.io/posts/youtube-share-hub/
-LINE匿名チャット LINEをあえて匿名掲示板みたいな使い方をしてみようというサービス． BOTと友達になるだけで繋がれます． GoogleAppsScript上で動いています．
-  解説 https://pishiko.github.io/posts/anonymas-chat/
-Github https://github.com/pishiko/anonymous-linechatbot
-カラオケ生成ツール Youtubeの動画をカラオケ動画に変換してくれるツールです．JOYSOUNDで動画を流して歌います． Python + ffmpeg製です
-  Github https://github.com/pishiko/you-karaoke
-facerigもどき Unity＋Python＋Live2D
-  学科掲示板通知BOT 大学の掲示板の使い勝手が悪かったのでスクレイピングして通知するLINEBotです． GoogleAppsScript上で動いてます．
-  Github https://github.com/pishiko/tuatsboard-linebot
-このブログ HugoとGithubPagesで作ってます．
-  ページ https://pishiko.github.io/
-解説 https://pishiko.</description>
+      <guid>https://pishiko.github.io/posts/summary/</guid>
+      <description>About 作った物を紹介します．
+GoNES   Go言語製のファミコンエミュレータです．
+ベースはほぼ完成していますが，特殊カセットへの対応や音声再生の改善のため，開発中です．
+記事：Go ファミコンエミュレータ開発記録 その1 // ぴしめも
+NowPlayingCat   C#.Net製のDiscord連携アプリケーションです．
+ほぼ全ての音楽配信サービスに対応しています．
+記事：Discordのnowplayingに音楽を表示させるのを作った // ぴしめも
+リンク：github，使い方
+YoutubeShareHub   モバイル向けの，共有をカスタマイズできるPWAアプリです．
+GithubPages上で動いています．
+記事： Youtubeの共有を便利にするWeb Appを作った // ぴしめも
+サイト(Android Only)：Youtube Share Hub
+LINE匿名チャット   GoogleAppsScript(Javascript)製のLINE Bot．
+LINEで匿名掲示板みたいな使い方をしてみようというサービスです．
+記事：匿名LINEチャットルームを作った // ぴしめも
+リンク：github
+カラオケ生成ツール   Python製，Youtubeの動画をカラオケ動画に変換するツールです．
+JOYSOUNDなら動画を流して歌えます．
+リンク：github
+バーチャルYoutuberになるツール   Unity＋Python＋Live2D製，フェイスキャプチャアプリです．
+学科掲示板通知BOT   GoogleAppsScript(javascript)製，大学の掲示板をスクレイピングして通知するLINEBotです．
+リンク：github
+discordBOT   Python製のDiscord Botです．Heroku上で動いています．
+サーバの管理から音楽を再生する機能まで，サークルメンバーで開発中．
+記事：Discord Bot 開発あれこれ // ぴしめも</description>
     </item>
     
   </channel>

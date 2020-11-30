@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AboutMe on ぴしめも</title>
+    <link>https://pishiko.github.io/tags/aboutme/</link>
+    <description>Recent content in AboutMe on ぴしめも</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>jp</language>
+    <lastBuildDate>Tue, 30 Mar 1999 19:23:16 +0900</lastBuildDate><atom:link href="https://pishiko.github.io/tags/aboutme/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>製作物まとめ</title>
+      <link>https://pishiko.github.io/posts/summary/</link>
+      <pubDate>Tue, 30 Mar 1999 19:23:16 +0900</pubDate>
+      
+      <guid>https://pishiko.github.io/posts/summary/</guid>
+      <description>About 作った物を紹介します．
+GoNES   Go言語製のファミコンエミュレータです．
+ベースはほぼ完成していますが，特殊カセットへの対応や音声再生の改善のため，開発中です．
+記事：Go ファミコンエミュレータ開発記録 その1 // ぴしめも
+NowPlayingCat   C#.Net製のDiscord連携アプリケーションです．
+ほぼ全ての音楽配信サービスに対応しています．
+記事：Discordのnowplayingに音楽を表示させるのを作った // ぴしめも
+リンク：github，使い方
+YoutubeShareHub   モバイル向けの，共有をカスタマイズできるPWAアプリです．
+GithubPages上で動いています．
+記事： Youtubeの共有を便利にするWeb Appを作った // ぴしめも
+サイト(Android Only)：Youtube Share Hub
+LINE匿名チャット   GoogleAppsScript(Javascript)製のLINE Bot．
+LINEで匿名掲示板みたいな使い方をしてみようというサービスです．
+記事：匿名LINEチャットルームを作った // ぴしめも
+リンク：github
+カラオケ生成ツール   Python製，Youtubeの動画をカラオケ動画に変換するツールです．
+JOYSOUNDなら動画を流して歌えます．
+リンク：github
+バーチャルYoutuberになるツール   Unity＋Python＋Live2D製，フェイスキャプチャアプリです．
+学科掲示板通知BOT   GoogleAppsScript(javascript)製，大学の掲示板をスクレイピングして通知するLINEBotです．
+リンク：github
+discordBOT   Python製のDiscord Botです．Heroku上で動いています．
+サーバの管理から音楽を再生する機能まで，サークルメンバーで開発中．
+記事：Discord Bot 開発あれこれ // ぴしめも</description>
+    </item>
+    
+  </channel>
+</rss>

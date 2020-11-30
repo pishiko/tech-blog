@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hugo on ぴしめも</title>
+    <link>https://pishiko.github.io/tags/hugo/</link>
+    <description>Recent content in hugo on ぴしめも</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>jp</language>
+    <lastBuildDate>Tue, 06 Oct 2020 16:50:38 +0900</lastBuildDate><atom:link href="https://pishiko.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugoのthemeを上書きできない問題</title>
+      <link>https://pishiko.github.io/posts/css-custom/</link>
+      <pubDate>Tue, 06 Oct 2020 16:50:38 +0900</pubDate>
+      
+      <guid>https://pishiko.github.io/posts/css-custom/</guid>
+      <description>hugo serverで確認しながらテーマの上書きを試みてるんだけど，全然上書きされない．
+あれーと思って キャッシュを強制再読み込みする --ignoreCache を付けてサーバーを起動してみたら次のエラーが出た．
+&amp;gt;hugo server --ignoreCache Building sites … ERROR 2020/10/06 14:44:37 Transformation failed: TOCSS: failed to transform &amp;quot;css/main.scss&amp;quot; (text/x-scss): this feature is not available in your current Hugo version, see https://goo.gl/YMrWcn for more information Built in 501 ms Error: Error building site: logged 1 error(s) で，公式のヘルプを読む．
+Frequently Asked Questions | Hugo
+要約すると，Hugoは2バージョンあって，通常版とextended版がある．Sass(cssの拡張言語)に対応してるのはextended版だけだからそっちにしてね．です．ちなみに，extended版は少し重いらしい．あんまり気にならなかったけど．
+ということでReleases · gohugoio/hugoからダウンロードして，Pathを通してあった場所を探して，Hugo.exeだけ入れ替える．
+はい！うまくいきました！
+にしても，オプション付けないとエラーが出てもキャッシュから生成しちゃうのどうなの？
+CSSのカスタマイズ 例えば/themes/assets/css/components/main.scssを上書きしたいとしたら，ファイルを/assets/css/main.scssにコピーして書き換えればよい．Hugoが自動で置き換えてくれるので，元のテーマを汚染する心配がなくなる．このサイトのthemeはm10cというのを使っていて，themes/assets/css/_extra.scssを上書きしろと書いてあるので，/assets/css/_extra.scssに上書きしたい要素を追加していく．
+例えばこんな感じで書けば，h2だけ上書きして下線を描画できる
+h2 { border-bottom: solid 1px $light-color; margin-top : 80px; margin-bottom : 30px; } フォントもカスタマイズ Hugoのthemeって日本のことはほとんど考えられていないので，フォントが微妙．なので，Noto Sans JPを導入する．</description>
+    </item>
+    
+  </channel>
+</rss>

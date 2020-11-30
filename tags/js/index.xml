@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>js on ぴしめも</title>
+    <link>https://pishiko.github.io/tags/js/</link>
+    <description>Recent content in js on ぴしめも</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>jp</language>
+    <lastBuildDate>Wed, 01 Apr 2020 21:46:39 +0900</lastBuildDate><atom:link href="https://pishiko.github.io/tags/js/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>匿名LINEチャットルームを作った</title>
+      <link>https://pishiko.github.io/posts/anonymas-chat/</link>
+      <pubDate>Wed, 01 Apr 2020 21:46:39 +0900</pubDate>
+      
+      <guid>https://pishiko.github.io/posts/anonymas-chat/</guid>
+      <description>概要   LINEのBotを公開しました。
+いままで身内向けのBOTを作ることはあったけど、初めてオープンなのを作りました。
+LINEのBOTを作るにはHTTPリクエストを受けるサーバーが必要なんですが、サーバーを立てるのはお金がかかります。そこで今回は無料でそれっぽいことができるGoogleAppsScriptを用いてやってみました。
+ソースコード https://github.com/pishiko/anonymous-linechatbot
+実装したこと   基本機能（発言を他の利用者に拡散）
+  アイコンの実装
+  ミュート機能
+  解説   まずLINE APIで多数にメッセージを配信するには宛先のuserIdを指定する必要があります。しかし、Botと友達になっているユーザーのリストはAPIでは手に入らないため、自分で用意する必要があります。なので、友達登録されたときのイベントを使って記録していきます。
+次に記録ですが、DBをGASでお手軽に実装するにはGoogleSpreadSheetを用います。視覚的にも分かりやすいし簡単だし、ちょっと遅いけど使えます。
+アイコンはキューをGSSで実装して、友達登録時にユーザーリストにIDと一緒にします。友達をやめたときはアイコンキューに戻してやって、ユーザーリストからIDごと消してやります。
+ミュート機能はユーザーがミュートかどうかリストに保存して、LINE APIのリッチメニューから操作できるようにします。リッチメニューはLINE @MANAGERからぽちぽちで作れます。リッチメニューのボタンが押されたらキーワードを発言するように設定して、それをGASでキャッチします。
+最後に発言をほかの登録者に拡散するようにします。LINE APIのイベントでメッセージ受信をキャッチして、userIdからユーザーリストを検索してアイコンを取得、そのあとユーザーリストの発信者以外かつミュートになっていない人に成形したメッセージを配信します。
+おわり</description>
+    </item>
+    
+    <item>
+      <title>Youtubeの共有を便利にするWeb Appを作った</title>
+      <link>https://pishiko.github.io/posts/youtube-share-hub/</link>
+      <pubDate>Mon, 30 Mar 2020 04:32:22 +0900</pubDate>
+      
+      <guid>https://pishiko.github.io/posts/youtube-share-hub/</guid>
+      <description>Youtube Share Hubを作った →https://pishiko.github.io/youtube-share-hub/
+どんなの？ こんなの
+  Youtubeの共有メニューから選択してツイートのリンクに遷移するwebアプリケーション
+そのまま共有してもURLしか共有できないしTwitterカードも表示されないから不便だったので作りました．
+どんな技術使った？  PWA  Web Share Target API   vue.js bootstrap Github Pages  PWAについて 最低構成は以下になる．
+index.html メインのアプリ
+serviceworker.js ServiceWorkerが動くことでオフラインでもキャッシュで動作したりすることが可能，特にやりたいことが無ければ関数は空でもいい
+manifest.json これがキモ．アプリの名前，アイコンから，共有メニューからの動作まで設定できる． 楽ちんジェネレーターもある．アイコンもリサイズしてくれる．https://app-manifest.firebaseapp.com/
+Web Share Target API apkのアプリみたいに共有機能が使える．ただし，「なんちゃってホームに追加Webアプリ」とかじゃこの機能は使えない．
+ChromeからPWAアプリと認められる条件は以下
+ アイコンがpngであること．jpgはだめ ServiceWorkerを用意する manifest.jsonが正しく記述されている  それから，Web Share APIは今のところAndroidでないと使えない．たのむよApple．
+そのほか メインはvue.jsで実装．丁寧にエラー処理なども書いた． デザインはbootstrap．楽． Github Pagesはこのブログ立ち上げた時と一緒．
+Github Pagesなので，ソースコードはここにあります． https://github.com/pishiko/youtube-share-hub
+おわり</description>
+    </item>
+    
+  </channel>
+</rss>
