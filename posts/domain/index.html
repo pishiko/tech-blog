@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="Pishiko" />
     <meta name="description" content="" />
-    <link rel="stylesheet" href="https://pishiko.github.io/css/main.min.7da7648407d378fc1955851bc8cec1840debc17a013879999242cbdd6430a5af.css" />
+    <link rel="stylesheet" href="https://pishiko.github.io/css/main.min.9d32eb7543f172896952f473007be9cf31de9c7ab588e931001dfc487d169ae4.css" />
     <link rel="stylesheet" href="/css/custom.css" />
 
     
@@ -26,7 +26,10 @@ p(ぴ)4（し）ko(こ).comということで，大変覚えやすいですね�
 Managing a custom domain for your GitHub Pages site - GitHub Docs
 それから，Hugoの場合は生成時にCNAMEファイルが消されてしまうので，static/以下にCNAMEファイルを置いておく必要があります．
 CNAMEファイルはgithubが自動で生成してくれるので，pullした後public/直下にあるCNAMEファイルを static/直下にコピーしておけばよいはずです．
-カスタムドメインでhttps化するにあたって，リポジトリのsettingsのEnforced Httpsのチェックを入れるだけでいいんですが，AレコードをDNSに登録しても いつまでも押せなかったので，一度カスタムドメインを外して再設定したところチェックボックスが押せるようになりました．
+追記 カスタムドメインでhttps化するにあたって，リポジトリのsettingsのEnforced Httpsのチェックを入れるだけでいいと思っていたんですが，AレコードをDNSに登録しても いつまでもチェックボックスを押せませんでした．
+一度カスタムドメインを外して再設定したところ表示が変わったのですが，15分どころか１時間くらいこんな感じでした．
+で，以下を参考に，wwwのCNAMEレコードをUSERNAME.github.ioに設定すると１日ほどでチェックできるようになっていました．
+Certificate request error is persistent (TLS Certificate can&rsquo;t be provisioned) - GitHub Help / GitHub Pages - GitHub Support Community
 おわり"/>
 
     <meta property="og:title" content="新ドメインにしました" />
@@ -36,7 +39,10 @@ p(ぴ)4（し）ko(こ).comということで，大変覚えやすいですね�
 Managing a custom domain for your GitHub Pages site - GitHub Docs
 それから，Hugoの場合は生成時にCNAMEファイルが消されてしまうので，static/以下にCNAMEファイルを置いておく必要があります．
 CNAMEファイルはgithubが自動で生成してくれるので，pullした後public/直下にあるCNAMEファイルを static/直下にコピーしておけばよいはずです．
-カスタムドメインでhttps化するにあたって，リポジトリのsettingsのEnforced Httpsのチェックを入れるだけでいいんですが，AレコードをDNSに登録しても いつまでも押せなかったので，一度カスタムドメインを外して再設定したところチェックボックスが押せるようになりました．
+追記 カスタムドメインでhttps化するにあたって，リポジトリのsettingsのEnforced Httpsのチェックを入れるだけでいいと思っていたんですが，AレコードをDNSに登録しても いつまでもチェックボックスを押せませんでした．
+一度カスタムドメインを外して再設定したところ表示が変わったのですが，15分どころか１時間くらいこんな感じでした．
+で，以下を参考に，wwwのCNAMEレコードをUSERNAME.github.ioに設定すると１日ほどでチェックできるようになっていました．
+Certificate request error is persistent (TLS Certificate can&rsquo;t be provisioned) - GitHub Help / GitHub Pages - GitHub Support Community
 おわり" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://pishiko.github.io/posts/domain/" />
@@ -131,8 +137,13 @@ CNAMEファイルはgithubが自動で生成してくれるので，pullした�
 <p><a href="https://docs.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site"  target="_blank" rel="nofollow noopener" >Managing a custom domain for your GitHub Pages site - GitHub Docs</a></p>
 <p>それから，Hugoの場合は生成時にCNAMEファイルが消されてしまうので，<code>static/</code>以下にCNAMEファイルを置いておく必要があります．</p>
 <p>CNAMEファイルはgithubが自動で生成してくれるので，pullした後<code>public/</code>直下にあるCNAMEファイルを <code>static/</code>直下にコピーしておけばよいはずです．</p>
-<p>カスタムドメインでhttps化するにあたって，リポジトリのsettingsのEnforced Httpsのチェックを入れるだけでいいんですが，AレコードをDNSに登録しても
-いつまでも押せなかったので，一度カスタムドメインを外して再設定したところチェックボックスが押せるようになりました．</p>
+<h3 id="追記">追記</h3>
+<p>カスタムドメインでhttps化するにあたって，リポジトリのsettingsのEnforced Httpsのチェックを入れるだけでいいと思っていたんですが，AレコードをDNSに登録しても
+いつまでもチェックボックスを押せませんでした．</p>
+<p>一度カスタムドメインを外して再設定したところ表示が変わったのですが，15分どころか１時間くらいこんな感じでした．</p>
+<p><img src="https://res.cloudinary.com/pishiko/image/upload/v1610888999/blog/tls_bhwgwi.png" alt="img"></p>
+<p>で，以下を参考に，wwwのCNAMEレコードをUSERNAME.github.ioに設定すると１日ほどでチェックできるようになっていました．</p>
+<p><a href="https://github.community/t/certificate-request-error-is-persistent-tls-certificate-cant-be-provisioned/11008/15"  target="_blank" rel="nofollow noopener" >Certificate request error is persistent (TLS Certificate can&rsquo;t be provisioned) - GitHub Help / GitHub Pages - GitHub Support Community</a></p>
 <p>おわり</p>
 
   </div>

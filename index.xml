@@ -19,7 +19,10 @@ p(ぴ)4（し）ko(こ).comということで，大変覚えやすいですね�
 Managing a custom domain for your GitHub Pages site - GitHub Docs
 それから，Hugoの場合は生成時にCNAMEファイルが消されてしまうので，static/以下にCNAMEファイルを置いておく必要があります．
 CNAMEファイルはgithubが自動で生成してくれるので，pullした後public/直下にあるCNAMEファイルを static/直下にコピーしておけばよいはずです．
-カスタムドメインでhttps化するにあたって，リポジトリのsettingsのEnforced Httpsのチェックを入れるだけでいいんですが，AレコードをDNSに登録しても いつまでも押せなかったので，一度カスタムドメインを外して再設定したところチェックボックスが押せるようになりました．
+追記 カスタムドメインでhttps化するにあたって，リポジトリのsettingsのEnforced Httpsのチェックを入れるだけでいいと思っていたんですが，AレコードをDNSに登録しても いつまでもチェックボックスを押せませんでした．
+一度カスタムドメインを外して再設定したところ表示が変わったのですが，15分どころか１時間くらいこんな感じでした．
+で，以下を参考に，wwwのCNAMEレコードをUSERNAME.github.ioに設定すると１日ほどでチェックできるようになっていました．
+Certificate request error is persistent (TLS Certificate can&amp;rsquo;t be provisioned) - GitHub Help / GitHub Pages - GitHub Support Community
 おわり</description>
     </item>
     
