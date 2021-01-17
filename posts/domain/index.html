@@ -25,7 +25,8 @@ p(ぴ)4（し）ko(こ).comということで，大変覚えやすいですね�
 作業メモ github pagesでホストしているサイトにカスタムドメインを割り当てる方法は以下に書いてありました．
 Managing a custom domain for your GitHub Pages site - GitHub Docs
 それから，Hugoの場合は生成時にCNAMEファイルが消されてしまうので，static/以下にCNAMEファイルを置いておく必要があります．
-CNAMEファイルはgithubが自動で生成してくれるので，pullした後/public直下にあるCNAMEファイルを /static直下にコピーしておけばよいはずです．
+CNAMEファイルはgithubが自動で生成してくれるので，pullした後public/直下にあるCNAMEファイルを static/直下にコピーしておけばよいはずです．
+カスタムドメインでhttps化するにあたって，リポジトリのsettingsのEnforced Httpsのチェックを入れるだけでいいんですが，AレコードをDNSに登録しても いつまでも押せなかったので，一度カスタムドメインを外して再設定したところチェックボックスが押せるようになりました．
 おわり"/>
 
     <meta property="og:title" content="新ドメインにしました" />
@@ -34,7 +35,8 @@ p(ぴ)4（し）ko(こ).comということで，大変覚えやすいですね�
 作業メモ github pagesでホストしているサイトにカスタムドメインを割り当てる方法は以下に書いてありました．
 Managing a custom domain for your GitHub Pages site - GitHub Docs
 それから，Hugoの場合は生成時にCNAMEファイルが消されてしまうので，static/以下にCNAMEファイルを置いておく必要があります．
-CNAMEファイルはgithubが自動で生成してくれるので，pullした後/public直下にあるCNAMEファイルを /static直下にコピーしておけばよいはずです．
+CNAMEファイルはgithubが自動で生成してくれるので，pullした後public/直下にあるCNAMEファイルを static/直下にコピーしておけばよいはずです．
+カスタムドメインでhttps化するにあたって，リポジトリのsettingsのEnforced Httpsのチェックを入れるだけでいいんですが，AレコードをDNSに登録しても いつまでも押せなかったので，一度カスタムドメインを外して再設定したところチェックボックスが押せるようになりました．
 おわり" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://pishiko.github.io/posts/domain/" />
@@ -128,7 +130,9 @@ CNAMEファイルはgithubが自動で生成してくれるので，pullした�
 <p>github pagesでホストしているサイトにカスタムドメインを割り当てる方法は以下に書いてありました．</p>
 <p><a href="https://docs.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site"  target="_blank" rel="nofollow noopener" >Managing a custom domain for your GitHub Pages site - GitHub Docs</a></p>
 <p>それから，Hugoの場合は生成時にCNAMEファイルが消されてしまうので，<code>static/</code>以下にCNAMEファイルを置いておく必要があります．</p>
-<p>CNAMEファイルはgithubが自動で生成してくれるので，pullした後<code>/public</code>直下にあるCNAMEファイルを <code>/static</code>直下にコピーしておけばよいはずです．</p>
+<p>CNAMEファイルはgithubが自動で生成してくれるので，pullした後<code>public/</code>直下にあるCNAMEファイルを <code>static/</code>直下にコピーしておけばよいはずです．</p>
+<p>カスタムドメインでhttps化するにあたって，リポジトリのsettingsのEnforced Httpsのチェックを入れるだけでいいんですが，AレコードをDNSに登録しても
+いつまでも押せなかったので，一度カスタムドメインを外して再設定したところチェックボックスが押せるようになりました．</p>
 <p>おわり</p>
 
   </div>

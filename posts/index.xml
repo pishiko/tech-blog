@@ -18,7 +18,8 @@ p(ぴ)4（し）ko(こ).comということで，大変覚えやすいですね�
 作業メモ github pagesでホストしているサイトにカスタムドメインを割り当てる方法は以下に書いてありました．
 Managing a custom domain for your GitHub Pages site - GitHub Docs
 それから，Hugoの場合は生成時にCNAMEファイルが消されてしまうので，static/以下にCNAMEファイルを置いておく必要があります．
-CNAMEファイルはgithubが自動で生成してくれるので，pullした後/public直下にあるCNAMEファイルを /static直下にコピーしておけばよいはずです．
+CNAMEファイルはgithubが自動で生成してくれるので，pullした後public/直下にあるCNAMEファイルを static/直下にコピーしておけばよいはずです．
+カスタムドメインでhttps化するにあたって，リポジトリのsettingsのEnforced Httpsのチェックを入れるだけでいいんですが，AレコードをDNSに登録しても いつまでも押せなかったので，一度カスタムドメインを外して再設定したところチェックボックスが押せるようになりました．
 おわり</description>
     </item>
     
