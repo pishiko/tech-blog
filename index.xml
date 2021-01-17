@@ -6,7 +6,22 @@
     <description>Recent content on ぴしめも</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
-    <lastBuildDate>Mon, 23 Nov 2020 00:24:55 +0900</lastBuildDate><atom:link href="https://pishiko.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 17 Jan 2021 19:08:19 +0900</lastBuildDate><atom:link href="https://pishiko.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>新ドメインにしました</title>
+      <link>https://pishiko.github.io/posts/domain/</link>
+      <pubDate>Sun, 17 Jan 2021 19:08:19 +0900</pubDate>
+      
+      <guid>https://pishiko.github.io/posts/domain/</guid>
+      <description>pishiko.github.ioからp4ko.comに変更しました！
+p(ぴ)4（し）ko(こ).comということで，大変覚えやすいですね．
+作業メモ github pagesでホストしているサイトにカスタムドメインを割り当てる方法は以下に書いてありました．
+Managing a custom domain for your GitHub Pages site - GitHub Docs
+それから，Hugoの場合は生成時にCNAMEファイルが消されてしまうので，static/以下にCNAMEファイルを置いておく必要があります．
+CNAMEファイルはgithubが自動で生成してくれるので，pullした後/public直下にあるCNAMEファイルを /static直下にコピーしておけばよいはずです．
+おわり</description>
+    </item>
+    
     <item>
       <title>Go ファミコンエミュレータ開発記録 その1</title>
       <link>https://pishiko.github.io/posts/nes1/</link>
