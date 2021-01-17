@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on ぴしめも</title>
-    <link>https://pishiko.github.io/posts/</link>
+    <link>https://p4ko.com/posts/</link>
     <description>Recent content in Posts on ぴしめも</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
-    <lastBuildDate>Sun, 17 Jan 2021 19:08:19 +0900</lastBuildDate><atom:link href="https://pishiko.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 17 Jan 2021 19:08:19 +0900</lastBuildDate><atom:link href="https://p4ko.com/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>新ドメインにしました</title>
-      <link>https://pishiko.github.io/posts/domain/</link>
+      <link>https://p4ko.com/posts/domain/</link>
       <pubDate>Sun, 17 Jan 2021 19:08:19 +0900</pubDate>
       
-      <guid>https://pishiko.github.io/posts/domain/</guid>
+      <guid>https://p4ko.com/posts/domain/</guid>
       <description>pishiko.github.ioからp4ko.comに変更しました！
 p(ぴ)4（し）ko(こ).comということで，大変覚えやすいですね．
 作業メモ github pagesでホストしているサイトにカスタムドメインを割り当てる方法は以下に書いてありました．
@@ -28,10 +28,10 @@ Certificate request error is persistent (TLS Certificate can&amp;rsquo;t be prov
     
     <item>
       <title>Go ファミコンエミュレータ開発記録 その1</title>
-      <link>https://pishiko.github.io/posts/nes1/</link>
+      <link>https://p4ko.com/posts/nes1/</link>
       <pubDate>Mon, 23 Nov 2020 00:24:55 +0900</pubDate>
       
-      <guid>https://pishiko.github.io/posts/nes1/</guid>
+      <guid>https://p4ko.com/posts/nes1/</guid>
       <description>日記みたいなものです． Twitterモーメントはこちら
 動機 任天堂レトロハードが好きなんですが，せっかくなら遊ぶだけじゃなくて中身にも詳しくなりたいと思っていました． 一番好きなのはスーファミなんですが，仕様が公開されておらず難易度が高そうなので，とりあえずシンプルそうなファミコンの動作の理解をしようと． で，前にQiitaでファミコンエミュレータのHello world解説記事があったのを思い出したので，今ならできる！と思って始めました．
 偉大なる先駆者様 ファミコンエミュレータの創り方　- Hello, World!編 - - Qiita
@@ -50,10 +50,10 @@ Ebiten - A dead simple 2D game library for Go
     
     <item>
       <title>Discord Bot 開発あれこれ</title>
-      <link>https://pishiko.github.io/posts/discordpy/</link>
+      <link>https://p4ko.com/posts/discordpy/</link>
       <pubDate>Sun, 11 Oct 2020 02:26:36 +0900</pubDate>
       
-      <guid>https://pishiko.github.io/posts/discordpy/</guid>
+      <guid>https://p4ko.com/posts/discordpy/</guid>
       <description>身内コミュニティ向けdiscord botを複数人で開発しているので，有用そうなレシピを書いていきます．
 環境 pythonのdiscordAPI ラッパーである discordpy 製botをgithubで管理し，heroku上で動かしています．
  discord.py へようこそ。 — discord.py 1.5.0 ドキュメント 【備忘録】GitHub経由でHerokuにデプロイするまでの流れ - Qiita  herokuの設定 基本  デプロイに必要なファイルの設定 | Pythonで実用Discord Bot(discordpy解説) - Qiita  時間を正しく扱うために  Herokuのタイムゾーンを日本に合わせる - Qiita  Herokuの仕様  24時間に1回再起動 ファイルは/tmp/以下でのみ書き込み可能． 再起動時にファイルなどはリポジトリの状態に初期化される  Cogで機能を分けて開発 Cogというのは，discordpyで提供されている，機能を分割するためのクラスです． メインのBotにCogを追加していく形になります．
@@ -65,10 +65,10 @@ class YourCog(commands.Cog): def __init__(self,bot): self.bot = bot Helpのカ�
     
     <item>
       <title>Hugoのthemeを上書きできない問題</title>
-      <link>https://pishiko.github.io/posts/css-custom/</link>
+      <link>https://p4ko.com/posts/css-custom/</link>
       <pubDate>Tue, 06 Oct 2020 16:50:38 +0900</pubDate>
       
-      <guid>https://pishiko.github.io/posts/css-custom/</guid>
+      <guid>https://p4ko.com/posts/css-custom/</guid>
       <description>hugo serverで確認しながらテーマの上書きを試みてるんだけど，全然上書きされない．
 あれーと思って キャッシュを強制再読み込みする --ignoreCache を付けてサーバーを起動してみたら次のエラーが出た．
 &amp;gt;hugo server --ignoreCache Building sites … ERROR 2020/10/06 14:44:37 Transformation failed: TOCSS: failed to transform &amp;quot;css/main.scss&amp;quot; (text/x-scss): this feature is not available in your current Hugo version, see https://goo.gl/YMrWcn for more information Built in 501 ms Error: Error building site: logged 1 error(s) で，公式のヘルプを読む．
@@ -84,10 +84,10 @@ h2 { border-bottom: solid 1px $light-color; margin-top : 80px; margin-bottom : 3
     
     <item>
       <title>【Last.fm&#43;Discord】Now Playing Cat取扱説明書</title>
-      <link>https://pishiko.github.io/posts/nowplayingcat/</link>
+      <link>https://p4ko.com/posts/nowplayingcat/</link>
       <pubDate>Tue, 14 Jul 2020 10:32:41 +0900</pubDate>
       
-      <guid>https://pishiko.github.io/posts/nowplayingcat/</guid>
+      <guid>https://p4ko.com/posts/nowplayingcat/</guid>
       <description>(2020 9/9 追記: v1.2でバグ修正をしました．記事一番下にアップデート方法を記載．)
 NowPlayingCat Github
 DiscordのNowPlaying欄に，Last.fmを通して聴いている音楽を表示するツールです．
@@ -111,10 +111,10 @@ v1.2 download
     
     <item>
       <title>Discordのnowplayingに音楽を表示させるのを作った</title>
-      <link>https://pishiko.github.io/posts/fmlast-discord/</link>
+      <link>https://p4ko.com/posts/fmlast-discord/</link>
       <pubDate>Sat, 09 May 2020 16:06:41 +0900</pubDate>
       
-      <guid>https://pishiko.github.io/posts/fmlast-discord/</guid>
+      <guid>https://p4ko.com/posts/fmlast-discord/</guid>
       <description>デスクトップ常駐型アプリケーションを作りました．
 Github
 使い方
@@ -136,10 +136,10 @@ WebAPIを呼ぶ HttpClientを使います．クエリパラメタもURLエンコ
     
     <item>
       <title>匿名LINEチャットルームを作った</title>
-      <link>https://pishiko.github.io/posts/anonymas-chat/</link>
+      <link>https://p4ko.com/posts/anonymas-chat/</link>
       <pubDate>Wed, 01 Apr 2020 21:46:39 +0900</pubDate>
       
-      <guid>https://pishiko.github.io/posts/anonymas-chat/</guid>
+      <guid>https://p4ko.com/posts/anonymas-chat/</guid>
       <description>概要   LINEのBotを公開しました。
 いままで身内向けのBOTを作ることはあったけど、初めてオープンなのを作りました。
 LINEのBOTを作るにはHTTPリクエストを受けるサーバーが必要なんですが、サーバーを立てるのはお金がかかります。そこで今回は無料でそれっぽいことができるGoogleAppsScriptを用いてやってみました。
@@ -157,10 +157,10 @@ LINEのBOTを作るにはHTTPリクエストを受けるサーバーが必要な
     
     <item>
       <title>Youtubeの共有を便利にするWeb Appを作った</title>
-      <link>https://pishiko.github.io/posts/youtube-share-hub/</link>
+      <link>https://p4ko.com/posts/youtube-share-hub/</link>
       <pubDate>Mon, 30 Mar 2020 04:32:22 +0900</pubDate>
       
-      <guid>https://pishiko.github.io/posts/youtube-share-hub/</guid>
+      <guid>https://p4ko.com/posts/youtube-share-hub/</guid>
       <description>Youtube Share Hubを作った →https://pishiko.github.io/youtube-share-hub/
 どんなの？ こんなの
   Youtubeの共有メニューから選択してツイートのリンクに遷移するwebアプリケーション
@@ -179,10 +179,10 @@ Github Pagesなので，ソースコードはここにあります． https://gi
     
     <item>
       <title>Dash Buttonサービス終了との闘い(敗北)</title>
-      <link>https://pishiko.github.io/posts/dash-button/</link>
+      <link>https://p4ko.com/posts/dash-button/</link>
       <pubDate>Mon, 17 Feb 2020 10:29:27 +0900</pubDate>
       
-      <guid>https://pishiko.github.io/posts/dash-button/</guid>
+      <guid>https://p4ko.com/posts/dash-button/</guid>
       <description>要約  Amazon Dash Button をハックしてIoTボタンにしてた 2020年に入ってから使えなくなってた 自爆ファームウェアの配信によって文鎮化されてた  昔々&amp;hellip; 実家暮らしなので母親にご飯を作っていただいているので，ご飯ができると「ご飯できたよ～」と呼ばれます．それがお互いにストレスだったので，キッチンには，押すとPush BulletというサービスからスマホやPCに通知が行くボタンが置いてありました．
 仕組みとしては，
  商品発注をオフにしたAmazon Dash Buttonが押される 自宅のサーバで検知（ボタンからのARPリクエストをキャッチ） IFTTTを通してPush Bulletに通知  といったものでした．
@@ -206,10 +206,10 @@ Wi-Fiの設定 再設定を試みます．Amazonのアプリには存在しな�
     
     <item>
       <title>このブログをHugoで作った</title>
-      <link>https://pishiko.github.io/posts/hugo1/</link>
+      <link>https://p4ko.com/posts/hugo1/</link>
       <pubDate>Sun, 02 Feb 2020 09:29:15 +0900</pubDate>
       
-      <guid>https://pishiko.github.io/posts/hugo1/</guid>
+      <guid>https://p4ko.com/posts/hugo1/</guid>
       <description>Hugo＋GitHub Pages このブログはHugo + github pagesで公開しています．テンプレートのカスタムをしてると意外と情報が無かったです．ということで，Hugoのインストールからブログの更新まで簡単にメモしたいと思います．
 そもそもなにそれ Hugoは静的ブログジェネレータというやつです．テンプレートとmarkdownの記事を用意すればhugoでindex.htmlなんかを生成してくれます．Go製です．早いです．
 github pagesはリポジトリに置いておいた静的ファイルをホストしてくれるサービスです．
@@ -231,10 +231,10 @@ cd public git init git remote add origin git@github.</description>
     
     <item>
       <title>Hello, world!</title>
-      <link>https://pishiko.github.io/posts/firstpost/</link>
+      <link>https://p4ko.com/posts/firstpost/</link>
       <pubDate>Sat, 01 Feb 2020 23:08:52 +0900</pubDate>
       
-      <guid>https://pishiko.github.io/posts/firstpost/</guid>
+      <guid>https://p4ko.com/posts/firstpost/</guid>
       <description>こんにちは．@pishitaro_です．
 サークル(？)のブログとは別にメモとしてブログを作ってみました．こっちではプログラミング成果物のメモが主になります．
 ちょこちょこ書いていく予定です．
@@ -243,10 +243,10 @@ cd public git init git remote add origin git@github.</description>
     
     <item>
       <title>製作物まとめ</title>
-      <link>https://pishiko.github.io/posts/summary/</link>
+      <link>https://p4ko.com/posts/summary/</link>
       <pubDate>Tue, 30 Mar 1999 19:23:16 +0900</pubDate>
       
-      <guid>https://pishiko.github.io/posts/summary/</guid>
+      <guid>https://p4ko.com/posts/summary/</guid>
       <description>About 作った物を紹介します．
 GoNES   Go言語製のファミコンエミュレータです．
 ベースはほぼ完成していますが，特殊カセットへの対応や音声再生の改善のため，開発中です．

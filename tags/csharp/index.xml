@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>cSharp on ぴしめも</title>
-    <link>https://pishiko.github.io/tags/csharp/</link>
+    <link>https://p4ko.com/tags/csharp/</link>
     <description>Recent content in cSharp on ぴしめも</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
-    <lastBuildDate>Sat, 09 May 2020 16:06:41 +0900</lastBuildDate><atom:link href="https://pishiko.github.io/tags/csharp/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 09 May 2020 16:06:41 +0900</lastBuildDate><atom:link href="https://p4ko.com/tags/csharp/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Discordのnowplayingに音楽を表示させるのを作った</title>
-      <link>https://pishiko.github.io/posts/fmlast-discord/</link>
+      <link>https://p4ko.com/posts/fmlast-discord/</link>
       <pubDate>Sat, 09 May 2020 16:06:41 +0900</pubDate>
       
-      <guid>https://pishiko.github.io/posts/fmlast-discord/</guid>
+      <guid>https://p4ko.com/posts/fmlast-discord/</guid>
       <description>デスクトップ常駐型アプリケーションを作りました．
 Github
 使い方

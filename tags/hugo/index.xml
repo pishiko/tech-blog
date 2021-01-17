@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>hugo on ぴしめも</title>
-    <link>https://pishiko.github.io/tags/hugo/</link>
+    <link>https://p4ko.com/tags/hugo/</link>
     <description>Recent content in hugo on ぴしめも</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
-    <lastBuildDate>Sun, 17 Jan 2021 19:08:19 +0900</lastBuildDate><atom:link href="https://pishiko.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 17 Jan 2021 19:08:19 +0900</lastBuildDate><atom:link href="https://p4ko.com/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>新ドメインにしました</title>
-      <link>https://pishiko.github.io/posts/domain/</link>
+      <link>https://p4ko.com/posts/domain/</link>
       <pubDate>Sun, 17 Jan 2021 19:08:19 +0900</pubDate>
       
-      <guid>https://pishiko.github.io/posts/domain/</guid>
+      <guid>https://p4ko.com/posts/domain/</guid>
       <description>pishiko.github.ioからp4ko.comに変更しました！
 p(ぴ)4（し）ko(こ).comということで，大変覚えやすいですね．
 作業メモ github pagesでホストしているサイトにカスタムドメインを割り当てる方法は以下に書いてありました．
@@ -28,10 +28,10 @@ Certificate request error is persistent (TLS Certificate can&amp;rsquo;t be prov
     
     <item>
       <title>Hugoのthemeを上書きできない問題</title>
-      <link>https://pishiko.github.io/posts/css-custom/</link>
+      <link>https://p4ko.com/posts/css-custom/</link>
       <pubDate>Tue, 06 Oct 2020 16:50:38 +0900</pubDate>
       
-      <guid>https://pishiko.github.io/posts/css-custom/</guid>
+      <guid>https://p4ko.com/posts/css-custom/</guid>
       <description>hugo serverで確認しながらテーマの上書きを試みてるんだけど，全然上書きされない．
 あれーと思って キャッシュを強制再読み込みする --ignoreCache を付けてサーバーを起動してみたら次のエラーが出た．
 &amp;gt;hugo server --ignoreCache Building sites … ERROR 2020/10/06 14:44:37 Transformation failed: TOCSS: failed to transform &amp;quot;css/main.scss&amp;quot; (text/x-scss): this feature is not available in your current Hugo version, see https://goo.gl/YMrWcn for more information Built in 501 ms Error: Error building site: logged 1 error(s) で，公式のヘルプを読む．

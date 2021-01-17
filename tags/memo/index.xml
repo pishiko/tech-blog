@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>memo on ぴしめも</title>
-    <link>https://pishiko.github.io/tags/memo/</link>
+    <link>https://p4ko.com/tags/memo/</link>
     <description>Recent content in memo on ぴしめも</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
-    <lastBuildDate>Mon, 17 Feb 2020 10:29:27 +0900</lastBuildDate><atom:link href="https://pishiko.github.io/tags/memo/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 17 Feb 2020 10:29:27 +0900</lastBuildDate><atom:link href="https://p4ko.com/tags/memo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Dash Buttonサービス終了との闘い(敗北)</title>
-      <link>https://pishiko.github.io/posts/dash-button/</link>
+      <link>https://p4ko.com/posts/dash-button/</link>
       <pubDate>Mon, 17 Feb 2020 10:29:27 +0900</pubDate>
       
-      <guid>https://pishiko.github.io/posts/dash-button/</guid>
+      <guid>https://p4ko.com/posts/dash-button/</guid>
       <description>要約  Amazon Dash Button をハックしてIoTボタンにしてた 2020年に入ってから使えなくなってた 自爆ファームウェアの配信によって文鎮化されてた  昔々&amp;hellip; 実家暮らしなので母親にご飯を作っていただいているので，ご飯ができると「ご飯できたよ～」と呼ばれます．それがお互いにストレスだったので，キッチンには，押すとPush BulletというサービスからスマホやPCに通知が行くボタンが置いてありました．
 仕組みとしては，
  商品発注をオフにしたAmazon Dash Buttonが押される 自宅のサーバで検知（ボタンからのARPリクエストをキャッチ） IFTTTを通してPush Bulletに通知  といったものでした．
@@ -36,10 +36,10 @@ Wi-Fiの設定 再設定を試みます．Amazonのアプリには存在しな�
     
     <item>
       <title>Hello, world!</title>
-      <link>https://pishiko.github.io/posts/firstpost/</link>
+      <link>https://p4ko.com/posts/firstpost/</link>
       <pubDate>Sat, 01 Feb 2020 23:08:52 +0900</pubDate>
       
-      <guid>https://pishiko.github.io/posts/firstpost/</guid>
+      <guid>https://p4ko.com/posts/firstpost/</guid>
       <description>こんにちは．@pishitaro_です．
 サークル(？)のブログとは別にメモとしてブログを作ってみました．こっちではプログラミング成果物のメモが主になります．
 ちょこちょこ書いていく予定です．

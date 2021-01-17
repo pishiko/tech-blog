@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>AboutMe on ぴしめも</title>
-    <link>https://pishiko.github.io/tags/aboutme/</link>
+    <link>https://p4ko.com/tags/aboutme/</link>
     <description>Recent content in AboutMe on ぴしめも</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
-    <lastBuildDate>Tue, 30 Mar 1999 19:23:16 +0900</lastBuildDate><atom:link href="https://pishiko.github.io/tags/aboutme/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 30 Mar 1999 19:23:16 +0900</lastBuildDate><atom:link href="https://p4ko.com/tags/aboutme/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>製作物まとめ</title>
-      <link>https://pishiko.github.io/posts/summary/</link>
+      <link>https://p4ko.com/posts/summary/</link>
       <pubDate>Tue, 30 Mar 1999 19:23:16 +0900</pubDate>
       
-      <guid>https://pishiko.github.io/posts/summary/</guid>
+      <guid>https://p4ko.com/posts/summary/</guid>
       <description>About 作った物を紹介します．
 GoNES   Go言語製のファミコンエミュレータです．
 ベースはほぼ完成していますが，特殊カセットへの対応や音声再生の改善のため，開発中です．
