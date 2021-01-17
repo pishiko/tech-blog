@@ -15,7 +15,7 @@
       <guid>https://p4ko.com/posts/domain/</guid>
       <description>pishiko.github.ioからp4ko.comに変更しました！
 p(ぴ)4（し）ko(こ).comということで，大変覚えやすいですね．
-作業メモ github pagesでホストしているサイトにカスタムドメインを割り当てる方法は以下に書いてありました．
+Github Pages + カスタムドメイン + HTTPS github pagesでホストしているサイトにカスタムドメインを割り当てる方法は以下に書いてありました．
 Managing a custom domain for your GitHub Pages site - GitHub Docs
 それから，Hugoの場合は生成時にCNAMEファイルが消されてしまうので，static/以下にCNAMEファイルを置いておく必要があります．
 CNAMEファイルはgithubが自動で生成してくれるので，pullした後public/直下にあるCNAMEファイルを static/直下にコピーしておけばよいはずです．
@@ -23,6 +23,7 @@ CNAMEファイルはgithubが自動で生成してくれるので，pullした�
 一度カスタムドメインを外して再設定したところ表示が変わったのですが，15分どころか１時間くらいこんな感じでした．
 で，以下を参考に，wwwのCNAMEレコードをUSERNAME.github.ioに設定すると１日ほどでチェックできるようになっているといいな．（まだできてない）
 Certificate request error is persistent (TLS Certificate can&amp;rsquo;t be provisioned) - GitHub Help / GitHub Pages - GitHub Support Community
+追記の追記 8hほどでできたよ！
 おわり</description>
     </item>
     
