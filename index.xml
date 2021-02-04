@@ -33,7 +33,8 @@ Certificate request error is persistent (TLS Certificate can&amp;rsquo;t be prov
       <pubDate>Mon, 23 Nov 2020 00:24:55 +0900</pubDate>
       
       <guid>https://p4ko.com/posts/nes1/</guid>
-      <description>日記みたいなものです． Twitterモーメントはこちら
+      <description>pishiko/gones: NES Emulator by Golang
+日記みたいなものです． Twitterモーメントはこちら
 動機 任天堂レトロハードが好きなんですが，せっかくなら遊ぶだけじゃなくて中身にも詳しくなりたいと思っていました． 一番好きなのはスーファミなんですが，仕様が公開されておらず難易度が高そうなので，とりあえずシンプルそうなファミコンの動作の理解をしようと． で，前にQiitaでファミコンエミュレータのHello world解説記事があったのを思い出したので，今ならできる！と思って始めました．
 偉大なる先駆者様 ファミコンエミュレータの創り方　- Hello, World!編 - - Qiita
 Pythonで実装したい！ 最初は他の人がまだやっていないものを作りたくて，Pythonで書いてmatplotのグラフ出力画面で動いたらオツだよな～と思って書いていたのですが，普通にCPUが60fpsでないので泣く泣く諦めました．
