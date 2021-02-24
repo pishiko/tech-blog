@@ -46,5 +46,30 @@ CSSのカスタマイズ 例えば/themes/assets/css/components/main.scssを上�
 h2 { border-bottom: solid 1px $light-color; margin-top : 80px; margin-bottom : 30px; } フォントもカスタマイズ Hugoのthemeって日本のことはほとんど考えられていないので，フォントが微妙．なので，Noto Sans JPを導入する．</description>
     </item>
     
+    <item>
+      <title>このブログをHugoで作った</title>
+      <link>https://p4ko.com/posts/hugo1/</link>
+      <pubDate>Sun, 02 Feb 2020 09:29:15 +0900</pubDate>
+      
+      <guid>https://p4ko.com/posts/hugo1/</guid>
+      <description>Hugo＋GitHub Pages このブログはHugo + github pagesで公開しています．テンプレートのカスタムをしてると意外と情報が無かったです．ということで，Hugoのインストールからブログの更新まで簡単にメモしたいと思います．
+そもそもなにそれ Hugoは静的ブログジェネレータというやつです．テンプレートとmarkdownの記事を用意すればhugoでindex.htmlなんかを生成してくれます．Go製です．早いです．
+github pagesはリポジトリに置いておいた静的ファイルをホストしてくれるサービスです．
+Hugoのインストール Windows10の場合です． https://github.com/gohugoio/hugo/releasesから最新リリースをダウンロードしてパスを通します．Hugo\binなんかにHugo.exeを移してPATHを通します．
+そういえばこのときPATHの上限2000文字くらいを超えててGUIだとうまくいかないというのに出会った．とりあえずユーザ環境変数にしておいた．
+Hugoのテーマ適用 hugo new site myblog  これでわーっと一式生成してくれます．
+その後，https://themes.gohugo.io/で適当なテーマをダウンロードし，\themes\直下に適当な名前（テーマ名とか）にリネームしてディレクトリごとコピーします．
+\config.tomlに設定を色々書いていきます．と言っても基本はコピペです．絶対に変えるのは
+baseURL = &amp;quot;例 https://pishiko.github.io&amp;quot; theme = &amp;quot;さっきリネームしたテンプレート名&amp;quot;  で，あとは（テンプレートによると思いますが，）\themes\適当なテンプレート名\exampleSite\config.tomlにテンプレート固有の設定があったのでコピペして適宜変更しました．
+Hugoでブログ生成 hugo new content\posts\test.md  するとひな形が生成されます． ひな形はこんな感じにすればOK
+--- title: &amp;quot;Hello, world!&amp;quot; date: 2020-02-01T23:08:52+09:00 draft: false tags: [&amp;quot;memo&amp;quot;] --- 注意すべきはdraftで，trueだと非公開状態（＝debugモード）のみ公開なのでfalseにしないとデプロイしても反映されなくて泣く．
+あとは適当にMarkdownで記事を書く．
+ここまで上手くいっていれば，
+hugo server -D  でdebugモードでサーバを起動できるので，localhost:1313でブログを確認できます．手直ししても更新検知して再起動してくれるので便利です．
+公開まで hugo  これで\publicにindex.html ファイル一式が生成されます．これを公開しましょう．
+まずはgithubで新規リポジトリを作成．その時のリポジトリ名はGITHUBのUSERNAME.github.ioにします．あとは
+cd public git init git remote add origin git@github.</description>
+    </item>
+    
   </channel>
 </rss>

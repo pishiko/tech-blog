@@ -33,8 +33,7 @@ Certificate request error is persistent (TLS Certificate can&amp;rsquo;t be prov
       <pubDate>Mon, 23 Nov 2020 00:24:55 +0900</pubDate>
       
       <guid>https://p4ko.com/posts/nes1/</guid>
-      <description>pishiko/gones: NES Emulator by Golang
-日記みたいなものです． Twitterモーメントはこちら
+      <description>日記みたいなものです． Twitterモーメントはこちら
 動機 任天堂レトロハードが好きなんですが，せっかくなら遊ぶだけじゃなくて中身にも詳しくなりたいと思っていました． 一番好きなのはスーファミなんですが，仕様が公開されておらず難易度が高そうなので，とりあえずシンプルそうなファミコンの動作の理解をしようと． で，前にQiitaでファミコンエミュレータのHello world解説記事があったのを思い出したので，今ならできる！と思って始めました．
 偉大なる先駆者様 ファミコンエミュレータの創り方　- Hello, World!編 - - Qiita
 Pythonで実装したい！ 最初は他の人がまだやっていないものを作りたくて，Pythonで書いてmatplotのグラフ出力画面で動いたらオツだよな～と思って書いていたのですが，普通にCPUが60fpsでないので泣く泣く諦めました．
@@ -244,9 +243,23 @@ cd public git init git remote add origin git@github.</description>
     </item>
     
     <item>
+      <title>About</title>
+      <link>https://p4ko.com/about/</link>
+      <pubDate>Sat, 01 Jan 2000 00:00:00 +0900</pubDate>
+      
+      <guid>https://p4ko.com/about/</guid>
+      <description>このブログについて このブログは，個人的な技術メモや製作物の記録がメインになります．
+Hugo + GithubPagesで運用しており，このブログに関する記事一覧はこちらです．
+筆者について 東京農工大学院工学府情報工学専攻1年(21年4月時点)
+これまでに作ったものなど👉製作物まとめ // ぴしめも
+連絡先 メール：Twitter：@pishitaro_
+Github：pishiko</description>
+    </item>
+    
+    <item>
       <title>製作物まとめ</title>
       <link>https://p4ko.com/posts/summary/</link>
-      <pubDate>Tue, 30 Mar 1999 19:23:16 +0900</pubDate>
+      <pubDate>Sat, 01 Jan 2000 00:00:00 +0900</pubDate>
       
       <guid>https://p4ko.com/posts/summary/</guid>
       <description>About 作った物を紹介します．
