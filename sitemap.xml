@@ -4,26 +4,36 @@
   
   <url>
     <loc>https://p4ko.com/tags/dev/</loc>
-    <lastmod>2021-01-17T19:08:19+09:00</lastmod>
+    <lastmod>2021-02-27T19:44:55+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://p4ko.com/tags/hugo/</loc>
-    <lastmod>2021-01-17T19:08:19+09:00</lastmod>
+    <loc>https://p4ko.com/posts/slashcommand/</loc>
+    <lastmod>2021-02-27T19:44:55+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://p4ko.com/posts/</loc>
-    <lastmod>2021-01-17T19:08:19+09:00</lastmod>
+    <lastmod>2021-02-27T19:44:55+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://p4ko.com/tags/python/</loc>
+    <lastmod>2021-02-27T19:44:55+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://p4ko.com/tags/</loc>
-    <lastmod>2021-01-17T19:08:19+09:00</lastmod>
+    <lastmod>2021-02-27T19:44:55+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://p4ko.com/</loc>
+    <lastmod>2021-02-27T19:44:55+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://p4ko.com/tags/hugo/</loc>
     <lastmod>2021-01-17T19:08:19+09:00</lastmod>
   </url>
   
@@ -44,11 +54,6 @@
   
   <url>
     <loc>https://p4ko.com/posts/discordpy/</loc>
-    <lastmod>2020-10-11T02:26:36+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://p4ko.com/tags/python/</loc>
     <lastmod>2020-10-11T02:26:36+09:00</lastmod>
   </url>
   

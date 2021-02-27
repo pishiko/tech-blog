@@ -6,7 +6,22 @@
     <description>Recent content in python on ぴしめも</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
-    <lastBuildDate>Sun, 11 Oct 2020 02:26:36 +0900</lastBuildDate><atom:link href="https://p4ko.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 27 Feb 2021 19:44:55 +0900</lastBuildDate><atom:link href="https://p4ko.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Discord Slash Commandについての記事を投稿した</title>
+      <link>https://p4ko.com/posts/slashcommand/</link>
+      <pubDate>Sat, 27 Feb 2021 19:44:55 +0900</pubDate>
+      
+      <guid>https://p4ko.com/posts/slashcommand/</guid>
+      <description>アドベントカレンダー 去年の年末にQiitaのDiscordBotアドベントカレンダーに初参加して，記事を投稿してみました．
+ アドベントカレンダーどころかQiitaに投稿するのは初だったのですが，人に読まれる文章を書くのって難しいですね&amp;hellip;
+DiscordのSlashCommandはまだβ版ですが，SlackのSlashCommandに比べて入力補助がしっかりしてるので，かなり期待の機能です． 入力補助というのは，ユーザーだったりチャンネルだったりの選択をクリックするだけで埋められるというもので，大変使いやすいので今後は全てこっちに移植していきたいと思います．
+Future DiscordBotのインタフェースは更に改善されていくと以下で公式に明言されています．楽しみですね．
+The Future of Bots on Discord. In case you weren’t aware, robots have… | by Nelly | Discord Blog
+以下のようなUIが扱えるらしいです．ちょっとしたツールとしても全然使えそう．
+おわり</description>
+    </item>
+    
     <item>
       <title>Discord Bot 開発あれこれ</title>
       <link>https://p4ko.com/posts/discordpy/</link>
