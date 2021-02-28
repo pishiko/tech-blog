@@ -6,7 +6,26 @@
     <description>Recent content in dev on ぴしめも</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
-    <lastBuildDate>Sat, 27 Feb 2021 19:44:55 +0900</lastBuildDate><atom:link href="https://p4ko.com/tags/dev/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 27 Feb 2021 19:45:05 +0900</lastBuildDate><atom:link href="https://p4ko.com/tags/dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>VSCodeの見た目を自分好みにする</title>
+      <link>https://p4ko.com/posts/vscodesettings/</link>
+      <pubDate>Sat, 27 Feb 2021 19:45:05 +0900</pubDate>
+      
+      <guid>https://p4ko.com/posts/vscodesettings/</guid>
+      <description>VSCodeの設定 変えすぎて何が何だかよくわからなくなってきそうなので整理も兼ねて設定を並べていきたいと思います．
+テーマ Solarized Darkを使用しています．
+Solarized
+&amp;#34;workbench.colorTheme&amp;#34;: &amp;#34;Solarized Dark&amp;#34;, フォント 半角がCancadia Code，全角日本語がHan Codeになるように設定しています． Cancadia CodeはMicrosoftの作ったWindowsTerminalのデフォルトフォントで，リガチャにも対応しています． 日本語は見やすさ重視です．
+microsoft/cascadia-code: This is a fun, new monospaced font that includes programming ligatures and is designed to enhance the modern look and feel of the Windows Terminal.
+adobe-fonts/source-han-code-jp: Source Han Code JP | 源ノ角ゴシック Code
+&amp;#34;editor.fontFamily&amp;#34;: &amp;#34;Cascadia Code, Han Code JP&amp;#34;, リガチャ（合字）は個別に有効にする必要があります．
+&amp;#34;editor.fontLigatures&amp;#34;: true, ターミナルの配色 Onehalfという配色を使ってます．
+配色テーマをVSCodeのsettings.json用に成形してくれてるサイトがあるのでとても便利です．
+Base16 Terminal Colors for Visual Studio Code
+&amp;#34;workbench.colorCustomizations&amp;#34;: { &amp;#34;terminal.</description>
+    </item>
+    
     <item>
       <title>Discord Slash Commandについての記事を投稿した</title>
       <link>https://p4ko.com/posts/slashcommand/</link>
