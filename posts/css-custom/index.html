@@ -150,18 +150,18 @@ Error: Error building site: logged 1 error(s)
 <h2 id="cssのカスタマイズ">CSSのカスタマイズ</h2>
 <p>例えば<code>/themes/assets/css/components/main.scss</code>を上書きしたいとしたら，ファイルを<code>/assets/css/main.scss</code>にコピーして書き換えればよい．Hugoが自動で置き換えてくれるので，元のテーマを汚染する心配がなくなる．このサイトのthemeはm10cというのを使っていて，<code>themes/assets/css/_extra.scss</code>を上書きしろと書いてあるので，<code>/assets/css/_extra.scss</code>に上書きしたい要素を追加していく．</p>
 <p>例えばこんな感じで書けば，h2だけ上書きして下線を描画できる</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">h2</span> {
-	<span style="color:#66d9ef">border-bottom</span>: <span style="color:#66d9ef">solid</span>  <span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span>  <span style="color:#960050;background-color:#1e0010">$</span>light-color;
-	<span style="color:#66d9ef">margin-top</span> : <span style="color:#ae81ff">80</span><span style="color:#66d9ef">px</span>;
-	<span style="color:#66d9ef">margin-bottom</span> : <span style="color:#ae81ff">30</span><span style="color:#66d9ef">px</span>;
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-css" data-lang="css"><span style="color:#268bd2">h2</span> {
+	<span style="color:#719e07">border-bottom</span>: <span style="color:#cb4b16">solid</span>  <span style="color:#2aa198">1</span><span style="color:#dc322f">px</span>  $light-color;
+	<span style="color:#719e07">margin-top</span> : <span style="color:#2aa198">80</span><span style="color:#dc322f">px</span>;
+	<span style="color:#719e07">margin-bottom</span> : <span style="color:#2aa198">30</span><span style="color:#dc322f">px</span>;
 }
 </code></pre></div><h2 id="フォントもカスタマイズ">フォントもカスタマイズ</h2>
 <p>Hugoのthemeって日本のことはほとんど考えられていないので，フォントが微妙．なので，Noto Sans JPを導入する．</p>
 <p><a href="https://fonts.google.com/specimen/Noto&#43;Sans&#43;JP"  target="_blank" rel="nofollow noopener" >Noto Sans JP - Google Fonts</a>で，追加したいフォントを選んで，selected familyからEmbed，@import内の一文をコピーして，カスタムcss部分にコピペする．それから，bodyのfont-familyを上書きする．</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">@<span style="color:#66d9ef">import</span>  <span style="color:#f92672">url</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#39;https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&amp;display=swap&#39;</span><span style="color:#f92672">)</span>;
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-css" data-lang="css">@<span style="color:#719e07">import</span>  <span style="color:#268bd2">url</span><span style="color:#719e07">(</span><span style="color:#2aa198">&#39;https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&amp;display=swap&#39;</span><span style="color:#719e07">)</span>;
 
-<span style="color:#f92672">body</span> {
-	<span style="color:#66d9ef">font-family</span>: <span style="color:#e6db74">&#39;Noto Sans JP&#39;</span>, <span style="color:#66d9ef">sans-serif</span>;
+<span style="color:#268bd2">body</span> {
+	<span style="color:#719e07">font-family</span>: <span style="color:#2aa198">&#39;Noto Sans JP&#39;</span>, <span style="color:#cb4b16">sans-serif</span>;
 }
 </code></pre></div><h2 id="レスポンシブデザイン">レスポンシブデザイン</h2>
 <p>レスポンシブデザインっぽくしてみた．

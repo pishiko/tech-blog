@@ -181,24 +181,24 @@ pythonは8bitでuintとして数値を扱えないので書きにくかったの
 </ul>
 <p>で，実装してみたところHello worldは出力できたんですが，8fpsくらいでした．</p>
 <p>何故かというと以下の様に，タイル1枚のパレット情報（00~11）のスライスを用意しておいて，それを毎回NewImageしていたからです．</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">background</span>.<span style="color:#a6e22e">DrawImage</span>(
-			<span style="color:#a6e22e">ebiten</span>.<span style="color:#a6e22e">NewImageFromImage</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">image</span>.<span style="color:#a6e22e">RGBA</span>{
-				<span style="color:#a6e22e">Pix</span>:    <span style="color:#a6e22e">tile</span>,
-				<span style="color:#a6e22e">Stride</span>: <span style="color:#ae81ff">8</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">4</span>,
-				<span style="color:#a6e22e">Rect</span>:   <span style="color:#a6e22e">image</span>.<span style="color:#a6e22e">Rect</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">8</span>),
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-go" data-lang="go">p.background.<span style="color:#268bd2">DrawImage</span>(
+			ebiten.<span style="color:#268bd2">NewImageFromImage</span>(<span style="color:#719e07">&amp;</span>image.RGBA{
+				Pix:    tile,
+				Stride: <span style="color:#2aa198">8</span> <span style="color:#719e07">*</span> <span style="color:#2aa198">4</span>,
+				Rect:   image.<span style="color:#268bd2">Rect</span>(<span style="color:#2aa198">0</span>, <span style="color:#2aa198">0</span>, <span style="color:#2aa198">8</span>, <span style="color:#2aa198">8</span>),
 			}),
-			<span style="color:#a6e22e">op</span>,
+			op,
 		)
 </code></pre></div><p>どうも NewImageFromImage及びImageの初期化が遅いみたいでした．</p>
 <p>ということで，早くします．
 ebiten.Imageを色なしで，パレットのインデックス（00,01,10,11）ごとにマスクになるような形であらかじめ4枚作っておきます．
 描画時はpalletの色を取得して，DrawImageOptionsで指定します．1色ごとに4枚のImageを貼り付けます．</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">for</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> &lt; <span style="color:#ae81ff">4</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span> {
-			<span style="color:#a6e22e">op</span> <span style="color:#f92672">:=</span> <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">ebiten</span>.<span style="color:#a6e22e">DrawImageOptions</span>{}
-			<span style="color:#a6e22e">op</span>.<span style="color:#a6e22e">GeoM</span>.<span style="color:#a6e22e">Translate</span>(float64(<span style="color:#a6e22e">tilex</span><span style="color:#f92672">*</span><span style="color:#ae81ff">8</span>), float64(<span style="color:#a6e22e">tiley</span><span style="color:#f92672">*</span><span style="color:#ae81ff">8</span>))
-			<span style="color:#a6e22e">c</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">nesColor</span>[<span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">vRAM</span>[<span style="color:#a6e22e">pHead</span><span style="color:#f92672">+</span><span style="color:#a6e22e">i</span>]]
-			<span style="color:#a6e22e">op</span>.<span style="color:#a6e22e">ColorM</span>.<span style="color:#a6e22e">Scale</span>(float64(<span style="color:#a6e22e">c</span>[<span style="color:#ae81ff">0</span>]), float64(<span style="color:#a6e22e">c</span>[<span style="color:#ae81ff">1</span>]), float64(<span style="color:#a6e22e">c</span>[<span style="color:#ae81ff">2</span>]), <span style="color:#ae81ff">1</span>)
-			<span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">background</span>.<span style="color:#a6e22e">DrawImage</span>(<span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">tiles</span>[<span style="color:#a6e22e">nameTable</span>[<span style="color:#a6e22e">tilex</span>]<span style="color:#f92672">+</span><span style="color:#a6e22e">patternOffset</span>][<span style="color:#a6e22e">i</span>], <span style="color:#a6e22e">op</span>)
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-go" data-lang="go"><span style="color:#719e07">for</span> i <span style="color:#719e07">:=</span> <span style="color:#2aa198">0</span>; i &lt; <span style="color:#2aa198">4</span>; i<span style="color:#719e07">++</span> {
+			op <span style="color:#719e07">:=</span> <span style="color:#719e07">&amp;</span>ebiten.DrawImageOptions{}
+			op.GeoM.<span style="color:#268bd2">Translate</span>(<span style="color:#b58900">float64</span>(tilex<span style="color:#719e07">*</span><span style="color:#2aa198">8</span>), <span style="color:#b58900">float64</span>(tiley<span style="color:#719e07">*</span><span style="color:#2aa198">8</span>))
+			c <span style="color:#719e07">:=</span> nesColor[p.vRAM[pHead<span style="color:#719e07">+</span>i]]
+			op.ColorM.<span style="color:#268bd2">Scale</span>(<span style="color:#b58900">float64</span>(c[<span style="color:#2aa198">0</span>]), <span style="color:#b58900">float64</span>(c[<span style="color:#2aa198">1</span>]), <span style="color:#b58900">float64</span>(c[<span style="color:#2aa198">2</span>]), <span style="color:#2aa198">1</span>)
+			p.background.<span style="color:#268bd2">DrawImage</span>(p.tiles[nameTable[tilex]<span style="color:#719e07">+</span>patternOffset][i], op)
 		}
 </code></pre></div><p>これで，晴れて60fpsになりました．</p>
 <p>関係ないですが，Ebitenは公式ドキュメントが充実しすぎてて，それで記事を書いてもらえずイマイチ盛り上がってないような&hellip;</p>

@@ -169,10 +169,10 @@ Spotifyなどと連携して聞いた音楽のログを取り，似た傾向の�
 <p>あんまり書く機会がなくて，いつも忘れるので．</p>
 <p>Formクラスを継承したクラスのインスタンスに初期化処理を書けば動く.</p>
 <p>定期実行はTimerクラスがあるので，以下でFunctionNameに定期実行したい処理を書けばよい．</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Csharp" data-lang="Csharp"><span style="color:#66d9ef">var</span> timer = <span style="color:#66d9ef">new</span> Timer();
-timer.Interval = <span style="color:#ae81ff">5000</span>; <span style="color:#75715e">//5s
-</span><span style="color:#75715e"></span>timer.Elapsed += FunctionName;
-timer.Enable = <span style="color:#66d9ef">true</span> <span style="color:#75715e">//動き出す
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-Csharp" data-lang="Csharp"><span style="color:#dc322f">var</span> timer = <span style="color:#719e07">new</span> Timer();
+timer.Interval = <span style="color:#2aa198">5000</span>; <span style="color:#586e75">//5s
+</span><span style="color:#586e75"></span>timer.Elapsed += FunctionName;
+timer.Enable = <span style="color:#719e07">true</span> <span style="color:#586e75">//動き出す
 </span></code></pre></div><h3 id="タスクトレイ常駐">タスクトレイ常駐</h3>
 <p>参考にしました．
 <a href="http://pineplanter.moo.jp/non-it-salaryman/2017/06/01/c-sharp-tasktray/"  target="_blank" rel="nofollow noopener" >http://pineplanter.moo.jp/non-it-salaryman/2017/06/01/c-sharp-tasktray/</a></p>
@@ -199,10 +199,10 @@ timer.Enable = <span style="color:#66d9ef">true</span> <span style="color:#75715
 <p>動的な，というのは，Last.fmのAPIをJSONで受け取ると，Nowplayingかどうかで微妙に形が変わるため構造体を作ってそこにぶち込む，という手法が使えない，ということです．</p>
 <p>Json.NETでは動的にメンバが生成されるJsonオブジェクトが扱えるので，Json.NETをnugetで導入します．</p>
 <p>面白かったのが，C#にはdynamic型という，PythonやJSのように実行時に型が決まる静的な型（型自体は静的，ややこしい）が存在することです．ゆるゆるなので当然実行時エラーガンガンなんですけどね．</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp"><span style="color:#66d9ef">dynamic</span> jsonResponse = JsonConvert.Deserialize(jsonString);
-<span style="color:#66d9ef">var</span> m = jsonResponse.member;<span style="color:#75715e">//
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-csharp" data-lang="csharp"><span style="color:#dc322f">dynamic</span> jsonResponse = JsonConvert.Deserialize(jsonString);
+<span style="color:#dc322f">var</span> m = jsonResponse.member;<span style="color:#586e75">//
 </span></code></pre></div><p>jsonで要素が存在するかは，メンバが存在するかなので，以下で判断できます．</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">jsonResponse.GetType().GetProperty(<span style="color:#e6db74">&#34;member&#34;</span>) != <span style="color:#66d9ef">null</span>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-csharp" data-lang="csharp">jsonResponse.GetType().GetProperty(<span style="color:#2aa198">&#34;member&#34;</span>) != <span style="color:#719e07">null</span>
 </code></pre></div><h3 id="参考">参考</h3>
 <ul>
 <li>
