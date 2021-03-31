@@ -6,7 +6,22 @@
     <description>Recent content in Posts on ぴしめも</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
-    <lastBuildDate>Sat, 27 Feb 2021 19:45:05 +0900</lastBuildDate><atom:link href="https://p4ko.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 31 Mar 2021 22:57:33 +0900</lastBuildDate><atom:link href="https://p4ko.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>WordPress 引っ越し日記【bitnami👉レンタルサーバ】</title>
+      <link>https://p4ko.com/posts/wordpress-move/</link>
+      <pubDate>Wed, 31 Mar 2021 22:57:33 +0900</pubDate>
+      
+      <guid>https://p4ko.com/posts/wordpress-move/</guid>
+      <description>WordPressの引っ越し作業をしたのですが，思いのほかやることが多く詰まったので作業メモを残しておきます．
+bitnami (on AWS) から XREAレンタルサーバ に引っ越しします． ついでにムームードメインで購入したドメインをAWS Route53からレンタルサーバと一緒に使えるバリュードメインDNSに引っ越しもします．
+無料から使える高機能・高品質レンタルサーバー | XREA（エクスリア）
+リダイレクトの設定を切る /opt/bitnami/apps/wordpress/conf/htaccess.conf の該当部を以下の様にコメントアウト
+# BEGIN Custom #RewriteCond %{HTTP_HOST} !^www\. #RewriteRule ^(.*) $https://www.%{HTTP_HOST}/$1 [R=301,L] #END Custom Wordpressを丸々ダウンロードする /opt/bitnami/apps/wordpress/htdocsの中身を丸々ダウンロードする．
+MySQLのデータを引っ越し PHPMYADMINからSQLをエクスポート localhostからしかログインできないので /opt/bitnami/apps/phpmyadmin/conf/httpd-app.confを編集し，
+&amp;lt;IfVersion &amp;lt; 2.3 &amp;gt; Order allow,deny Allow from 127.0.0.1 Allow from &amp;lt;YOURIP&amp;gt; Satisfy all &amp;lt;/IfVersion&amp;gt; &amp;lt;IfVersion &amp;gt;= 2.3&amp;gt; Require local Require ip &amp;lt;YOURIP&amp;gt; &amp;lt;/IfVersion&amp;gt; ErrorDocument 403 &amp;quot;For security reasons, this URL is only accessible using localhost (127.0.0.1) as the hostname.</description>
+    </item>
+    
     <item>
       <title>VSCodeの見た目を自分好みにする</title>
       <link>https://p4ko.com/posts/vscodesettings/</link>
