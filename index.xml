@@ -6,7 +6,19 @@
     <description>Recent content on ぴしめも</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
-    <lastBuildDate>Wed, 31 Mar 2021 22:57:33 +0900</lastBuildDate><atom:link href="https://p4ko.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 17 May 2021 17:15:19 +0900</lastBuildDate><atom:link href="https://p4ko.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Build MediapipeUnityPlugin for Android (Ubuntu20.04 WSL2)</title>
+      <link>https://p4ko.com/posts/build-mediapipe-unity-plugin/</link>
+      <pubDate>Mon, 17 May 2021 17:15:19 +0900</pubDate>
+      
+      <guid>https://p4ko.com/posts/build-mediapipe-unity-plugin/</guid>
+      <description>homuler/MediaPipeUnityPlugin: Unity plugin to run MediaPipe graphs
+Versions  MediapipeUnityPlugin v0.6.0   This is a Unity (2020.3.8f1) Plugin to use MediaPipe (0.8.3.1).
+  WSL2 Windows10 Home Ubuntu20.04 Python3.9 bazel 4.0.0 gcc (Ubuntu 9.3.0-17ubuntu1~20.04) 9.3.0 NuGet Version: 5.6.0.6489 .NET SDK Version: 5.0.203 Mono 6.12.0.122 Android SDK Build-Tools 29.0.2 Android NDK (Side by side) 21.4.7075529  MediaPipeUnityPlugin homuler/MediaPipeUnityPlugin: Unity plugin to run MediaPipe graphs
+git clone https://github.com/homuler/MediaPipeUnityPlugin.git cd MediaPipeUnityPlugin OpenCV, FFmpeg Installation - mediapipe</description>
+    </item>
+    
     <item>
       <title>WordPress 引っ越し日記【bitnami👉レンタルサーバ】</title>
       <link>https://p4ko.com/posts/wordpress-move/</link>
