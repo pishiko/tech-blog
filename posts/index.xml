@@ -6,7 +6,26 @@
     <description>Recent content in Posts on ぴしめも</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
-    <lastBuildDate>Mon, 17 May 2021 17:15:19 +0900</lastBuildDate><atom:link href="https://p4ko.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 26 May 2021 21:54:53 +0900</lastBuildDate><atom:link href="https://p4ko.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Android向け「おえかきキーボード」をPlay Storeでリリースしました</title>
+      <link>https://p4ko.com/posts/paint-keyboard/</link>
+      <pubDate>Wed, 26 May 2021 21:54:53 +0900</pubDate>
+      
+      <guid>https://p4ko.com/posts/paint-keyboard/</guid>
+      <description>おえかきキーボード というアプリを作りました．Android向けのIMEです． ちなみに英語版は&amp;quot;Scrobble Keyboard&amp;quot;です．
+専用ページはこちら👇
+おえかきキーボード
+詳しくは👆の紹介ページに書いてあるのですが，簡単に説明すると，画像貼り付けに対応したテキスト入力中にサクッと絵を描けるキーボードで，コンセプトは「スタンプをその場で書いて送ろう」です．
+こんな感じでTwitterとかLINEとかでインスタントに送れたら面白いかなーと．
+所感 リポジトリもあります👇
+pishiko/paint-keyboard: Android向けおえかきキーボードアプリ
+IMEの情報がインターネット上に無いのと，IMEのServiceが特殊なライフサイクルなのもあって結構手探りでした．
+はじめてのアプリリリース Androidアプリ自体はいくつか作ったことがあったのですが，全体に公開することはありませんでした． Play Storeにリリースは前からしたかったことの一つなので，とりあえずリリース出来たな～という感じです． プライバシーポリシーが無くてリジェクトとか，英語に対応するとか，審査が遅いとか，アプリリリースの面倒ごとは大体経験したので，次はもう少し大きいアプリでもリリースしようかなーと思ってます．
+loading...
+&amp;mdash; pishiko (@pishitaro_) loading... おわり</description>
+    </item>
+    
     <item>
       <title>Build MediapipeUnityPlugin for Android (Ubuntu20.04 WSL2)</title>
       <link>https://p4ko.com/posts/build-mediapipe-unity-plugin/</link>
@@ -311,6 +330,10 @@ cd public git init git remote add origin git@github.</description>
       
       <guid>https://p4ko.com/posts/summary/</guid>
       <description>About 作った物を紹介します．
+おえかきキーボード   Kotlinで書いたAndroid IMEです．
+らくがきスタンプを投稿できるキーボードで，画像投稿に対応したテキストボックスなら使えます．Play Storeでリリースしました．
+紹介ページ：おえかきキーボード
+リポジトリ：pishiko/paint-keyboard: Android向けおえかきキーボードアプリ
 GoNES   Go言語製のファミコンエミュレータです．
 ベースはほぼ完成していますが，特殊カセットへの対応や音声再生の改善のため，開発中です．
 記事：Go ファミコンエミュレータ開発記録 その1 // ぴしめも
@@ -331,10 +354,7 @@ JOYSOUNDなら動画を流して歌えます．
 リンク：github
 バーチャルYoutuberになるツール   Unity＋Python＋Live2D製，フェイスキャプチャアプリです．
 学科掲示板通知BOT   GoogleAppsScript(javascript)製，大学の掲示板をスクレイピングして通知するLINEBotです．
-リンク：github
-discordBOT   Python製のDiscord Botです．Heroku上で動いています．
-サーバの管理から音楽を再生する機能まで，サークルメンバーで開発中．
-記事：Discord Bot 開発あれこれ // ぴしめも</description>
+リンク：github</description>
     </item>
     
   </channel>
