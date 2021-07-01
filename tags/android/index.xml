@@ -6,7 +6,22 @@
     <description>Recent content in android on ぴしめも</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
-    <lastBuildDate>Wed, 26 May 2021 21:54:53 +0900</lastBuildDate><atom:link href="https://p4ko.com/tags/android/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 01 Jul 2021 23:01:15 +0900</lastBuildDate><atom:link href="https://p4ko.com/tags/android/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ARフリーハンドおえかきアプリ（製作中）</title>
+      <link>https://p4ko.com/posts/aroekaki/</link>
+      <pubDate>Thu, 01 Jul 2021 23:01:15 +0900</pubDate>
+      
+      <guid>https://p4ko.com/posts/aroekaki/</guid>
+      <description>こんなやつです （Twitterの動画）
+loading...
+&amp;mdash; pishiko (@pishitaro_) loading... フレームワークなど ARFoundation UnityのモバイルAR向けAPIです． これによって自己位置推定が可能になるため，現実の空間上に描いた物体を表示させることが出来ます． ついでにマルチプラットフォーム対応です．（iOS, Android）(試したのはAndroidだけですが)
+Mediapipe Googleの画像処理系機械学習ライブラリです．骨格推定や表情推定などが扱えますが，ハンドトラッキングを使用しています． モバイル向けのハンドトラッキングで精度の高さと軽量さ（あと無料なやつ）を考えると多分これが一番いいと思います．
+動機 講義で自由制作があったので作ってます．
+まだ製作途中ですが，発表が終わったらスライドなどもろもろ上げたいと思います．
+おわり </description>
+    </item>
+    
     <item>
       <title>Android向け「おえかきキーボード」をPlay Storeでリリースしました</title>
       <link>https://p4ko.com/posts/paint-keyboard/</link>
