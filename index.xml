@@ -354,36 +354,18 @@ Github：pishiko</description>
     </item>
     
     <item>
-      <title>製作物まとめ</title>
-      <link>https://p4ko.com/posts/summary/</link>
+      <title>制作物まとめ</title>
+      <link>https://p4ko.com/product/</link>
       <pubDate>Sat, 01 Jan 2000 00:00:00 +0900</pubDate>
       
-      <guid>https://p4ko.com/posts/summary/</guid>
-      <description>作った物(新しい順) ARフリーハンドおえかきアプリ（制作中） 手を使って現実空間に絵を描けるアプリです．
+      <guid>https://p4ko.com/product/</guid>
+      <description>その他(主にTwitterに上げたもの) テトリス C++ とDirectXで実装したテトリスです．
 loading...
-&amp;mdash; pishiko (@pishitaro_) loading... 講義の自由制作で制作中です．
-MediapipeによるハンドトラッキングとARFoundationによるスマートフォンの自己位置推定（空間認識）で実現しています．
-紹介ページ：ARフリーハンドおえかきアプリ（製作中） // ぴしめも
-おえかきキーボード   Kotlinで書いたAndroid IMEです．
-らくがきスタンプを投稿できるキーボードで，画像投稿に対応したテキストボックスなら使えます．Play Storeでリリースしました．
-紹介ページ：おえかきキーボード
-リポジトリ：pishiko/paint-keyboard: Android向けおえかきキーボードアプリ
-GoNES   Go言語製のファミコンエミュレータです．
-ベースはほぼ完成していますが，特殊カセットへの対応や音声再生の改善のため，開発中です．
-記事：Go ファミコンエミュレータ開発記録 その1 // ぴしめも
-NowPlayingCat   C#.Net製のDiscord連携アプリケーションです．
-ほぼ全ての音楽配信サービスに対応しています．
-記事：Discordのnowplayingに音楽を表示させるのを作った // ぴしめも
-リンク：github，使い方
-YoutubeShareHub   モバイル向けの，共有をカスタマイズできるPWAアプリです．
-GithubPages上で動いています．
-記事： Youtubeの共有を便利にするWeb Appを作った // ぴしめも
-サイト(Android Only)：Youtube Share Hub
-LINE匿名チャット   GoogleAppsScript(Javascript)製のLINE Bot．
-LINEで匿名掲示板みたいな使い方をしてみようというサービスです．
-記事：匿名LINEチャットルームを作った // ぴしめも
-リンク：github
-カラオケ生成ツール   Python製，Youtubeの動画をカラオケ動画に変換するツールです．</description>
+&amp;mdash; pishiko (@pishitaro_) loading... OculusQuest開発 スタンドアロンのVRHMDであるOculusQuestで動作する積み木アプリ． Unity製です．
+loading...
+&amp;mdash; pishiko (@pishitaro_) loading... ARゲーム ジャンプゲームです． Unity＋Vuforia製です．
+loading...
+&amp;mdash; pishiko (@pishitaro_) loading... おわり</description>
     </item>
     
   </channel>
