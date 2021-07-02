@@ -6,7 +6,27 @@
     <description>Recent content in hugo on ぴしめも</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
-    <lastBuildDate>Sun, 17 Jan 2021 19:08:19 +0900</lastBuildDate><atom:link href="https://p4ko.com/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 02 Jul 2021 22:23:12 +0900</lastBuildDate><atom:link href="https://p4ko.com/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugoで個別ページを作る</title>
+      <link>https://p4ko.com/posts/addstaicpage/</link>
+      <pubDate>Fri, 02 Jul 2021 22:23:12 +0900</pubDate>
+      
+      <guid>https://p4ko.com/posts/addstaicpage/</guid>
+      <description>やりたいこと Hugoでブログを書いて，Aboutやポートフォリオなどの特別なページを作りたい．
+通常投稿のテンプレートではなく，独自のスタイルのテンプレートを利用したい．
+やり方 目標は
+p4ko.com/posts/通常投稿/ p4ko.com/posts/通常投稿2/ p4ko.com/プロダクト/ 👈特別なページ ファイル構成は
+/content/posts/通常投稿.md /content/posts/通常投稿2.md /content/プロダクト.md 👈追加ページ /layouts/custom/product.html 👈独自テンプレート プロダクト.mdのfrontmatterに次を追加します（YAMLの場合）
+--- type: &amp;#34;custom&amp;#34; layout: &amp;#34;product&amp;#34; --- product.htmlにテンプレートを書きます． テーマの通常投稿のテンプレート（/themes/HOGE/layouts/_default/single.html）をコピーして弄るとよいと思います．
+完全にベタ書きしたい場合はmarkdownの本文は空でもいいですし，もしくはテンプレート{{ .Content }}から本文を取ってきてもよいです．
+あとがき 経緯 日本語の情報が無かったので書きました．
+制作物まとめのページを以前から通常の投稿として置いていたのですが，もうちょっと見た目を良くしたかったので，追加テンプレートから生成するよう（というかほぼベタ書き）にしました．👇
+⭐制作物まとめ⭐ // ぴしめも
+参考 Creating &amp;lsquo;static&amp;rsquo; content that uses partials - support - HUGO
+おわり</description>
+    </item>
+    
     <item>
       <title>新ドメインにしました</title>
       <link>https://p4ko.com/posts/domain/</link>
