@@ -6,7 +6,17 @@
     <description>Recent content in Posts on ぴしめも</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
-    <lastBuildDate>Fri, 02 Jul 2021 22:23:12 +0900</lastBuildDate><atom:link href="https://p4ko.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 28 Aug 2021 22:10:18 +0900</lastBuildDate><atom:link href="https://p4ko.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>VOYAGEのインターン&#34;Treasure&#34;に参加しました2021</title>
+      <link>https://p4ko.com/posts/treasure21/</link>
+      <pubDate>Sat, 28 Aug 2021 22:10:18 +0900</pubDate>
+      
+      <guid>https://p4ko.com/posts/treasure21/</guid>
+      <description>N 行まとめ こんな目標で臨みました  Web 開発わからんが多いので地固めしたい！ チーム開発の機会がないのでいろいろ試したい！ つよつよの人と交流したい！  こんな感じの流れでした  1 週目：Go バック・React/TS フロント・AWS 講義，フィードバック 2 週目：DB 設計・アイデア講義，チーム開発 3 週目：チーム開発，プレゼン・フィードバック  完走した感想  フルサイクル開発めちゃ楽しい！ これがチーム開発&amp;hellip;！これが壁&amp;hellip;！！ 周りが Web つよマン＆競プロ勢とか，CS 各方面につよくて楽しかった 最後に機能リリースできなかったの悔しい，自分の実装力が足りない&amp;hellip; サポーターおもしれ～，ゲーマー多い チームメンバーつえ～！ありがとう チーム開発たのし～！！  クルーのみなさん，本当にありがとうございました！
+レポート 編集中&amp;hellip;</description>
+    </item>
+    
     <item>
       <title>Hugoで個別ページを作る</title>
       <link>https://p4ko.com/posts/addstaicpage/</link>

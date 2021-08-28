@@ -6,7 +6,7 @@
     <description>Recent content on ぴしめも</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
-    <lastBuildDate>Fri, 02 Jul 2021 22:23:12 +0900</lastBuildDate><atom:link href="https://p4ko.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 28 Aug 2021 22:10:18 +0900</lastBuildDate><atom:link href="https://p4ko.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>⭐制作物まとめ⭐</title>
       <link>https://p4ko.com/product/</link>
@@ -20,6 +20,16 @@ loading...
 &amp;mdash; pishiko (@pishitaro_) loading... ARゲーム ジャンプゲームです． Unity＋Vuforia製です．
 loading...
 &amp;mdash; pishiko (@pishitaro_) loading... おわり</description>
+    </item>
+    
+    <item>
+      <title>VOYAGEのインターン&#34;Treasure&#34;に参加しました2021</title>
+      <link>https://p4ko.com/posts/treasure21/</link>
+      <pubDate>Sat, 28 Aug 2021 22:10:18 +0900</pubDate>
+      
+      <guid>https://p4ko.com/posts/treasure21/</guid>
+      <description>N 行まとめ こんな目標で臨みました  Web 開発わからんが多いので地固めしたい！ チーム開発の機会がないのでいろいろ試したい！ つよつよの人と交流したい！  こんな感じの流れでした  1 週目：Go バック・React/TS フロント・AWS 講義，フィードバック 2 週目：DB 設計・アイデア講義，チーム開発 3 週目：チーム開発，プレゼン・フィードバック  完走した感想  フルサイクル開発めちゃ楽しい！ これがチーム開発&amp;hellip;！これが壁&amp;hellip;！！ 周りが Web つよマン＆競プロ勢とか，CS 各方面につよくて楽しかった 最後に機能リリースできなかったの悔しい，自分の実装力が足りない&amp;hellip; サポーターおもしれ～，ゲーマー多い チームメンバーつえ～！ありがとう チーム開発たのし～！！  クルーのみなさん，本当にありがとうございました！
+レポート 編集中&amp;hellip;</description>
     </item>
     
     <item>
@@ -380,9 +390,15 @@ cd public git init git remote add origin git@github.</description>
       
       <guid>https://p4ko.com/about/</guid>
       <description>このブログについて このブログは，個人的な技術メモや製作物の記録がメインになります．
-Hugo + GithubPagesで運用しており，このブログに関する記事一覧はこちらです．
-筆者について 東京農工大学院工学府情報工学専攻1年(21年4月時点)
-これまでに作ったものなど👉製作物まとめ // ぴしめも
+Hugo + GithubPages で運用しており，このブログに関する記事一覧はこちらです．
+筆者について 東京農工大学院工学府情報工学専攻 1 年(21 年 8 月時点)
+研究では論理知識を活用した深層学習の研究をしています．
+趣味でも AR，ファミコンエミュレーター，Android キーボードアプリなど様々な領域に手を出してます．
+これまでに作ったものはこちら 👉製作物まとめ // ぴしめも
+最近は Web 開発にお熱です．
+参加したイベントなど   VOYAGE Group サマーインターン「Treasure」   レポートはこちら VOYAGE のインターン&amp;quot;Treasure&amp;quot;に参加しました 2021 // ぴしめも
+2021 年 8 月（3Week）のエンジニアインターンです． フロントエンドからインフラまでフルサイクルなチーム開発をしました． アイデア出しからチームで開発をして，発表では賞を頂きました！
+  チームラボエンジニアインターン   2021 年 9 月（2Week）で参加予定のエンジニアインターンです．
 連絡先 バグ報告，お問い合わせはこちらにお願いします．
 メール：Twitter：@pishitaro_
 Github：pishiko</description>
