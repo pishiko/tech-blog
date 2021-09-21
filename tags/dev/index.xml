@@ -6,7 +6,23 @@
     <description>Recent content in dev on ぴしめも</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
-    <lastBuildDate>Sat, 28 Aug 2021 22:10:18 +0900</lastBuildDate><atom:link href="https://p4ko.com/tags/dev/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 21 Sep 2021 23:01:15 +0900</lastBuildDate><atom:link href="https://p4ko.com/tags/dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ARフリーハンドおえかきアプリを作りました（完成）</title>
+      <link>https://p4ko.com/posts/aroekaki/</link>
+      <pubDate>Tue, 21 Sep 2021 23:01:15 +0900</pubDate>
+      
+      <guid>https://p4ko.com/posts/aroekaki/</guid>
+      <description>こんなやつです （Twitter の動画）
+loading...
+&amp;mdash; pishiko (@pishitaro_) loading... 追記：カラー対応してパレットをいくつか用意しました 追記：滑らかさや入力感度の設定を追加しました 追記：ピースサインでスポイトできる機能を追加しました フレームワークなど ARFoundation Unity のモバイル AR 向け API です． これによって自己位置推定が可能になるため，現実の空間上に描いた物体を表示させることが出来ます． ついでにマルチプラットフォーム対応です．（iOS, Android）(試したのは Android だけですが)
+Mediapipe Google の画像処理系機械学習ライブラリです．骨格推定や表情推定などが扱えますが，ハンドトラッキングを使用しています． モバイル向けのハンドトラッキングで精度の高さと軽量さ（あと無料なやつ）を考えると多分これが一番いいと思います．
+動機 講義で自由制作があったので作ってます．
+まだ製作途中ですが，発表が終わったらスライドなどもろもろ上げたいと思います．
+追記： いろいろ機能を追加したり，入力精度がそれなりになったりで満足しています．平滑化をいい感じにしたらいい感じに書きやすくなりました．講義も終わったのでこれで完成かな～
+おわり </description>
+    </item>
+    
     <item>
       <title>🚀VOYAGEのインターン「Treasure」に参加しました2021</title>
       <link>https://p4ko.com/posts/treasure21/</link>
@@ -49,21 +65,6 @@ p4ko.com/posts/通常投稿/ p4ko.com/posts/通常投稿2/ p4ko.com/プロダク
 ⭐制作物まとめ⭐ // ぴしめも
 参考 Creating &amp;lsquo;static&amp;rsquo; content that uses partials - support - HUGO
 おわり</description>
-    </item>
-    
-    <item>
-      <title>ARフリーハンドおえかきアプリ（製作中）</title>
-      <link>https://p4ko.com/posts/aroekaki/</link>
-      <pubDate>Thu, 01 Jul 2021 23:01:15 +0900</pubDate>
-      
-      <guid>https://p4ko.com/posts/aroekaki/</guid>
-      <description>こんなやつです （Twitterの動画）
-loading...
-&amp;mdash; pishiko (@pishitaro_) loading... フレームワークなど ARFoundation UnityのモバイルAR向けAPIです． これによって自己位置推定が可能になるため，現実の空間上に描いた物体を表示させることが出来ます． ついでにマルチプラットフォーム対応です．（iOS, Android）(試したのはAndroidだけですが)
-Mediapipe Googleの画像処理系機械学習ライブラリです．骨格推定や表情推定などが扱えますが，ハンドトラッキングを使用しています． モバイル向けのハンドトラッキングで精度の高さと軽量さ（あと無料なやつ）を考えると多分これが一番いいと思います．
-動機 講義で自由制作があったので作ってます．
-まだ製作途中ですが，発表が終わったらスライドなどもろもろ上げたいと思います．
-おわり </description>
     </item>
     
     <item>

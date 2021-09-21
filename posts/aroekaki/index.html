@@ -9,7 +9,7 @@
     <link rel="manifest" href="/site.webmanifest">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
-    <title>ARフリーハンドおえかきアプリ（製作中） // ぴしめも</title>
+    <title>ARフリーハンドおえかきアプリを作りました（完成） // ぴしめも</title>
     <meta charset="utf-8" />
     <meta name="generator" content="Hugo 0.75.1" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -20,27 +20,29 @@
 
     
     <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="ARフリーハンドおえかきアプリ（製作中）"/>
-<meta name="twitter:description" content="こんなやつです （Twitterの動画）
+<meta name="twitter:title" content="ARフリーハンドおえかきアプリを作りました（完成）"/>
+<meta name="twitter:description" content="こんなやつです （Twitter の動画）
 loading...
-&mdash; pishiko (@pishitaro_) loading... フレームワークなど ARFoundation UnityのモバイルAR向けAPIです． これによって自己位置推定が可能になるため，現実の空間上に描いた物体を表示させることが出来ます． ついでにマルチプラットフォーム対応です．（iOS, Android）(試したのはAndroidだけですが)
-Mediapipe Googleの画像処理系機械学習ライブラリです．骨格推定や表情推定などが扱えますが，ハンドトラッキングを使用しています． モバイル向けのハンドトラッキングで精度の高さと軽量さ（あと無料なやつ）を考えると多分これが一番いいと思います．
+&mdash; pishiko (@pishitaro_) loading... 追記：カラー対応してパレットをいくつか用意しました 追記：滑らかさや入力感度の設定を追加しました 追記：ピースサインでスポイトできる機能を追加しました フレームワークなど ARFoundation Unity のモバイル AR 向け API です． これによって自己位置推定が可能になるため，現実の空間上に描いた物体を表示させることが出来ます． ついでにマルチプラットフォーム対応です．（iOS, Android）(試したのは Android だけですが)
+Mediapipe Google の画像処理系機械学習ライブラリです．骨格推定や表情推定などが扱えますが，ハンドトラッキングを使用しています． モバイル向けのハンドトラッキングで精度の高さと軽量さ（あと無料なやつ）を考えると多分これが一番いいと思います．
 動機 講義で自由制作があったので作ってます．
 まだ製作途中ですが，発表が終わったらスライドなどもろもろ上げたいと思います．
+追記： いろいろ機能を追加したり，入力精度がそれなりになったりで満足しています．平滑化をいい感じにしたらいい感じに書きやすくなりました．講義も終わったのでこれで完成かな～
 おわり "/>
 
-    <meta property="og:title" content="ARフリーハンドおえかきアプリ（製作中）" />
-<meta property="og:description" content="こんなやつです （Twitterの動画）
+    <meta property="og:title" content="ARフリーハンドおえかきアプリを作りました（完成）" />
+<meta property="og:description" content="こんなやつです （Twitter の動画）
 loading...
-&mdash; pishiko (@pishitaro_) loading... フレームワークなど ARFoundation UnityのモバイルAR向けAPIです． これによって自己位置推定が可能になるため，現実の空間上に描いた物体を表示させることが出来ます． ついでにマルチプラットフォーム対応です．（iOS, Android）(試したのはAndroidだけですが)
-Mediapipe Googleの画像処理系機械学習ライブラリです．骨格推定や表情推定などが扱えますが，ハンドトラッキングを使用しています． モバイル向けのハンドトラッキングで精度の高さと軽量さ（あと無料なやつ）を考えると多分これが一番いいと思います．
+&mdash; pishiko (@pishitaro_) loading... 追記：カラー対応してパレットをいくつか用意しました 追記：滑らかさや入力感度の設定を追加しました 追記：ピースサインでスポイトできる機能を追加しました フレームワークなど ARFoundation Unity のモバイル AR 向け API です． これによって自己位置推定が可能になるため，現実の空間上に描いた物体を表示させることが出来ます． ついでにマルチプラットフォーム対応です．（iOS, Android）(試したのは Android だけですが)
+Mediapipe Google の画像処理系機械学習ライブラリです．骨格推定や表情推定などが扱えますが，ハンドトラッキングを使用しています． モバイル向けのハンドトラッキングで精度の高さと軽量さ（あと無料なやつ）を考えると多分これが一番いいと思います．
 動機 講義で自由制作があったので作ってます．
 まだ製作途中ですが，発表が終わったらスライドなどもろもろ上げたいと思います．
+追記： いろいろ機能を追加したり，入力精度がそれなりになったりで満足しています．平滑化をいい感じにしたらいい感じに書きやすくなりました．講義も終わったのでこれで完成かな～
 おわり " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://p4ko.com/posts/aroekaki/" />
-<meta property="article:published_time" content="2021-07-01T23:01:15+09:00" />
-<meta property="article:modified_time" content="2021-07-01T23:01:15+09:00" />
+<meta property="article:published_time" content="2021-09-21T23:01:15+09:00" />
+<meta property="article:modified_time" content="2021-09-21T23:01:15+09:00" />
 
 
   </head>
@@ -110,14 +112,14 @@ Mediapipe Googleの画像処理系機械学習ライブラリです．骨格推�
       
 <article class="post">
   <header class="post-header">
-    <h1 class="post-title">ARフリーハンドおえかきアプリ（製作中）</h1>
+    <h1 class="post-title">ARフリーハンドおえかきアプリを作りました（完成）</h1>
     <div class="post-meta">
       <div>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
   <title>calendar</title>
   <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
 </svg>
-        Jul 1, 2021
+        Sep 21, 2021
       </div>
       <div>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
@@ -134,23 +136,31 @@ Mediapipe Googleの画像処理系機械学習ライブラリです．骨格推�
   </header>
   <div class="post-content">
     <h2 id="こんなやつです">こんなやつです</h2>
-<p>（Twitterの動画）</p>
+<p>（Twitter の動画）</p>
 <blockquote class="twitter-tweet" data-lang="ja" data-theme="dark">
     <p lang="ja" dir="ltr">loading...</p>&mdash; pishiko (@pishitaro_) <a
-        href="https://twitter.com/pishitaro_/status/1410598403222904838">loading...</a>
+        href="https://twitter.com/pishitaro_/status/1440326240896835599">loading...</a>
 </blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<h3 id="追記カラー対応してパレットをいくつか用意しました">追記：カラー対応してパレットをいくつか用意しました</h3>
+<p><img src="https://res.cloudinary.com/pishiko/image/upload/v1632234719/blog/hana2_Moment_uesscn.jpg" alt="img"></p>
+<h3 id="追記滑らかさや入力感度の設定を追加しました">追記：滑らかさや入力感度の設定を追加しました</h3>
+<p><img src="https://res.cloudinary.com/pishiko/image/upload/v1632234730/blog/screen-20210722-115841_Moment_ozxjxy.jpg" alt="img"></p>
+<h3 id="追記ピースサインでスポイトできる機能を追加しました">追記：ピースサインでスポイトできる機能を追加しました</h3>
+<p><img src="https://res.cloudinary.com/pishiko/image/upload/v1632235774/blog/screen-20210722-120042_Trim_Moment_xah4gx.jpg" alt="img"></p>
 <h2 id="フレームワークなど">フレームワークなど</h2>
 <h3 id="arfoundation">ARFoundation</h3>
-<p>UnityのモバイルAR向けAPIです．
+<p>Unity のモバイル AR 向け API です．
 これによって自己位置推定が可能になるため，現実の空間上に描いた物体を表示させることが出来ます．
-ついでにマルチプラットフォーム対応です．（iOS, Android）(試したのはAndroidだけですが)</p>
+ついでにマルチプラットフォーム対応です．（iOS, Android）(試したのは Android だけですが)</p>
 <h3 id="mediapipe">Mediapipe</h3>
-<p>Googleの画像処理系機械学習ライブラリです．骨格推定や表情推定などが扱えますが，ハンドトラッキングを使用しています．
+<p>Google の画像処理系機械学習ライブラリです．骨格推定や表情推定などが扱えますが，ハンドトラッキングを使用しています．
 モバイル向けのハンドトラッキングで精度の高さと軽量さ（あと無料なやつ）を考えると多分これが一番いいと思います．</p>
 <h2 id="動機">動機</h2>
 <p>講義で自由制作があったので作ってます．</p>
 <p>まだ製作途中ですが，発表が終わったらスライドなどもろもろ上げたいと思います．</p>
+<h3 id="追記">追記：</h3>
+<p>いろいろ機能を追加したり，入力精度がそれなりになったりで満足しています．平滑化をいい感じにしたらいい感じに書きやすくなりました．講義も終わったのでこれで完成かな～</p>
 <h3 id="おわり">おわり</h3>
 
   </div>
