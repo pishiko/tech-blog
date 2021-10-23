@@ -53,16 +53,16 @@ PS こちらは支給品のデイリーナッツ loading.</description>
       <pubDate>Fri, 02 Jul 2021 22:23:12 +0900</pubDate>
       
       <guid>https://p4ko.com/posts/addstaicpage/</guid>
-      <description>やりたいこと Hugoでブログを書いて，Aboutやポートフォリオなどの特別なページを作りたい．
+      <description>やりたいこと Hugo でブログを書いて，About やポートフォリオなどの特別なページを作りたい．
 通常投稿のテンプレートではなく，独自のスタイルのテンプレートを利用したい．
 やり方 目標は
 p4ko.com/posts/通常投稿/ p4ko.com/posts/通常投稿2/ p4ko.com/プロダクト/ 👈特別なページ ファイル構成は
-/content/posts/通常投稿.md /content/posts/通常投稿2.md /content/プロダクト.md 👈追加ページ /layouts/custom/product.html 👈独自テンプレート プロダクト.mdのfrontmatterに次を追加します（YAMLの場合）
+/content/posts/通常投稿.md /content/posts/通常投稿2.md /content/プロダクト.md 👈追加ページ /layouts/custom/product.html 👈独自テンプレート プロダクト.mdの frontmatter に次を追加します（YAML の場合）
 --- type: &amp;#34;custom&amp;#34; layout: &amp;#34;product&amp;#34; --- product.htmlにテンプレートを書きます． テーマの通常投稿のテンプレート（/themes/HOGE/layouts/_default/single.html）をコピーして弄るとよいと思います．
-完全にベタ書きしたい場合はmarkdownの本文は空でもいいですし，もしくはテンプレート{{ .Content }}から本文を取ってきてもよいです．
+完全にベタ書きしたい場合は markdown の本文は空でもいいですし，もしくはテンプレート{{ .Content }}から本文を取ってきてもよいです．
 あとがき 経緯 日本語の情報が無かったので書きました．
 制作物まとめのページを以前から通常の投稿として置いていたのですが，もうちょっと見た目を良くしたかったので，追加テンプレートから生成するよう（というかほぼベタ書き）にしました．👇
-⭐制作物まとめ⭐ // ぴしめも
+⭐ 制作物まとめ ⭐ // ぴしめも
 参考 Creating &amp;lsquo;static&amp;rsquo; content that uses partials - support - HUGO
 おわり</description>
     </item>
@@ -73,21 +73,21 @@ p4ko.com/posts/通常投稿/ p4ko.com/posts/通常投稿2/ p4ko.com/プロダク
       <pubDate>Wed, 26 May 2021 21:54:53 +0900</pubDate>
       
       <guid>https://p4ko.com/posts/paint-keyboard/</guid>
-      <description>おえかきキーボード というアプリを作りました．Android向けのIMEです． ちなみに英語版は&amp;quot;Scrobble Keyboard&amp;quot;です．
-専用ページはこちら👇
+      <description>おえかきキーボード というアプリを作りました．Android 向けの IME です． ちなみに英語版は&amp;quot;Scrobble Keyboard&amp;quot;です．
+専用ページはこちら 👇
 おえかきキーボード
-詳しくは👆の紹介ページに書いてあるのですが，簡単に説明すると，画像貼り付けに対応したテキスト入力中にサクッと絵を描けるキーボードで，コンセプトは「スタンプをその場で書いて送ろう」です．
-こんな感じでTwitterとかLINEとかでインスタントに送れたら面白いかなーと．
-所感 リポジトリもあります👇
-pishiko/paint-keyboard: Android向けおえかきキーボードアプリ
-IMEの情報がインターネット上に無いのと，IMEのServiceが特殊なライフサイクルなのもあって結構手探りでした．
-はじめてのアプリリリース Androidアプリ自体はいくつか作ったことがあったのですが，全体に公開することはありませんでした． Play Storeにリリースは前からしたかったことの一つなので，とりあえずリリース出来たな～という感じです． プライバシーポリシーが無くてリジェクトとか，英語に対応するとか，審査が遅いとか，アプリリリースの面倒ごとは大体経験したので，次はもう少し大きいアプリでもリリースしようかなーと思ってます．
+詳しくは 👆 の紹介ページに書いてあるのですが，簡単に説明すると，画像貼り付けに対応したテキスト入力中にサクッと絵を描けるキーボードで，コンセプトは「スタンプをその場で書いて送ろう」です．
+こんな感じで Twitter とか LINE とかでインスタントに送れたら面白いかなーと．
+所感 リポジトリもあります 👇
+pishiko/paint-keyboard: Android 向けおえかきキーボードアプリ
+IME の情報がインターネット上に無いのと，IME の Service が特殊なライフサイクルなのもあって結構手探りでした．
+はじめてのアプリリリース Android アプリ自体はいくつか作ったことがあったのですが，全体に公開することはありませんでした． Play Store にリリースは前からしたかったことの一つなので，とりあえずリリース出来たな～という感じです． プライバシーポリシーが無くてリジェクトとか，英語に対応するとか，審査が遅いとか，アプリリリースの面倒ごとは大体経験したので，次はもう少し大きいアプリでもリリースしようかなーと思ってます．
 loading...
 &amp;mdash; pishiko (@pishitaro_) loading... おわり</description>
     </item>
     
     <item>
-      <title>Build MediapipeUnityPlugin for Android (Ubuntu20.04 WSL2)</title>
+      <title>Build MediapipeUnityPlugin for Android</title>
       <link>https://p4ko.com/posts/build-mediapipe-unity-plugin/</link>
       <pubDate>Mon, 17 May 2021 17:15:19 +0900</pubDate>
       
@@ -104,13 +104,13 @@ git clone https://github.com/homuler/MediaPipeUnityPlugin.git cd MediaPipeUnityP
       <pubDate>Wed, 31 Mar 2021 22:57:33 +0900</pubDate>
       
       <guid>https://p4ko.com/posts/wordpress-move/</guid>
-      <description>WordPressの引っ越し作業をしたのですが，思いのほかやることが多く詰まったので作業メモを残しておきます．
-bitnami (on AWS) から XREAレンタルサーバ に引っ越しします． ついでにムームードメインで購入したドメインをAWS Route53からレンタルサーバと一緒に使えるバリュードメインDNSに引っ越しもします．
+      <description>WordPress の引っ越し作業をしたのですが，思いのほかやることが多く詰まったので作業メモを残しておきます．
+bitnami (on AWS) から XREA レンタルサーバ に引っ越しします． ついでにムームードメインで購入したドメインを AWS Route53 からレンタルサーバと一緒に使えるバリュードメイン DNS に引っ越しもします．
 無料から使える高機能・高品質レンタルサーバー | XREA（エクスリア）
 リダイレクトの設定を切る /opt/bitnami/apps/wordpress/conf/htaccess.conf の該当部を以下の様にコメントアウト
-# BEGIN Custom #RewriteCond %{HTTP_HOST} !^www\. #RewriteRule ^(.*) $https://www.%{HTTP_HOST}/$1 [R=301,L] #END Custom Wordpressを丸々ダウンロードする /opt/bitnami/apps/wordpress/htdocsの中身を丸々ダウンロードする．
-MySQLのデータを引っ越し PHPMYADMINからSQLをエクスポート localhostからしかログインできないので /opt/bitnami/apps/phpmyadmin/conf/httpd-app.confを編集し，
-&amp;lt;IfVersion &amp;lt; 2.3 &amp;gt; Order allow,deny Allow from 127.0.0.1 Allow from &amp;lt;YOURIP&amp;gt; Satisfy all &amp;lt;/IfVersion&amp;gt; &amp;lt;IfVersion &amp;gt;= 2.3&amp;gt; Require local Require ip &amp;lt;YOURIP&amp;gt; &amp;lt;/IfVersion&amp;gt; ErrorDocument 403 &amp;quot;For security reasons, this URL is only accessible using localhost (127.0.0.1) as the hostname.</description>
+# BEGIN Custom #RewriteCond %{HTTP_HOST} !^www\. #RewriteRule ^(.*) $https://www.%{HTTP_HOST}/$1 [R=301,L] #END Custom Wordpress を丸々ダウンロードする /opt/bitnami/apps/wordpress/htdocsの中身を丸々ダウンロードする．
+MySQL のデータを引っ越し PHPMYADMIN から SQL をエクスポート localhost からしかログインできないので /opt/bitnami/apps/phpmyadmin/conf/httpd-app.confを編集し，
+&amp;lt;IfVersion &amp;lt; 2.3 &amp;gt; Order allow,deny Allow from 127.0.0.1 Allow from &amp;lt;YOURIP&amp;gt; Satisfy all &amp;lt;/IfVersion&amp;gt; &amp;lt;IfVersion &amp;gt;= 2.3&amp;gt; Require local Require ip &amp;lt;YOURIP&amp;gt; &amp;lt;/IfVersion&amp;gt; ErrorDocument 403 &amp;quot;For security reasons, this URL is only accessible using localhost (127.</description>
     </item>
     
     <item>
@@ -119,17 +119,14 @@ MySQLのデータを引っ越し PHPMYADMINからSQLをエクスポート localh
       <pubDate>Sat, 27 Feb 2021 19:45:05 +0900</pubDate>
       
       <guid>https://p4ko.com/posts/vscodesettings/</guid>
-      <description>VSCodeの設定 変えすぎて何が何だかよくわからなくなってきそうなので整理も兼ねて設定を並べていきたいと思います．
-テーマ Solarized Darkを使用しています．
+      <description>VSCode の設定 変えすぎて何が何だかよくわからなくなってきそうなので整理も兼ねて設定を並べていきたいと思います．
+テーマ Solarized Dark を使用しています．
 Solarized
-&amp;#34;workbench.colorTheme&amp;#34;: &amp;#34;Solarized Dark&amp;#34;, フォント 半角がCancadia Code，全角日本語がHan Codeになるように設定しています． Cancadia CodeはMicrosoftの作ったWindowsTerminalのデフォルトフォントで，リガチャにも対応しています． 日本語は見やすさ重視です．
+&amp;#34;workbench.colorTheme&amp;#34;: &amp;#34;Solarized Dark&amp;#34;, フォント 半角が Cancadia Code，全角日本語が Han Code になるように設定しています． Cancadia Code は Microsoft の作った WindowsTerminal のデフォルトフォントで，リガチャにも対応しています． 日本語は見やすさ重視です．
 microsoft/cascadia-code: This is a fun, new monospaced font that includes programming ligatures and is designed to enhance the modern look and feel of the Windows Terminal.
 adobe-fonts/source-han-code-jp: Source Han Code JP | 源ノ角ゴシック Code
 &amp;#34;editor.fontFamily&amp;#34;: &amp;#34;Cascadia Code, Han Code JP&amp;#34;, リガチャ（合字）は個別に有効にする必要があります．
-&amp;#34;editor.fontLigatures&amp;#34;: true, ターミナルの配色 Onehalfという配色を使ってます．
-配色テーマをVSCodeのsettings.json用に成形してくれてるサイトがあるのでとても便利です．
-Base16 Terminal Colors for Visual Studio Code
-&amp;#34;workbench.colorCustomizations&amp;#34;: { &amp;#34;terminal.</description>
+&amp;#34;editor.fontLigatures&amp;#34;: true, ターミナルの配色 Onehalfという配色を使ってます．</description>
     </item>
     
     <item>
@@ -138,12 +135,12 @@ Base16 Terminal Colors for Visual Studio Code
       <pubDate>Sat, 27 Feb 2021 19:44:55 +0900</pubDate>
       
       <guid>https://p4ko.com/posts/slashcommand/</guid>
-      <description>アドベントカレンダー 去年の年末にQiitaのDiscordBotアドベントカレンダーに初参加して，記事を投稿してみました．
- アドベントカレンダーどころかQiitaに投稿するのは初だったのですが，人に読まれる文章を書くのって難しいですね&amp;hellip;
-DiscordのSlashCommandはまだβ版ですが，SlackのSlashCommandに比べて入力補助がしっかりしてるので，かなり期待の機能です． 入力補助というのは，ユーザーだったりチャンネルだったりの選択をクリックするだけで埋められるというもので，大変使いやすいので今後は全てこっちに移植していきたいと思います．
-Future DiscordBotのインタフェースは更に改善されていくと以下で公式に明言されています．楽しみですね．
+      <description>アドベントカレンダー 去年の年末に Qiita の DiscordBot アドベントカレンダーに初参加して，記事を投稿してみました．
+ アドベントカレンダーどころか Qiita に投稿するのは初だったのですが，人に読まれる文章を書くのって難しいですね&amp;hellip;
+Discord の SlashCommand はまだ β 版ですが，Slack の SlashCommand に比べて入力補助がしっかりしてるので，かなり期待の機能です． 入力補助というのは，ユーザーだったりチャンネルだったりの選択をクリックするだけで埋められるというもので，大変使いやすいので今後は全てこっちに移植していきたいと思います．
+Future DiscordBot のインタフェースは更に改善されていくと以下で公式に明言されています．楽しみですね．
 The Future of Bots on Discord. In case you weren’t aware, robots have… | by Nelly | Discord Blog
-以下のようなUIが扱えるらしいです．ちょっとしたツールとしても全然使えそう．
+以下のような UI が扱えるらしいです．ちょっとしたツールとしても全然使えそう．
 おわり</description>
     </item>
     
@@ -154,17 +151,15 @@ The Future of Bots on Discord. In case you weren’t aware, robots have… | by 
       
       <guid>https://p4ko.com/posts/domain/</guid>
       <description>pishiko.github.ioからp4ko.comに変更しました！
-p(ぴ)4（し）ko(こ).comということで，大変覚えやすいですね．
-Github Pages + カスタムドメイン + HTTPS github pagesでホストしているサイトにカスタムドメインを割り当てる方法は以下に書いてありました．
+p(ぴ)4（し）ko(こ).com ということで，大変覚えやすいですね．
+Github Pages + カスタムドメイン + HTTPS github pages でホストしているサイトにカスタムドメインを割り当てる方法は以下に書いてありました．
 Managing a custom domain for your GitHub Pages site - GitHub Docs
-それから，Hugoの場合は生成時にCNAMEファイルが消されてしまうので，static/以下にCNAMEファイルを置いておく必要があります．
-CNAMEファイルはgithubが自動で生成してくれるので，pullした後public/直下にあるCNAMEファイルを static/直下にコピーしておけばよいはずです．
-追記 カスタムドメインでhttps化するにあたって，リポジトリのsettingsのEnforced Httpsのチェックを入れるだけでいいと思っていたんですが，AレコードをDNSに登録しても いつまでもチェックボックスを押せませんでした．
-一度カスタムドメインを外して再設定したところ表示が変わったのですが，15分どころか１時間くらいこんな感じでした．
-で，以下を参考に，wwwのCNAMEレコードをUSERNAME.github.ioに設定すると１日ほどでチェックできるようになっているといいな．（まだできてない）
-Certificate request error is persistent (TLS Certificate can&amp;rsquo;t be provisioned) - GitHub Help / GitHub Pages - GitHub Support Community
-追記の追記 8hほどでできたよ！
-おわり</description>
+それから，Hugo の場合は生成時に CNAME ファイルが消されてしまうので，static/以下に CNAME ファイルを置いておく必要があります．
+CNAME ファイルは github が自動で生成してくれるので，pull した後public/直下にある CNAME ファイルを static/直下にコピーしておけばよいはずです．
+追記 カスタムドメインで https 化するにあたって，リポジトリの settings の Enforced Https のチェックを入れるだけでいいと思っていたんですが，A レコードを DNS に登録しても いつまでもチェックボックスを押せませんでした．
+一度カスタムドメインを外して再設定したところ表示が変わったのですが，15 分どころか１時間くらいこんな感じでした．
+で，以下を参考に，www の CNAME レコードを USERNAME.github.io に設定すると１日ほどでチェックできるようになっているといいな．（まだできてない）
+Certificate request error is persistent (TLS Certificate can&amp;rsquo;t be provisioned) - GitHub Help / GitHub Pages - GitHub Support Community</description>
     </item>
     
     <item>
@@ -174,20 +169,15 @@ Certificate request error is persistent (TLS Certificate can&amp;rsquo;t be prov
       
       <guid>https://p4ko.com/posts/nes1/</guid>
       <description>リポジトリ
- 日記みたいなものです． Twitterモーメントはこちら
-動機 任天堂レトロハードが好きなんですが，せっかくなら遊ぶだけじゃなくて中身にも詳しくなりたいと思っていました． 一番好きなのはスーファミなんですが，仕様が公開されておらず難易度が高そうなので，とりあえずシンプルそうなファミコンの動作の理解をしようと． で，前にQiitaでファミコンエミュレータのHello world解説記事があったのを思い出したので，今ならできる！と思って始めました．
+ 日記みたいなものです． Twitter モーメントはこちら
+動機 任天堂レトロハードが好きなんですが，せっかくなら遊ぶだけじゃなくて中身にも詳しくなりたいと思っていました． 一番好きなのはスーファミなんですが，仕様が公開されておらず難易度が高そうなので，とりあえずシンプルそうなファミコンの動作の理解をしようと． で，前に Qiita でファミコンエミュレータの Hello world 解説記事があったのを思い出したので，今ならできる！と思って始めました．
 偉大なる先駆者様 ファミコンエミュレータの創り方　- Hello, World!編 - - Qiita
-Pythonで実装したい！ 最初は他の人がまだやっていないものを作りたくて，Pythonで書いてmatplotのグラフ出力画面で動いたらオツだよな～と思って書いていたのですが，普通にCPUが60fpsでないので泣く泣く諦めました．
+Python で実装したい！ 最初は他の人がまだやっていないものを作りたくて，Python で書いて matplot のグラフ出力画面で動いたらオツだよな～と思って書いていたのですが，普通に CPU が 60fps でないので泣く泣く諦めました．
 これは果たされなかった夢の跡です． loading...
 &amp;mdash; pishiko (@pishitaro_) loading...
 実装の流れは，ROM reader-&amp;gt;CPU（Adressing -&amp;gt; OP -&amp;gt; WRAM read/write）-&amp;gt; PPU( VRAM read/write -&amp;gt;Line 生成-&amp;gt;描画 )でした．
-Go編 ということで，妥協してgolangを採用しました． pythonは8bitでuintとして数値を扱えないので書きにくかったのですが，Goは圧倒的に楽でした．
-Pythonのソースコードをほぼ移植する形で，HelloWorldを実行したところCPUは60fps十分に出ました．最高！
-loading...
-&amp;mdash; pishiko (@pishitaro_) loading... PPU 60fps計画 PPUを実装する前にどうやって出力するかを考えました．その中で，golang製2Dゲームエンジンの「Ebiten」がよさげだったので採用しました．
-Ebiten - A dead simple 2D game library for Go
-採用理由
- 名前がかわいい ゲームライブラリなので低レイヤは触る必要が無さげ コライダーの機能などは実装されていないため，無駄がなく早そう 日本製  で，実装してみたところHello worldは出力できたんですが，8fpsくらいでした．</description>
+Go 編 ということで，妥協して golang を採用しました． python は 8bit で uint として数値を扱えないので書きにくかったのですが，Go は圧倒的に楽でした．
+Python のソースコードをほぼ移植する形で，HelloWorld を実行したところ CPU は 60fps 十分に出ました．最高！</description>
     </item>
     
     <item>
@@ -196,13 +186,9 @@ Ebiten - A dead simple 2D game library for Go
       <pubDate>Sun, 11 Oct 2020 02:26:36 +0900</pubDate>
       
       <guid>https://p4ko.com/posts/discordpy/</guid>
-      <description>身内コミュニティ向けdiscord botを複数人で開発しているので，有用そうなレシピを書いていきます．
-環境 pythonのdiscordAPI ラッパーである discordpy 製botをgithubで管理し，heroku上で動かしています．
- discord.py へようこそ。 — discord.py 1.5.0 ドキュメント 【備忘録】GitHub経由でHerokuにデプロイするまでの流れ - Qiita  herokuの設定 基本  デプロイに必要なファイルの設定 | Pythonで実用Discord Bot(discordpy解説) - Qiita  時間を正しく扱うために  Herokuのタイムゾーンを日本に合わせる - Qiita  Herokuの仕様  24時間に1回再起動 ファイルは/tmp/以下でのみ書き込み可能． 再起動時にファイルなどはリポジトリの状態に初期化される  Cogで機能を分けて開発 Cogというのは，discordpyで提供されている，機能を分割するためのクラスです． メインのBotにCogを追加していく形になります．
-最低限の要素だけで構成されたテンプレートです．
- pishiko/discordpy-cog-template: Cog template  構成 run-bot.py bot.add_cog(cog)でCogを追加します
-bot = Bot(command_prefix=[&amp;#34;!&amp;#34;]) bot.add_cog(YourCog(bot)) bot.run(TOKEN) your_cog.py Cogクラスを継承したYourCogクラスを定義します． コンストラクタ__init__に取り込まれる先のbotを与えて保持します． これによりYourCog内でもbotにアクセスできます．例えば，bot自身のUserは，self.bot.userでアクセスできるわけです．
-class YourCog(commands.Cog): def __init__(self,bot): self.bot = bot Helpのカスタマイズ デフォルトのヘルプは英語だし見にくいので，おしゃれにしてあげたいです． commands.</description>
+      <description>身内コミュニティ向け discord bot を複数人で開発しているので，有用そうなレシピを書いていきます．
+環境 python の discordAPI ラッパーである discordpy 製 bot を github で管理し，heroku 上で動かしています．
+ discord.py へようこそ。 — discord.py 1.5.0 ドキュメント 【備忘録】GitHub 経由で Heroku にデプロイするまでの流れ - Qiita  heroku の設定 基本  デプロイに必要なファイルの設定 | Python で実用 Discord Bot(discordpy 解説) - Qiita  時間を正しく扱うために  Heroku のタイムゾーンを日本に合わせる - Qiita  Heroku の仕様  24 時間に 1 回再起動 ファイルは/tmp/以下でのみ書き込み可能． 再起動時にファイルなどはリポジトリの状態に初期化される  Cog で機能を分けて開発 Cog というのは，discordpy で提供されている，機能を分割するためのクラスです． メインの Bot に Cog を追加していく形になります．</description>
     </item>
     
     <item>
@@ -215,13 +201,8 @@ class YourCog(commands.Cog): def __init__(self,bot): self.bot = bot Helpのカ�
 あれーと思って キャッシュを強制再読み込みする --ignoreCache を付けてサーバーを起動してみたら次のエラーが出た．
 &amp;gt;hugo server --ignoreCache Building sites … ERROR 2020/10/06 14:44:37 Transformation failed: TOCSS: failed to transform &amp;quot;css/main.scss&amp;quot; (text/x-scss): this feature is not available in your current Hugo version, see https://goo.gl/YMrWcn for more information Built in 501 ms Error: Error building site: logged 1 error(s) で，公式のヘルプを読む．
 Frequently Asked Questions | Hugo
-要約すると，Hugoは2バージョンあって，通常版とextended版がある．Sass(cssの拡張言語)に対応してるのはextended版だけだからそっちにしてね．です．ちなみに，extended版は少し重いらしい．あんまり気にならなかったけど．
-ということでReleases · gohugoio/hugoからダウンロードして，Pathを通してあった場所を探して，Hugo.exeだけ入れ替える．
-はい！うまくいきました！
-にしても，オプション付けないとエラーが出てもキャッシュから生成しちゃうのどうなの？
-CSSのカスタマイズ 例えば/themes/assets/css/components/main.scssを上書きしたいとしたら，ファイルを/assets/css/main.scssにコピーして書き換えればよい．Hugoが自動で置き換えてくれるので，元のテーマを汚染する心配がなくなる．このサイトのthemeはm10cというのを使っていて，themes/assets/css/_extra.scssを上書きしろと書いてあるので，/assets/css/_extra.scssに上書きしたい要素を追加していく．
-例えばこんな感じで書けば，h2だけ上書きして下線を描画できる
-h2 { border-bottom: solid 1px $light-color; margin-top : 80px; margin-bottom : 30px; } フォントもカスタマイズ Hugoのthemeって日本のことはほとんど考えられていないので，フォントが微妙．なので，Noto Sans JPを導入する．</description>
+要約すると，Hugo は 2 バージョンあって，通常版と extended 版がある．Sass(css の拡張言語)に対応してるのは extended 版だけだからそっちにしてね．です．ちなみに，extended 版は少し重いらしい．あんまり気にならなかったけど．
+ということでReleases · gohugoio/hugoからダウンロードして，Path を通してあった場所を探して，Hugo.exe だけ入れ替える．</description>
     </item>
     
     <item>
@@ -230,25 +211,20 @@ h2 { border-bottom: solid 1px $light-color; margin-top : 80px; margin-bottom : 3
       <pubDate>Tue, 14 Jul 2020 10:32:41 +0900</pubDate>
       
       <guid>https://p4ko.com/posts/nowplayingcat/</guid>
-      <description>(2020 9/9 追記: v1.2でバグ修正をしました．記事一番下にアップデート方法を記載．)
+      <description>(2020 9/9 追記: v1.2 でバグ修正をしました．記事一番下にアップデート方法を記載．)
 NowPlayingCat Github
-DiscordのNowPlaying欄に，Last.fmを通して聴いている音楽を表示するツールです．
-Last.fmがほとんどの音楽サービスに対応しているため，どんなサービスで音楽を聴いていても表示できます．
-Windowsにしか対応していません．
-Last.fm とは Last.fmは，聴いている音楽を記録し，自分の音楽傾向を知ったり，新たなジャンルを発見する音楽SNSサービスです．
+Discord の NowPlaying 欄に，Last.fm を通して聴いている音楽を表示するツールです．
+Last.fm がほとんどの音楽サービスに対応しているため，どんなサービスで音楽を聴いていても表示できます．
+Windows にしか対応していません．
+Last.fm とは Last.fm は，聴いている音楽を記録し，自分の音楽傾向を知ったり，新たなジャンルを発見する音楽 SNS サービスです．
 詳しくはこちら
-導入方法 前提として，Last.fmに登録しているものとします．
-  https://www.last.fm/api/account/createでAPIキーを取得します． CallBackURLは空白でいいです．他は適当に入力してください．
-  アプリケーションをここからダウンロードして，解凍します．
-  初回起動時はエラーで設定画面が開くはずなので，先ほどメモったAPIKeyを入力します． Last.fm User NameにはLast.fmのユーザーネームを入力します． お好みで他の設定を変更してください．
-  保存を押したらdiscordにNowPlayingCatが表示されているはずです．
+導入方法 前提として，Last.fm に登録しているものとします．
+  https://www.last.fm/api/account/createで API キーを取得します． CallBackURL は空白でいいです．他は適当に入力してください．
+![img](https://res.cloudinary.com/pishiko/image/upload/v1605807283/blog/lfmkey_im6rvt.jpg)    アプリケーションをここからダウンロードして，解凍します．
+  初回起動時はエラーで設定画面が開くはずなので，先ほどメモった APIKey を入力します． Last.fm User Name には Last.fm のユーザーネームを入力します． お好みで他の設定を変更してください．
+![img](https://res.cloudinary.com/pishiko/image/upload/v1605807388/blog/settings_ownmlv.jpg)    保存を押したら discord に NowPlayingCat が表示されているはずです．
   その他 起動中はタスクバーに駐在するので，アイコンを右クリックすることで，アプリケーションを終了したり，設定画面を開いたりできます．
-v1.0からの移行 以前の設定ファイルがsettings.iniにあるはずなので，そこに書いてあるAPIKeyをv1.1の設定画面でコピペしてください．
-以下はv1.0からの変更点です．
- 音楽を聴いていない時は表示しないように変更(Sleeping Catの削除) 設定画面を追加 起動時に実行の設定を追加 画像にDancing Catを追加 バグを修正  v1.1からv1.2への移行 ダウンロードして解凍したNowPlayingCat1.2内，discordRPCTool.exeを，古いバージョンのexeファイルがあった場所に上書きコピーしてください．
-※コピーするときは一旦終了させてください
-v1.2 download
-おわり</description>
+v1.0 からの移行 以前の設定ファイルが settings.ini にあるはずなので，そこに書いてある APIKey を v1.</description>
     </item>
     
     <item>
@@ -260,20 +236,15 @@ v1.2 download
       <description>デスクトップ常駐型アプリケーションを作りました．
 Github
 使い方
-経緯 Last.fmを見つけた ライフログを取るのにハマっていて，GPSとかの記録を取ったりしているのですが，ふと音楽のログも取りたいと思いました．
-そのようなサービスがないか調べたところ，Last.fmというものがありました． Spotifyなどと連携して聞いた音楽のログを取り，似た傾向のおすすめの曲を紹介してくれるそうです． 気に入ったのが，ログを取るためのAPIが用意してあり，PC，スマートフォンのあらゆるプレイヤーで記録できるところで，もし対応していなければ開発すればいいのです．
-共有したい Last.fmのAPIリファレンスを見ていたところ今聞いている曲を取得できるのを見つけたので，これでdiscordの「プレイ中」欄に表示しようと考えたのでした．さりげなさがいい感じなので．
-使ったもの  C# Windows フォームアプリ Last.fm API Discord RPC (Discord Game SDKのC#ラッパー)  ポイントなど C#フォームアプリの基本 あんまり書く機会がなくて，いつも忘れるので．
-Formクラスを継承したクラスのインスタンスに初期化処理を書けば動く.
-定期実行はTimerクラスがあるので，以下でFunctionNameに定期実行したい処理を書けばよい．
+経緯 Last.fm を見つけた ライフログを取るのにハマっていて，GPS とかの記録を取ったりしているのですが，ふと音楽のログも取りたいと思いました．
+そのようなサービスがないか調べたところ，Last.fm というものがありました． Spotify などと連携して聞いた音楽のログを取り，似た傾向のおすすめの曲を紹介してくれるそうです． 気に入ったのが，ログを取るための API が用意してあり，PC，スマートフォンのあらゆるプレイヤーで記録できるところで，もし対応していなければ開発すればいいのです．
+共有したい Last.fm の API リファレンスを見ていたところ今聞いている曲を取得できるのを見つけたので，これで discord の「プレイ中」欄に表示しようと考えたのでした．さりげなさがいい感じなので．
+使ったもの  C# Windows フォームアプリ Last.fm API Discord RPC (Discord Game SDK の C#ラッパー)  ポイントなど C#フォームアプリの基本 あんまり書く機会がなくて，いつも忘れるので．
+Form クラスを継承したクラスのインスタンスに初期化処理を書けば動く.
+定期実行は Timer クラスがあるので，以下で FunctionName に定期実行したい処理を書けばよい．
 var timer = new Timer(); timer.Interval = 5000; //5s timer.Elapsed += FunctionName; timer.Enable = true //動き出す タスクトレイ常駐 参考にしました． http://pineplanter.moo.jp/non-it-salaryman/2017/06/01/c-sharp-tasktray/
 全部ここに書いてるのですが，やることは
- タスクトレイにアイコンを追加する タスクトレイアイコンに終了メニューを追加する タスクバーに表示させない フォームを表示させない  です．
-discord RPC ドキュメントが充実しているので特に書くこともないです． https://github.com/Lachee/discord-rpc-csharp
-nugetで導入してREADMEのチュートリアル通りに書けばいいです．
- ただ最初はDiscord Game SDKでやろうとしていて，文字化け問題に直面したのでかなり苦労しました．Issue→https://github.com/discord/discord-rpc/issues/119
-ちなみに，昔はGameSDKでなくてもRichPeresenceを弄れたのですがAPIが廃止されたので面倒になりました． 昔は同じことをするjs製ツールがあったっぽいのですが，API廃止で使えなくなっちゃったみたいです．
-WebAPIを呼ぶ HttpClientを使います．クエリパラメタもURLエンコードできます． その他まとめ→C# 今更ですが、HttpClientを使う - Qiita</description>
+ タスクトレイにアイコンを追加する タスクトレイアイコンに終了メニューを追加する タスクバーに表示させない フォームを表示させない  です．</description>
     </item>
     
     <item>
@@ -282,18 +253,18 @@ WebAPIを呼ぶ HttpClientを使います．クエリパラメタもURLエンコ
       <pubDate>Wed, 01 Apr 2020 21:46:39 +0900</pubDate>
       
       <guid>https://p4ko.com/posts/anonymas-chat/</guid>
-      <description>概要   LINEのBotを公開しました。
-いままで身内向けのBOTを作ることはあったけど、初めてオープンなのを作りました。
-LINEのBOTを作るにはHTTPリクエストを受けるサーバーが必要なんですが、サーバーを立てるのはお金がかかります。そこで今回は無料でそれっぽいことができるGoogleAppsScriptを用いてやってみました。
+      <description>概要   LINE の Bot を公開しました。
+いままで身内向けの BOT を作ることはあったけど、初めてオープンなのを作りました。
+LINE の BOT を作るには HTTP リクエストを受けるサーバーが必要なんですが、サーバーを立てるのはお金がかかります。そこで今回は無料でそれっぽいことができる GoogleAppsScript を用いてやってみました。
 ソースコード https://github.com/pishiko/anonymous-linechatbot
 実装したこと   基本機能（発言を他の利用者に拡散）
   アイコンの実装
   ミュート機能
-  解説   まずLINE APIで多数にメッセージを配信するには宛先のuserIdを指定する必要があります。しかし、Botと友達になっているユーザーのリストはAPIでは手に入らないため、自分で用意する必要があります。なので、友達登録されたときのイベントを使って記録していきます。
-次に記録ですが、DBをGASでお手軽に実装するにはGoogleSpreadSheetを用います。視覚的にも分かりやすいし簡単だし、ちょっと遅いけど使えます。
-アイコンはキューをGSSで実装して、友達登録時にユーザーリストにIDと一緒にします。友達をやめたときはアイコンキューに戻してやって、ユーザーリストからIDごと消してやります。
-ミュート機能はユーザーがミュートかどうかリストに保存して、LINE APIのリッチメニューから操作できるようにします。リッチメニューはLINE @MANAGERからぽちぽちで作れます。リッチメニューのボタンが押されたらキーワードを発言するように設定して、それをGASでキャッチします。
-最後に発言をほかの登録者に拡散するようにします。LINE APIのイベントでメッセージ受信をキャッチして、userIdからユーザーリストを検索してアイコンを取得、そのあとユーザーリストの発信者以外かつミュートになっていない人に成形したメッセージを配信します。
+  解説   まず LINE API で多数にメッセージを配信するには宛先の userId を指定する必要があります。しかし、Bot と友達になっているユーザーのリストは API では手に入らないため、自分で用意する必要があります。なので、友達登録されたときのイベントを使って記録していきます。
+次に記録ですが、DB を GAS でお手軽に実装するには GoogleSpreadSheet を用います。視覚的にも分かりやすいし簡単だし、ちょっと遅いけど使えます。
+アイコンはキューを GSS で実装して、友達登録時にユーザーリストに ID と一緒にします。友達をやめたときはアイコンキューに戻してやって、ユーザーリストから ID ごと消してやります。
+ミュート機能はユーザーがミュートかどうかリストに保存して、LINE API のリッチメニューから操作できるようにします。リッチメニューは LINE @MANAGER からぽちぽちで作れます。リッチメニューのボタンが押されたらキーワードを発言するように設定して、それを GAS でキャッチします。
+最後に発言をほかの登録者に拡散するようにします。LINE API のイベントでメッセージ受信をキャッチして、userId からユーザーリストを検索してアイコンを取得、そのあとユーザーリストの発信者以外かつミュートになっていない人に成形したメッセージを配信します。
 おわり</description>
     </item>
     
@@ -303,20 +274,17 @@ LINEのBOTを作るにはHTTPリクエストを受けるサーバーが必要な
       <pubDate>Mon, 30 Mar 2020 04:32:22 +0900</pubDate>
       
       <guid>https://p4ko.com/posts/youtube-share-hub/</guid>
-      <description>Youtube Share Hubを作った →https://pishiko.github.io/youtube-share-hub/
+      <description>Youtube Share Hub を作った →https://pishiko.github.io/youtube-share-hub/
 どんなの？ こんなの
-  Youtubeの共有メニューから選択してツイートのリンクに遷移するwebアプリケーション
-そのまま共有してもURLしか共有できないしTwitterカードも表示されないから不便だったので作りました．
-どんな技術使った？  PWA  Web Share Target API   vue.js bootstrap Github Pages  PWAについて 最低構成は以下になる．
+  Youtube の共有メニューから選択してツイートのリンクに遷移する web アプリケーション
+そのまま共有しても URL しか共有できないし Twitter カードも表示されないから不便だったので作りました．
+どんな技術使った？  PWA  Web Share Target API   vue.js bootstrap Github Pages  PWA について 最低構成は以下になる．
 index.html メインのアプリ
-serviceworker.js ServiceWorkerが動くことでオフラインでもキャッシュで動作したりすることが可能，特にやりたいことが無ければ関数は空でもいい
+serviceworker.js ServiceWorker が動くことでオフラインでもキャッシュで動作したりすることが可能，特にやりたいことが無ければ関数は空でもいい
 manifest.json これがキモ．アプリの名前，アイコンから，共有メニューからの動作まで設定できる． 楽ちんジェネレーターもある．アイコンもリサイズしてくれる．https://app-manifest.firebaseapp.com/
-Web Share Target API apkのアプリみたいに共有機能が使える．ただし，「なんちゃってホームに追加Webアプリ」とかじゃこの機能は使えない．
-ChromeからPWAアプリと認められる条件は以下
- アイコンがpngであること．jpgはだめ ServiceWorkerを用意する manifest.jsonが正しく記述されている  それから，Web Share APIは今のところAndroidでないと使えない．たのむよApple．
-そのほか メインはvue.jsで実装．丁寧にエラー処理なども書いた． デザインはbootstrap．楽． Github Pagesはこのブログ立ち上げた時と一緒．
-Github Pagesなので，ソースコードはここにあります． https://github.com/pishiko/youtube-share-hub
-おわり</description>
+Web Share Target API apk のアプリみたいに共有機能が使える．ただし，「なんちゃってホームに追加 Web アプリ」とかじゃこの機能は使えない．
+Chrome から PWA アプリと認められる条件は以下
+ アイコンが png であること．jpg はだめ ServiceWorker を用意する manifest.json が正しく記述されている  それから，Web Share API は今のところ Android でないと使えない．たのむよ Apple．</description>
     </item>
     
     <item>
@@ -325,25 +293,16 @@ Github Pagesなので，ソースコードはここにあります． https://gi
       <pubDate>Mon, 17 Feb 2020 10:29:27 +0900</pubDate>
       
       <guid>https://p4ko.com/posts/dash-button/</guid>
-      <description>要約  Amazon Dash Button をハックしてIoTボタンにしてた 2020年に入ってから使えなくなってた 自爆ファームウェアの配信によって文鎮化されてた  昔々&amp;hellip; 実家暮らしなので母親にご飯を作っていただいているので，ご飯ができると「ご飯できたよ～」と呼ばれます．それがお互いにストレスだったので，キッチンには，押すとPush BulletというサービスからスマホやPCに通知が行くボタンが置いてありました．
+      <description>要約  Amazon Dash Button をハックして IoT ボタンにしてた 2020 年に入ってから使えなくなってた 自爆ファームウェアの配信によって文鎮化されてた  昔々&amp;hellip; 実家暮らしなので母親にご飯を作っていただいているので，ご飯ができると「ご飯できたよ～」と呼ばれます．それがお互いにストレスだったので，キッチンには，押すとPush Bulletというサービスからスマホや PC に通知が行くボタンが置いてありました．
 仕組みとしては，
- 商品発注をオフにしたAmazon Dash Buttonが押される 自宅のサーバで検知（ボタンからのARPリクエストをキャッチ） IFTTTを通してPush Bulletに通知  といったものでした．
-ところが 動かなくなってました．とりあえず初期化しようと思ってAmazon アプリから設定しようとしたのですが，設定項目がありませんでした．もしやと思って調べてみたら&amp;hellip;
- Dash Button端末を使用した商品の注文は、2019年8月31日で終了しています。
-端末は2019年12月31日に自動的に登録解除およびリセットされるため、お客様による操作は必要ありません。なお、Dash Button端末を廃棄する前に手動での登録解除をご希望の場合は、コンテンツと端末の管理にアクセスして、端末タブから登録を解除できます。お使いのDash Buttonを選択し、登録の解除をクリックしてください。最後に、Dash Button端末を1回押します。ライトが白く点滅した後、赤く点灯します。
+ 商品発注をオフにした Amazon Dash Button が押される 自宅のサーバで検知（ボタンからの ARP リクエストをキャッチ） IFTTT を通して Push Bullet に通知  といったものでした．
+ところが 動かなくなってました．とりあえず初期化しようと思って Amazon アプリから設定しようとしたのですが，設定項目がありませんでした．もしやと思って調べてみたら&amp;hellip;
+ Dash Button 端末を使用した商品の注文は、2019 年 8 月 31 日で終了しています。
+端末は 2019 年 12 月 31 日に自動的に登録解除およびリセットされるため、お客様による操作は必要ありません。なお、Dash Button 端末を廃棄する前に手動での登録解除をご希望の場合は、コンテンツと端末の管理にアクセスして、端末タブから登録を解除できます。お使いの Dash Button を選択し、登録の解除をクリックしてください。最後に、Dash Button 端末を 1 回押します。ライトが白く点滅した後、赤く点灯します。
  https://www.amazon.co.jp/gp/help/customer/display.html?nodeId=201706050
 とのこと．
 サービス終了&amp;hellip;
-自爆とは どうやら2020年になってからボタンを押してアマゾンのサーバにリクエストを送ると，文鎮化するファームウェアアップデートが実行される模様． スパイ映画でよく見た「なお，このメッセージは自動的に消滅する．」ってやつだ&amp;hellip;
-ネットワークから遮断 とりあえずDash Button Hackライブラリの Nekmo/amazon-dash によると，dash-button-na-aws-opf.amazon.com, 0.amazon.pool.ntp.org, 1.amazon.pool.ntp.org, 2.amazon.pool.ntp.org, 3.amazon.pool.ntp .orgからのパケットをブロックすればよいとのこと．
-ちなみにntp.orgってなんだろうと思ったらNetwork Time Protocolプロトコルというものっぽい．ネットワーク機器の時間同期に用いるとか．
-→まだだめ
-Wi-Fiの設定 再設定を試みます．Amazonのアプリには存在しないため，非公式のスクリプトを用いて設定します． fffonion/setup-dashbutton.py
-スクリプトの中身自体は，
- Dashボタン長押しで設定モードにする Amazon ConfigureMeというSSIDに接続 http://192.168.0.1/?amzn_ssid=SSID&amp;amp;amzn_pw=PASS にアクセス  て感じでシンプルです．
-→でもだめ
-最後の手段 https://blog.christophermullins.com/2019/12/20/rescue-your-amazon-dash-buttons/によると，
- ファームウェアアップデートを一度でもしてしまったら終わり 一度Wi-Fiの設定をしたことがあるボタンのみWi-Fiの再設定が可能 ただし古いボタンなら特定の音声を流すことで初期設定が可能  特定の音声っていうのは，ボタンにはマイクがついていて，それによって設定が可能らしい．で，それでバッファの長さチェックがされていないので，オーバーフローさせていい感じにできるらしいです． ふわふわしてますね． その音声ファイルはここ .</description>
+自爆とは どうやら 2020 年になってからボタンを押してアマゾンのサーバにリクエストを送ると，文鎮化するファームウェアアップデートが実行される模様． スパイ映画でよく見た「なお，このメッセージは自動的に消滅する．」ってやつだ&amp;hellip;</description>
     </item>
     
     <item>
@@ -352,23 +311,17 @@ Wi-Fiの設定 再設定を試みます．Amazonのアプリには存在しな�
       <pubDate>Sun, 02 Feb 2020 09:29:15 +0900</pubDate>
       
       <guid>https://p4ko.com/posts/hugo1/</guid>
-      <description>Hugo＋GitHub Pages このブログはHugo + github pagesで公開しています．テンプレートのカスタムをしてると意外と情報が無かったです．ということで，Hugoのインストールからブログの更新まで簡単にメモしたいと思います．
-そもそもなにそれ Hugoは静的ブログジェネレータというやつです．テンプレートとmarkdownの記事を用意すればhugoでindex.htmlなんかを生成してくれます．Go製です．早いです．
-github pagesはリポジトリに置いておいた静的ファイルをホストしてくれるサービスです．
-Hugoのインストール Windows10の場合です． https://github.com/gohugoio/hugo/releasesから最新リリースをダウンロードしてパスを通します．Hugo\binなんかにHugo.exeを移してPATHを通します．
-そういえばこのときPATHの上限2000文字くらいを超えててGUIだとうまくいかないというのに出会った．とりあえずユーザ環境変数にしておいた．
-Hugoのテーマ適用 hugo new site myblog  これでわーっと一式生成してくれます．
+      <description>Hugo ＋ GitHub Pages このブログは Hugo + github pages で公開しています．テンプレートのカスタムをしてると意外と情報が無かったです．ということで，Hugo のインストールからブログの更新まで簡単にメモしたいと思います．
+そもそもなにそれ Hugo は静的ブログジェネレータというやつです．テンプレートと markdown の記事を用意すればhugoで index.html なんかを生成してくれます．Go 製です．早いです．
+github pages はリポジトリに置いておいた静的ファイルをホストしてくれるサービスです．
+Hugo のインストール Windows10 の場合です． https://github.com/gohugoio/hugo/releasesから最新リリースをダウンロードしてパスを通します．Hugo\binなんかにHugo.exeを移して PATH を通します．
+そういえばこのとき PATH の上限 2000 文字くらいを超えてて GUI だとうまくいかないというのに出会った．とりあえずユーザ環境変数にしておいた．
+Hugo のテーマ適用 hugo new site myblog  これでわーっと一式生成してくれます．
 その後，https://themes.gohugo.io/で適当なテーマをダウンロードし，\themes\直下に適当な名前（テーマ名とか）にリネームしてディレクトリごとコピーします．
 \config.tomlに設定を色々書いていきます．と言っても基本はコピペです．絶対に変えるのは
 baseURL = &amp;quot;例 https://pishiko.github.io&amp;quot; theme = &amp;quot;さっきリネームしたテンプレート名&amp;quot;  で，あとは（テンプレートによると思いますが，）\themes\適当なテンプレート名\exampleSite\config.tomlにテンプレート固有の設定があったのでコピペして適宜変更しました．
-Hugoでブログ生成 hugo new content\posts\test.md  するとひな形が生成されます． ひな形はこんな感じにすればOK
---- title: &amp;quot;Hello, world!&amp;quot; date: 2020-02-01T23:08:52+09:00 draft: false tags: [&amp;quot;memo&amp;quot;] --- 注意すべきはdraftで，trueだと非公開状態（＝debugモード）のみ公開なのでfalseにしないとデプロイしても反映されなくて泣く．
-あとは適当にMarkdownで記事を書く．
-ここまで上手くいっていれば，
-hugo server -D  でdebugモードでサーバを起動できるので，localhost:1313でブログを確認できます．手直ししても更新検知して再起動してくれるので便利です．
-公開まで hugo  これで\publicにindex.html ファイル一式が生成されます．これを公開しましょう．
-まずはgithubで新規リポジトリを作成．その時のリポジトリ名はGITHUBのUSERNAME.github.ioにします．あとは
-cd public git init git remote add origin git@github.</description>
+Hugo でブログ生成 hugo new content\posts\test.md  するとひな形が生成されます． ひな形はこんな感じにすれば OK
+--- title: &amp;quot;Hello, world!&amp;quot; date: 2020-02-01T23:08:52+09:00 draft: false tags: [&amp;quot;memo&amp;quot;] --- 注意すべきはdraftで，trueだと非公開状態（＝ debug モード）のみ公開なので false にしないとデプロイしても反映されなくて泣く．</description>
     </item>
     
   </channel>

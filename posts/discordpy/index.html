@@ -13,32 +13,27 @@
     <meta charset="utf-8" />
     <meta name="generator" content="Hugo 0.75.1" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="Pishiko" />
+    <meta name="author" content="pishiko" />
     <meta name="description" content="" />
-    <link rel="stylesheet" href="https://p4ko.com/css/main.min.e2c8a7c2c9819c9b418bc2773b86a1982f85656d09ce61ec919a03993d9f9db9.css" />
+    <link rel="stylesheet" href="https://p4ko.com/css/main.min.20f8fc25c6101790716780b492dadf4ed1c718b46d5620320ff33b85a8ea088c.css" />
     <link rel="stylesheet" href="/css/custom.css" />
 
     
-    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://p4ko.com/ogp/discordpy.png"/>
+
 <meta name="twitter:title" content="Discord Bot 開発あれこれ"/>
-<meta name="twitter:description" content="身内コミュニティ向けdiscord botを複数人で開発しているので，有用そうなレシピを書いていきます．
-環境 pythonのdiscordAPI ラッパーである discordpy 製botをgithubで管理し，heroku上で動かしています．
- discord.py へようこそ。 — discord.py 1.5.0 ドキュメント 【備忘録】GitHub経由でHerokuにデプロイするまでの流れ - Qiita  herokuの設定 基本  デプロイに必要なファイルの設定 | Pythonで実用Discord Bot(discordpy解説) - Qiita  時間を正しく扱うために  Herokuのタイムゾーンを日本に合わせる - Qiita  Herokuの仕様  24時間に1回再起動 ファイルは/tmp/以下でのみ書き込み可能． 再起動時にファイルなどはリポジトリの状態に初期化される  Cogで機能を分けて開発 Cogというのは，discordpyで提供されている，機能を分割するためのクラスです． メインのBotにCogを追加していく形になります．
-最低限の要素だけで構成されたテンプレートです．
- pishiko/discordpy-cog-template: Cog template  構成 run-bot.py bot.add_cog(cog)でCogを追加します
-bot = Bot(command_prefix=[&#34;!&#34;]) bot.add_cog(YourCog(bot)) bot.run(TOKEN) your_cog.py Cogクラスを継承したYourCogクラスを定義します． コンストラクタ__init__に取り込まれる先のbotを与えて保持します． これによりYourCog内でもbotにアクセスできます．例えば，bot自身のUserは，self.bot.userでアクセスできるわけです．
-class YourCog(commands.Cog): def __init__(self,bot): self.bot = bot Helpのカスタマイズ デフォルトのヘルプは英語だし見にくいので，おしゃれにしてあげたいです． commands."/>
+<meta name="twitter:description" content="身内コミュニティ向け discord bot を複数人で開発しているので，有用そうなレシピを書いていきます．
+環境 python の discordAPI ラッパーである discordpy 製 bot を github で管理し，heroku 上で動かしています．
+ discord.py へようこそ。 — discord.py 1.5.0 ドキュメント 【備忘録】GitHub 経由で Heroku にデプロイするまでの流れ - Qiita  heroku の設定 基本  デプロイに必要なファイルの設定 | Python で実用 Discord Bot(discordpy 解説) - Qiita  時間を正しく扱うために  Heroku のタイムゾーンを日本に合わせる - Qiita  Heroku の仕様  24 時間に 1 回再起動 ファイルは/tmp/以下でのみ書き込み可能． 再起動時にファイルなどはリポジトリの状態に初期化される  Cog で機能を分けて開発 Cog というのは，discordpy で提供されている，機能を分割するためのクラスです． メインの Bot に Cog を追加していく形になります．"/>
 
     <meta property="og:title" content="Discord Bot 開発あれこれ" />
-<meta property="og:description" content="身内コミュニティ向けdiscord botを複数人で開発しているので，有用そうなレシピを書いていきます．
-環境 pythonのdiscordAPI ラッパーである discordpy 製botをgithubで管理し，heroku上で動かしています．
- discord.py へようこそ。 — discord.py 1.5.0 ドキュメント 【備忘録】GitHub経由でHerokuにデプロイするまでの流れ - Qiita  herokuの設定 基本  デプロイに必要なファイルの設定 | Pythonで実用Discord Bot(discordpy解説) - Qiita  時間を正しく扱うために  Herokuのタイムゾーンを日本に合わせる - Qiita  Herokuの仕様  24時間に1回再起動 ファイルは/tmp/以下でのみ書き込み可能． 再起動時にファイルなどはリポジトリの状態に初期化される  Cogで機能を分けて開発 Cogというのは，discordpyで提供されている，機能を分割するためのクラスです． メインのBotにCogを追加していく形になります．
-最低限の要素だけで構成されたテンプレートです．
- pishiko/discordpy-cog-template: Cog template  構成 run-bot.py bot.add_cog(cog)でCogを追加します
-bot = Bot(command_prefix=[&#34;!&#34;]) bot.add_cog(YourCog(bot)) bot.run(TOKEN) your_cog.py Cogクラスを継承したYourCogクラスを定義します． コンストラクタ__init__に取り込まれる先のbotを与えて保持します． これによりYourCog内でもbotにアクセスできます．例えば，bot自身のUserは，self.bot.userでアクセスできるわけです．
-class YourCog(commands.Cog): def __init__(self,bot): self.bot = bot Helpのカスタマイズ デフォルトのヘルプは英語だし見にくいので，おしゃれにしてあげたいです． commands." />
+<meta property="og:description" content="身内コミュニティ向け discord bot を複数人で開発しているので，有用そうなレシピを書いていきます．
+環境 python の discordAPI ラッパーである discordpy 製 bot を github で管理し，heroku 上で動かしています．
+ discord.py へようこそ。 — discord.py 1.5.0 ドキュメント 【備忘録】GitHub 経由で Heroku にデプロイするまでの流れ - Qiita  heroku の設定 基本  デプロイに必要なファイルの設定 | Python で実用 Discord Bot(discordpy 解説) - Qiita  時間を正しく扱うために  Heroku のタイムゾーンを日本に合わせる - Qiita  Heroku の仕様  24 時間に 1 回再起動 ファイルは/tmp/以下でのみ書き込み可能． 再起動時にファイルなどはリポジトリの状態に初期化される  Cog で機能を分けて開発 Cog というのは，discordpy で提供されている，機能を分割するためのクラスです． メインの Bot に Cog を追加していく形になります．" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://p4ko.com/posts/discordpy/" />
+<meta property="og:image" content="https://p4ko.com/ogp/discordpy.png" />
 <meta property="article:published_time" content="2020-10-11T02:26:36+09:00" />
 <meta property="article:modified_time" content="2020-10-11T02:26:36+09:00" />
 
@@ -47,7 +42,7 @@ class YourCog(commands.Cog): def __init__(self,bot): self.bot = bot Helpのカ�
   <body>
     <header class="app-header">
       <div class="b1-header">
-        <a href="https://p4ko.com"><img class="app-header-avatar" src="/avatar.jpg" alt="Pishiko" /></a>
+        <a href="https://p4ko.com"><img class="app-header-avatar" src="/avatar.jpg" alt="pishiko" /></a>
         <h1>ぴしめも</h1>
       </div>
       <p class="poem-header">Pishiko&#39;s Dev Blog</p>
@@ -133,58 +128,58 @@ class YourCog(commands.Cog): def __init__(self,bot): self.bot = bot Helpのカ�
         <a class="tag" href="https://p4ko.com/tags/dev/">dev</a><a class="tag" href="https://p4ko.com/tags/python/">python</a></div></div>
   </header>
   <div class="post-content">
-    <p>身内コミュニティ向けdiscord botを複数人で開発しているので，有用そうなレシピを書いていきます．</p>
+    <p>身内コミュニティ向け discord bot を複数人で開発しているので，有用そうなレシピを書いていきます．</p>
 <h2 id="環境">環境</h2>
-<p>pythonのdiscordAPI ラッパーである discordpy 製botをgithubで管理し，heroku上で動かしています．</p>
+<p>python の discordAPI ラッパーである discordpy 製 bot を github で管理し，heroku 上で動かしています．</p>
 <ul>
 <li><a href="https://discordpy.readthedocs.io/ja/latest/index.html"  target="_blank" rel="nofollow noopener" >discord.py へようこそ。 — discord.py 1.5.0 ドキュメント</a></li>
-<li><a href="https://qiita.com/0yan/items/cd7eb98e114dd812c498"  target="_blank" rel="nofollow noopener" >【備忘録】GitHub経由でHerokuにデプロイするまでの流れ - Qiita</a></li>
+<li><a href="https://qiita.com/0yan/items/cd7eb98e114dd812c498"  target="_blank" rel="nofollow noopener" >【備忘録】GitHub 経由で Heroku にデプロイするまでの流れ - Qiita</a></li>
 </ul>
-<h2 id="herokuの設定">herokuの設定</h2>
+<h2 id="heroku-の設定">heroku の設定</h2>
 <h3 id="基本">基本</h3>
 <ul>
-<li><a href="https://qiita.com/1ntegrale9/items/9d570ef8175cf178468f#heroku%E3%81%AE%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97"  target="_blank" rel="nofollow noopener" >デプロイに必要なファイルの設定 | Pythonで実用Discord Bot(discordpy解説) - Qiita</a></li>
+<li><a href="https://qiita.com/1ntegrale9/items/9d570ef8175cf178468f#heroku%E3%81%AE%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97"  target="_blank" rel="nofollow noopener" >デプロイに必要なファイルの設定 | Python で実用 Discord Bot(discordpy 解説) - Qiita</a></li>
 </ul>
 <h3 id="時間を正しく扱うために">時間を正しく扱うために</h3>
 <ul>
-<li><a href="https://qiita.com/ikemura23/items/52ab8a5d260c7ee4d42b"  target="_blank" rel="nofollow noopener" >Herokuのタイムゾーンを日本に合わせる - Qiita</a></li>
+<li><a href="https://qiita.com/ikemura23/items/52ab8a5d260c7ee4d42b"  target="_blank" rel="nofollow noopener" >Heroku のタイムゾーンを日本に合わせる - Qiita</a></li>
 </ul>
-<h3 id="herokuの仕様">Herokuの仕様</h3>
+<h3 id="heroku-の仕様">Heroku の仕様</h3>
 <ul>
-<li>24時間に1回再起動</li>
+<li>24 時間に 1 回再起動</li>
 <li>ファイルは<code>/tmp/</code>以下でのみ書き込み可能．</li>
 <li>再起動時にファイルなどはリポジトリの状態に初期化される</li>
 </ul>
-<h2 id="cogで機能を分けて開発">Cogで機能を分けて開発</h2>
-<p>Cogというのは，discordpyで提供されている，機能を分割するためのクラスです．
-メインのBotにCogを追加していく形になります．</p>
+<h2 id="cog-で機能を分けて開発">Cog で機能を分けて開発</h2>
+<p>Cog というのは，discordpy で提供されている，機能を分割するためのクラスです．
+メインの Bot に Cog を追加していく形になります．</p>
 <p>最低限の要素だけで構成されたテンプレートです．</p>
 <ul>
 <li><a href="https://github.com/pishiko/discordpy-cog-template"  target="_blank" rel="nofollow noopener" >pishiko/discordpy-cog-template: Cog template</a></li>
 </ul>
 <h3 id="構成">構成</h3>
 <h4 id="run-botpy">run-bot.py</h4>
-<p><code>bot.add_cog(cog)</code>でCogを追加します</p>
+<p><code>bot.add_cog(cog)</code>で Cog を追加します</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python">bot <span style="color:#719e07">=</span> Bot(command_prefix<span style="color:#719e07">=</span>[<span style="color:#2aa198">&#34;!&#34;</span>])
 bot<span style="color:#719e07">.</span>add_cog(YourCog(bot))
 bot<span style="color:#719e07">.</span>run(TOKEN)
 </code></pre></div><h4 id="your_cogpy">your_cog.py</h4>
-<p>Cogクラスを継承したYourCogクラスを定義します．
-コンストラクタ<code>__init__</code>に取り込まれる先のbotを与えて保持します．
-これによりYourCog内でもbotにアクセスできます．例えば，bot自身のUserは，<code>self.bot.user</code>でアクセスできるわけです．</p>
+<p>Cog クラスを継承した YourCog クラスを定義します．
+コンストラクタ<code>__init__</code>に取り込まれる先の bot を与えて保持します．
+これにより YourCog 内でも bot にアクセスできます．例えば，bot 自身の User は，<code>self.bot.user</code>でアクセスできるわけです．</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#719e07">class</span> <span style="color:#268bd2">YourCog</span>(commands<span style="color:#719e07">.</span>Cog):
     <span style="color:#719e07">def</span> __init__(<span style="color:#268bd2">self</span>,bot):
         <span style="color:#268bd2">self</span><span style="color:#719e07">.</span>bot <span style="color:#719e07">=</span> bot
-</code></pre></div><h2 id="helpのカスタマイズ">Helpのカスタマイズ</h2>
+</code></pre></div><h2 id="help-のカスタマイズ">Help のカスタマイズ</h2>
 <p><img src="https://res.cloudinary.com/pishiko/image/upload/v1602351526/blog/help_eps7hl.png" alt="help"></p>
 <p>デフォルトのヘルプは英語だし見にくいので，おしゃれにしてあげたいです．
-commands.HelpCommandを継承したクラスのメソッドをオーバーライドして実装します．
-クラスは，Botクラスのコンストラクタで指定します．</p>
-<p>send_bot_helpメソッドを上書きすれば，<code>!help</code>コマンドが呼ばれたときの動作を指定できます．今回はEmbedを使ってでリッチにしてみました．</p>
+commands.HelpCommand を継承したクラスのメソッドをオーバーライドして実装します．
+クラスは，Bot クラスのコンストラクタで指定します．</p>
+<p>send_bot_help メソッドを上書きすれば，<code>!help</code>コマンドが呼ばれたときの動作を指定できます．今回は Embed を使ってでリッチにしてみました．</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#719e07">class</span> <span style="color:#268bd2">Help</span>(commands<span style="color:#719e07">.</span>HelpCommand):
     <span style="color:#719e07">def</span> __init__(<span style="color:#268bd2">self</span>):
         <span style="color:#b58900">super</span>()<span style="color:#719e07">.</span>__init__()
-        
+
     async <span style="color:#719e07">def</span> <span style="color:#268bd2">send_bot_help</span>(<span style="color:#268bd2">self</span>,mapping):
         description <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;&#34;</span>
         <span style="color:#719e07">for</span> cog,commands <span style="color:#719e07">in</span> mapping<span style="color:#719e07">.</span>items():
@@ -199,10 +194,10 @@ commands.HelpCommandを継承したクラスのメソッドをオーバーライ
 bot <span style="color:#719e07">=</span> Bot(command_prefix<span style="color:#719e07">=</span>PREFIX,help_command<span style="color:#719e07">=</span>Help())
 bot<span style="color:#719e07">.</span>run(TOKEN)
 </code></pre></div><p>その他にも書き換えられる要素があるので，以下を参考にしてみてください．
-<a href="https://qiita.com/coolwind0202/items/2167339f6e5edf889318"  target="_blank" rel="nofollow noopener" >Discord.py Bot Commands Framework のhelpコマンドについて - Qiita</a></p>
-<h2 id="reactionをボタンとして利用">Reactionをボタンとして利用</h2>
+<a href="https://qiita.com/coolwind0202/items/2167339f6e5edf889318"  target="_blank" rel="nofollow noopener" >Discord.py Bot Commands Framework の help コマンドについて - Qiita</a></p>
+<h2 id="reaction-をボタンとして利用">Reaction をボタンとして利用</h2>
 <p><img src="https://res.cloudinary.com/pishiko/image/upload/v1602353146/blog/reaction_egbqht.gif" alt="reaction"></p>
-<p>例えば，〇と✖のリアクションが押されたメッセージを用意して，YESかNOを訪ねたいときに使います．
+<p>例えば，〇と ✖ のリアクションが押されたメッセージを用意して，YES か NO を訪ねたいときに使います．
 タイムアウト時間も指定できます．押された絵文字が返されます．</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#2aa198">&#34;&#34;&#34;
 </span><span style="color:#2aa198">messageにリアクションをし，最初に押されたリアクションを返す．
@@ -211,7 +206,7 @@ bot<span style="color:#719e07">.</span>run(TOKEN)
 async <span style="color:#719e07">def</span> <span style="color:#268bd2">wait_button</span>(bot,message: Message,emoji_strs: List[<span style="color:#b58900">str</span>],allow_user<span style="color:#719e07">=</span><span style="color:#268bd2">None</span>,timeout<span style="color:#719e07">=</span><span style="color:#268bd2">None</span>) <span style="color:#719e07">-&gt;</span> Emoji:
     <span style="color:#719e07">for</span> e <span style="color:#719e07">in</span> emoji_strs:
         await message<span style="color:#719e07">.</span>add_reaction(e)
-    
+
     <span style="color:#719e07">def</span> <span style="color:#268bd2">check</span>(react,user):
         <span style="color:#719e07">if</span> allow_user:
             is_author <span style="color:#719e07">=</span> user <span style="color:#719e07">==</span> allow_user
@@ -223,24 +218,24 @@ async <span style="color:#719e07">def</span> <span style="color:#268bd2">wait_bu
     reaction, user <span style="color:#719e07">=</span> await bot<span style="color:#719e07">.</span>wait_for(<span style="color:#2aa198">&#39;reaction_add&#39;</span>,check<span style="color:#719e07">=</span>check,timeout<span style="color:#719e07">=</span>timeout)
     <span style="color:#719e07">return</span> reaction<span style="color:#719e07">.</span>emoji
 </code></pre></div><h2 id="文字入り画像を生成">文字入り画像を生成</h2>
-<p>pillow(PILの後継)で文字入れした画像を投稿します．
+<p>pillow(PIL の後継)で文字入れした画像を投稿します．
 以下は最低限文字入れするならの記事です．
 <a href="https://qiita.com/ekzemplaro/items/cd79d6a0fb4ff0a0f883"  target="_blank" rel="nofollow noopener" >pillow で図形に文字を挿入 - Qiita</a></p>
 <p>文字数に合わせていい感じの大きさにしたり，縁取りなどの装飾や縦書き対応もしたんですが，長くなりそうなので後日別記事で書きます．</p>
-<h2 id="botにユーザーとして発言させたい">botにユーザーとして発言させたい</h2>
+<h2 id="bot-にユーザーとして発言させたい">bot にユーザーとして発言させたい</h2>
 <p><img src="https://res.cloudinary.com/pishiko/image/upload/v1602353724/blog/owarida_dpwsae.gif" alt="owarida"></p>
 <h3 id="例">例</h3>
 <ol>
-<li>Aさんが「おわりだ」と発言</li>
-<li>Botが検知</li>
+<li>A さんが「おわりだ」と発言</li>
+<li>Bot が検知</li>
 <li>投稿が画像に変更される</li>
 </ol>
 <h3 id="アプローチ">アプローチ</h3>
 <ol>
 <li>特定のフレーズを検知</li>
-<li>Aさんの投稿を削除</li>
-<li>Aさんのアイコンと名前を取得</li>
-<li>取得した情報でWebhookを送信</li>
+<li>A さんの投稿を削除</li>
+<li>A さんのアイコンと名前を取得</li>
+<li>取得した情報で Webhook を送信</li>
 </ol>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python">HOOK_NAME <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;BOT_HOOK&#34;</span>
 
@@ -250,9 +245,9 @@ async <span style="color:#719e07">def</span> <span style="color:#268bd2">on_mess
     bot_hook <span style="color:#719e07">=</span> <span style="color:#b58900">next</span>(<span style="color:#b58900">filter</span>(<span style="color:#719e07">lambda</span> h:h<span style="color:#719e07">.</span>name<span style="color:#719e07">==</span>HOOK_NAME,hooks),<span style="color:#268bd2">None</span>)
     <span style="color:#719e07">if</span> <span style="color:#719e07">not</span> bot_hook:
         bot_hook <span style="color:#719e07">=</span> await channel<span style="color:#719e07">.</span>create_webhook(name<span style="color:#719e07">=</span>HOOK_NAME)
-	
+
 	await  msg<span style="color:#719e07">.</span>delete()
-	
+
 	await  bot_hook<span style="color:#719e07">.</span>send(
 	username<span style="color:#719e07">=</span>msg<span style="color:#719e07">.</span>author<span style="color:#719e07">.</span>display_name,
 	avatar_url<span style="color:#719e07">=</span>msg<span style="color:#719e07">.</span>author<span style="color:#719e07">.</span>avatar_url,
@@ -325,6 +320,7 @@ async <span style="color:#719e07">def</span> <span style="color:#268bd2">on_mess
         </div>
         <div class="links-footer">
           <h3>Links</h3>
+          <p><a href="https://paintkeyboard.p4ko.com/" target="_blank">おえかきキーボード</a></p>
           <p><a href="https://pishiko.github.io/youtube-share-hub/" target="_blank">Youtube Share Hub</a></p>
           <p><a href="/posts/nowplayingcat/" target="_blank">Now Playing Cat</a></p>
         </div>

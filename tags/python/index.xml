@@ -13,12 +13,12 @@
       <pubDate>Sat, 27 Feb 2021 19:44:55 +0900</pubDate>
       
       <guid>https://p4ko.com/posts/slashcommand/</guid>
-      <description>アドベントカレンダー 去年の年末にQiitaのDiscordBotアドベントカレンダーに初参加して，記事を投稿してみました．
- アドベントカレンダーどころかQiitaに投稿するのは初だったのですが，人に読まれる文章を書くのって難しいですね&amp;hellip;
-DiscordのSlashCommandはまだβ版ですが，SlackのSlashCommandに比べて入力補助がしっかりしてるので，かなり期待の機能です． 入力補助というのは，ユーザーだったりチャンネルだったりの選択をクリックするだけで埋められるというもので，大変使いやすいので今後は全てこっちに移植していきたいと思います．
-Future DiscordBotのインタフェースは更に改善されていくと以下で公式に明言されています．楽しみですね．
+      <description>アドベントカレンダー 去年の年末に Qiita の DiscordBot アドベントカレンダーに初参加して，記事を投稿してみました．
+ アドベントカレンダーどころか Qiita に投稿するのは初だったのですが，人に読まれる文章を書くのって難しいですね&amp;hellip;
+Discord の SlashCommand はまだ β 版ですが，Slack の SlashCommand に比べて入力補助がしっかりしてるので，かなり期待の機能です． 入力補助というのは，ユーザーだったりチャンネルだったりの選択をクリックするだけで埋められるというもので，大変使いやすいので今後は全てこっちに移植していきたいと思います．
+Future DiscordBot のインタフェースは更に改善されていくと以下で公式に明言されています．楽しみですね．
 The Future of Bots on Discord. In case you weren’t aware, robots have… | by Nelly | Discord Blog
-以下のようなUIが扱えるらしいです．ちょっとしたツールとしても全然使えそう．
+以下のような UI が扱えるらしいです．ちょっとしたツールとしても全然使えそう．
 おわり</description>
     </item>
     
@@ -28,13 +28,9 @@ The Future of Bots on Discord. In case you weren’t aware, robots have… | by 
       <pubDate>Sun, 11 Oct 2020 02:26:36 +0900</pubDate>
       
       <guid>https://p4ko.com/posts/discordpy/</guid>
-      <description>身内コミュニティ向けdiscord botを複数人で開発しているので，有用そうなレシピを書いていきます．
-環境 pythonのdiscordAPI ラッパーである discordpy 製botをgithubで管理し，heroku上で動かしています．
- discord.py へようこそ。 — discord.py 1.5.0 ドキュメント 【備忘録】GitHub経由でHerokuにデプロイするまでの流れ - Qiita  herokuの設定 基本  デプロイに必要なファイルの設定 | Pythonで実用Discord Bot(discordpy解説) - Qiita  時間を正しく扱うために  Herokuのタイムゾーンを日本に合わせる - Qiita  Herokuの仕様  24時間に1回再起動 ファイルは/tmp/以下でのみ書き込み可能． 再起動時にファイルなどはリポジトリの状態に初期化される  Cogで機能を分けて開発 Cogというのは，discordpyで提供されている，機能を分割するためのクラスです． メインのBotにCogを追加していく形になります．
-最低限の要素だけで構成されたテンプレートです．
- pishiko/discordpy-cog-template: Cog template  構成 run-bot.py bot.add_cog(cog)でCogを追加します
-bot = Bot(command_prefix=[&amp;#34;!&amp;#34;]) bot.add_cog(YourCog(bot)) bot.run(TOKEN) your_cog.py Cogクラスを継承したYourCogクラスを定義します． コンストラクタ__init__に取り込まれる先のbotを与えて保持します． これによりYourCog内でもbotにアクセスできます．例えば，bot自身のUserは，self.bot.userでアクセスできるわけです．
-class YourCog(commands.Cog): def __init__(self,bot): self.bot = bot Helpのカスタマイズ デフォルトのヘルプは英語だし見にくいので，おしゃれにしてあげたいです． commands.</description>
+      <description>身内コミュニティ向け discord bot を複数人で開発しているので，有用そうなレシピを書いていきます．
+環境 python の discordAPI ラッパーである discordpy 製 bot を github で管理し，heroku 上で動かしています．
+ discord.py へようこそ。 — discord.py 1.5.0 ドキュメント 【備忘録】GitHub 経由で Heroku にデプロイするまでの流れ - Qiita  heroku の設定 基本  デプロイに必要なファイルの設定 | Python で実用 Discord Bot(discordpy 解説) - Qiita  時間を正しく扱うために  Heroku のタイムゾーンを日本に合わせる - Qiita  Heroku の仕様  24 時間に 1 回再起動 ファイルは/tmp/以下でのみ書き込み可能． 再起動時にファイルなどはリポジトリの状態に初期化される  Cog で機能を分けて開発 Cog というのは，discordpy で提供されている，機能を分割するためのクラスです． メインの Bot に Cog を追加していく形になります．</description>
     </item>
     
   </channel>

@@ -18,6 +18,11 @@
   </url>
   
   <url>
+    <loc>https://p4ko.com/categories/</loc>
+    <lastmod>2021-09-21T23:01:15+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://p4ko.com/tags/dev/</loc>
     <lastmod>2021-09-21T23:01:15+09:00</lastmod>
   </url>
@@ -34,6 +39,11 @@
   
   <url>
     <loc>https://p4ko.com/tags/unity/</loc>
+    <lastmod>2021-09-21T23:01:15+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://p4ko.com/categories/%E3%81%B4%E3%81%97%E3%82%81%E3%82%82/</loc>
     <lastmod>2021-09-21T23:01:15+09:00</lastmod>
   </url>
   
@@ -170,10 +180,6 @@
   <url>
     <loc>https://p4ko.com/about/</loc>
     <lastmod>2000-01-01T00:00:00+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://p4ko.com/categories/</loc>
   </url>
   
 </urlset>

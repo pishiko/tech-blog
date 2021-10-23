@@ -29,21 +29,21 @@ Mediapipe Google の画像処理系機械学習ライブラリです．骨格推
       <pubDate>Wed, 26 May 2021 21:54:53 +0900</pubDate>
       
       <guid>https://p4ko.com/posts/paint-keyboard/</guid>
-      <description>おえかきキーボード というアプリを作りました．Android向けのIMEです． ちなみに英語版は&amp;quot;Scrobble Keyboard&amp;quot;です．
-専用ページはこちら👇
+      <description>おえかきキーボード というアプリを作りました．Android 向けの IME です． ちなみに英語版は&amp;quot;Scrobble Keyboard&amp;quot;です．
+専用ページはこちら 👇
 おえかきキーボード
-詳しくは👆の紹介ページに書いてあるのですが，簡単に説明すると，画像貼り付けに対応したテキスト入力中にサクッと絵を描けるキーボードで，コンセプトは「スタンプをその場で書いて送ろう」です．
-こんな感じでTwitterとかLINEとかでインスタントに送れたら面白いかなーと．
-所感 リポジトリもあります👇
-pishiko/paint-keyboard: Android向けおえかきキーボードアプリ
-IMEの情報がインターネット上に無いのと，IMEのServiceが特殊なライフサイクルなのもあって結構手探りでした．
-はじめてのアプリリリース Androidアプリ自体はいくつか作ったことがあったのですが，全体に公開することはありませんでした． Play Storeにリリースは前からしたかったことの一つなので，とりあえずリリース出来たな～という感じです． プライバシーポリシーが無くてリジェクトとか，英語に対応するとか，審査が遅いとか，アプリリリースの面倒ごとは大体経験したので，次はもう少し大きいアプリでもリリースしようかなーと思ってます．
+詳しくは 👆 の紹介ページに書いてあるのですが，簡単に説明すると，画像貼り付けに対応したテキスト入力中にサクッと絵を描けるキーボードで，コンセプトは「スタンプをその場で書いて送ろう」です．
+こんな感じで Twitter とか LINE とかでインスタントに送れたら面白いかなーと．
+所感 リポジトリもあります 👇
+pishiko/paint-keyboard: Android 向けおえかきキーボードアプリ
+IME の情報がインターネット上に無いのと，IME の Service が特殊なライフサイクルなのもあって結構手探りでした．
+はじめてのアプリリリース Android アプリ自体はいくつか作ったことがあったのですが，全体に公開することはありませんでした． Play Store にリリースは前からしたかったことの一つなので，とりあえずリリース出来たな～という感じです． プライバシーポリシーが無くてリジェクトとか，英語に対応するとか，審査が遅いとか，アプリリリースの面倒ごとは大体経験したので，次はもう少し大きいアプリでもリリースしようかなーと思ってます．
 loading...
 &amp;mdash; pishiko (@pishitaro_) loading... おわり</description>
     </item>
     
     <item>
-      <title>Build MediapipeUnityPlugin for Android (Ubuntu20.04 WSL2)</title>
+      <title>Build MediapipeUnityPlugin for Android</title>
       <link>https://p4ko.com/posts/build-mediapipe-unity-plugin/</link>
       <pubDate>Mon, 17 May 2021 17:15:19 +0900</pubDate>
       

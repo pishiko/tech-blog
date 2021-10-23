@@ -13,56 +13,41 @@
     <meta charset="utf-8" />
     <meta name="generator" content="Hugo 0.75.1" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="Pishiko" />
+    <meta name="author" content="pishiko" />
     <meta name="description" content="" />
-    <link rel="stylesheet" href="https://p4ko.com/css/main.min.e2c8a7c2c9819c9b418bc2773b86a1982f85656d09ce61ec919a03993d9f9db9.css" />
+    <link rel="stylesheet" href="https://p4ko.com/css/main.min.20f8fc25c6101790716780b492dadf4ed1c718b46d5620320ff33b85a8ea088c.css" />
     <link rel="stylesheet" href="/css/custom.css" />
 
     
-    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://p4ko.com/ogp/dash-button.png"/>
+
 <meta name="twitter:title" content="Dash Buttonサービス終了との闘い(敗北)"/>
-<meta name="twitter:description" content="要約  Amazon Dash Button をハックしてIoTボタンにしてた 2020年に入ってから使えなくなってた 自爆ファームウェアの配信によって文鎮化されてた  昔々&hellip; 実家暮らしなので母親にご飯を作っていただいているので，ご飯ができると「ご飯できたよ～」と呼ばれます．それがお互いにストレスだったので，キッチンには，押すとPush BulletというサービスからスマホやPCに通知が行くボタンが置いてありました．
+<meta name="twitter:description" content="要約  Amazon Dash Button をハックして IoT ボタンにしてた 2020 年に入ってから使えなくなってた 自爆ファームウェアの配信によって文鎮化されてた  昔々&hellip; 実家暮らしなので母親にご飯を作っていただいているので，ご飯ができると「ご飯できたよ～」と呼ばれます．それがお互いにストレスだったので，キッチンには，押すとPush Bulletというサービスからスマホや PC に通知が行くボタンが置いてありました．
 仕組みとしては，
- 商品発注をオフにしたAmazon Dash Buttonが押される 自宅のサーバで検知（ボタンからのARPリクエストをキャッチ） IFTTTを通してPush Bulletに通知  といったものでした．
-ところが 動かなくなってました．とりあえず初期化しようと思ってAmazon アプリから設定しようとしたのですが，設定項目がありませんでした．もしやと思って調べてみたら&hellip;
- Dash Button端末を使用した商品の注文は、2019年8月31日で終了しています。
-端末は2019年12月31日に自動的に登録解除およびリセットされるため、お客様による操作は必要ありません。なお、Dash Button端末を廃棄する前に手動での登録解除をご希望の場合は、コンテンツと端末の管理にアクセスして、端末タブから登録を解除できます。お使いのDash Buttonを選択し、登録の解除をクリックしてください。最後に、Dash Button端末を1回押します。ライトが白く点滅した後、赤く点灯します。
+ 商品発注をオフにした Amazon Dash Button が押される 自宅のサーバで検知（ボタンからの ARP リクエストをキャッチ） IFTTT を通して Push Bullet に通知  といったものでした．
+ところが 動かなくなってました．とりあえず初期化しようと思って Amazon アプリから設定しようとしたのですが，設定項目がありませんでした．もしやと思って調べてみたら&hellip;
+ Dash Button 端末を使用した商品の注文は、2019 年 8 月 31 日で終了しています。
+端末は 2019 年 12 月 31 日に自動的に登録解除およびリセットされるため、お客様による操作は必要ありません。なお、Dash Button 端末を廃棄する前に手動での登録解除をご希望の場合は、コンテンツと端末の管理にアクセスして、端末タブから登録を解除できます。お使いの Dash Button を選択し、登録の解除をクリックしてください。最後に、Dash Button 端末を 1 回押します。ライトが白く点滅した後、赤く点灯します。
  https://www.amazon.co.jp/gp/help/customer/display.html?nodeId=201706050
 とのこと．
 サービス終了&hellip;
-自爆とは どうやら2020年になってからボタンを押してアマゾンのサーバにリクエストを送ると，文鎮化するファームウェアアップデートが実行される模様． スパイ映画でよく見た「なお，このメッセージは自動的に消滅する．」ってやつだ&hellip;
-ネットワークから遮断 とりあえずDash Button Hackライブラリの Nekmo/amazon-dash によると，dash-button-na-aws-opf.amazon.com, 0.amazon.pool.ntp.org, 1.amazon.pool.ntp.org, 2.amazon.pool.ntp.org, 3.amazon.pool.ntp .orgからのパケットをブロックすればよいとのこと．
-ちなみにntp.orgってなんだろうと思ったらNetwork Time Protocolプロトコルというものっぽい．ネットワーク機器の時間同期に用いるとか．
-→まだだめ
-Wi-Fiの設定 再設定を試みます．Amazonのアプリには存在しないため，非公式のスクリプトを用いて設定します． fffonion/setup-dashbutton.py
-スクリプトの中身自体は，
- Dashボタン長押しで設定モードにする Amazon ConfigureMeというSSIDに接続 http://192.168.0.1/?amzn_ssid=SSID&amp;amzn_pw=PASS にアクセス  て感じでシンプルです．
-→でもだめ
-最後の手段 https://blog.christophermullins.com/2019/12/20/rescue-your-amazon-dash-buttons/によると，
- ファームウェアアップデートを一度でもしてしまったら終わり 一度Wi-Fiの設定をしたことがあるボタンのみWi-Fiの再設定が可能 ただし古いボタンなら特定の音声を流すことで初期設定が可能  特定の音声っていうのは，ボタンにはマイクがついていて，それによって設定が可能らしい．で，それでバッファの長さチェックがされていないので，オーバーフローさせていい感じにできるらしいです． ふわふわしてますね． その音声ファイルはここ ."/>
+自爆とは どうやら 2020 年になってからボタンを押してアマゾンのサーバにリクエストを送ると，文鎮化するファームウェアアップデートが実行される模様． スパイ映画でよく見た「なお，このメッセージは自動的に消滅する．」ってやつだ&hellip;"/>
 
     <meta property="og:title" content="Dash Buttonサービス終了との闘い(敗北)" />
-<meta property="og:description" content="要約  Amazon Dash Button をハックしてIoTボタンにしてた 2020年に入ってから使えなくなってた 自爆ファームウェアの配信によって文鎮化されてた  昔々&hellip; 実家暮らしなので母親にご飯を作っていただいているので，ご飯ができると「ご飯できたよ～」と呼ばれます．それがお互いにストレスだったので，キッチンには，押すとPush BulletというサービスからスマホやPCに通知が行くボタンが置いてありました．
+<meta property="og:description" content="要約  Amazon Dash Button をハックして IoT ボタンにしてた 2020 年に入ってから使えなくなってた 自爆ファームウェアの配信によって文鎮化されてた  昔々&hellip; 実家暮らしなので母親にご飯を作っていただいているので，ご飯ができると「ご飯できたよ～」と呼ばれます．それがお互いにストレスだったので，キッチンには，押すとPush Bulletというサービスからスマホや PC に通知が行くボタンが置いてありました．
 仕組みとしては，
- 商品発注をオフにしたAmazon Dash Buttonが押される 自宅のサーバで検知（ボタンからのARPリクエストをキャッチ） IFTTTを通してPush Bulletに通知  といったものでした．
-ところが 動かなくなってました．とりあえず初期化しようと思ってAmazon アプリから設定しようとしたのですが，設定項目がありませんでした．もしやと思って調べてみたら&hellip;
- Dash Button端末を使用した商品の注文は、2019年8月31日で終了しています。
-端末は2019年12月31日に自動的に登録解除およびリセットされるため、お客様による操作は必要ありません。なお、Dash Button端末を廃棄する前に手動での登録解除をご希望の場合は、コンテンツと端末の管理にアクセスして、端末タブから登録を解除できます。お使いのDash Buttonを選択し、登録の解除をクリックしてください。最後に、Dash Button端末を1回押します。ライトが白く点滅した後、赤く点灯します。
+ 商品発注をオフにした Amazon Dash Button が押される 自宅のサーバで検知（ボタンからの ARP リクエストをキャッチ） IFTTT を通して Push Bullet に通知  といったものでした．
+ところが 動かなくなってました．とりあえず初期化しようと思って Amazon アプリから設定しようとしたのですが，設定項目がありませんでした．もしやと思って調べてみたら&hellip;
+ Dash Button 端末を使用した商品の注文は、2019 年 8 月 31 日で終了しています。
+端末は 2019 年 12 月 31 日に自動的に登録解除およびリセットされるため、お客様による操作は必要ありません。なお、Dash Button 端末を廃棄する前に手動での登録解除をご希望の場合は、コンテンツと端末の管理にアクセスして、端末タブから登録を解除できます。お使いの Dash Button を選択し、登録の解除をクリックしてください。最後に、Dash Button 端末を 1 回押します。ライトが白く点滅した後、赤く点灯します。
  https://www.amazon.co.jp/gp/help/customer/display.html?nodeId=201706050
 とのこと．
 サービス終了&hellip;
-自爆とは どうやら2020年になってからボタンを押してアマゾンのサーバにリクエストを送ると，文鎮化するファームウェアアップデートが実行される模様． スパイ映画でよく見た「なお，このメッセージは自動的に消滅する．」ってやつだ&hellip;
-ネットワークから遮断 とりあえずDash Button Hackライブラリの Nekmo/amazon-dash によると，dash-button-na-aws-opf.amazon.com, 0.amazon.pool.ntp.org, 1.amazon.pool.ntp.org, 2.amazon.pool.ntp.org, 3.amazon.pool.ntp .orgからのパケットをブロックすればよいとのこと．
-ちなみにntp.orgってなんだろうと思ったらNetwork Time Protocolプロトコルというものっぽい．ネットワーク機器の時間同期に用いるとか．
-→まだだめ
-Wi-Fiの設定 再設定を試みます．Amazonのアプリには存在しないため，非公式のスクリプトを用いて設定します． fffonion/setup-dashbutton.py
-スクリプトの中身自体は，
- Dashボタン長押しで設定モードにする Amazon ConfigureMeというSSIDに接続 http://192.168.0.1/?amzn_ssid=SSID&amp;amzn_pw=PASS にアクセス  て感じでシンプルです．
-→でもだめ
-最後の手段 https://blog.christophermullins.com/2019/12/20/rescue-your-amazon-dash-buttons/によると，
- ファームウェアアップデートを一度でもしてしまったら終わり 一度Wi-Fiの設定をしたことがあるボタンのみWi-Fiの再設定が可能 ただし古いボタンなら特定の音声を流すことで初期設定が可能  特定の音声っていうのは，ボタンにはマイクがついていて，それによって設定が可能らしい．で，それでバッファの長さチェックがされていないので，オーバーフローさせていい感じにできるらしいです． ふわふわしてますね． その音声ファイルはここ ." />
+自爆とは どうやら 2020 年になってからボタンを押してアマゾンのサーバにリクエストを送ると，文鎮化するファームウェアアップデートが実行される模様． スパイ映画でよく見た「なお，このメッセージは自動的に消滅する．」ってやつだ&hellip;" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://p4ko.com/posts/dash-button/" />
+<meta property="og:image" content="https://p4ko.com/ogp/dash-button.png" />
 <meta property="article:published_time" content="2020-02-17T10:29:27+09:00" />
 <meta property="article:modified_time" content="2020-02-17T10:29:27+09:00" />
 
@@ -71,7 +56,7 @@ Wi-Fiの設定 再設定を試みます．Amazonのアプリには存在しな�
   <body>
     <header class="app-header">
       <div class="b1-header">
-        <a href="https://p4ko.com"><img class="app-header-avatar" src="/avatar.jpg" alt="Pishiko" /></a>
+        <a href="https://p4ko.com"><img class="app-header-avatar" src="/avatar.jpg" alt="pishiko" /></a>
         <h1>ぴしめも</h1>
       </div>
       <p class="poem-header">Pishiko&#39;s Dev Blog</p>
@@ -160,53 +145,53 @@ Wi-Fiの設定 再設定を試みます．Amazonのアプリには存在しな�
     <p><img src="https://lh3.googleusercontent.com/-1PQgZZjcLRY/XknrmD0nUZI/AAAAAAAAJ2E/bRKeLblbJ-8wl0Tk2zXdDZSZwB2tbCOXQCE0YBhgL/IMG_20200217_094801.jpg" alt="IMG_20200217_094801.jpg"></p>
 <h2 id="要約">要約</h2>
 <ul>
-<li>Amazon Dash Button をハックしてIoTボタンにしてた</li>
-<li>2020年に入ってから使えなくなってた</li>
+<li>Amazon Dash Button をハックして IoT ボタンにしてた</li>
+<li>2020 年に入ってから使えなくなってた</li>
 <li>自爆ファームウェアの配信によって文鎮化されてた</li>
 </ul>
 <h2 id="昔々">昔々&hellip;</h2>
-<p>実家暮らしなので母親にご飯を作っていただいているので，ご飯ができると「ご飯できたよ～」と呼ばれます．それがお互いにストレスだったので，キッチンには，押すと<a href="https://www.pushbullet.com/"  target="_blank" rel="nofollow noopener" >Push Bullet</a>というサービスからスマホやPCに通知が行くボタンが置いてありました．</p>
+<p>実家暮らしなので母親にご飯を作っていただいているので，ご飯ができると「ご飯できたよ～」と呼ばれます．それがお互いにストレスだったので，キッチンには，押すと<a href="https://www.pushbullet.com/"  target="_blank" rel="nofollow noopener" >Push Bullet</a>というサービスからスマホや PC に通知が行くボタンが置いてありました．</p>
 <p>仕組みとしては，</p>
 <ol>
-<li>商品発注をオフにしたAmazon Dash Buttonが押される</li>
-<li>自宅のサーバで検知（ボタンからのARPリクエストをキャッチ）</li>
-<li>IFTTTを通してPush Bulletに通知</li>
+<li>商品発注をオフにした Amazon Dash Button が押される</li>
+<li>自宅のサーバで検知（ボタンからの ARP リクエストをキャッチ）</li>
+<li>IFTTT を通して Push Bullet に通知</li>
 </ol>
 <p>といったものでした．</p>
 <h2 id="ところが">ところが</h2>
-<p>動かなくなってました．とりあえず初期化しようと思ってAmazon アプリから設定しようとしたのですが，設定項目がありませんでした．もしやと思って調べてみたら&hellip;</p>
+<p>動かなくなってました．とりあえず初期化しようと思って Amazon アプリから設定しようとしたのですが，設定項目がありませんでした．もしやと思って調べてみたら&hellip;</p>
 <blockquote>
-<p>Dash Button端末を使用した商品の注文は、2019年8月31日で終了しています。</p>
-<p>端末は2019年12月31日に自動的に登録解除およびリセットされるため、お客様による操作は必要ありません。なお、Dash
-Button端末を廃棄する前に手動での登録解除をご希望の場合は、<a href="https://www.amazon.co.jp/mycd"  target="_blank" rel="nofollow noopener" >コンテンツと端末の管理</a>にアクセスして、<strong>端末</strong>タブから登録を解除できます。お使いのDash
-Buttonを選択し、<strong>登録の解除</strong>をクリックしてください。最後に、Dash
-Button端末を1回押します。ライトが白く点滅した後、赤く点灯します。</p>
+<p>Dash Button 端末を使用した商品の注文は、2019 年 8 月 31 日で終了しています。</p>
+<p>端末は 2019 年 12 月 31 日に自動的に登録解除およびリセットされるため、お客様による操作は必要ありません。なお、Dash
+Button 端末を廃棄する前に手動での登録解除をご希望の場合は、<a href="https://www.amazon.co.jp/mycd"  target="_blank" rel="nofollow noopener" >コンテンツと端末の管理</a>にアクセスして、<strong>端末</strong>タブから登録を解除できます。お使いの Dash
+Button を選択し、<strong>登録の解除</strong>をクリックしてください。最後に、Dash
+Button 端末を 1 回押します。ライトが白く点滅した後、赤く点灯します。</p>
 </blockquote>
 <p><a href="https://www.amazon.co.jp/gp/help/customer/display.html?nodeId=201706050"  target="_blank" rel="nofollow noopener" >https://www.amazon.co.jp/gp/help/customer/display.html?nodeId=201706050</a></p>
 <p>とのこと．</p>
 <p><strong>サービス終了&hellip;</strong></p>
 <h2 id="自爆とは">自爆とは</h2>
-<p>どうやら2020年になってからボタンを押してアマゾンのサーバにリクエストを送ると，<strong>文鎮化するファームウェアアップデート</strong>が実行される模様．
+<p>どうやら 2020 年になってからボタンを押してアマゾンのサーバにリクエストを送ると，<strong>文鎮化するファームウェアアップデート</strong>が実行される模様．
 スパイ映画でよく見た「なお，このメッセージは自動的に消滅する．」ってやつだ&hellip;</p>
 <h2 id="ネットワークから遮断">ネットワークから遮断</h2>
-<p>とりあえずDash Button Hackライブラリの <a href="https://github.com/Nekmo"  target="_blank" rel="nofollow noopener" >Nekmo</a>/<strong><a href="https://github.com/Nekmo/amazon-dash"  target="_blank" rel="nofollow noopener" >amazon-dash</a></strong> によると，<code>dash-button-na-aws-opf.amazon.com</code>, <code>0.amazon.pool.ntp.org</code>, <code>1.amazon.pool.ntp.org</code>, <code>2.amazon.pool.ntp.org</code>, <code>3.amazon.pool.ntp .org</code>からのパケットをブロックすればよいとのこと．</p>
-<p>ちなみにntp.orgってなんだろうと思ったらNetwork Time Protocolプロトコルというものっぽい．ネットワーク機器の時間同期に用いるとか．</p>
-<p><strong>→まだだめ</strong></p>
-<h2 id="wi-fiの設定">Wi-Fiの設定</h2>
-<p>再設定を試みます．Amazonのアプリには存在しないため，非公式のスクリプトを用いて設定します． <a href="https://gist.github.com/fffonion"  target="_blank" rel="nofollow noopener" >fffonion</a>/<strong><a href="https://gist.github.com/fffonion/d4960503ff6782640286163d47a30080"  target="_blank" rel="nofollow noopener" >setup-dashbutton.py</a></strong></p>
+<p>とりあえず Dash Button Hack ライブラリの <a href="https://github.com/Nekmo"  target="_blank" rel="nofollow noopener" >Nekmo</a>/<strong><a href="https://github.com/Nekmo/amazon-dash"  target="_blank" rel="nofollow noopener" >amazon-dash</a></strong> によると，<code>dash-button-na-aws-opf.amazon.com</code>, <code>0.amazon.pool.ntp.org</code>, <code>1.amazon.pool.ntp.org</code>, <code>2.amazon.pool.ntp.org</code>, <code>3.amazon.pool.ntp .org</code>からのパケットをブロックすればよいとのこと．</p>
+<p>ちなみに ntp.org ってなんだろうと思ったら Network Time Protocol プロトコルというものっぽい．ネットワーク機器の時間同期に用いるとか．</p>
+<p><strong>→ まだだめ</strong></p>
+<h2 id="wi-fi-の設定">Wi-Fi の設定</h2>
+<p>再設定を試みます．Amazon のアプリには存在しないため，非公式のスクリプトを用いて設定します． <a href="https://gist.github.com/fffonion"  target="_blank" rel="nofollow noopener" >fffonion</a>/<strong><a href="https://gist.github.com/fffonion/d4960503ff6782640286163d47a30080"  target="_blank" rel="nofollow noopener" >setup-dashbutton.py</a></strong></p>
 <p>スクリプトの中身自体は，</p>
 <ul>
-<li>Dashボタン長押しで設定モードにする</li>
-<li>Amazon ConfigureMeというSSIDに接続</li>
+<li>Dash ボタン長押しで設定モードにする</li>
+<li>Amazon ConfigureMe という SSID に接続</li>
 <li>http://192.168.0.1/?amzn_ssid=SSID&amp;amzn_pw=PASS にアクセス</li>
 </ul>
 <p>て感じでシンプルです．</p>
-<p><strong>→でもだめ</strong></p>
+<p><strong>→ でもだめ</strong></p>
 <h2 id="最後の手段">最後の手段</h2>
 <p><a href="https://blog.christophermullins.com/2019/12/20/rescue-your-amazon-dash-buttons/"  target="_blank" rel="nofollow noopener" >https://blog.christophermullins.com/2019/12/20/rescue-your-amazon-dash-buttons/</a>によると，</p>
 <ul>
 <li>ファームウェアアップデートを一度でもしてしまったら終わり</li>
-<li>一度Wi-Fiの設定をしたことがあるボタンのみWi-Fiの再設定が可能</li>
+<li>一度 Wi-Fi の設定をしたことがあるボタンのみ Wi-Fi の再設定が可能</li>
 <li>ただし古いボタンなら特定の音声を流すことで初期設定が可能</li>
 </ul>
 <p>特定の音声っていうのは，ボタンにはマイクがついていて，それによって設定が可能らしい．で，それでバッファの長さチェックがされていないので，オーバーフローさせていい感じにできるらしいです．
@@ -283,6 +268,7 @@ Button端末を1回押します。ライトが白く点滅した後、赤く点�
         </div>
         <div class="links-footer">
           <h3>Links</h3>
+          <p><a href="https://paintkeyboard.p4ko.com/" target="_blank">おえかきキーボード</a></p>
           <p><a href="https://pishiko.github.io/youtube-share-hub/" target="_blank">Youtube Share Hub</a></p>
           <p><a href="/posts/nowplayingcat/" target="_blank">Now Playing Cat</a></p>
         </div>

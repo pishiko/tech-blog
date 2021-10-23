@@ -13,46 +13,43 @@
     <meta charset="utf-8" />
     <meta name="generator" content="Hugo 0.75.1" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="Pishiko" />
+    <meta name="author" content="pishiko" />
     <meta name="description" content="" />
-    <link rel="stylesheet" href="https://p4ko.com/css/main.min.e2c8a7c2c9819c9b418bc2773b86a1982f85656d09ce61ec919a03993d9f9db9.css" />
+    <link rel="stylesheet" href="https://p4ko.com/css/main.min.20f8fc25c6101790716780b492dadf4ed1c718b46d5620320ff33b85a8ea088c.css" />
     <link rel="stylesheet" href="/css/custom.css" />
 
     
-    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://p4ko.com/ogp/youtube-share-hub.png"/>
+
 <meta name="twitter:title" content="Youtubeの共有を便利にするWeb Appを作った"/>
-<meta name="twitter:description" content="Youtube Share Hubを作った →https://pishiko.github.io/youtube-share-hub/
+<meta name="twitter:description" content="Youtube Share Hub を作った →https://pishiko.github.io/youtube-share-hub/
 どんなの？ こんなの
-  Youtubeの共有メニューから選択してツイートのリンクに遷移するwebアプリケーション
-そのまま共有してもURLしか共有できないしTwitterカードも表示されないから不便だったので作りました．
-どんな技術使った？  PWA  Web Share Target API   vue.js bootstrap Github Pages  PWAについて 最低構成は以下になる．
+  Youtube の共有メニューから選択してツイートのリンクに遷移する web アプリケーション
+そのまま共有しても URL しか共有できないし Twitter カードも表示されないから不便だったので作りました．
+どんな技術使った？  PWA  Web Share Target API   vue.js bootstrap Github Pages  PWA について 最低構成は以下になる．
 index.html メインのアプリ
-serviceworker.js ServiceWorkerが動くことでオフラインでもキャッシュで動作したりすることが可能，特にやりたいことが無ければ関数は空でもいい
+serviceworker.js ServiceWorker が動くことでオフラインでもキャッシュで動作したりすることが可能，特にやりたいことが無ければ関数は空でもいい
 manifest.json これがキモ．アプリの名前，アイコンから，共有メニューからの動作まで設定できる． 楽ちんジェネレーターもある．アイコンもリサイズしてくれる．https://app-manifest.firebaseapp.com/
-Web Share Target API apkのアプリみたいに共有機能が使える．ただし，「なんちゃってホームに追加Webアプリ」とかじゃこの機能は使えない．
-ChromeからPWAアプリと認められる条件は以下
- アイコンがpngであること．jpgはだめ ServiceWorkerを用意する manifest.jsonが正しく記述されている  それから，Web Share APIは今のところAndroidでないと使えない．たのむよApple．
-そのほか メインはvue.jsで実装．丁寧にエラー処理なども書いた． デザインはbootstrap．楽． Github Pagesはこのブログ立ち上げた時と一緒．
-Github Pagesなので，ソースコードはここにあります． https://github.com/pishiko/youtube-share-hub
-おわり"/>
+Web Share Target API apk のアプリみたいに共有機能が使える．ただし，「なんちゃってホームに追加 Web アプリ」とかじゃこの機能は使えない．
+Chrome から PWA アプリと認められる条件は以下
+ アイコンが png であること．jpg はだめ ServiceWorker を用意する manifest.json が正しく記述されている  それから，Web Share API は今のところ Android でないと使えない．たのむよ Apple．"/>
 
     <meta property="og:title" content="Youtubeの共有を便利にするWeb Appを作った" />
-<meta property="og:description" content="Youtube Share Hubを作った →https://pishiko.github.io/youtube-share-hub/
+<meta property="og:description" content="Youtube Share Hub を作った →https://pishiko.github.io/youtube-share-hub/
 どんなの？ こんなの
-  Youtubeの共有メニューから選択してツイートのリンクに遷移するwebアプリケーション
-そのまま共有してもURLしか共有できないしTwitterカードも表示されないから不便だったので作りました．
-どんな技術使った？  PWA  Web Share Target API   vue.js bootstrap Github Pages  PWAについて 最低構成は以下になる．
+  Youtube の共有メニューから選択してツイートのリンクに遷移する web アプリケーション
+そのまま共有しても URL しか共有できないし Twitter カードも表示されないから不便だったので作りました．
+どんな技術使った？  PWA  Web Share Target API   vue.js bootstrap Github Pages  PWA について 最低構成は以下になる．
 index.html メインのアプリ
-serviceworker.js ServiceWorkerが動くことでオフラインでもキャッシュで動作したりすることが可能，特にやりたいことが無ければ関数は空でもいい
+serviceworker.js ServiceWorker が動くことでオフラインでもキャッシュで動作したりすることが可能，特にやりたいことが無ければ関数は空でもいい
 manifest.json これがキモ．アプリの名前，アイコンから，共有メニューからの動作まで設定できる． 楽ちんジェネレーターもある．アイコンもリサイズしてくれる．https://app-manifest.firebaseapp.com/
-Web Share Target API apkのアプリみたいに共有機能が使える．ただし，「なんちゃってホームに追加Webアプリ」とかじゃこの機能は使えない．
-ChromeからPWAアプリと認められる条件は以下
- アイコンがpngであること．jpgはだめ ServiceWorkerを用意する manifest.jsonが正しく記述されている  それから，Web Share APIは今のところAndroidでないと使えない．たのむよApple．
-そのほか メインはvue.jsで実装．丁寧にエラー処理なども書いた． デザインはbootstrap．楽． Github Pagesはこのブログ立ち上げた時と一緒．
-Github Pagesなので，ソースコードはここにあります． https://github.com/pishiko/youtube-share-hub
-おわり" />
+Web Share Target API apk のアプリみたいに共有機能が使える．ただし，「なんちゃってホームに追加 Web アプリ」とかじゃこの機能は使えない．
+Chrome から PWA アプリと認められる条件は以下
+ アイコンが png であること．jpg はだめ ServiceWorker を用意する manifest.json が正しく記述されている  それから，Web Share API は今のところ Android でないと使えない．たのむよ Apple．" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://p4ko.com/posts/youtube-share-hub/" />
+<meta property="og:image" content="https://p4ko.com/ogp/youtube-share-hub.png" />
 <meta property="article:published_time" content="2020-03-30T04:32:22+09:00" />
 <meta property="article:modified_time" content="2020-03-30T04:32:22+09:00" />
 
@@ -61,7 +58,7 @@ Github Pagesなので，ソースコードはここにあります． https://gi
   <body>
     <header class="app-header">
       <div class="b1-header">
-        <a href="https://p4ko.com"><img class="app-header-avatar" src="/avatar.jpg" alt="Pishiko" /></a>
+        <a href="https://p4ko.com"><img class="app-header-avatar" src="/avatar.jpg" alt="pishiko" /></a>
         <h1>ぴしめも</h1>
       </div>
       <p class="poem-header">Pishiko&#39;s Dev Blog</p>
@@ -147,7 +144,7 @@ Github Pagesなので，ソースコードはここにあります． https://gi
         <a class="tag" href="https://p4ko.com/tags/dev/">dev</a><a class="tag" href="https://p4ko.com/tags/js/">js</a></div></div>
   </header>
   <div class="post-content">
-    <h2 id="youtube-share-hubを作った">Youtube Share Hubを作った</h2>
+    <h2 id="youtube-share-hub-を作った">Youtube Share Hub を作った</h2>
 <p>→<a href="https://pishiko.github.io/youtube-share-hub/"  target="_blank" rel="nofollow noopener" >https://pishiko.github.io/youtube-share-hub/</a></p>
 <h2 id="どんなの">どんなの？</h2>
 <p>こんなの</p>
@@ -155,8 +152,8 @@ Github Pagesなので，ソースコードはここにあります． https://gi
     <img src="/img/youshare.gif" width="320"/> 
 </figure>
 
-<p>Youtubeの共有メニューから選択してツイートのリンクに遷移するwebアプリケーション</p>
-<p>そのまま共有してもURLしか共有できないしTwitterカードも表示されないから不便だったので作りました．</p>
+<p>Youtube の共有メニューから選択してツイートのリンクに遷移する web アプリケーション</p>
+<p>そのまま共有しても URL しか共有できないし Twitter カードも表示されないから不便だったので作りました．</p>
 <h2 id="どんな技術使った">どんな技術使った？</h2>
 <ul>
 <li>PWA
@@ -168,29 +165,29 @@ Github Pagesなので，ソースコードはここにあります． https://gi
 <li>bootstrap</li>
 <li>Github Pages</li>
 </ul>
-<h2 id="pwaについて">PWAについて</h2>
+<h2 id="pwa-について">PWA について</h2>
 <p>最低構成は以下になる．</p>
 <h3 id="indexhtml">index.html</h3>
 <p>メインのアプリ</p>
 <h3 id="serviceworkerjs">serviceworker.js</h3>
-<p>ServiceWorkerが動くことでオフラインでもキャッシュで動作したりすることが可能，特にやりたいことが無ければ関数は空でもいい</p>
+<p>ServiceWorker が動くことでオフラインでもキャッシュで動作したりすることが可能，特にやりたいことが無ければ関数は空でもいい</p>
 <h3 id="manifestjson">manifest.json</h3>
 <p>これがキモ．アプリの名前，アイコンから，共有メニューからの動作まで設定できる．
 楽ちんジェネレーターもある．アイコンもリサイズしてくれる．<a href="https://app-manifest.firebaseapp.com/"  target="_blank" rel="nofollow noopener" >https://app-manifest.firebaseapp.com/</a></p>
 <h2 id="web-share-target-api">Web Share Target API</h2>
-<p>apkのアプリみたいに共有機能が使える．ただし，「なんちゃってホームに追加Webアプリ」とかじゃこの機能は使えない．</p>
-<p>ChromeからPWAアプリと認められる条件は以下</p>
+<p>apk のアプリみたいに共有機能が使える．ただし，「なんちゃってホームに追加 Web アプリ」とかじゃこの機能は使えない．</p>
+<p>Chrome から PWA アプリと認められる条件は以下</p>
 <ul>
-<li>アイコンがpngであること．jpgはだめ</li>
-<li>ServiceWorkerを用意する</li>
-<li>manifest.jsonが正しく記述されている</li>
+<li>アイコンが png であること．jpg はだめ</li>
+<li>ServiceWorker を用意する</li>
+<li>manifest.json が正しく記述されている</li>
 </ul>
-<p>それから，Web Share APIは今のところAndroidでないと使えない．たのむよApple．</p>
+<p>それから，Web Share API は今のところ Android でないと使えない．たのむよ Apple．</p>
 <h2 id="そのほか">そのほか</h2>
-<p>メインはvue.jsで実装．丁寧にエラー処理なども書いた．
-デザインはbootstrap．楽．
-Github Pagesはこのブログ立ち上げた時と一緒．</p>
-<p>Github Pagesなので，ソースコードはここにあります．
+<p>メインは vue.js で実装．丁寧にエラー処理なども書いた．
+デザインは bootstrap．楽．
+Github Pages はこのブログ立ち上げた時と一緒．</p>
+<p>Github Pages なので，ソースコードはここにあります．
 <a href="https://github.com/pishiko/youtube-share-hub"  target="_blank" rel="nofollow noopener" >https://github.com/pishiko/youtube-share-hub</a></p>
 <p>おわり</p>
 
@@ -258,6 +255,7 @@ Github Pagesはこのブログ立ち上げた時と一緒．</p>
         </div>
         <div class="links-footer">
           <h3>Links</h3>
+          <p><a href="https://paintkeyboard.p4ko.com/" target="_blank">おえかきキーボード</a></p>
           <p><a href="https://pishiko.github.io/youtube-share-hub/" target="_blank">Youtube Share Hub</a></p>
           <p><a href="/posts/nowplayingcat/" target="_blank">Now Playing Cat</a></p>
         </div>

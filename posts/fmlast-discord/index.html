@@ -13,52 +13,45 @@
     <meta charset="utf-8" />
     <meta name="generator" content="Hugo 0.75.1" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="Pishiko" />
+    <meta name="author" content="pishiko" />
     <meta name="description" content="" />
-    <link rel="stylesheet" href="https://p4ko.com/css/main.min.e2c8a7c2c9819c9b418bc2773b86a1982f85656d09ce61ec919a03993d9f9db9.css" />
+    <link rel="stylesheet" href="https://p4ko.com/css/main.min.20f8fc25c6101790716780b492dadf4ed1c718b46d5620320ff33b85a8ea088c.css" />
     <link rel="stylesheet" href="/css/custom.css" />
 
     
-    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://p4ko.com/ogp/fmlast-discord.png"/>
+
 <meta name="twitter:title" content="Discordのnowplayingに音楽を表示させるのを作った"/>
 <meta name="twitter:description" content="デスクトップ常駐型アプリケーションを作りました．
 Github
 使い方
-経緯 Last.fmを見つけた ライフログを取るのにハマっていて，GPSとかの記録を取ったりしているのですが，ふと音楽のログも取りたいと思いました．
-そのようなサービスがないか調べたところ，Last.fmというものがありました． Spotifyなどと連携して聞いた音楽のログを取り，似た傾向のおすすめの曲を紹介してくれるそうです． 気に入ったのが，ログを取るためのAPIが用意してあり，PC，スマートフォンのあらゆるプレイヤーで記録できるところで，もし対応していなければ開発すればいいのです．
-共有したい Last.fmのAPIリファレンスを見ていたところ今聞いている曲を取得できるのを見つけたので，これでdiscordの「プレイ中」欄に表示しようと考えたのでした．さりげなさがいい感じなので．
-使ったもの  C# Windows フォームアプリ Last.fm API Discord RPC (Discord Game SDKのC#ラッパー)  ポイントなど C#フォームアプリの基本 あんまり書く機会がなくて，いつも忘れるので．
-Formクラスを継承したクラスのインスタンスに初期化処理を書けば動く.
-定期実行はTimerクラスがあるので，以下でFunctionNameに定期実行したい処理を書けばよい．
+経緯 Last.fm を見つけた ライフログを取るのにハマっていて，GPS とかの記録を取ったりしているのですが，ふと音楽のログも取りたいと思いました．
+そのようなサービスがないか調べたところ，Last.fm というものがありました． Spotify などと連携して聞いた音楽のログを取り，似た傾向のおすすめの曲を紹介してくれるそうです． 気に入ったのが，ログを取るための API が用意してあり，PC，スマートフォンのあらゆるプレイヤーで記録できるところで，もし対応していなければ開発すればいいのです．
+共有したい Last.fm の API リファレンスを見ていたところ今聞いている曲を取得できるのを見つけたので，これで discord の「プレイ中」欄に表示しようと考えたのでした．さりげなさがいい感じなので．
+使ったもの  C# Windows フォームアプリ Last.fm API Discord RPC (Discord Game SDK の C#ラッパー)  ポイントなど C#フォームアプリの基本 あんまり書く機会がなくて，いつも忘れるので．
+Form クラスを継承したクラスのインスタンスに初期化処理を書けば動く.
+定期実行は Timer クラスがあるので，以下で FunctionName に定期実行したい処理を書けばよい．
 var timer = new Timer(); timer.Interval = 5000; //5s timer.Elapsed &#43;= FunctionName; timer.Enable = true //動き出す タスクトレイ常駐 参考にしました． http://pineplanter.moo.jp/non-it-salaryman/2017/06/01/c-sharp-tasktray/
 全部ここに書いてるのですが，やることは
- タスクトレイにアイコンを追加する タスクトレイアイコンに終了メニューを追加する タスクバーに表示させない フォームを表示させない  です．
-discord RPC ドキュメントが充実しているので特に書くこともないです． https://github.com/Lachee/discord-rpc-csharp
-nugetで導入してREADMEのチュートリアル通りに書けばいいです．
- ただ最初はDiscord Game SDKでやろうとしていて，文字化け問題に直面したのでかなり苦労しました．Issue→https://github.com/discord/discord-rpc/issues/119
-ちなみに，昔はGameSDKでなくてもRichPeresenceを弄れたのですがAPIが廃止されたので面倒になりました． 昔は同じことをするjs製ツールがあったっぽいのですが，API廃止で使えなくなっちゃったみたいです．
-WebAPIを呼ぶ HttpClientを使います．クエリパラメタもURLエンコードできます． その他まとめ→C# 今更ですが、HttpClientを使う - Qiita"/>
+ タスクトレイにアイコンを追加する タスクトレイアイコンに終了メニューを追加する タスクバーに表示させない フォームを表示させない  です．"/>
 
     <meta property="og:title" content="Discordのnowplayingに音楽を表示させるのを作った" />
 <meta property="og:description" content="デスクトップ常駐型アプリケーションを作りました．
 Github
 使い方
-経緯 Last.fmを見つけた ライフログを取るのにハマっていて，GPSとかの記録を取ったりしているのですが，ふと音楽のログも取りたいと思いました．
-そのようなサービスがないか調べたところ，Last.fmというものがありました． Spotifyなどと連携して聞いた音楽のログを取り，似た傾向のおすすめの曲を紹介してくれるそうです． 気に入ったのが，ログを取るためのAPIが用意してあり，PC，スマートフォンのあらゆるプレイヤーで記録できるところで，もし対応していなければ開発すればいいのです．
-共有したい Last.fmのAPIリファレンスを見ていたところ今聞いている曲を取得できるのを見つけたので，これでdiscordの「プレイ中」欄に表示しようと考えたのでした．さりげなさがいい感じなので．
-使ったもの  C# Windows フォームアプリ Last.fm API Discord RPC (Discord Game SDKのC#ラッパー)  ポイントなど C#フォームアプリの基本 あんまり書く機会がなくて，いつも忘れるので．
-Formクラスを継承したクラスのインスタンスに初期化処理を書けば動く.
-定期実行はTimerクラスがあるので，以下でFunctionNameに定期実行したい処理を書けばよい．
+経緯 Last.fm を見つけた ライフログを取るのにハマっていて，GPS とかの記録を取ったりしているのですが，ふと音楽のログも取りたいと思いました．
+そのようなサービスがないか調べたところ，Last.fm というものがありました． Spotify などと連携して聞いた音楽のログを取り，似た傾向のおすすめの曲を紹介してくれるそうです． 気に入ったのが，ログを取るための API が用意してあり，PC，スマートフォンのあらゆるプレイヤーで記録できるところで，もし対応していなければ開発すればいいのです．
+共有したい Last.fm の API リファレンスを見ていたところ今聞いている曲を取得できるのを見つけたので，これで discord の「プレイ中」欄に表示しようと考えたのでした．さりげなさがいい感じなので．
+使ったもの  C# Windows フォームアプリ Last.fm API Discord RPC (Discord Game SDK の C#ラッパー)  ポイントなど C#フォームアプリの基本 あんまり書く機会がなくて，いつも忘れるので．
+Form クラスを継承したクラスのインスタンスに初期化処理を書けば動く.
+定期実行は Timer クラスがあるので，以下で FunctionName に定期実行したい処理を書けばよい．
 var timer = new Timer(); timer.Interval = 5000; //5s timer.Elapsed &#43;= FunctionName; timer.Enable = true //動き出す タスクトレイ常駐 参考にしました． http://pineplanter.moo.jp/non-it-salaryman/2017/06/01/c-sharp-tasktray/
 全部ここに書いてるのですが，やることは
- タスクトレイにアイコンを追加する タスクトレイアイコンに終了メニューを追加する タスクバーに表示させない フォームを表示させない  です．
-discord RPC ドキュメントが充実しているので特に書くこともないです． https://github.com/Lachee/discord-rpc-csharp
-nugetで導入してREADMEのチュートリアル通りに書けばいいです．
- ただ最初はDiscord Game SDKでやろうとしていて，文字化け問題に直面したのでかなり苦労しました．Issue→https://github.com/discord/discord-rpc/issues/119
-ちなみに，昔はGameSDKでなくてもRichPeresenceを弄れたのですがAPIが廃止されたので面倒になりました． 昔は同じことをするjs製ツールがあったっぽいのですが，API廃止で使えなくなっちゃったみたいです．
-WebAPIを呼ぶ HttpClientを使います．クエリパラメタもURLエンコードできます． その他まとめ→C# 今更ですが、HttpClientを使う - Qiita" />
+ タスクトレイにアイコンを追加する タスクトレイアイコンに終了メニューを追加する タスクバーに表示させない フォームを表示させない  です．" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://p4ko.com/posts/fmlast-discord/" />
+<meta property="og:image" content="https://p4ko.com/ogp/fmlast-discord.png" />
 <meta property="article:published_time" content="2020-05-09T16:06:41+09:00" />
 <meta property="article:modified_time" content="2020-05-09T16:06:41+09:00" />
 
@@ -67,7 +60,7 @@ WebAPIを呼ぶ HttpClientを使います．クエリパラメタもURLエンコ
   <body>
     <header class="app-header">
       <div class="b1-header">
-        <a href="https://p4ko.com"><img class="app-header-avatar" src="/avatar.jpg" alt="Pishiko" /></a>
+        <a href="https://p4ko.com"><img class="app-header-avatar" src="/avatar.jpg" alt="pishiko" /></a>
         <h1>ぴしめも</h1>
       </div>
       <p class="poem-header">Pishiko&#39;s Dev Blog</p>
@@ -158,24 +151,24 @@ WebAPIを呼ぶ HttpClientを使います．クエリパラメタもURLエンコ
 <p><a href="https://github.com/pishiko/discord-nowplaying"  target="_blank" rel="nofollow noopener" >Github</a></p>
 <p><a href="https://pishiko.github.io/posts/fmlast-discord/"  target="_blank" rel="nofollow noopener" >使い方</a></p>
 <h2 id="経緯">経緯</h2>
-<h3 id="lastfmを見つけた">Last.fmを見つけた</h3>
-<p>ライフログを取るのにハマっていて，GPSとかの記録を取ったりしているのですが，ふと音楽のログも取りたいと思いました．</p>
-<p>そのようなサービスがないか調べたところ，Last.fmというものがありました．
-Spotifyなどと連携して聞いた音楽のログを取り，似た傾向のおすすめの曲を紹介してくれるそうです．
-気に入ったのが，ログを取るためのAPIが用意してあり，PC，スマートフォンのあらゆるプレイヤーで記録できるところで，もし対応していなければ開発すればいいのです．</p>
+<h3 id="lastfm-を見つけた">Last.fm を見つけた</h3>
+<p>ライフログを取るのにハマっていて，GPS とかの記録を取ったりしているのですが，ふと音楽のログも取りたいと思いました．</p>
+<p>そのようなサービスがないか調べたところ，Last.fm というものがありました．
+Spotify などと連携して聞いた音楽のログを取り，似た傾向のおすすめの曲を紹介してくれるそうです．
+気に入ったのが，ログを取るための API が用意してあり，PC，スマートフォンのあらゆるプレイヤーで記録できるところで，もし対応していなければ開発すればいいのです．</p>
 <h3 id="共有したい">共有したい</h3>
-<p>Last.fmのAPIリファレンスを見ていたところ今聞いている曲を取得できるのを見つけたので，これでdiscordの「プレイ中」欄に表示しようと考えたのでした．さりげなさがいい感じなので．</p>
+<p>Last.fm の API リファレンスを見ていたところ今聞いている曲を取得できるのを見つけたので，これで discord の「プレイ中」欄に表示しようと考えたのでした．さりげなさがいい感じなので．</p>
 <h2 id="使ったもの">使ったもの</h2>
 <ul>
 <li>C# Windows フォームアプリ</li>
 <li>Last.fm API</li>
-<li>Discord RPC (Discord Game SDKのC#ラッパー)</li>
+<li>Discord RPC (Discord Game SDK の C#ラッパー)</li>
 </ul>
 <h2 id="ポイントなど">ポイントなど</h2>
 <h3 id="cフォームアプリの基本">C#フォームアプリの基本</h3>
 <p>あんまり書く機会がなくて，いつも忘れるので．</p>
-<p>Formクラスを継承したクラスのインスタンスに初期化処理を書けば動く.</p>
-<p>定期実行はTimerクラスがあるので，以下でFunctionNameに定期実行したい処理を書けばよい．</p>
+<p>Form クラスを継承したクラスのインスタンスに初期化処理を書けば動く.</p>
+<p>定期実行は Timer クラスがあるので，以下で FunctionName に定期実行したい処理を書けばよい．</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-Csharp" data-lang="Csharp"><span style="color:#dc322f">var</span> timer = <span style="color:#719e07">new</span> Timer();
 timer.Interval = <span style="color:#2aa198">5000</span>; <span style="color:#586e75">//5s
 </span><span style="color:#586e75"></span>timer.Elapsed += FunctionName;
@@ -194,21 +187,21 @@ timer.Enable = <span style="color:#719e07">true</span> <span style="color:#586e7
 <h3 id="discord-rpc">discord RPC</h3>
 <p>ドキュメントが充実しているので特に書くこともないです．
 <a href="https://github.com/Lachee/discord-rpc-csharp"  target="_blank" rel="nofollow noopener" >https://github.com/Lachee/discord-rpc-csharp</a></p>
-<p>nugetで導入してREADMEのチュートリアル通りに書けばいいです．</p>
+<p>nuget で導入して README のチュートリアル通りに書けばいいです．</p>
 <hr>
-<p>ただ最初はDiscord Game SDKでやろうとしていて，文字化け問題に直面したのでかなり苦労しました．Issue→<a href="https://github.com/discord/discord-rpc/issues/119"  target="_blank" rel="nofollow noopener" >https://github.com/discord/discord-rpc/issues/119</a></p>
-<p>ちなみに，昔はGameSDKでなくてもRichPeresenceを弄れたのですがAPIが廃止されたので面倒になりました．
-昔は同じことをするjs製ツールがあったっぽいのですが，API廃止で使えなくなっちゃったみたいです．</p>
-<h3 id="webapiを呼ぶ">WebAPIを呼ぶ</h3>
-<p>HttpClientを使います．クエリパラメタもURLエンコードできます．
-その他まとめ→<a href="https://qiita.com/rawr/items/f78a3830d894042f891b"  target="_blank" rel="nofollow noopener" >C# 今更ですが、HttpClientを使う - Qiita</a></p>
-<h3 id="動的なjsonを処理する">動的なJsonを処理する</h3>
-<p>動的な，というのは，Last.fmのAPIをJSONで受け取ると，Nowplayingかどうかで微妙に形が変わるため構造体を作ってそこにぶち込む，という手法が使えない，ということです．</p>
-<p>Json.NETでは動的にメンバが生成されるJsonオブジェクトが扱えるので，Json.NETをnugetで導入します．</p>
-<p>面白かったのが，C#にはdynamic型という，PythonやJSのように実行時に型が決まる静的な型（型自体は静的，ややこしい）が存在することです．ゆるゆるなので当然実行時エラーガンガンなんですけどね．</p>
+<p>ただ最初は Discord Game SDK でやろうとしていて，文字化け問題に直面したのでかなり苦労しました．Issue→<a href="https://github.com/discord/discord-rpc/issues/119"  target="_blank" rel="nofollow noopener" >https://github.com/discord/discord-rpc/issues/119</a></p>
+<p>ちなみに，昔は GameSDK でなくても RichPeresence を弄れたのですが API が廃止されたので面倒になりました．
+昔は同じことをする js 製ツールがあったっぽいのですが，API 廃止で使えなくなっちゃったみたいです．</p>
+<h3 id="webapi-を呼ぶ">WebAPI を呼ぶ</h3>
+<p>HttpClient を使います．クエリパラメタも URL エンコードできます．
+その他まとめ →<a href="https://qiita.com/rawr/items/f78a3830d894042f891b"  target="_blank" rel="nofollow noopener" >C# 今更ですが、HttpClient を使う - Qiita</a></p>
+<h3 id="動的な-json-を処理する">動的な Json を処理する</h3>
+<p>動的な，というのは，Last.fm の API を JSON で受け取ると，Nowplaying かどうかで微妙に形が変わるため構造体を作ってそこにぶち込む，という手法が使えない，ということです．</p>
+<p>Json.NET では動的にメンバが生成される Json オブジェクトが扱えるので，Json.NET を nuget で導入します．</p>
+<p>面白かったのが，C#には dynamic 型という，Python や JS のように実行時に型が決まる静的な型（型自体は静的，ややこしい）が存在することです．ゆるゆるなので当然実行時エラーガンガンなんですけどね．</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-csharp" data-lang="csharp"><span style="color:#dc322f">dynamic</span> jsonResponse = JsonConvert.Deserialize(jsonString);
 <span style="color:#dc322f">var</span> m = jsonResponse.member;<span style="color:#586e75">//
-</span></code></pre></div><p>jsonで要素が存在するかは，メンバが存在するかなので，以下で判断できます．</p>
+</span></code></pre></div><p>json で要素が存在するかは，メンバが存在するかなので，以下で判断できます．</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-csharp" data-lang="csharp">jsonResponse.GetType().GetProperty(<span style="color:#2aa198">&#34;member&#34;</span>) != <span style="color:#719e07">null</span>
 </code></pre></div><h3 id="参考">参考</h3>
 <ul>
@@ -220,7 +213,7 @@ timer.Enable = <span style="color:#719e07">true</span> <span style="color:#586e7
 </li>
 </ul>
 <h2 id="おわり">おわり</h2>
-<p>Last.fmのAPIは制限もゆるく太っ腹なのでいろいろ遊べそうです．
+<p>Last.fm の API は制限もゆるく太っ腹なのでいろいろ遊べそうです．
 楽曲情報も取得できるっぽいのでそれで何かします．</p>
 
   </div>
@@ -287,6 +280,7 @@ timer.Enable = <span style="color:#719e07">true</span> <span style="color:#586e7
         </div>
         <div class="links-footer">
           <h3>Links</h3>
+          <p><a href="https://paintkeyboard.p4ko.com/" target="_blank">おえかきキーボード</a></p>
           <p><a href="https://pishiko.github.io/youtube-share-hub/" target="_blank">Youtube Share Hub</a></p>
           <p><a href="/posts/nowplayingcat/" target="_blank">Now Playing Cat</a></p>
         </div>

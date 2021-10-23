@@ -13,13 +13,13 @@
       <pubDate>Wed, 31 Mar 2021 22:57:33 +0900</pubDate>
       
       <guid>https://p4ko.com/posts/wordpress-move/</guid>
-      <description>WordPressの引っ越し作業をしたのですが，思いのほかやることが多く詰まったので作業メモを残しておきます．
-bitnami (on AWS) から XREAレンタルサーバ に引っ越しします． ついでにムームードメインで購入したドメインをAWS Route53からレンタルサーバと一緒に使えるバリュードメインDNSに引っ越しもします．
+      <description>WordPress の引っ越し作業をしたのですが，思いのほかやることが多く詰まったので作業メモを残しておきます．
+bitnami (on AWS) から XREA レンタルサーバ に引っ越しします． ついでにムームードメインで購入したドメインを AWS Route53 からレンタルサーバと一緒に使えるバリュードメイン DNS に引っ越しもします．
 無料から使える高機能・高品質レンタルサーバー | XREA（エクスリア）
 リダイレクトの設定を切る /opt/bitnami/apps/wordpress/conf/htaccess.conf の該当部を以下の様にコメントアウト
-# BEGIN Custom #RewriteCond %{HTTP_HOST} !^www\. #RewriteRule ^(.*) $https://www.%{HTTP_HOST}/$1 [R=301,L] #END Custom Wordpressを丸々ダウンロードする /opt/bitnami/apps/wordpress/htdocsの中身を丸々ダウンロードする．
-MySQLのデータを引っ越し PHPMYADMINからSQLをエクスポート localhostからしかログインできないので /opt/bitnami/apps/phpmyadmin/conf/httpd-app.confを編集し，
-&amp;lt;IfVersion &amp;lt; 2.3 &amp;gt; Order allow,deny Allow from 127.0.0.1 Allow from &amp;lt;YOURIP&amp;gt; Satisfy all &amp;lt;/IfVersion&amp;gt; &amp;lt;IfVersion &amp;gt;= 2.3&amp;gt; Require local Require ip &amp;lt;YOURIP&amp;gt; &amp;lt;/IfVersion&amp;gt; ErrorDocument 403 &amp;quot;For security reasons, this URL is only accessible using localhost (127.0.0.1) as the hostname.</description>
+# BEGIN Custom #RewriteCond %{HTTP_HOST} !^www\. #RewriteRule ^(.*) $https://www.%{HTTP_HOST}/$1 [R=301,L] #END Custom Wordpress を丸々ダウンロードする /opt/bitnami/apps/wordpress/htdocsの中身を丸々ダウンロードする．
+MySQL のデータを引っ越し PHPMYADMIN から SQL をエクスポート localhost からしかログインできないので /opt/bitnami/apps/phpmyadmin/conf/httpd-app.confを編集し，
+&amp;lt;IfVersion &amp;lt; 2.3 &amp;gt; Order allow,deny Allow from 127.0.0.1 Allow from &amp;lt;YOURIP&amp;gt; Satisfy all &amp;lt;/IfVersion&amp;gt; &amp;lt;IfVersion &amp;gt;= 2.3&amp;gt; Require local Require ip &amp;lt;YOURIP&amp;gt; &amp;lt;/IfVersion&amp;gt; ErrorDocument 403 &amp;quot;For security reasons, this URL is only accessible using localhost (127.</description>
     </item>
     
     <item>
@@ -28,17 +28,14 @@ MySQLのデータを引っ越し PHPMYADMINからSQLをエクスポート localh
       <pubDate>Sat, 27 Feb 2021 19:45:05 +0900</pubDate>
       
       <guid>https://p4ko.com/posts/vscodesettings/</guid>
-      <description>VSCodeの設定 変えすぎて何が何だかよくわからなくなってきそうなので整理も兼ねて設定を並べていきたいと思います．
-テーマ Solarized Darkを使用しています．
+      <description>VSCode の設定 変えすぎて何が何だかよくわからなくなってきそうなので整理も兼ねて設定を並べていきたいと思います．
+テーマ Solarized Dark を使用しています．
 Solarized
-&amp;#34;workbench.colorTheme&amp;#34;: &amp;#34;Solarized Dark&amp;#34;, フォント 半角がCancadia Code，全角日本語がHan Codeになるように設定しています． Cancadia CodeはMicrosoftの作ったWindowsTerminalのデフォルトフォントで，リガチャにも対応しています． 日本語は見やすさ重視です．
+&amp;#34;workbench.colorTheme&amp;#34;: &amp;#34;Solarized Dark&amp;#34;, フォント 半角が Cancadia Code，全角日本語が Han Code になるように設定しています． Cancadia Code は Microsoft の作った WindowsTerminal のデフォルトフォントで，リガチャにも対応しています． 日本語は見やすさ重視です．
 microsoft/cascadia-code: This is a fun, new monospaced font that includes programming ligatures and is designed to enhance the modern look and feel of the Windows Terminal.
 adobe-fonts/source-han-code-jp: Source Han Code JP | 源ノ角ゴシック Code
 &amp;#34;editor.fontFamily&amp;#34;: &amp;#34;Cascadia Code, Han Code JP&amp;#34;, リガチャ（合字）は個別に有効にする必要があります．
-&amp;#34;editor.fontLigatures&amp;#34;: true, ターミナルの配色 Onehalfという配色を使ってます．
-配色テーマをVSCodeのsettings.json用に成形してくれてるサイトがあるのでとても便利です．
-Base16 Terminal Colors for Visual Studio Code
-&amp;#34;workbench.colorCustomizations&amp;#34;: { &amp;#34;terminal.</description>
+&amp;#34;editor.fontLigatures&amp;#34;: true, ターミナルの配色 Onehalfという配色を使ってます．</description>
     </item>
     
     <item>
@@ -47,25 +44,16 @@ Base16 Terminal Colors for Visual Studio Code
       <pubDate>Mon, 17 Feb 2020 10:29:27 +0900</pubDate>
       
       <guid>https://p4ko.com/posts/dash-button/</guid>
-      <description>要約  Amazon Dash Button をハックしてIoTボタンにしてた 2020年に入ってから使えなくなってた 自爆ファームウェアの配信によって文鎮化されてた  昔々&amp;hellip; 実家暮らしなので母親にご飯を作っていただいているので，ご飯ができると「ご飯できたよ～」と呼ばれます．それがお互いにストレスだったので，キッチンには，押すとPush BulletというサービスからスマホやPCに通知が行くボタンが置いてありました．
+      <description>要約  Amazon Dash Button をハックして IoT ボタンにしてた 2020 年に入ってから使えなくなってた 自爆ファームウェアの配信によって文鎮化されてた  昔々&amp;hellip; 実家暮らしなので母親にご飯を作っていただいているので，ご飯ができると「ご飯できたよ～」と呼ばれます．それがお互いにストレスだったので，キッチンには，押すとPush Bulletというサービスからスマホや PC に通知が行くボタンが置いてありました．
 仕組みとしては，
- 商品発注をオフにしたAmazon Dash Buttonが押される 自宅のサーバで検知（ボタンからのARPリクエストをキャッチ） IFTTTを通してPush Bulletに通知  といったものでした．
-ところが 動かなくなってました．とりあえず初期化しようと思ってAmazon アプリから設定しようとしたのですが，設定項目がありませんでした．もしやと思って調べてみたら&amp;hellip;
- Dash Button端末を使用した商品の注文は、2019年8月31日で終了しています。
-端末は2019年12月31日に自動的に登録解除およびリセットされるため、お客様による操作は必要ありません。なお、Dash Button端末を廃棄する前に手動での登録解除をご希望の場合は、コンテンツと端末の管理にアクセスして、端末タブから登録を解除できます。お使いのDash Buttonを選択し、登録の解除をクリックしてください。最後に、Dash Button端末を1回押します。ライトが白く点滅した後、赤く点灯します。
+ 商品発注をオフにした Amazon Dash Button が押される 自宅のサーバで検知（ボタンからの ARP リクエストをキャッチ） IFTTT を通して Push Bullet に通知  といったものでした．
+ところが 動かなくなってました．とりあえず初期化しようと思って Amazon アプリから設定しようとしたのですが，設定項目がありませんでした．もしやと思って調べてみたら&amp;hellip;
+ Dash Button 端末を使用した商品の注文は、2019 年 8 月 31 日で終了しています。
+端末は 2019 年 12 月 31 日に自動的に登録解除およびリセットされるため、お客様による操作は必要ありません。なお、Dash Button 端末を廃棄する前に手動での登録解除をご希望の場合は、コンテンツと端末の管理にアクセスして、端末タブから登録を解除できます。お使いの Dash Button を選択し、登録の解除をクリックしてください。最後に、Dash Button 端末を 1 回押します。ライトが白く点滅した後、赤く点灯します。
  https://www.amazon.co.jp/gp/help/customer/display.html?nodeId=201706050
 とのこと．
 サービス終了&amp;hellip;
-自爆とは どうやら2020年になってからボタンを押してアマゾンのサーバにリクエストを送ると，文鎮化するファームウェアアップデートが実行される模様． スパイ映画でよく見た「なお，このメッセージは自動的に消滅する．」ってやつだ&amp;hellip;
-ネットワークから遮断 とりあえずDash Button Hackライブラリの Nekmo/amazon-dash によると，dash-button-na-aws-opf.amazon.com, 0.amazon.pool.ntp.org, 1.amazon.pool.ntp.org, 2.amazon.pool.ntp.org, 3.amazon.pool.ntp .orgからのパケットをブロックすればよいとのこと．
-ちなみにntp.orgってなんだろうと思ったらNetwork Time Protocolプロトコルというものっぽい．ネットワーク機器の時間同期に用いるとか．
-→まだだめ
-Wi-Fiの設定 再設定を試みます．Amazonのアプリには存在しないため，非公式のスクリプトを用いて設定します． fffonion/setup-dashbutton.py
-スクリプトの中身自体は，
- Dashボタン長押しで設定モードにする Amazon ConfigureMeというSSIDに接続 http://192.168.0.1/?amzn_ssid=SSID&amp;amp;amzn_pw=PASS にアクセス  て感じでシンプルです．
-→でもだめ
-最後の手段 https://blog.christophermullins.com/2019/12/20/rescue-your-amazon-dash-buttons/によると，
- ファームウェアアップデートを一度でもしてしまったら終わり 一度Wi-Fiの設定をしたことがあるボタンのみWi-Fiの再設定が可能 ただし古いボタンなら特定の音声を流すことで初期設定が可能  特定の音声っていうのは，ボタンにはマイクがついていて，それによって設定が可能らしい．で，それでバッファの長さチェックがされていないので，オーバーフローさせていい感じにできるらしいです． ふわふわしてますね． その音声ファイルはここ .</description>
+自爆とは どうやら 2020 年になってからボタンを押してアマゾンのサーバにリクエストを送ると，文鎮化するファームウェアアップデートが実行される模様． スパイ映画でよく見た「なお，このメッセージは自動的に消滅する．」ってやつだ&amp;hellip;</description>
     </item>
     
     <item>
