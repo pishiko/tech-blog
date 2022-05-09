@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>js on ぴしめも</title>
-    <link>https://p4ko.com/tags/js/</link>
+    <link>https://blog.p4ko.com/tags/js/</link>
     <description>Recent content in js on ぴしめも</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
-    <lastBuildDate>Wed, 01 Apr 2020 21:46:39 +0900</lastBuildDate><atom:link href="https://p4ko.com/tags/js/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 01 Apr 2020 21:46:39 +0900</lastBuildDate><atom:link href="https://blog.p4ko.com/tags/js/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>匿名LINEチャットルームを作った</title>
-      <link>https://p4ko.com/posts/anonymas-chat/</link>
+      <link>https://blog.p4ko.com/posts/anonymas-chat/</link>
       <pubDate>Wed, 01 Apr 2020 21:46:39 +0900</pubDate>
       
-      <guid>https://p4ko.com/posts/anonymas-chat/</guid>
+      <guid>https://blog.p4ko.com/posts/anonymas-chat/</guid>
       <description>概要   LINE の Bot を公開しました。
 いままで身内向けの BOT を作ることはあったけど、初めてオープンなのを作りました。
 LINE の BOT を作るには HTTP リクエストを受けるサーバーが必要なんですが、サーバーを立てるのはお金がかかります。そこで今回は無料でそれっぽいことができる GoogleAppsScript を用いてやってみました。
@@ -30,10 +30,10 @@ LINE の BOT を作るには HTTP リクエストを受けるサーバーが必�
     
     <item>
       <title>Youtubeの共有を便利にするWeb Appを作った</title>
-      <link>https://p4ko.com/posts/youtube-share-hub/</link>
+      <link>https://blog.p4ko.com/posts/youtube-share-hub/</link>
       <pubDate>Mon, 30 Mar 2020 04:32:22 +0900</pubDate>
       
-      <guid>https://p4ko.com/posts/youtube-share-hub/</guid>
+      <guid>https://blog.p4ko.com/posts/youtube-share-hub/</guid>
       <description>Youtube Share Hub を作った →https://pishiko.github.io/youtube-share-hub/
 どんなの？ こんなの
   Youtube の共有メニューから選択してツイートのリンクに遷移する web アプリケーション

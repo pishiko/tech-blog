@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>hugo on ぴしめも</title>
-    <link>https://p4ko.com/tags/hugo/</link>
+    <link>https://blog.p4ko.com/tags/hugo/</link>
     <description>Recent content in hugo on ぴしめも</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
-    <lastBuildDate>Fri, 02 Jul 2021 22:23:12 +0900</lastBuildDate><atom:link href="https://p4ko.com/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 02 Jul 2021 22:23:12 +0900</lastBuildDate><atom:link href="https://blog.p4ko.com/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugoで個別ページを作る</title>
-      <link>https://p4ko.com/posts/addstaicpage/</link>
+      <link>https://blog.p4ko.com/posts/addstaicpage/</link>
       <pubDate>Fri, 02 Jul 2021 22:23:12 +0900</pubDate>
       
-      <guid>https://p4ko.com/posts/addstaicpage/</guid>
+      <guid>https://blog.p4ko.com/posts/addstaicpage/</guid>
       <description>やりたいこと Hugo でブログを書いて，About やポートフォリオなどの特別なページを作りたい．
 通常投稿のテンプレートではなく，独自のスタイルのテンプレートを利用したい．
 やり方 目標は
@@ -29,10 +29,10 @@ p4ko.com/posts/通常投稿/ p4ko.com/posts/通常投稿2/ p4ko.com/プロダク
     
     <item>
       <title>新ドメインにしました</title>
-      <link>https://p4ko.com/posts/domain/</link>
+      <link>https://blog.p4ko.com/posts/domain/</link>
       <pubDate>Sun, 17 Jan 2021 19:08:19 +0900</pubDate>
       
-      <guid>https://p4ko.com/posts/domain/</guid>
+      <guid>https://blog.p4ko.com/posts/domain/</guid>
       <description>pishiko.github.ioからp4ko.comに変更しました！
 p(ぴ)4（し）ko(こ).com ということで，大変覚えやすいですね．
 Github Pages + カスタムドメイン + HTTPS github pages でホストしているサイトにカスタムドメインを割り当てる方法は以下に書いてありました．
@@ -47,10 +47,10 @@ Certificate request error is persistent (TLS Certificate can&amp;rsquo;t be prov
     
     <item>
       <title>Hugoのthemeを上書きできない問題</title>
-      <link>https://p4ko.com/posts/css-custom/</link>
+      <link>https://blog.p4ko.com/posts/css-custom/</link>
       <pubDate>Tue, 06 Oct 2020 16:50:38 +0900</pubDate>
       
-      <guid>https://p4ko.com/posts/css-custom/</guid>
+      <guid>https://blog.p4ko.com/posts/css-custom/</guid>
       <description>hugo serverで確認しながらテーマの上書きを試みてるんだけど，全然上書きされない．
 あれーと思って キャッシュを強制再読み込みする --ignoreCache を付けてサーバーを起動してみたら次のエラーが出た．
 &amp;gt;hugo server --ignoreCache Building sites … ERROR 2020/10/06 14:44:37 Transformation failed: TOCSS: failed to transform &amp;quot;css/main.scss&amp;quot; (text/x-scss): this feature is not available in your current Hugo version, see https://goo.gl/YMrWcn for more information Built in 501 ms Error: Error building site: logged 1 error(s) で，公式のヘルプを読む．
@@ -61,10 +61,10 @@ Frequently Asked Questions | Hugo
     
     <item>
       <title>このブログをHugoで作った</title>
-      <link>https://p4ko.com/posts/hugo1/</link>
+      <link>https://blog.p4ko.com/posts/hugo1/</link>
       <pubDate>Sun, 02 Feb 2020 09:29:15 +0900</pubDate>
       
-      <guid>https://p4ko.com/posts/hugo1/</guid>
+      <guid>https://blog.p4ko.com/posts/hugo1/</guid>
       <description>Hugo ＋ GitHub Pages このブログは Hugo + github pages で公開しています．テンプレートのカスタムをしてると意外と情報が無かったです．ということで，Hugo のインストールからブログの更新まで簡単にメモしたいと思います．
 そもそもなにそれ Hugo は静的ブログジェネレータというやつです．テンプレートと markdown の記事を用意すればhugoで index.html なんかを生成してくれます．Go 製です．早いです．
 github pages はリポジトリに置いておいた静的ファイルをホストしてくれるサービスです．

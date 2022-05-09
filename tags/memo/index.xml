@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>memo on ぴしめも</title>
-    <link>https://p4ko.com/tags/memo/</link>
+    <link>https://blog.p4ko.com/tags/memo/</link>
     <description>Recent content in memo on ぴしめも</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
-    <lastBuildDate>Wed, 31 Mar 2021 22:57:33 +0900</lastBuildDate><atom:link href="https://p4ko.com/tags/memo/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 31 Mar 2021 22:57:33 +0900</lastBuildDate><atom:link href="https://blog.p4ko.com/tags/memo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>WordPress 引っ越し日記【bitnami⇨レンタルサーバ】</title>
-      <link>https://p4ko.com/posts/wordpress-move/</link>
+      <link>https://blog.p4ko.com/posts/wordpress-move/</link>
       <pubDate>Wed, 31 Mar 2021 22:57:33 +0900</pubDate>
       
-      <guid>https://p4ko.com/posts/wordpress-move/</guid>
+      <guid>https://blog.p4ko.com/posts/wordpress-move/</guid>
       <description>WordPress の引っ越し作業をしたのですが，思いのほかやることが多く詰まったので作業メモを残しておきます．
 bitnami (on AWS) から XREA レンタルサーバ に引っ越しします． ついでにムームードメインで購入したドメインを AWS Route53 からレンタルサーバと一緒に使えるバリュードメイン DNS に引っ越しもします．
 無料から使える高機能・高品質レンタルサーバー | XREA（エクスリア）
@@ -24,10 +24,10 @@ MySQL のデータを引っ越し PHPMYADMIN から SQL をエクスポート lo
     
     <item>
       <title>VSCodeの見た目を自分好みにする</title>
-      <link>https://p4ko.com/posts/vscodesettings/</link>
+      <link>https://blog.p4ko.com/posts/vscodesettings/</link>
       <pubDate>Sat, 27 Feb 2021 19:45:05 +0900</pubDate>
       
-      <guid>https://p4ko.com/posts/vscodesettings/</guid>
+      <guid>https://blog.p4ko.com/posts/vscodesettings/</guid>
       <description>VSCode の設定 変えすぎて何が何だかよくわからなくなってきそうなので整理も兼ねて設定を並べていきたいと思います．
 テーマ Solarized Dark を使用しています．
 Solarized
@@ -40,10 +40,10 @@ adobe-fonts/source-han-code-jp: Source Han Code JP | 源ノ角ゴシック Code
     
     <item>
       <title>Dash Buttonサービス終了との闘い(敗北)</title>
-      <link>https://p4ko.com/posts/dash-button/</link>
+      <link>https://blog.p4ko.com/posts/dash-button/</link>
       <pubDate>Mon, 17 Feb 2020 10:29:27 +0900</pubDate>
       
-      <guid>https://p4ko.com/posts/dash-button/</guid>
+      <guid>https://blog.p4ko.com/posts/dash-button/</guid>
       <description>要約  Amazon Dash Button をハックして IoT ボタンにしてた 2020 年に入ってから使えなくなってた 自爆ファームウェアの配信によって文鎮化されてた  昔々&amp;hellip; 実家暮らしなので母親にご飯を作っていただいているので，ご飯ができると「ご飯できたよ～」と呼ばれます．それがお互いにストレスだったので，キッチンには，押すとPush Bulletというサービスからスマホや PC に通知が行くボタンが置いてありました．
 仕組みとしては，
  商品発注をオフにした Amazon Dash Button が押される 自宅のサーバで検知（ボタンからの ARP リクエストをキャッチ） IFTTT を通して Push Bullet に通知  といったものでした．
@@ -58,10 +58,10 @@ adobe-fonts/source-han-code-jp: Source Han Code JP | 源ノ角ゴシック Code
     
     <item>
       <title>Hello, world!</title>
-      <link>https://p4ko.com/posts/firstpost/</link>
+      <link>https://blog.p4ko.com/posts/firstpost/</link>
       <pubDate>Sat, 01 Feb 2020 23:08:52 +0900</pubDate>
       
-      <guid>https://p4ko.com/posts/firstpost/</guid>
+      <guid>https://blog.p4ko.com/posts/firstpost/</guid>
       <description>こんにちは．@pishitaro_です．
 サークル(？)のブログとは別にメモとしてブログを作ってみました．こっちではプログラミング成果物のメモが主になります．
 ちょこちょこ書いていく予定です．

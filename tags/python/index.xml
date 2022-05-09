@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>python on ぴしめも</title>
-    <link>https://p4ko.com/tags/python/</link>
+    <link>https://blog.p4ko.com/tags/python/</link>
     <description>Recent content in python on ぴしめも</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
-    <lastBuildDate>Sat, 27 Feb 2021 19:44:55 +0900</lastBuildDate><atom:link href="https://p4ko.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 27 Feb 2021 19:44:55 +0900</lastBuildDate><atom:link href="https://blog.p4ko.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Discord Slash Commandについての記事を投稿した</title>
-      <link>https://p4ko.com/posts/slashcommand/</link>
+      <link>https://blog.p4ko.com/posts/slashcommand/</link>
       <pubDate>Sat, 27 Feb 2021 19:44:55 +0900</pubDate>
       
-      <guid>https://p4ko.com/posts/slashcommand/</guid>
+      <guid>https://blog.p4ko.com/posts/slashcommand/</guid>
       <description>アドベントカレンダー 去年の年末に Qiita の DiscordBot アドベントカレンダーに初参加して，記事を投稿してみました．
  アドベントカレンダーどころか Qiita に投稿するのは初だったのですが，人に読まれる文章を書くのって難しいですね&amp;hellip;
 Discord の SlashCommand はまだ β 版ですが，Slack の SlashCommand に比べて入力補助がしっかりしてるので，かなり期待の機能です． 入力補助というのは，ユーザーだったりチャンネルだったりの選択をクリックするだけで埋められるというもので，大変使いやすいので今後は全てこっちに移植していきたいと思います．
@@ -24,10 +24,10 @@ The Future of Bots on Discord. In case you weren’t aware, robots have… | by 
     
     <item>
       <title>Discord Bot 開発あれこれ</title>
-      <link>https://p4ko.com/posts/discordpy/</link>
+      <link>https://blog.p4ko.com/posts/discordpy/</link>
       <pubDate>Sun, 11 Oct 2020 02:26:36 +0900</pubDate>
       
-      <guid>https://p4ko.com/posts/discordpy/</guid>
+      <guid>https://blog.p4ko.com/posts/discordpy/</guid>
       <description>身内コミュニティ向け discord bot を複数人で開発しているので，有用そうなレシピを書いていきます．
 環境 python の discordAPI ラッパーである discordpy 製 bot を github で管理し，heroku 上で動かしています．
  discord.py へようこそ。 — discord.py 1.5.0 ドキュメント 【備忘録】GitHub 経由で Heroku にデプロイするまでの流れ - Qiita  heroku の設定 基本  デプロイに必要なファイルの設定 | Python で実用 Discord Bot(discordpy 解説) - Qiita  時間を正しく扱うために  Heroku のタイムゾーンを日本に合わせる - Qiita  Heroku の仕様  24 時間に 1 回再起動 ファイルは/tmp/以下でのみ書き込み可能． 再起動時にファイルなどはリポジトリの状態に初期化される  Cog で機能を分けて開発 Cog というのは，discordpy で提供されている，機能を分割するためのクラスです． メインの Bot に Cog を追加していく形になります．</description>

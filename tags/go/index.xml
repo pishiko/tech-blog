@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>go on ぴしめも</title>
-    <link>https://p4ko.com/tags/go/</link>
+    <link>https://blog.p4ko.com/tags/go/</link>
     <description>Recent content in go on ぴしめも</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
-    <lastBuildDate>Mon, 23 Nov 2020 00:24:55 +0900</lastBuildDate><atom:link href="https://p4ko.com/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 23 Nov 2020 00:24:55 +0900</lastBuildDate><atom:link href="https://blog.p4ko.com/tags/go/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Go ファミコンエミュレータ開発記録 その1</title>
-      <link>https://p4ko.com/posts/nes1/</link>
+      <link>https://blog.p4ko.com/posts/nes1/</link>
       <pubDate>Mon, 23 Nov 2020 00:24:55 +0900</pubDate>
       
-      <guid>https://p4ko.com/posts/nes1/</guid>
+      <guid>https://blog.p4ko.com/posts/nes1/</guid>
       <description>リポジトリ
  日記みたいなものです． Twitter モーメントはこちら
 動機 任天堂レトロハードが好きなんですが，せっかくなら遊ぶだけじゃなくて中身にも詳しくなりたいと思っていました． 一番好きなのはスーファミなんですが，仕様が公開されておらず難易度が高そうなので，とりあえずシンプルそうなファミコンの動作の理解をしようと． で，前に Qiita でファミコンエミュレータの Hello world 解説記事があったのを思い出したので，今ならできる！と思って始めました．

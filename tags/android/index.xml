@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>android on ぴしめも</title>
-    <link>https://p4ko.com/tags/android/</link>
+    <link>https://blog.p4ko.com/tags/android/</link>
     <description>Recent content in android on ぴしめも</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
-    <lastBuildDate>Tue, 21 Sep 2021 23:01:15 +0900</lastBuildDate><atom:link href="https://p4ko.com/tags/android/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 21 Sep 2021 23:01:15 +0900</lastBuildDate><atom:link href="https://blog.p4ko.com/tags/android/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ARフリーハンドおえかきアプリを作りました（完成）</title>
-      <link>https://p4ko.com/posts/aroekaki/</link>
+      <link>https://blog.p4ko.com/posts/aroekaki/</link>
       <pubDate>Tue, 21 Sep 2021 23:01:15 +0900</pubDate>
       
-      <guid>https://p4ko.com/posts/aroekaki/</guid>
+      <guid>https://blog.p4ko.com/posts/aroekaki/</guid>
       <description>こんなやつです （Twitter の動画）
 loading...
 &amp;mdash; pishiko (@pishitaro_) loading... 追記：カラー対応してパレットをいくつか用意しました 追記：滑らかさや入力感度の設定を追加しました 追記：ピースサインでスポイトできる機能を追加しました フレームワークなど ARFoundation Unity のモバイル AR 向け API です． これによって自己位置推定が可能になるため，現実の空間上に描いた物体を表示させることが出来ます． ついでにマルチプラットフォーム対応です．（iOS, Android）(試したのは Android だけですが)
@@ -25,10 +25,10 @@ Mediapipe Google の画像処理系機械学習ライブラリです．骨格推
     
     <item>
       <title>Android向け「おえかきキーボード」をPlay Storeでリリースしました</title>
-      <link>https://p4ko.com/posts/paint-keyboard/</link>
+      <link>https://blog.p4ko.com/posts/paint-keyboard/</link>
       <pubDate>Wed, 26 May 2021 21:54:53 +0900</pubDate>
       
-      <guid>https://p4ko.com/posts/paint-keyboard/</guid>
+      <guid>https://blog.p4ko.com/posts/paint-keyboard/</guid>
       <description>おえかきキーボード というアプリを作りました．Android 向けの IME です． ちなみに英語版は&amp;quot;Scrobble Keyboard&amp;quot;です．
 専用ページはこちら 👇
 おえかきキーボード
@@ -44,10 +44,10 @@ loading...
     
     <item>
       <title>Build MediapipeUnityPlugin for Android</title>
-      <link>https://p4ko.com/posts/build-mediapipe-unity-plugin/</link>
+      <link>https://blog.p4ko.com/posts/build-mediapipe-unity-plugin/</link>
       <pubDate>Mon, 17 May 2021 17:15:19 +0900</pubDate>
       
-      <guid>https://p4ko.com/posts/build-mediapipe-unity-plugin/</guid>
+      <guid>https://blog.p4ko.com/posts/build-mediapipe-unity-plugin/</guid>
       <description>homuler/MediaPipeUnityPlugin: Unity plugin to run MediaPipe graphs
 Versions  MediapipeUnityPlugin v0.6.0   This is a Unity (2020.3.8f1) Plugin to use MediaPipe (0.8.3.1).
   WSL2 Windows10 Home Ubuntu20.04 Python3.9 bazel 4.0.0 gcc (Ubuntu 9.3.0-17ubuntu1~20.04) 9.3.0 NuGet Version: 5.6.0.6489 .NET SDK Version: 5.0.203 Mono 6.12.0.122 Android SDK Build-Tools 29.0.2 Android NDK (Side by side) 21.4.7075529  MediaPipeUnityPlugin homuler/MediaPipeUnityPlugin: Unity plugin to run MediaPipe graphs

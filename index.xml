@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ぴしめも</title>
-    <link>https://p4ko.com/</link>
+    <link>https://blog.p4ko.com/</link>
     <description>Recent content on ぴしめも</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
-    <lastBuildDate>Tue, 21 Sep 2021 23:01:15 +0900</lastBuildDate><atom:link href="https://p4ko.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 21 Sep 2021 23:01:15 +0900</lastBuildDate><atom:link href="https://blog.p4ko.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>⭐制作物まとめ⭐</title>
-      <link>https://p4ko.com/product/</link>
+      <link>https://blog.p4ko.com/product/</link>
       <pubDate>Sun, 01 Jan 4096 00:00:00 +0900</pubDate>
       
-      <guid>https://p4ko.com/product/</guid>
+      <guid>https://blog.p4ko.com/product/</guid>
       <description>その他(主に Twitter に上げたもの) テトリス C++ と DirectX で実装したテトリスです．
 loading...
 &amp;mdash; pishiko (@pishitaro_) loading... OculusQuest 開発 スタンドアロンの VRHMD である OculusQuest で動作する積み木アプリ． Unity 製です．
@@ -24,10 +24,10 @@ loading...
     
     <item>
       <title>ARフリーハンドおえかきアプリを作りました（完成）</title>
-      <link>https://p4ko.com/posts/aroekaki/</link>
+      <link>https://blog.p4ko.com/posts/aroekaki/</link>
       <pubDate>Tue, 21 Sep 2021 23:01:15 +0900</pubDate>
       
-      <guid>https://p4ko.com/posts/aroekaki/</guid>
+      <guid>https://blog.p4ko.com/posts/aroekaki/</guid>
       <description>こんなやつです （Twitter の動画）
 loading...
 &amp;mdash; pishiko (@pishitaro_) loading... 追記：カラー対応してパレットをいくつか用意しました 追記：滑らかさや入力感度の設定を追加しました 追記：ピースサインでスポイトできる機能を追加しました フレームワークなど ARFoundation Unity のモバイル AR 向け API です． これによって自己位置推定が可能になるため，現実の空間上に描いた物体を表示させることが出来ます． ついでにマルチプラットフォーム対応です．（iOS, Android）(試したのは Android だけですが)
@@ -40,10 +40,10 @@ Mediapipe Google の画像処理系機械学習ライブラリです．骨格推
     
     <item>
       <title>🚀VOYAGEのインターン「Treasure」に参加しました2021</title>
-      <link>https://p4ko.com/posts/treasure21/</link>
+      <link>https://blog.p4ko.com/posts/treasure21/</link>
       <pubDate>Sat, 28 Aug 2021 22:10:18 +0900</pubDate>
       
-      <guid>https://p4ko.com/posts/treasure21/</guid>
+      <guid>https://blog.p4ko.com/posts/treasure21/</guid>
       <description>こんな目標で臨みました  Web 開発わからんが多いので地固めしたい！ チーム開発の機会がないのでいろいろ試したい！ つよつよの人と交流したい！  こんな感じの流れでした  1 週目：Go バック・React/TS フロント・AWS 講義，フィードバック 2 週目：DB 設計・アイデア講義，チーム開発 3 週目：チーム開発，プレゼン・フィードバック  レポート えっ！未経験からでも行けるインターンがあるんですか！？ 応募のことを思い出すため改めてメールを確認したところ，応募したのが 1 月で，決まったのが 4 月くらいでした．早期選考枠というやつです．
 インターンは今回が人生初で，今までの業務経験というと，画像処理・機械学習寄りのバイトくらいで，業務での Web 開発の経験は全くありませんでした．にもかかわらず参加できたのは，大なり小なりいろいろ公開していたのが大きかったのかなと思います．拙いものでも公開するのは大事だなと思いました．
 実際参加者を見ても，Web 経験はないけど競プロ強いです！，機械学習強いです！，ネタ iPhone アプリ作ってます！みたいな人も多かったので，そういうことかなと思います．
@@ -64,10 +64,10 @@ PS こちらは支給品のデイリーナッツ loading.</description>
     
     <item>
       <title>Hugoで個別ページを作る</title>
-      <link>https://p4ko.com/posts/addstaicpage/</link>
+      <link>https://blog.p4ko.com/posts/addstaicpage/</link>
       <pubDate>Fri, 02 Jul 2021 22:23:12 +0900</pubDate>
       
-      <guid>https://p4ko.com/posts/addstaicpage/</guid>
+      <guid>https://blog.p4ko.com/posts/addstaicpage/</guid>
       <description>やりたいこと Hugo でブログを書いて，About やポートフォリオなどの特別なページを作りたい．
 通常投稿のテンプレートではなく，独自のスタイルのテンプレートを利用したい．
 やり方 目標は
@@ -84,10 +84,10 @@ p4ko.com/posts/通常投稿/ p4ko.com/posts/通常投稿2/ p4ko.com/プロダク
     
     <item>
       <title>Android向け「おえかきキーボード」をPlay Storeでリリースしました</title>
-      <link>https://p4ko.com/posts/paint-keyboard/</link>
+      <link>https://blog.p4ko.com/posts/paint-keyboard/</link>
       <pubDate>Wed, 26 May 2021 21:54:53 +0900</pubDate>
       
-      <guid>https://p4ko.com/posts/paint-keyboard/</guid>
+      <guid>https://blog.p4ko.com/posts/paint-keyboard/</guid>
       <description>おえかきキーボード というアプリを作りました．Android 向けの IME です． ちなみに英語版は&amp;quot;Scrobble Keyboard&amp;quot;です．
 専用ページはこちら 👇
 おえかきキーボード
@@ -103,10 +103,10 @@ loading...
     
     <item>
       <title>Build MediapipeUnityPlugin for Android</title>
-      <link>https://p4ko.com/posts/build-mediapipe-unity-plugin/</link>
+      <link>https://blog.p4ko.com/posts/build-mediapipe-unity-plugin/</link>
       <pubDate>Mon, 17 May 2021 17:15:19 +0900</pubDate>
       
-      <guid>https://p4ko.com/posts/build-mediapipe-unity-plugin/</guid>
+      <guid>https://blog.p4ko.com/posts/build-mediapipe-unity-plugin/</guid>
       <description>homuler/MediaPipeUnityPlugin: Unity plugin to run MediaPipe graphs
 Versions  MediapipeUnityPlugin v0.6.0   This is a Unity (2020.3.8f1) Plugin to use MediaPipe (0.8.3.1).
   WSL2 Windows10 Home Ubuntu20.04 Python3.9 bazel 4.0.0 gcc (Ubuntu 9.3.0-17ubuntu1~20.04) 9.3.0 NuGet Version: 5.6.0.6489 .NET SDK Version: 5.0.203 Mono 6.12.0.122 Android SDK Build-Tools 29.0.2 Android NDK (Side by side) 21.4.7075529  MediaPipeUnityPlugin homuler/MediaPipeUnityPlugin: Unity plugin to run MediaPipe graphs
@@ -115,10 +115,10 @@ git clone https://github.com/homuler/MediaPipeUnityPlugin.git cd MediaPipeUnityP
     
     <item>
       <title>WordPress 引っ越し日記【bitnami⇨レンタルサーバ】</title>
-      <link>https://p4ko.com/posts/wordpress-move/</link>
+      <link>https://blog.p4ko.com/posts/wordpress-move/</link>
       <pubDate>Wed, 31 Mar 2021 22:57:33 +0900</pubDate>
       
-      <guid>https://p4ko.com/posts/wordpress-move/</guid>
+      <guid>https://blog.p4ko.com/posts/wordpress-move/</guid>
       <description>WordPress の引っ越し作業をしたのですが，思いのほかやることが多く詰まったので作業メモを残しておきます．
 bitnami (on AWS) から XREA レンタルサーバ に引っ越しします． ついでにムームードメインで購入したドメインを AWS Route53 からレンタルサーバと一緒に使えるバリュードメイン DNS に引っ越しもします．
 無料から使える高機能・高品質レンタルサーバー | XREA（エクスリア）
@@ -130,10 +130,10 @@ MySQL のデータを引っ越し PHPMYADMIN から SQL をエクスポート lo
     
     <item>
       <title>VSCodeの見た目を自分好みにする</title>
-      <link>https://p4ko.com/posts/vscodesettings/</link>
+      <link>https://blog.p4ko.com/posts/vscodesettings/</link>
       <pubDate>Sat, 27 Feb 2021 19:45:05 +0900</pubDate>
       
-      <guid>https://p4ko.com/posts/vscodesettings/</guid>
+      <guid>https://blog.p4ko.com/posts/vscodesettings/</guid>
       <description>VSCode の設定 変えすぎて何が何だかよくわからなくなってきそうなので整理も兼ねて設定を並べていきたいと思います．
 テーマ Solarized Dark を使用しています．
 Solarized
@@ -146,10 +146,10 @@ adobe-fonts/source-han-code-jp: Source Han Code JP | 源ノ角ゴシック Code
     
     <item>
       <title>Discord Slash Commandについての記事を投稿した</title>
-      <link>https://p4ko.com/posts/slashcommand/</link>
+      <link>https://blog.p4ko.com/posts/slashcommand/</link>
       <pubDate>Sat, 27 Feb 2021 19:44:55 +0900</pubDate>
       
-      <guid>https://p4ko.com/posts/slashcommand/</guid>
+      <guid>https://blog.p4ko.com/posts/slashcommand/</guid>
       <description>アドベントカレンダー 去年の年末に Qiita の DiscordBot アドベントカレンダーに初参加して，記事を投稿してみました．
  アドベントカレンダーどころか Qiita に投稿するのは初だったのですが，人に読まれる文章を書くのって難しいですね&amp;hellip;
 Discord の SlashCommand はまだ β 版ですが，Slack の SlashCommand に比べて入力補助がしっかりしてるので，かなり期待の機能です． 入力補助というのは，ユーザーだったりチャンネルだったりの選択をクリックするだけで埋められるというもので，大変使いやすいので今後は全てこっちに移植していきたいと思います．
@@ -161,10 +161,10 @@ The Future of Bots on Discord. In case you weren’t aware, robots have… | by 
     
     <item>
       <title>新ドメインにしました</title>
-      <link>https://p4ko.com/posts/domain/</link>
+      <link>https://blog.p4ko.com/posts/domain/</link>
       <pubDate>Sun, 17 Jan 2021 19:08:19 +0900</pubDate>
       
-      <guid>https://p4ko.com/posts/domain/</guid>
+      <guid>https://blog.p4ko.com/posts/domain/</guid>
       <description>pishiko.github.ioからp4ko.comに変更しました！
 p(ぴ)4（し）ko(こ).com ということで，大変覚えやすいですね．
 Github Pages + カスタムドメイン + HTTPS github pages でホストしているサイトにカスタムドメインを割り当てる方法は以下に書いてありました．
@@ -179,10 +179,10 @@ Certificate request error is persistent (TLS Certificate can&amp;rsquo;t be prov
     
     <item>
       <title>Go ファミコンエミュレータ開発記録 その1</title>
-      <link>https://p4ko.com/posts/nes1/</link>
+      <link>https://blog.p4ko.com/posts/nes1/</link>
       <pubDate>Mon, 23 Nov 2020 00:24:55 +0900</pubDate>
       
-      <guid>https://p4ko.com/posts/nes1/</guid>
+      <guid>https://blog.p4ko.com/posts/nes1/</guid>
       <description>リポジトリ
  日記みたいなものです． Twitter モーメントはこちら
 動機 任天堂レトロハードが好きなんですが，せっかくなら遊ぶだけじゃなくて中身にも詳しくなりたいと思っていました． 一番好きなのはスーファミなんですが，仕様が公開されておらず難易度が高そうなので，とりあえずシンプルそうなファミコンの動作の理解をしようと． で，前に Qiita でファミコンエミュレータの Hello world 解説記事があったのを思い出したので，今ならできる！と思って始めました．
@@ -197,10 +197,10 @@ Python のソースコードをほぼ移植する形で，HelloWorld を実行�
     
     <item>
       <title>Discord Bot 開発あれこれ</title>
-      <link>https://p4ko.com/posts/discordpy/</link>
+      <link>https://blog.p4ko.com/posts/discordpy/</link>
       <pubDate>Sun, 11 Oct 2020 02:26:36 +0900</pubDate>
       
-      <guid>https://p4ko.com/posts/discordpy/</guid>
+      <guid>https://blog.p4ko.com/posts/discordpy/</guid>
       <description>身内コミュニティ向け discord bot を複数人で開発しているので，有用そうなレシピを書いていきます．
 環境 python の discordAPI ラッパーである discordpy 製 bot を github で管理し，heroku 上で動かしています．
  discord.py へようこそ。 — discord.py 1.5.0 ドキュメント 【備忘録】GitHub 経由で Heroku にデプロイするまでの流れ - Qiita  heroku の設定 基本  デプロイに必要なファイルの設定 | Python で実用 Discord Bot(discordpy 解説) - Qiita  時間を正しく扱うために  Heroku のタイムゾーンを日本に合わせる - Qiita  Heroku の仕様  24 時間に 1 回再起動 ファイルは/tmp/以下でのみ書き込み可能． 再起動時にファイルなどはリポジトリの状態に初期化される  Cog で機能を分けて開発 Cog というのは，discordpy で提供されている，機能を分割するためのクラスです． メインの Bot に Cog を追加していく形になります．</description>
@@ -208,10 +208,10 @@ Python のソースコードをほぼ移植する形で，HelloWorld を実行�
     
     <item>
       <title>Hugoのthemeを上書きできない問題</title>
-      <link>https://p4ko.com/posts/css-custom/</link>
+      <link>https://blog.p4ko.com/posts/css-custom/</link>
       <pubDate>Tue, 06 Oct 2020 16:50:38 +0900</pubDate>
       
-      <guid>https://p4ko.com/posts/css-custom/</guid>
+      <guid>https://blog.p4ko.com/posts/css-custom/</guid>
       <description>hugo serverで確認しながらテーマの上書きを試みてるんだけど，全然上書きされない．
 あれーと思って キャッシュを強制再読み込みする --ignoreCache を付けてサーバーを起動してみたら次のエラーが出た．
 &amp;gt;hugo server --ignoreCache Building sites … ERROR 2020/10/06 14:44:37 Transformation failed: TOCSS: failed to transform &amp;quot;css/main.scss&amp;quot; (text/x-scss): this feature is not available in your current Hugo version, see https://goo.gl/YMrWcn for more information Built in 501 ms Error: Error building site: logged 1 error(s) で，公式のヘルプを読む．
@@ -222,10 +222,10 @@ Frequently Asked Questions | Hugo
     
     <item>
       <title>【Last.fm&#43;Discord】Now Playing Cat取扱説明書</title>
-      <link>https://p4ko.com/posts/nowplayingcat/</link>
+      <link>https://blog.p4ko.com/posts/nowplayingcat/</link>
       <pubDate>Tue, 14 Jul 2020 10:32:41 +0900</pubDate>
       
-      <guid>https://p4ko.com/posts/nowplayingcat/</guid>
+      <guid>https://blog.p4ko.com/posts/nowplayingcat/</guid>
       <description>(2020 9/9 追記: v1.2 でバグ修正をしました．記事一番下にアップデート方法を記載．)
 NowPlayingCat Github
 Discord の NowPlaying 欄に，Last.fm を通して聴いている音楽を表示するツールです．
@@ -244,10 +244,10 @@ v1.0 からの移行 以前の設定ファイルが settings.ini にあるはず
     
     <item>
       <title>Discordのnowplayingに音楽を表示させるのを作った</title>
-      <link>https://p4ko.com/posts/fmlast-discord/</link>
+      <link>https://blog.p4ko.com/posts/fmlast-discord/</link>
       <pubDate>Sat, 09 May 2020 16:06:41 +0900</pubDate>
       
-      <guid>https://p4ko.com/posts/fmlast-discord/</guid>
+      <guid>https://blog.p4ko.com/posts/fmlast-discord/</guid>
       <description>デスクトップ常駐型アプリケーションを作りました．
 Github
 使い方
@@ -264,10 +264,10 @@ var timer = new Timer(); timer.Interval = 5000; //5s timer.Elapsed += FunctionNa
     
     <item>
       <title>匿名LINEチャットルームを作った</title>
-      <link>https://p4ko.com/posts/anonymas-chat/</link>
+      <link>https://blog.p4ko.com/posts/anonymas-chat/</link>
       <pubDate>Wed, 01 Apr 2020 21:46:39 +0900</pubDate>
       
-      <guid>https://p4ko.com/posts/anonymas-chat/</guid>
+      <guid>https://blog.p4ko.com/posts/anonymas-chat/</guid>
       <description>概要   LINE の Bot を公開しました。
 いままで身内向けの BOT を作ることはあったけど、初めてオープンなのを作りました。
 LINE の BOT を作るには HTTP リクエストを受けるサーバーが必要なんですが、サーバーを立てるのはお金がかかります。そこで今回は無料でそれっぽいことができる GoogleAppsScript を用いてやってみました。
@@ -285,10 +285,10 @@ LINE の BOT を作るには HTTP リクエストを受けるサーバーが必�
     
     <item>
       <title>Youtubeの共有を便利にするWeb Appを作った</title>
-      <link>https://p4ko.com/posts/youtube-share-hub/</link>
+      <link>https://blog.p4ko.com/posts/youtube-share-hub/</link>
       <pubDate>Mon, 30 Mar 2020 04:32:22 +0900</pubDate>
       
-      <guid>https://p4ko.com/posts/youtube-share-hub/</guid>
+      <guid>https://blog.p4ko.com/posts/youtube-share-hub/</guid>
       <description>Youtube Share Hub を作った →https://pishiko.github.io/youtube-share-hub/
 どんなの？ こんなの
   Youtube の共有メニューから選択してツイートのリンクに遷移する web アプリケーション
@@ -304,10 +304,10 @@ Chrome から PWA アプリと認められる条件は以下
     
     <item>
       <title>Dash Buttonサービス終了との闘い(敗北)</title>
-      <link>https://p4ko.com/posts/dash-button/</link>
+      <link>https://blog.p4ko.com/posts/dash-button/</link>
       <pubDate>Mon, 17 Feb 2020 10:29:27 +0900</pubDate>
       
-      <guid>https://p4ko.com/posts/dash-button/</guid>
+      <guid>https://blog.p4ko.com/posts/dash-button/</guid>
       <description>要約  Amazon Dash Button をハックして IoT ボタンにしてた 2020 年に入ってから使えなくなってた 自爆ファームウェアの配信によって文鎮化されてた  昔々&amp;hellip; 実家暮らしなので母親にご飯を作っていただいているので，ご飯ができると「ご飯できたよ～」と呼ばれます．それがお互いにストレスだったので，キッチンには，押すとPush Bulletというサービスからスマホや PC に通知が行くボタンが置いてありました．
 仕組みとしては，
  商品発注をオフにした Amazon Dash Button が押される 自宅のサーバで検知（ボタンからの ARP リクエストをキャッチ） IFTTT を通して Push Bullet に通知  といったものでした．
@@ -322,10 +322,10 @@ Chrome から PWA アプリと認められる条件は以下
     
     <item>
       <title>このブログをHugoで作った</title>
-      <link>https://p4ko.com/posts/hugo1/</link>
+      <link>https://blog.p4ko.com/posts/hugo1/</link>
       <pubDate>Sun, 02 Feb 2020 09:29:15 +0900</pubDate>
       
-      <guid>https://p4ko.com/posts/hugo1/</guid>
+      <guid>https://blog.p4ko.com/posts/hugo1/</guid>
       <description>Hugo ＋ GitHub Pages このブログは Hugo + github pages で公開しています．テンプレートのカスタムをしてると意外と情報が無かったです．ということで，Hugo のインストールからブログの更新まで簡単にメモしたいと思います．
 そもそもなにそれ Hugo は静的ブログジェネレータというやつです．テンプレートと markdown の記事を用意すればhugoで index.html なんかを生成してくれます．Go 製です．早いです．
 github pages はリポジトリに置いておいた静的ファイルをホストしてくれるサービスです．
@@ -341,10 +341,10 @@ Hugo でブログ生成 hugo new content\posts\test.md  するとひな形が生
     
     <item>
       <title>Hello, world!</title>
-      <link>https://p4ko.com/posts/firstpost/</link>
+      <link>https://blog.p4ko.com/posts/firstpost/</link>
       <pubDate>Sat, 01 Feb 2020 23:08:52 +0900</pubDate>
       
-      <guid>https://p4ko.com/posts/firstpost/</guid>
+      <guid>https://blog.p4ko.com/posts/firstpost/</guid>
       <description>こんにちは．@pishitaro_です．
 サークル(？)のブログとは別にメモとしてブログを作ってみました．こっちではプログラミング成果物のメモが主になります．
 ちょこちょこ書いていく予定です．
@@ -353,10 +353,10 @@ Hugo でブログ生成 hugo new content\posts\test.md  するとひな形が生
     
     <item>
       <title>About</title>
-      <link>https://p4ko.com/about/</link>
+      <link>https://blog.p4ko.com/about/</link>
       <pubDate>Sat, 01 Jan 2000 00:00:00 +0900</pubDate>
       
-      <guid>https://p4ko.com/about/</guid>
+      <guid>https://blog.p4ko.com/about/</guid>
       <description>このブログについて このブログは，個人的な技術メモや製作物の記録がメインになります．
 Hugo + GithubPages で運用しており，このブログに関する記事一覧はこちらです．
 筆者について 東京農工大学院工学府情報工学専攻 1 年(21 年 8 月時点)
