@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="jp">
+  <head>
+    <script data-ad-client="ca-pub-6134002879217738" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <meta name="google-site-verification" content="cmuKoqOLuwpYoCgAz6trdGp_ipiqBR2BU5VHLeGaGFI" />
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <title>Google Cloud Functionsで DiscordコマンドBotをサーバレスにする // ぴしめも</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.75.1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="pishiko" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://blog.p4ko.com/css/main.min.20f8fc25c6101790716780b492dadf4ed1c718b46d5620320ff33b85a8ea088c.css" />
+    <link rel="stylesheet" href="/css/custom.css" />
+    
+    
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://blog.p4ko.com/ogp/slash-functions.png"/>
+
+<meta name="twitter:title" content="Google Cloud Functionsで DiscordコマンドBotをサーバレスにする"/>
+<meta name="twitter:description" content="はじめに discord.py製のBotを運用していたのですが、Botを置いていたHerokuの無料枠が消えたため、Cloud Functionsに引っ越し、というかほぼ置き換えすることにしました。インターネット上に見当たらなかったのでそのメモです。
+参考までに、Cloud Functionsの料金は200万リクエスト（≒コマンド呼び出し回数）まで無料です。
+Firebaseに登録する 【Firebase】Cloud Functions チュートリアル
+こちらの冒頭無料部分を参考に環境構築を行います。(丸投げ)
+やることダイジェスト  Firebaseプロジェクトの作成 Firebaseのプランをアップグレード Firebase CLIのインストール $ firebase init done!  Discord Botを登録する https://zenn.dev/drumath2237/articles/112fd0bfa7ea4f836195#applicationの作成
+こちらの記事のDiscord Slash Commandを作成する～Slash Commandの登録までを進めます。（丸投げ）
+やることダイジェスト  Applicationの作成 Slash Commandの登録 done!  Functionの実装・デプロイ function/index.tsが生成されていると思うのでこれを弄っていきます。
+とりあえず $ npm install discord-interactions をします。
+検証について Slash Commandのエンドポイントが不正でないか証明するために、いくつか検証プロセスが必要になります。わざと不正なリクエストが飛んできたりします。
+具体的には
+ ヘッダーの署名検証を行い、不正であれば401を返す  https://discord.com/developers/docs/interactions/receiving-and-responding#security-and-authorization
+ Interactionのタイプが1の場合は、PONGを返却  https://discord.com/developers/docs/interactions/receiving-and-responding#receiving-an-interaction
+それを踏まえたのが以下のコードになります。今回は、コマンドに関係なく、hi! 名前と応答するよう実装します。
+import * as functions from &#34;firebase-functions&#34;; import { verifyKey, InteractionType, InteractionResponseType, } from &#34;discord-interactions&#34;; // Start writing Firebase Functions // https://firebase."/>
+
+    <meta property="og:title" content="Google Cloud Functionsで DiscordコマンドBotをサーバレスにする" />
+<meta property="og:description" content="はじめに discord.py製のBotを運用していたのですが、Botを置いていたHerokuの無料枠が消えたため、Cloud Functionsに引っ越し、というかほぼ置き換えすることにしました。インターネット上に見当たらなかったのでそのメモです。
+参考までに、Cloud Functionsの料金は200万リクエスト（≒コマンド呼び出し回数）まで無料です。
+Firebaseに登録する 【Firebase】Cloud Functions チュートリアル
+こちらの冒頭無料部分を参考に環境構築を行います。(丸投げ)
+やることダイジェスト  Firebaseプロジェクトの作成 Firebaseのプランをアップグレード Firebase CLIのインストール $ firebase init done!  Discord Botを登録する https://zenn.dev/drumath2237/articles/112fd0bfa7ea4f836195#applicationの作成
+こちらの記事のDiscord Slash Commandを作成する～Slash Commandの登録までを進めます。（丸投げ）
+やることダイジェスト  Applicationの作成 Slash Commandの登録 done!  Functionの実装・デプロイ function/index.tsが生成されていると思うのでこれを弄っていきます。
+とりあえず $ npm install discord-interactions をします。
+検証について Slash Commandのエンドポイントが不正でないか証明するために、いくつか検証プロセスが必要になります。わざと不正なリクエストが飛んできたりします。
+具体的には
+ ヘッダーの署名検証を行い、不正であれば401を返す  https://discord.com/developers/docs/interactions/receiving-and-responding#security-and-authorization
+ Interactionのタイプが1の場合は、PONGを返却  https://discord.com/developers/docs/interactions/receiving-and-responding#receiving-an-interaction
+それを踏まえたのが以下のコードになります。今回は、コマンドに関係なく、hi! 名前と応答するよう実装します。
+import * as functions from &#34;firebase-functions&#34;; import { verifyKey, InteractionType, InteractionResponseType, } from &#34;discord-interactions&#34;; // Start writing Firebase Functions // https://firebase." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.p4ko.com/posts/slash-functions/" />
+<meta property="og:image" content="https://blog.p4ko.com/ogp/slash-functions.png" />
+<meta property="article:published_time" content="2022-11-10T02:51:15+09:00" />
+<meta property="article:modified_time" content="2022-11-10T02:51:15+09:00" />
+
+    
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="b1-header">
+        <a href="https://blog.p4ko.com"><img class="app-header-avatar" src="/avatar.jpg" alt="pishiko" /></a>
+        <h1>ぴしめも</h1>
+      </div>
+      <p class="poem-header">Pishiko&#39;s Dev Blog</p>
+      
+      <div class="b2-header">
+        <div class="app-header-social">
+          
+          <a target=_self href="/about" rel="noreferrer noopener"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-user">
+  <title>user</title>
+  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle>
+</svg></a>
+          
+          <a target=_blank href="https://twitter.com/pishitaro_" rel="noreferrer noopener"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-twitter">
+  <title>twitter</title>
+  <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+</svg></a>
+          
+          <a target=_blank href="https://github.com/pishiko" rel="noreferrer noopener"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg></a>
+          
+        </div>
+        <div class="tags-header">
+          <p></p>
+          <h3>Tags</h3>
+          
+          <a class="tag" href="https://blog.p4ko.com/tags/android/">android</a>
+          
+          <a class="tag" href="https://blog.p4ko.com/tags/csharp/">cSharp</a>
+          
+          <a class="tag" href="https://blog.p4ko.com/tags/dev/">dev</a>
+          
+          <a class="tag" href="https://blog.p4ko.com/tags/go/">go</a>
+          
+          <a class="tag" href="https://blog.p4ko.com/tags/hugo/">hugo</a>
+          
+          <a class="tag" href="https://blog.p4ko.com/tags/js/">js</a>
+          
+          <a class="tag" href="https://blog.p4ko.com/tags/memo/">memo</a>
+          
+          <a class="tag" href="https://blog.p4ko.com/tags/python/">python</a>
+          
+          <a class="tag" href="https://blog.p4ko.com/tags/unity/">unity</a>
+          
+          <a class="tag" href="https://blog.p4ko.com/tags/web/">web</a>
+          
+        </div>
+        <div class="links-header">
+          <h3>Links</h3>
+          <p><a href="https://paintkeyboard.p4ko.com/" target="_blank">おえかきキーボード</a></p>
+          <p><a href="https://pishiko.github.io/youtube-share-hub/" target="_blank">Youtube Share Hub</a></p>
+          <p><a href="/posts/nowplayingcat/" target="_blank">Now Playing Cat</a></p>
+        </div>
+      </div>
+
+    </header>
+
+    <main class="app-container">
+      
+<article class="post">
+  <header class="post-header">
+    <h1 class="post-title">Google Cloud Functionsで DiscordコマンドBotをサーバレスにする</h1>
+    <div class="post-meta">
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+        Nov 10, 2022
+      </div>
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+        1 min read
+      </div><div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line>
+</svg>
+        <a class="tag" href="https://blog.p4ko.com/tags/dev/">dev</a></div></div>
+  </header>
+  <div class="post-content">
+    <h2 id="はじめに">はじめに</h2>
+<p>discord.py製のBotを運用していたのですが、Botを置いていたHerokuの無料枠が消えたため、Cloud Functionsに引っ越し、というかほぼ置き換えすることにしました。インターネット上に見当たらなかったのでそのメモです。</p>
+<p>参考までに、Cloud Functionsの料金は200万リクエスト（≒コマンド呼び出し回数）まで無料です。</p>
+<h2 id="firebaseに登録する">Firebaseに登録する</h2>
+<p><a href="https://zenn.dev/tentel/books/a96e4a64d3a672911f25"  target="_blank" rel="nofollow noopener" >【Firebase】Cloud Functions チュートリアル</a></p>
+<p>こちらの冒頭無料部分を参考に環境構築を行います。(丸投げ)</p>
+<h3 id="やることダイジェスト">やることダイジェスト</h3>
+<ul>
+<li>Firebaseプロジェクトの作成</li>
+<li>Firebaseのプランをアップグレード</li>
+<li>Firebase CLIのインストール</li>
+<li><code>$ firebase init</code></li>
+<li>done!</li>
+</ul>
+<h2 id="discord-botを登録する">Discord Botを登録する</h2>
+<p><a href="https://zenn.dev/drumath2237/articles/112fd0bfa7ea4f836195#application%E3%81%AE%E4%BD%9C%E6%88%90"  target="_blank" rel="nofollow noopener" >https://zenn.dev/drumath2237/articles/112fd0bfa7ea4f836195#applicationの作成</a></p>
+<p>こちらの記事の<strong>Discord Slash Commandを作成する</strong>～<strong>Slash Commandの登録</strong>までを進めます。（丸投げ）</p>
+<h3 id="やることダイジェスト-1">やることダイジェスト</h3>
+<ul>
+<li>Applicationの作成</li>
+<li>Slash Commandの登録</li>
+<li>done!</li>
+</ul>
+<h2 id="functionの実装デプロイ">Functionの実装・デプロイ</h2>
+<p><code>function/index.ts</code>が生成されていると思うのでこれを弄っていきます。</p>
+<p>とりあえず <code>$ npm install discord-interactions</code> をします。</p>
+<h3 id="検証について">検証について</h3>
+<p>Slash Commandのエンドポイントが不正でないか証明するために、いくつか検証プロセスが必要になります。わざと不正なリクエストが飛んできたりします。</p>
+<p>具体的には</p>
+<ul>
+<li>ヘッダーの署名検証を行い、不正であれば401を返す</li>
+</ul>
+<p><a href="https://discord.com/developers/docs/interactions/receiving-and-responding#security-and-authorization"  target="_blank" rel="nofollow noopener" >https://discord.com/developers/docs/interactions/receiving-and-responding#security-and-authorization</a></p>
+<ul>
+<li>Interactionのタイプが1の場合は、PONGを返却</li>
+</ul>
+<p><a href="https://discord.com/developers/docs/interactions/receiving-and-responding#receiving-an-interaction"  target="_blank" rel="nofollow noopener" >https://discord.com/developers/docs/interactions/receiving-and-responding#receiving-an-interaction</a></p>
+<p>それを踏まえたのが以下のコードになります。今回は、コマンドに関係なく、hi! 名前と応答するよう実装します。</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-tsx" data-lang="tsx"><span style="color:#268bd2">import</span> <span style="color:#719e07">*</span> <span style="color:#268bd2">as</span> functions <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#34;firebase-functions&#34;</span>;
+<span style="color:#268bd2">import</span> {
+  verifyKey,
+  InteractionType,
+  InteractionResponseType,
+} <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#34;discord-interactions&#34;</span>;
+
+<span style="color:#586e75">// Start writing Firebase Functions
+</span><span style="color:#586e75">// https://firebase.google.com/docs/functions/typescript
+</span><span style="color:#586e75"></span>
+<span style="color:#268bd2">export</span> <span style="color:#268bd2">const</span> discordBot <span style="color:#719e07">=</span> functions.https.onRequest((request, response) <span style="color:#719e07">=&gt;</span> {
+  <span style="color:#586e75">// 検証：不正な署名を弾く
+</span><span style="color:#586e75"></span>  <span style="color:#268bd2">const</span> sig <span style="color:#719e07">=</span> request.headers[<span style="color:#2aa198">&#34;x-signature-ed25519&#34;</span>];
+  <span style="color:#268bd2">const</span> time <span style="color:#719e07">=</span> request.headers[<span style="color:#2aa198">&#34;x-signature-timestamp&#34;</span>];
+  <span style="color:#719e07">if</span> (<span style="color:#719e07">typeof</span> sig <span style="color:#719e07">!==</span> <span style="color:#2aa198">&#34;string&#34;</span> <span style="color:#719e07">||</span> <span style="color:#719e07">typeof</span> time <span style="color:#719e07">!==</span> <span style="color:#2aa198">&#34;string&#34;</span>) {
+    response.status(<span style="color:#2aa198">401</span>).send(<span style="color:#2aa198">&#34;&#34;</span>);
+    <span style="color:#719e07">return</span>;
+  }
+
+  <span style="color:#268bd2">const</span> CLIENT_PUBLIC_KEY <span style="color:#719e07">=</span> process.env.CLIENT_PUBLIC_KEY <span style="color:#719e07">??</span> <span style="color:#2aa198">&#34;&#34;</span>;
+  <span style="color:#268bd2">const</span> isValid <span style="color:#719e07">=</span> verifyKey(request.rawBody, sig, time, CLIENT_PUBLIC_KEY);
+  <span style="color:#719e07">if</span> (<span style="color:#719e07">!</span>isValid) {
+    response.status(<span style="color:#2aa198">401</span>).send(<span style="color:#2aa198">&#34;&#34;</span>);
+    <span style="color:#719e07">return</span>;
+  }
+
+  <span style="color:#268bd2">const</span> interaction <span style="color:#719e07">=</span> request.body;
+  <span style="color:#719e07">if</span> (<span style="color:#719e07">!</span>interaction) <span style="color:#719e07">return</span>;
+  <span style="color:#719e07">if</span> (interaction.<span style="color:#268bd2">type</span> <span style="color:#719e07">===</span> InteractionType.PING) {
+		<span style="color:#586e75">// 検証：PINGが送信された場合はPONGを返す
+</span><span style="color:#586e75"></span>    response.send({
+      <span style="color:#268bd2">type</span><span style="color:#719e07">:</span> InteractionResponseType.PONG,
+    });
+    <span style="color:#719e07">return</span>;
+  } <span style="color:#719e07">else</span> {
+    <span style="color:#586e75">// コマンド：挨拶する
+</span><span style="color:#586e75"></span>    response
+      .status(<span style="color:#2aa198">200</span>)
+      .<span style="color:#268bd2">type</span>(<span style="color:#2aa198">&#34;application/json&#34;</span>)
+      .send({
+        <span style="color:#268bd2">type</span><span style="color:#719e07">:</span> InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
+        data<span style="color:#719e07">:</span> {
+          content<span style="color:#719e07">:</span> <span style="color:#586e75">`hi! </span><span style="color:#2aa198">${</span>interaction.member.user.username<span style="color:#2aa198">}</span><span style="color:#586e75">`</span>,
+        },
+      });
+  }
+});
+</code></pre></div><p>それから、Discord Applicationの<code>CLIENT_PUBLIC_KEY</code>を<code>.env</code> ファイルに置きます。</p>
+<p>具体的には<code>functions/.env</code>を作成し、
+Discord Developer Portalの
+アプリケーションの
+General Infomationの
+PUBLIC KEY
+を以下の様にコピペします。</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-yaml" data-lang="yaml">CLIENT_PUBLIC_KEY=0123456789abcdef0123456789abcdef
+</code></pre></div><h2 id="デプロイする">デプロイする</h2>
+<p><code>$ firebase deploy</code> します。</p>
+<p>その後、firebaseのプロジェクトページからデプロイされた関数の詳細を確認します。</p>
+<p>リクエストURLを控え、</p>
+<p>Discord Developer Portalの
+アプリケーションの
+General Infomationの
+INTERACTION ENDPOINT
+に先程のリクエストURLを記述します。</p>
+<p>お疲れ様でした。適当なサーバーでコマンドを叩いて確認してみてください。</p>
+<h2 id="発展">発展</h2>
+<h3 id="実際にコマンドを実装する">実際にコマンドを実装する</h3>
+<p><code>interaction.data.name</code> でコマンド名が取れます。コマンドの判別はidでも良いでしょう。</p>
+<h3 id="デバッグしたい">デバッグしたい</h3>
+<p>CloudFunctionsのデバッグについては以下が参考になります。</p>
+<p><a href="https://qiita.com/seya/items/c37207cd65ec914692ba#%E3%83%87%E3%83%90%E3%83%83%E3%82%B0%E6%96%B9%E6%B3%951-%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%AB%E3%81%A7http%E3%83%99%E3%83%BC%E3%82%B9%E3%81%AE%E9%96%A2%E6%95%B0%E3%82%92%E5%AE%9F%E8%A1%8C%E3%81%99%E3%82%8B"  target="_blank" rel="nofollow noopener" >https://qiita.com/seya/items/c37207cd65ec914692ba</a></p>
+<p>DiscordBotの場合はローカルでリクエストを作るのが大変なので、<a href="https://discord.com/developers/docs/tutorials/hosting-on-cloudflare-workers#setting-up-ngrok"  target="_blank" rel="nofollow noopener" >公式チュートリアルも推奨している</a>ngrokでどうにかするとよいでしょう。</p>
+<p>おわり</p>
+
+  </div>
+  <div class="post-footer">
+    
+  </div>
+  <div>
+    <li class="posts-list-item">
+    </li>
+    <p></p>
+    <a href="https://blog.p4ko.com"><u>＜ Back</u></a>
+  </div>
+</article>
+
+    </main>
+    <footer class="app-footer">
+      <div class="app-footer-social">
+        
+        <a target="_blank" href="/about"
+          rel="noreferrer noopener"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-user">
+  <title>user</title>
+  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle>
+</svg></a>
+        
+        <a target="_blank" href="https://twitter.com/pishitaro_"
+          rel="noreferrer noopener"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-twitter">
+  <title>twitter</title>
+  <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+</svg></a>
+        
+        <a target="_blank" href="https://github.com/pishiko"
+          rel="noreferrer noopener"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg></a>
+        
+      </div>
+
+      <div class="b1-footer">
+
+        <div class="tags-footer">
+          <h3>Tags</h3>
+          
+          <a class="tag" href="https://blog.p4ko.com/tags/android/">android</a>
+          
+          <a class="tag" href="https://blog.p4ko.com/tags/csharp/">cSharp</a>
+          
+          <a class="tag" href="https://blog.p4ko.com/tags/dev/">dev</a>
+          
+          <a class="tag" href="https://blog.p4ko.com/tags/go/">go</a>
+          
+          <a class="tag" href="https://blog.p4ko.com/tags/hugo/">hugo</a>
+          
+          <a class="tag" href="https://blog.p4ko.com/tags/js/">js</a>
+          
+          <a class="tag" href="https://blog.p4ko.com/tags/memo/">memo</a>
+          
+          <a class="tag" href="https://blog.p4ko.com/tags/python/">python</a>
+          
+          <a class="tag" href="https://blog.p4ko.com/tags/unity/">unity</a>
+          
+          <a class="tag" href="https://blog.p4ko.com/tags/web/">web</a>
+          
+        </div>
+        <div class="links-footer">
+          <h3>Links</h3>
+          <p><a href="https://paintkeyboard.p4ko.com/" target="_blank">おえかきキーボード</a></p>
+          <p><a href="https://pishiko.github.io/youtube-share-hub/" target="_blank">Youtube Share Hub</a></p>
+          <p><a href="/posts/nowplayingcat/" target="_blank">Now Playing Cat</a></p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

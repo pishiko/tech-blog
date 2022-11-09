@@ -6,7 +6,29 @@
     <description>Recent content in dev on ぴしめも</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
-    <lastBuildDate>Tue, 21 Sep 2021 23:01:15 +0900</lastBuildDate><atom:link href="https://blog.p4ko.com/tags/dev/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 10 Nov 2022 02:51:15 +0900</lastBuildDate><atom:link href="https://blog.p4ko.com/tags/dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Google Cloud Functionsで DiscordコマンドBotをサーバレスにする</title>
+      <link>https://blog.p4ko.com/posts/slash-functions/</link>
+      <pubDate>Thu, 10 Nov 2022 02:51:15 +0900</pubDate>
+      
+      <guid>https://blog.p4ko.com/posts/slash-functions/</guid>
+      <description>はじめに discord.py製のBotを運用していたのですが、Botを置いていたHerokuの無料枠が消えたため、Cloud Functionsに引っ越し、というかほぼ置き換えすることにしました。インターネット上に見当たらなかったのでそのメモです。
+参考までに、Cloud Functionsの料金は200万リクエスト（≒コマンド呼び出し回数）まで無料です。
+Firebaseに登録する 【Firebase】Cloud Functions チュートリアル
+こちらの冒頭無料部分を参考に環境構築を行います。(丸投げ)
+やることダイジェスト  Firebaseプロジェクトの作成 Firebaseのプランをアップグレード Firebase CLIのインストール $ firebase init done!  Discord Botを登録する https://zenn.dev/drumath2237/articles/112fd0bfa7ea4f836195#applicationの作成
+こちらの記事のDiscord Slash Commandを作成する～Slash Commandの登録までを進めます。（丸投げ）
+やることダイジェスト  Applicationの作成 Slash Commandの登録 done!  Functionの実装・デプロイ function/index.tsが生成されていると思うのでこれを弄っていきます。
+とりあえず $ npm install discord-interactions をします。
+検証について Slash Commandのエンドポイントが不正でないか証明するために、いくつか検証プロセスが必要になります。わざと不正なリクエストが飛んできたりします。
+具体的には
+ ヘッダーの署名検証を行い、不正であれば401を返す  https://discord.com/developers/docs/interactions/receiving-and-responding#security-and-authorization
+ Interactionのタイプが1の場合は、PONGを返却  https://discord.com/developers/docs/interactions/receiving-and-responding#receiving-an-interaction
+それを踏まえたのが以下のコードになります。今回は、コマンドに関係なく、hi! 名前と応答するよう実装します。
+import * as functions from &amp;#34;firebase-functions&amp;#34;; import { verifyKey, InteractionType, InteractionResponseType, } from &amp;#34;discord-interactions&amp;#34;; // Start writing Firebase Functions // https://firebase.</description>
+    </item>
+    
     <item>
       <title>ARフリーハンドおえかきアプリを作りました（完成）</title>
       <link>https://blog.p4ko.com/posts/aroekaki/</link>
